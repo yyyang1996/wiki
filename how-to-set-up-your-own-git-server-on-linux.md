@@ -9,7 +9,7 @@ categories: linux
 Git 作为版本控制工具无疑是软件开发最好的选择, 而 Github 又是 Git 服务中做的最好的, 但是这并不妨碍我们搭建自己的 Git Server .
 
 
-##Set up the server
+## Set up the server
 
 连接到远程服务器
 
@@ -40,7 +40,7 @@ sudo chmod 600 /home/git/.ssh/*
 	ssh git@lsong.org
 
 
-##开始一个项目
+## 开始一个项目
 
 在服务器上启动一个项目
 
@@ -62,9 +62,9 @@ sudo chmod 600 /home/git/.ssh/*
 
 	git clone git@lsong.org:project.git
 
-##权限控制
+## 权限控制
 
-###读写权限
+### 读写权限
 
 让需要 `git` 服务写权限的用户将 SSH 公钥发给你
 
@@ -82,7 +82,7 @@ sudo chmod 600 /home/git/.ssh/*
 
 这个用户就可以提交了
 
-###只读权限
+### 只读权限
 
 	cd ~git/public_html
 	ln -s ../project.git project.git
@@ -100,7 +100,7 @@ sudo chmod 600 /home/git/.ssh/*
 
 来 `clone` 项目
 
-##安全性
+## 安全性
 
 你可以用 Git 自带的 `git-shell` 工具限制 `git` 用户的活动范围。只要把它设为 `git` 用户登入的 shell，那么该用户就无法使用普通的 bash 或者 csh 什么的 shell 程序。编辑 `/etc/passwd` 文件：
 
