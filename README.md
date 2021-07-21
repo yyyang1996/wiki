@@ -1,12 +1,25 @@
-# Liu Song's Wiki
+# Initial page
 
-+ [Setup OpenWRT on WR720N](setup-openwrt-on-wr720n.md)
-+ [How To Build A Quadcopter](how-to-build-a-quadcopter.md)
-+ [How to install Lubuntu on Cubietruck](lubuntu-on-cubietruck.md)
-+ [How to set up your own Git server on Linux](how-to-set-up-your-own-git-server-on-linux.md)
+## Getting Super Powers
 
----
+Becoming a super hero is a fairly straight forward process:
 
-Liu Song  
-hi@lsong.org   
-https://lsong.org   
+```
+$ give me super-powers
+```
+
+{% hint style="info" %}
+ Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+{% endhint %}
+
+Once you're strong enough, save the world:
+
+{% code title="hello.sh" %}
+```bash
+# Ain't no code for that yet, sorry
+echo 'You got to trust me on this, I saved the world'
+```
+{% endcode %}
+
+
+
