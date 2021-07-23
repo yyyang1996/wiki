@@ -16,7 +16,7 @@ intro: >
   keep your hands from leaving the keyboard
 ---
 
-# Windows & Linux Keymap
+# idea
 
 ## Editing
 

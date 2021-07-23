@@ -16,7 +16,7 @@ intro: >
   WebStorm running on Windows/Linux or Mac
 ---
 
-# Windows & Linux Keymap {.cols-3}
+# webstorm
 
 ## Editing {.row-span-5}
 

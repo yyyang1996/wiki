@@ -12,7 +12,7 @@ intro: >
   contains all registered MIME types.
 ---
 
-# Common MIME \(Media\) types
+# mime
 
 | Extension | Kind of document | MIME Type \(Content Type\) |
 | :--- | :--- | :--- |
