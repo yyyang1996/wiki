@@ -1,22 +1,24 @@
 ---
 title: PHP
-date: 2021-01-04 15:23:28
+date: '2021-01-04T15:23:28.000Z'
 icon: icon-php
 background: bg-purple-900
 tags:
-    - web
+  - web
 categories:
-    - Programming
-intro: |
-    This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference for quickly looking up the correct syntax for the code you use most frequently. 
+  - Programming
+intro: >
+  This [PHP](https://www.php.net/manual/en/) cheat sheet provides a reference
+  for quickly looking up the correct syntax for the code you use most
+  frequently.
 ---
 
+# php
 
-Getting started {.cols-3}
----------------
-
+## Getting started {.cols-3}
 
 ### hello.php
+
 ```php
 <?php // begin with a PHP open tag.
 
@@ -25,13 +27,10 @@ print("Hello quickref.me");
 
 ?>
 ```
-PHP run command
-```shell script
-$ php hello.php
-```
 
+PHP run command \`\`\`shell script $ php hello.php
 
-
+```text
 ### Variables
 ```php
 $boolean1 = true;
@@ -44,12 +43,11 @@ unset($float);  // Delete variable
 $str1 = "How are you?";
 $str2 = 'Fine, thanks';
 ```
-See: [Types](#types)
 
-
-
+See: [Types](php.md#types)
 
 ### Strings
+
 ```php
 $url = "quickref.me";
 echo "I'm learning PHP at $url";
@@ -61,12 +59,11 @@ $hello = "Hello, ";
 $hello .= "World!";
 echo $hello;   # => Hello, World!
 ```
-See: [Strings](#strings-2)
 
-
-
+See: [Strings](php.md#strings-2)
 
 ### Arrays
+
 ```php
 $num = [1, 3, 5, 7, 9];
 $num[5] = 11;
@@ -74,11 +71,11 @@ unset($num[2]);    // Delete variable
 print_r($num);     # => 1 3 7 9 11
 echo count($num);  # => 5
 ```
-See: [Arrays](#arrays-2)
 
-
+See: [Arrays](php.md#arrays-2)
 
 ### Operators
+
 ```php
 $x = 1;
 $y = 2;
@@ -86,11 +83,13 @@ $y = 2;
 $sum = $x + $y;
 echo $sum;   # => 3
 ```
-See: [Operators](#operators-2)
 
+See: [Operators](php.md#operators-2)
 
 ### Include {.row-span-3}
+
 #### vars.php
+
 ```php
 <?php // begin with a PHP open tag.
 $fruit = 'apple';
@@ -98,7 +97,9 @@ echo "I was imported";
 return 'Anything you like.';
 ?>
 ```
+
 #### test.php
+
 ```php
 <?php
 include 'vars.php';
@@ -121,9 +122,8 @@ echo $result;  # => Anything you like.
 ?>
 ```
 
-
-
 ### Functions
+
 ```php
 function add($num1, $num2 = 1) {
     return $num1 + $num2;
@@ -131,12 +131,11 @@ function add($num1, $num2 = 1) {
 echo add(10);    # => 11
 echo add(10, 5); # => 15
 ```
-See: [Functions](#functions-3)
 
+See: [Functions](php.md#functions-3)
 
+### Comments
 
-
-### Comments 
 ```php
 # This is a one line shell-style comment
 
@@ -146,23 +145,19 @@ See: [Functions](#functions-3)
    yet another line of comment */
 ```
 
-
-
 ### Constants
+
 ```php
 const MY_CONST = "hello";
 
 echo MY_CONST;   # => hello
 
 # => MY_CONST is: hello
-echo 'MY_CONST is: ' . MY_CONST; 
+echo 'MY_CONST is: ' . MY_CONST;
 ```
 
-
-
-
-
 ### Classes
+
 ```php
 class Student {
     public function __construct($name) {
@@ -171,17 +166,13 @@ class Student {
 }
 $alex = new Student("Alex");
 ```
-See: [Classes](#classes-2)
 
+See: [Classes](php.md#classes-2)
 
-
-
-
-Types {.cols-3}
----------------
-
+## Types {.cols-3}
 
 ### Boolean {.row-span-2}
+
 ```php
 $boolean1 = true;
 $boolean2 = TRUE;
@@ -191,12 +182,11 @@ $boolean4 = FALSE;
 $boolean5 = (boolean) 1;   # => true
 $boolean6 = (boolean) 0;   # => false
 ```
+
 Boolean are case-insensitive
 
-
-
-
 ### Integer {.row-span-2}
+
 ```php
 $int1 = 28;    # => 28
 $int2 = -32;   # => -32
@@ -207,23 +197,27 @@ $int5 = 0b101; # => 5  (binary)
 # => 2000100000 (decimal, PHP 7.4.0)
 $int6 = 2_000_100_000;
 ```
+
 See also: [Integers](https://www.php.net/manual/en/language.types.integer.php)
 
-
 ### Strings
+
 ```php
 echo 'this is a simple string';
 ```
-See: [Strings](#strings-3)
+
+See: [Strings](php.md#strings-3)
 
 ### Arrays
+
 ```php
 $arr = array("hello", "world", "!");
 ```
-See: [Arrays](#arrays-3)
 
+See: [Arrays](php.md#arrays-3)
 
-### Float (Double)
+### Float \(Double\)
+
 ```php
 $float1 = 1.234;
 $float2 = 1.2e7;
@@ -236,9 +230,8 @@ $float5 = 1 + "10.5";   # => 11.5
 $float6 = 1 + "-1.3e3"; # => -1299
 ```
 
-
-
 ### Null
+
 ```php
 $a = null;
 $b = 'Hello php!';
@@ -251,8 +244,8 @@ $a === null   # => false
 is_null($a)   # => false
 ```
 
-
 ### Iterables
+
 ```php
 function bar(): iterable {
     return [1, 2, 3];
@@ -264,16 +257,13 @@ function gen(): iterable {
 }
 foreach (bar() as $value) {
     echo $value;   # => 123
-} 
+}
 ```
 
-
-Strings {.cols-3}
----------------
-
-
+## Strings {.cols-3}
 
 ### String
+
 ```php
 # => '$String'
 $sgl_quotes = '$String';
@@ -281,17 +271,15 @@ $sgl_quotes = '$String';
 # => 'This is a $String.'
 $dbl_quotes = "This is a $sgl_quotes.";
 
-# => a 	 tab character.
+# => a      tab character.
 $escaped   = "a \t tab character.";
 
 # => a slash and a t: \t
 $unescaped = 'a slash and a t: \t';
 ```
 
-
-
-
 ### Multi-line
+
 ```php
 $str = "foo";
 
@@ -308,9 +296,8 @@ $str
 END;
 ```
 
-
-
 ### Manipulation
+
 ```php
 $s = "Hello Phper";
 echo strlen($s);       # => 11
@@ -325,20 +312,21 @@ echo strtolower($s);   # => hello phper
 echo strpos($s, "l");      # => 2
 var_dump(strpos($s, "L")); # => false
 ```
+
 See: [String Functions](https://www.php.net/manual/en/ref.strings.php)
 
-
-
-Arrays {.cols-3}
----------------
+## Arrays {.cols-3}
 
 ### Defining {.row-span-2}
+
 ```php
 $a1 = ["hello", "world", "!"]
 $a2 = array("hello", "world", "!");
 $a3 = explode(",", "apple,pear,peach");
 ```
+
 #### Mixed int and string keys
+
 ```php
 $array = array(
     "foo" => "bar",
@@ -348,7 +336,9 @@ $array = array(
 );
 var_dump($array);
 ```
+
 #### Short array syntax
+
 ```php
 $array = [
     "foo" => "bar",
@@ -356,9 +346,8 @@ $array = [
 ];
 ```
 
-
-
 ### Multi array
+
 ```php
 $multiArray = [ 
     [1, 2, 3],
@@ -371,8 +360,8 @@ print_r($multiArray[0][1]) # => 2
 print_r($multiArray[0][2]) # => 3
 ```
 
-
 ### Multi type {.row-span-2}
+
 ```php
 $array = array(
     "foo" => "bar",
@@ -394,9 +383,8 @@ var_dump($array[42]);
 var_dump($array["multi"]["dim"]["a"]);
 ```
 
-
-
 ### manipulation
+
 ```php
 $arr = array(5 => 1, 12 => 2);
 $arr[] = 56;      // Append
@@ -405,9 +393,11 @@ sort($arr);       // Sort
 unset($arr[5]);   // Remove
 unset($arr);      // Remove all
 ```
+
 See: [Array Functions](https://www.php.net/manual/en/ref.array.php)
 
 ### Indexing iteration
+
 ```php
 $array = array('a', 'b', 'c');
 $count = count($array);
@@ -418,6 +408,7 @@ for ($i = 0; $i < $count; $i++) {
 ```
 
 ### Value iteration
+
 ```php
 $colors = array('red', 'blue', 'green');
 
@@ -425,18 +416,21 @@ foreach ($colors as $color) {
     echo "Do you like $color?\n";
 }
 ```
+
 ### Key iteration
+
 ```php
 $arr = ["foo" => "bar", "bar" => "foo"];
 
 foreach ( $arr as $key => $value )
 {
-  	echo "key: " . $key . "\n";
+      echo "key: " . $key . "\n";
     echo "val: {$arr[$key]}\n";
 }
 ```
 
 ### Concatenate arrays
+
 ```php
 $a = [1, 2];
 $b = [3, 4];
@@ -447,83 +441,80 @@ $result = [...$a, ...$b];
 ```
 
 ### Into functions
+
 ```php
 $array = [1, 2];
 
 function foo(int $a, int $b) {
-	echo $a; # => 1
-  	echo $b; # => 2
+    echo $a; # => 1
+      echo $b; # => 2
 }
 foo(...$array);
 ```
 
-
 ### Splat Operator
+
 ```php
 function foo($first, ...$other) {
-	var_dump($first); # => a
-  	var_dump($other); # => ['b', 'c']
+    var_dump($first); # => a
+      var_dump($other); # => ['b', 'c']
 }
 foo('a', 'b', 'c' /*, ...*/ );
 // or
 function foo($first, string ...$other){}
 ```
 
-
-
-Operators {.cols-4}
----------------
-
-
+## Operators {.cols-4}
 
 ### Arithmetic
-| -  | -              |
-|----|----------------|
-| `+`  | Addition       |
-| `-`  | Subtraction    |
-| `*`  | Multiplication |
-| `/`  | Division       |
-| `%`  | Modulo         |
+
+| - | - |
+| :--- | :--- |
+| `+` | Addition |
+| `-` | Subtraction |
+| `*` | Multiplication |
+| `/` | Division |
+| `%` | Modulo |
 | `**` | Exponentiation |
 
 ### Assignment
-| -      | -                 |
-|--------|-------------------|
+
+| - | - |
+| :--- | :--- |
 | `a += b` | Same as `a = a + b` |
 | `a -= b` | Same as `a = a – b` |
 | `a *= b` | Same as `a = a * b` |
 | `a /= b` | Same as `a = a / b` |
 | `a %= b` | Same as `a = a % b` |
 
-
 ### Comparison {.row-span-2}
-| -   | -                            |
-|-----|------------------------------|
-| `==`  | Equal                        |
-| `===` | Identical                    |
-| `!=`  | Not equal                    |
-| `<>`  | Not equal                    |
-| `!==` | Not identical                |
-| `<`   | Less than                    |
-| `>`   | Greater than                 |
-| `<=`  | Less than or equal           |
-| `>=`  | Greater than or equal        |
+
+| - | - |
+| :--- | :--- |
+| `==` | Equal |
+| `===` | Identical |
+| `!=` | Not equal |
+| `<>` | Not equal |
+| `!==` | Not identical |
+| `<` | Less than |
+| `>` | Greater than |
+| `<=` | Less than or equal |
+| `>=` | Greater than or equal |
 | `<=>` | Less than/equal/greater than |
 
 ### Logical
-| -    | -            |
-|------|--------------|
-| `and`  | And          |
-| `or`   | Or           |
-| `xor`  | Exclusive or |
-| `!`    | Not          |
-| `&&`   | And          |
-| `||` | Or           |
 
-
-
+| - | - |  |  |
+| :--- | :--- | :--- | :--- |
+| `and` | And |  |  |
+| `or` | Or |  |  |
+| `xor` | Exclusive or |  |  |
+| `!` | Not |  |  |
+| `&&` | And |  |  |
+| \` |  | \` | Or |
 
 ### Arithmetic {.col-span-2}
+
 ```php
 // Arithmetic
 $sum        = 1 + 1; // 2
@@ -539,25 +530,21 @@ echo ++$num;     // Prints 3 (increments before evaluation)
 $num /= $float;  // Divide and assign the quotient to $num
 ```
 
-
-
 ### Bitwise
-| -  | -                  |
-|----|--------------------|
-| `&`  | And                |
-| `|`  | Or (inclusive or)  |
-| `^`  | Xor (exclusive or) |
-| `~`  | Not                |
-| `<<` | Shift left         |
-| `>>` | Shift right        |
 
+| - | - |  |
+| :--- | :--- | :--- |
+| `&` | And |  |
+| \` | \` | Or \(inclusive or\) |
+| `^` | Xor \(exclusive or\) |  |
+| `~` | Not |  |
+| `<<` | Shift left |  |
+| `>>` | Shift right |  |
 
-
-
-Conditionals {.cols-3}
----------------
+## Conditionals {.cols-3}
 
 ### If elseif else
+
 ```php
 $a = 10;
 $b = 20;
@@ -571,8 +558,8 @@ if ($a > $b) {
 }
 ```
 
-
 ### Switch
+
 ```php
 $x = 0;
 switch ($x) {
@@ -589,6 +576,7 @@ switch ($x) {
 ```
 
 ### Ternary operator
+
 ```php
 # => Does
 print (false ? 'Not' : 'Does');
@@ -606,6 +594,7 @@ echo $b ?? 'b is unset';
 ```
 
 ### Match
+
 ```php
 $statusCode = 500;
 $message = match($statusCode) {
@@ -616,10 +605,11 @@ $message = match($statusCode) {
 };
 echo $message; # => server error
 ```
+
 See: [Match](https://www.php.net/manual/en/control-structures.match.php)
 
-
 ### Match expressions
+
 ```php
 $age = 23;
 
@@ -633,12 +623,10 @@ $result = match (true) {
 echo $result; # => young adult
 ```
 
-
-Loops {.cols-3}
----------------
-
+## Loops {.cols-3}
 
 ### while
+
 ```php
 $i = 1;
 # => 12345
@@ -648,6 +636,7 @@ while ($i <= 5) {
 ```
 
 ### do while
+
 ```php
 $i = 1;
 # => 12345
@@ -656,8 +645,8 @@ do {
 } while ($i <= 5);
 ```
 
-
 ### for i
+
 ```php
 # => 12345
 for ($i = 1; $i <= 5; $i++) {
@@ -666,6 +655,7 @@ for ($i = 1; $i <= 5; $i++) {
 ```
 
 ### break
+
 ```php
 # => 123
 for ($i = 1; $i <= 5; $i++) {
@@ -677,6 +667,7 @@ for ($i = 1; $i <= 5; $i++) {
 ```
 
 ### continue
+
 ```php
 # => 1235
 for ($i = 1; $i <= 5; $i++) {
@@ -688,6 +679,7 @@ for ($i = 1; $i <= 5; $i++) {
 ```
 
 ### foreach
+
 ```php
 $a = ['foo' => 1, 'bar' => 2];
 # => 12
@@ -695,15 +687,13 @@ foreach ($a as $k) {
     echo $k;
 }
 ```
-See: [Array iteration](#value-iteration)
 
+See: [Array iteration](php.md#value-iteration)
 
-
-Functions {.cols-3}
----------------
-
+## Functions {.cols-3}
 
 ### Returning values
+
 ```php
 function square($x)
 {
@@ -714,6 +704,7 @@ echo square(4);  # => 16
 ```
 
 ### Return types
+
 ```php
 // Basic return type declaration
 function sum($a, $b): float {/*...*/}
@@ -725,6 +716,7 @@ function getC(): C { return new C; }
 ```
 
 ### Nullable return types
+
 ```php
 // Available in PHP 7.1
 function nullOrString(int $v) : ?string
@@ -734,21 +726,24 @@ function nullOrString(int $v) : ?string
 echo nullOrString(3);       # => odd
 var_dump(nullOrString(4));  # => NULL
 ```
+
 See: [Nullable types](https://www.php.net/manual/en/migration71.new-features.php)
 
 ### Void functions
+
 ```php
 // Available in PHP 7.1
 function voidFunction(): void
 {
-	echo 'Hello';
-	return;
+    echo 'Hello';
+    return;
 }
 
 voidFunction();  # => Hello
 ```
 
 ### Variable functions
+
 ```php
 function bar($arg = '')
 {
@@ -759,11 +754,8 @@ $func = 'bar';
 $func('test'); # => In bar(); arg: test
 ```
 
-
-
-
-
 ### Anonymous functions
+
 ```php
 $greet = function($name)
 {
@@ -774,10 +766,8 @@ $greet('World'); # => Hello World
 $greet('PHP');   # => Hello PHP
 ```
 
-
-
-
 ### Recursive functions
+
 ```php
 function recursion($x)
 {
@@ -789,9 +779,8 @@ function recursion($x)
 recursion(1);  # => 1234
 ```
 
-
-
 ### Default parameters
+
 ```php
 function coffee($type = "cappuccino")
 {
@@ -805,12 +794,11 @@ echo coffee(null);
 echo coffee("espresso");
 ```
 
-
-
 ### Arrow Functions
+
 ```php
 $y = 1;
- 
+
 $fn1 = fn($x) => $x + $y;
 
 // equivalent to using $y by value:
@@ -821,20 +809,16 @@ echo $fn1(5);   # => 6
 echo $fn2(5);   # => 6
 ```
 
-
-
-
-Classes {.cols-3}
----------------
-
+## Classes {.cols-3}
 
 ### Constructor
+
 ```php
 class Student {
     public function __construct($name) {
         $this->name = $name;
     }
-  	public function print() {
+      public function print() {
         echo "Name: " . $this->name;
     }
 }
@@ -843,6 +827,7 @@ $alex->print();    # => Name: Alex
 ```
 
 ### Inheritance
+
 ```php
 class ExtendClass extends SimpleClass
 {
@@ -859,6 +844,7 @@ $extended->displayVar();
 ```
 
 ### Classes variables {.row-span-2}
+
 ```php
 class MyClass
 {
@@ -881,15 +867,16 @@ class MyClass
     private $var7        = 'pri';  
 }
 ```
+
 Access statically
+
 ```php
 echo MyClass::MY_CONST;   # => value
 echo MyClass::$staticVar; # => static
 ```
 
-
-
 ### Magic Methods
+
 ```php
 class MyClass
 {
@@ -906,8 +893,8 @@ class MyClass
 }
 ```
 
-
 ### Interface
+
 ```php
 interface Foo 
 {
@@ -924,10 +911,10 @@ class Cls implements Foo, Bar
 }
 ```
 
-Miscellaneous {.cols-3}
--------------
+## Miscellaneous {.cols-3}
 
 ### Basic error handling
+
 ```php
 try {
     // Do something
@@ -939,24 +926,21 @@ try {
 ```
 
 ### Exception in PHP 8.0 {.col-span-2}
-```php {.wrap}
-$nullableValue = null;
 
-try {
-	$value = $nullableValue ?? throw new InvalidArgumentException();
-} catch (InvalidArgumentException) { // Variable is optional
-    // Handle my exception
-    echo "print me!";
-}
-```
+\`\`\`php {.wrap} $nullableValue = null;
 
+try { $value = $nullableValue ?? throw new InvalidArgumentException\(\); } catch \(InvalidArgumentException\) { // Variable is optional // Handle my exception echo "print me!"; }
+
+```text
 ### Custom exception {.row-span-2}
 ```php
 class MyException extends Exception {
     // do something
 }
 ```
+
 Usage
+
 ```php
 try {
     $condition = true;
@@ -969,6 +953,7 @@ try {
 ```
 
 ### Nullsafe Operator {.row-span-2}
+
 ```php
 // As of PHP 8.0.0, this line:
 $result = $repo?->getUser(5)?->name;
@@ -985,29 +970,31 @@ if (is_null($repo)) {
     }
 }
 ```
+
 See also: [Nullsafe Operator](https://wiki.php.net/rfc/nullsafe_operator)
 
 ### Regular expressions
+
 ```php
 $str = "Visit Quickref.me";
 echo preg_match("/qu/i", $str); # => 1
 ```
-See: [Regex in PHP](/regex#regex-in-php)
 
-### fopen() mode
+See: [Regex in PHP](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md#regex-in-php)
 
-| -    | -                        |
-|------|--------------------------|
-| `r`  | Read                     |
-| `r+` | Read and write, prepend  |
-| `w`  | Write, truncate          |
+### fopen\(\) mode
+
+| - | - |
+| :--- | :--- |
+| `r` | Read |
+| `r+` | Read and write, prepend |
+| `w` | Write, truncate |
 | `w+` | Read and write, truncate |
-| `a`  | Write, append            |
-| `a+` | Read and write, append   |
-
-
+| `a` | Write, append |
+| `a+` | Read and write, append |
 
 ### Runtime defined Constants
+
 ```php
 define("CURRENT_DATE", date('Y-m-d'));
 
@@ -1015,16 +1002,11 @@ define("CURRENT_DATE", date('Y-m-d'));
 echo CURRENT_DATE;   # => 2021-01-05
 
 # => CURRENT_DATE is: 2021-01-05
-echo 'CURRENT_DATE is: ' . CURRENT_DATE; 
+echo 'CURRENT_DATE is: ' . CURRENT_DATE;
 ```
 
+## Also see
 
-Also see 
--------
-
-- [PHP Docs](https://www.php.net/manual/en/index.php)
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/php/)
-
-
-
+* [PHP Docs](https://www.php.net/manual/en/index.php)
+* [Learn X in Y minutes](https://learnxinyminutes.com/docs/php/)
 

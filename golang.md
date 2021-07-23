@@ -1,23 +1,23 @@
 ---
 title: Golang
-date: 2020-12-17 21:51:44
+date: '2020-12-17T21:51:44.000Z'
 icon: icon-golang
 background: bg-blue-400
 tags:
-    - Go
+  - Go
 categories:
-    - Programming
-intro: |
-    This cheat sheet provided basic syntax and methods to help you using [Golang](https://golang.org/). 
+  - Programming
+intro: >
+  This cheat sheet provided basic syntax and methods to help you using
+  [Golang](https://golang.org/).
 ---
 
+# golang
 
-Getting started {.cols-3}
---------
-
-
+## Getting started {.cols-3}
 
 ### hello.go
+
 ```go
 package main
 
@@ -27,11 +27,10 @@ func main() {
     fmt.Println("Hello, world!")
 }
 ```
-Run directly
-```shell script
-$ go run hello.go
-Hello, world!
-```
+
+Run directly \`\`\`shell script $ go run hello.go Hello, world!
+
+```text
 Or try it out in the [Go repl](https://repl.it/languages/go)
 
 
@@ -45,18 +44,19 @@ s1 = "Learn Go!"
 var b, c int = 1, 2
 var d = true
 ```
+
 Short declaration
+
 ```go
 s1 := "Learn Go!"        // string
 b, c := 1, 2             // int
 d := true                // bool
 ```
 
-See: [Basic types](#basic-types)
-
-
+See: [Basic types](golang.md#basic-types)
 
 ### Functions
+
 ```go
 package main
 
@@ -72,11 +72,11 @@ func say(message string) {
     fmt.Println("You said: ", message)
 }
 ```
-See: [Functions](#functions-2)
 
-
+See: [Functions](golang.md#functions-2)
 
 ### Comments
+
 ```go
 // Single line comment
 
@@ -84,20 +84,17 @@ See: [Functions](#functions-2)
  line comment */
 ```
 
-
-
 ### If statement
+
 ```go
 if true {
     fmt.Println("Yes!")
 }
 ```
-See: [Flow control](#flow-control)
 
+See: [Flow control](golang.md#flow-control)
 
-
-Basic types {.cols-3}
---------
+## Basic types {.cols-3}
 
 ### Strings
 
@@ -113,10 +110,10 @@ fmt.Println(len(s1))
 // Outputs: Hello
 fmt.Println(string(s1[0:5]))
 ```
+
 Strings are of type `string`.
 
-
-### Numbers 
+### Numbers
 
 ```go
 num := 3         // int
@@ -127,17 +124,17 @@ num := byte('a') // byte (alias: uint8)
 var u uint = 7        // uint (unsigned)
 var p float32 = 22.7  // 32-bit float
 ```
+
 #### Operators
+
 ```go
 x := 5
 x++
 fmt.Println("x + 4 =", x + 4)
-fmt.Println("x * 4 =", x * 4) 
+fmt.Println("x * 4 =", x * 4)
 ```
-See: [More Operators](#operators-and-punctuation)
 
-
-
+See: [More Operators](golang.md#operators-and-punctuation)
 
 ### Booleans
 
@@ -146,7 +143,8 @@ isTrue   := true
 isFalse  := false
 ```
 
-#### Operators 
+#### Operators
+
 ```go
 fmt.Println(true && true)   // true 
 fmt.Println(true && false)  // false
@@ -154,20 +152,17 @@ fmt.Println(true || true)   // true
 fmt.Println(true || false)  // true
 fmt.Println(!true)          // false
 ```
-See: [More Operators](#operators-and-punctuation)
 
-
-
+See: [More Operators](golang.md#operators-and-punctuation)
 
 ### Arrays {.row-span-2}
+
 ```go
 ┌────┬────┬────┬────┬─────┬─────┐
 | 2  | 3  | 5  | 7  | 11  | 13  |
 └────┴────┴────┴────┴─────┴─────┘
   0    1    2    3     4     5
 ```
-
----
 
 ```go
 primes := [...]int{2, 3, 5, 7, 11, 13}
@@ -179,7 +174,7 @@ fmt.Println(primes)
 // Same as [:3], Outputs: [2 3 5]
 fmt.Println(primes[0:3])
 ```
----
+
 ```go
 var a [2]string
 a[0] = "Hello"
@@ -188,7 +183,9 @@ a[1] = "World"
 fmt.Println(a[0], a[1]) //=> Hello World
 fmt.Println(a)   // => [Hello World]
 ```
+
 #### 2d array
+
 ```go
 var twoDimension [2][3]int
 for i := 0; i < 2; i++ {
@@ -200,8 +197,6 @@ for i := 0; i < 2; i++ {
 fmt.Println("2d: ", twoDimension)
 ```
 
-
-
 ### Pointers
 
 ```go
@@ -211,7 +206,6 @@ func main () {
 }
 ```
 
-
 ```go
 func getPointer () (myPointer *int) {
   a := 234
@@ -219,14 +213,12 @@ func getPointer () (myPointer *int) {
 }
 ```
 
-
 ```go
 a := new(int)
 *a = 234
 ```
 
 See: [Pointers](https://tour.golang.org/moretypes/1)
-
 
 ### Slices
 
@@ -247,12 +239,8 @@ slice := []int{2, 3, 4}
 
 See also: [Slices example](https://gobyexample.com/slices)
 
-
-
-
-
-
 ### Constants
+
 ```go
 const s string = "constant"
 const Phi = 1.618
@@ -260,9 +248,6 @@ const n = 500000000
 const d = 3e20 / n
 fmt.Println(d)
 ```
-
-
-
 
 ### Type conversions
 
@@ -285,111 +270,101 @@ s := strconv.Itoa(i)
 fmt.Println(s) // Outputs: 90
 ```
 
-
-
-
-Strings {.cols-3}
---------
+## Strings {.cols-3}
 
 ### Strings function
+
 ```go
 package main
 
 import (
-	"fmt"
-	s "strings"
+    "fmt"
+    s "strings"
 )
 
 func main() {
     /* Need to import strings as s */
-	fmt.Println(s.Contains("test", "e"))
+    fmt.Println(s.Contains("test", "e"))
 
     /* Build in */
     fmt.Println(len("hello"))  // => 5
     // Outputs: 101
-	fmt.Println("hello"[1])
+    fmt.Println("hello"[1])
     // Outputs: e
-	fmt.Println(string("hello"[1]))
+    fmt.Println(string("hello"[1]))
 
 }
 ```
 
-
-
 ### fmt.Printf {.row-span-2 .col-span-2}
+
 ```go
 package main
 
 import (
-	"fmt"
-	"os"
+    "fmt"
+    "os"
 )
 
 type point struct {
-	x, y int
+    x, y int
 }
 
 func main() {
-	p := point{1, 2}
-	fmt.Printf("%v\n", p)                        // => {1 2}
-	fmt.Printf("%+v\n", p)                       // => {x:1 y:2}
-	fmt.Printf("%#v\n", p)                       // => main.point{x:1, y:2}
-	fmt.Printf("%T\n", p)                        // => main.point
-	fmt.Printf("%t\n", true)                     // => TRUE
-	fmt.Printf("%d\n", 123)                      // => 123
-	fmt.Printf("%b\n", 14)                       // => 1110
-	fmt.Printf("%c\n", 33)                       // => !
-	fmt.Printf("%x\n", 456)                      // => 1c8
-	fmt.Printf("%f\n", 78.9)                     // => 78.9
-	fmt.Printf("%e\n", 123400000.0)              // => 1.23E+08
-	fmt.Printf("%E\n", 123400000.0)              // => 1.23E+08
-	fmt.Printf("%s\n", "\"string\"")             // => "string"
-	fmt.Printf("%q\n", "\"string\"")             // => "\"string\""
-	fmt.Printf("%x\n", "hex this")               // => 6.86578E+15
-	fmt.Printf("%p\n", &p)                       // => 0xc00002c040
-	fmt.Printf("|%6d|%6d|\n", 12, 345)           // => |    12|   345|
-	fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)     // => |  1.20|  3.45|
-	fmt.Printf("|%-6.2f|%-6.2f|\n", 1.2, 3.45)   // => |1.20  |3.45  |
-	fmt.Printf("|%6s|%6s|\n", "foo", "b")        // => |   foo|     b|
-	fmt.Printf("|%-6s|%-6s|\n", "foo", "b")      // => |foo   |b     |
+    p := point{1, 2}
+    fmt.Printf("%v\n", p)                        // => {1 2}
+    fmt.Printf("%+v\n", p)                       // => {x:1 y:2}
+    fmt.Printf("%#v\n", p)                       // => main.point{x:1, y:2}
+    fmt.Printf("%T\n", p)                        // => main.point
+    fmt.Printf("%t\n", true)                     // => TRUE
+    fmt.Printf("%d\n", 123)                      // => 123
+    fmt.Printf("%b\n", 14)                       // => 1110
+    fmt.Printf("%c\n", 33)                       // => !
+    fmt.Printf("%x\n", 456)                      // => 1c8
+    fmt.Printf("%f\n", 78.9)                     // => 78.9
+    fmt.Printf("%e\n", 123400000.0)              // => 1.23E+08
+    fmt.Printf("%E\n", 123400000.0)              // => 1.23E+08
+    fmt.Printf("%s\n", "\"string\"")             // => "string"
+    fmt.Printf("%q\n", "\"string\"")             // => "\"string\""
+    fmt.Printf("%x\n", "hex this")               // => 6.86578E+15
+    fmt.Printf("%p\n", &p)                       // => 0xc00002c040
+    fmt.Printf("|%6d|%6d|\n", 12, 345)           // => |    12|   345|
+    fmt.Printf("|%6.2f|%6.2f|\n", 1.2, 3.45)     // => |  1.20|  3.45|
+    fmt.Printf("|%-6.2f|%-6.2f|\n", 1.2, 3.45)   // => |1.20  |3.45  |
+    fmt.Printf("|%6s|%6s|\n", "foo", "b")        // => |   foo|     b|
+    fmt.Printf("|%-6s|%-6s|\n", "foo", "b")      // => |foo   |b     |
 
-	s := fmt.Sprintf("a %s", "string")
-	fmt.Println(s)
+    s := fmt.Sprintf("a %s", "string")
+    fmt.Println(s)
 
-	fmt.Fprintf(os.Stderr, "an %s\n", "error")
+    fmt.Fprintf(os.Stderr, "an %s\n", "error")
 }
-
 ```
+
 See also: [fmt](https://golang.org/pkg/fmt/)
 
-
-
-
 ### Function examples
-| Example                       |   Result      |
-|-------------------------------|---------------|
-| Contains("test", "es")        | true        |
-| Count("test", "t")            | 2           |
-| HasPrefix("test", "te")       | true        |
-| HasSuffix("test", "st")       | true        |
-| Index("test", "e")            | 1           |
-| Join([]string{"a", "b"}, "-") | a-b         |
-| Repeat("a", 5)                | aaaaa       |
-| Replace("foo", "o", "0", -1)  | f00         |
-| Replace("foo", "o", "0", 1)   | f0o         |
-| Split("a-b-c-d-e", "-")       | [a b c d e] |
-| ToLower("TEST")               | test        |
-| ToUpper("test")               | TEST        |
 
+| Example | Result |
+| :--- | :--- |
+| Contains\("test", "es"\) | true |
+| Count\("test", "t"\) | 2 |
+| HasPrefix\("test", "te"\) | true |
+| HasSuffix\("test", "st"\) | true |
+| Index\("test", "e"\) | 1 |
+| Join\(\[\]string{"a", "b"}, "-"\) | a-b |
+| Repeat\("a", 5\) | aaaaa |
+| Replace\("foo", "o", "0", -1\) | f00 |
+| Replace\("foo", "o", "0", 1\) | f0o |
+| Split\("a-b-c-d-e", "-"\) | \[a b c d e\] |
+| ToLower\("TEST"\) | test |
+| ToUpper\("test"\) | TEST |
 
-
-Flow control {.cols-3}
---------
+## Flow control {.cols-3}
 
 ### Conditional
 
 ```go
-
 a := 10
 
 if a > 20 {
@@ -409,32 +384,19 @@ x := "hello go!"
 if count := len(x); count > 0 {
     fmt.Println("Yes")
 }
-
 ```
----
-```go
 
+```go
 if _, err := doThing(); err != nil {
     fmt.Println("Uh oh")
 }
 ```
 
 ### Switch
-```go {.wrap}
-x := 42.0
-switch x {
-case 0:
-case 1, 2:
-    fmt.Println("Multiple matches")
-case 42:   // Don't "fall through".
-    fmt.Println("reached")
-case 43:
-    fmt.Println("Unreached")
-default:
-    fmt.Println("Optional")
-}
-```
 
+\`\`\`go {.wrap} x := 42.0 switch x { case 0: case 1, 2: fmt.Println\("Multiple matches"\) case 42: // Don't "fall through". fmt.Println\("reached"\) case 43: fmt.Println\("Unreached"\) default: fmt.Println\("Optional"\) }
+
+```text
 See: [Switch](https://github.com/golang/go/wiki/Switch)
 
 ### For loop
@@ -447,15 +409,9 @@ for i := 0; i <= 10; i++ {
 
 ### For-Range loop
 
-```go {.wrap}
-nums := []int{2, 3, 4}
-sum := 0
-for _, num := range nums {
-    sum += num
-}
-fmt.Println("sum:", sum)
-```
+\`\`\`go {.wrap} nums := \[\]int{2, 3, 4} sum := 0 for \_, num := range nums { sum += num } fmt.Println\("sum:", sum\)
 
+```text
 ### While loop
 
 ```go
@@ -467,6 +423,7 @@ for i <= 3 {
 ```
 
 ### Continue keyword
+
 ```go
 for i := 0; i <= 5; i++ {
     if i % 2 == 0 {
@@ -475,7 +432,9 @@ for i := 0; i <= 5; i++ {
     fmt.Println(i)
 }
 ```
+
 ### Break keyword
+
 ```go
 for {
     fmt.Println("loop")
@@ -483,10 +442,7 @@ for {
 }
 ```
 
-
-
-Structs & Maps {.cols-3}
---------
+## Structs & Maps {.cols-3}
 
 ### Defining {.row-span-2}
 
@@ -494,18 +450,18 @@ Structs & Maps {.cols-3}
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 type Vertex struct {
-	X int
-	Y int
+    X int
+    Y int
 }
 
 func main() {
-	v := Vertex{1, 2}
-	v.X = 4
-	fmt.Println(v.X, v.Y) // => 4 2
+    v := Vertex{1, 2}
+    v.X = 4
+    fmt.Println(v.X, v.Y) // => 4 2
 }
 ```
 
@@ -523,8 +479,8 @@ v := Vertex{X: 1}
 
 You can also put field names.
 
-
 ### Maps {.row-span-2}
+
 ```go
 m := make(map[string]int)
 m["k1"] = 7
@@ -545,7 +501,6 @@ n := map[string]int{"foo": 1, "bar": 2}
 fmt.Println(n) // => map[bar:2 foo:1]
 ```
 
-
 ### Pointers to structs
 
 ```go
@@ -555,15 +510,10 @@ v.X = 2
 
 Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
 
-
-
-
-
-Functions {.cols-3}
---------
-
+## Functions {.cols-3}
 
 ### Multiple arguments
+
 ```go
 func plus(a int, b int) int {
     return a + b
@@ -588,6 +538,7 @@ fmt.Println(b)    // => 7
 ```
 
 ### Anonymous function
+
 ```go
 r1, r2 := func() (string, string) {
     x := []string{"hello", "world"}
@@ -613,6 +564,7 @@ fmt.Println(y)   // => 10
 ```
 
 ### Variadic functions
+
 ```go
 func sum(nums ...int) {
     fmt.Print(nums, " ")
@@ -629,12 +581,12 @@ nums := []int{1, 2, 3, 4}
 sum(nums...)  // => [1 2 3 4] 10
 ```
 
-
 ### init function
+
 ```go
 import --> const --> var --> init()
 ```
----
+
 ```go
 var num = setNumber()
 
@@ -649,8 +601,8 @@ func main() {
 }
 ```
 
-
 ### Functions as values
+
 ```go
 func main() {
     // assign a function to a name
@@ -663,6 +615,7 @@ func main() {
 ```
 
 ### Closures 1
+
 ```go
 func scope() func() int{
     outer_var := 2
@@ -675,6 +628,7 @@ fmt.Println(scope()())
 ```
 
 ### Closures 2
+
 ```go
 func outer() (func() int, int) {
     outer_var := 2
@@ -690,10 +644,7 @@ fmt.Println(inner()) // => 200
 fmt.Println(val)     // => 101
 ```
 
-
-Packages {.cols-3}
---------
-
+## Packages {.cols-3}
 
 ### Importing {.row-span-2}
 
@@ -701,7 +652,9 @@ Packages {.cols-3}
 import "fmt"
 import "math/rand"
 ```
+
 #### Same as
+
 ```go
 import (
   "fmt"        // gives fmt.Println
@@ -711,33 +664,28 @@ import (
 
 See: [Importing](https://tour.golang.org/basics/1)
 
-
-
-
 ### Aliases {.row-span-2}
 
 ```go
 import r "math/rand"
 ```
----
+
 ```go
 import (
     "fmt"
     r "math/rand"
 )
 ```
----
+
 ```go
 r.Intn()
 ```
-
 
 ### Packages
 
 ```go
 package main
 ```
-
 
 ### Exporting names
 
@@ -750,10 +698,7 @@ func Hello () {
 
 See: [Exported names](https://tour.golang.org/basics/3)
 
-
-
-Concurrency {.cols-3}
---------
+## Concurrency {.cols-3}
 
 ### Goroutines {.row-span-2}
 
@@ -761,34 +706,30 @@ Concurrency {.cols-3}
 package main
 
 import (
-	"fmt"
-	"time"
+    "fmt"
+    "time"
 )
 
 func f(from string) {
-	for i := 0; i < 3; i++ {
-		fmt.Println(from, ":", i)
-	}
+    for i := 0; i < 3; i++ {
+        fmt.Println(from, ":", i)
+    }
 }
 
 func main() {
-	f("direct")
-	go f("goroutine")
+    f("direct")
+    go f("goroutine")
 
-	go func(msg string) {
-		fmt.Println(msg)
-	}("going")
+    go func(msg string) {
+        fmt.Println(msg)
+    }("going")
 
-	time.Sleep(time.Second)
-	fmt.Println("done")
+    time.Sleep(time.Second)
+    fmt.Println("done")
 }
 ```
 
-
 See: [Goroutines](https://tour.golang.org/concurrency/1), [Channels](https://tour.golang.org/concurrency/2)
-
-
-
 
 ### WaitGroup  {.row-span-2}
 
@@ -796,32 +737,30 @@ See: [Goroutines](https://tour.golang.org/concurrency/1), [Channels](https://tou
 package main
 
 import (
-	"fmt"
-	"sync"
-	"time"
+    "fmt"
+    "sync"
+    "time"
 )
 
 func w(id int, wg *sync.WaitGroup) {
-	defer wg.Done()
-	fmt.Printf("%d starting\n", id)
+    defer wg.Done()
+    fmt.Printf("%d starting\n", id)
 
-	time.Sleep(time.Second)
-	fmt.Printf("%d done\n", id)
+    time.Sleep(time.Second)
+    fmt.Printf("%d done\n", id)
 }
 
 func main() {
-	var wg sync.WaitGroup
-	for i := 1; i <= 5; i++ {
-		wg.Add(1)
-		go w(i, &wg)
-	}
-	wg.Wait()
+    var wg sync.WaitGroup
+    for i := 1; i <= 5; i++ {
+        wg.Add(1)
+        go w(i, &wg)
+    }
+    wg.Wait()
 }
 ```
+
 See: [WaitGroup](https://golang.org/pkg/sync/#WaitGroup)
-
-
-
 
 ### Closing channels
 
@@ -831,22 +770,20 @@ ch <- 2
 ch <- 3
 close(ch) // Closes a channel
 ```
----
+
 ```go
 // Iterate the channel until closed
 for i := range ch {
   ···
 }
 ```
----
+
 ```go
 // Closed if `ok == false`
 v, ok := <- ch
 ```
 
 See: [Range and close](https://tour.golang.org/concurrency/4)
-
-
 
 ### Buffered channels
 
@@ -861,14 +798,9 @@ ch <- 3
 
 See: [Buffered channels](https://tour.golang.org/concurrency/3)
 
+## Error control {.cols-3}
 
-
-
-
-Error control {.cols-3}
---------
-
-### Deferring functions 
+### Deferring functions
 
 ```go
 func main() {
@@ -878,7 +810,6 @@ func main() {
   fmt.Println("Working...")
 }
 ```
-
 
 ### Lambda defer
 
@@ -895,9 +826,6 @@ func main() {
 
 The defer func uses current value of d, unless we use a pointer to get final value at end of main.
 
-
-
-
 ### Defer
 
 ```go
@@ -909,10 +837,7 @@ func main() {
 
 See: [Defer, panic and recover](https://blog.golang.org/defer-panic-and-recover)
 
-
-
-Methods  {.cols-2}
---------
+## Methods  {.cols-2}
 
 ### Receivers
 
@@ -927,7 +852,6 @@ func (v Vertex) Abs() float64 {
   return math.Sqrt(v.X * v.X + v.Y * v.Y)
 }
 ```
-
 
 ```go
 v := Vertex{1, 2}
@@ -945,7 +869,6 @@ func (v *Vertex) Scale(f float64) {
 }
 ```
 
-
 ```go
 v := Vertex{6, 12}
 v.Scale(0.5)
@@ -954,8 +877,7 @@ v.Scale(0.5)
 
 See: [Pointer receivers](https://tour.golang.org/methods/4)
 
-Interfaces {.cols-2}
---------
+## Interfaces {.cols-2}
 
 ### A basic interface
 
@@ -992,67 +914,61 @@ The methods defined in `Shape` are implemented in `Rectangle`.
 
 ### Interface example
 
-```go {.wrap}
-func main() {
-  var r Shape = Rectangle{Length: 3, Width: 4}
-  fmt.Printf("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area(), r.Perimeter())
-}
-```
+\`\`\`go {.wrap} func main\(\) { var r Shape = Rectangle{Length: 3, Width: 4} fmt.Printf\("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area\(\), r.Perimeter\(\)\) }
 
-Miscellaneous {.cols-3}
--------------
+\`\`\`
+
+## Miscellaneous {.cols-3}
 
 ### Keywords
-- break
-- default
-- func
-- interface
-- select
-- case
-- defer
-- go
-- map
-- struct
-- chan
-- else
-- goto
-- package
-- switch
-- const
-- fallthrough
-- if
-- range
-- type
-- continue
-- for
-- import
-- return
-- var
-{.cols-3 .style-none}
+
+* break
+* default
+* func
+* interface
+* select
+* case
+* defer
+* go
+* map
+* struct
+* chan
+* else
+* goto
+* package
+* switch
+* const
+* fallthrough
+* if
+* range
+* type
+* continue
+* for
+* import
+* return
+* var
+
+  {.cols-3 .style-none}
 
 ### Operators and punctuation
-|   |    |     |     |      |    |     |    |   |
-|---|----|-----|-----|------|----|-----|----|---|
-| +  | &   | +=  | &=   | && | ==  | != | ( | ) |
-| - | \| | -=  | \|= | \|\| | <  | <=  | [  | ] |
-| * | ^  | *=  | ^=  | <-   | >  | >=  | {  | } |
-| / | << | /=  | <<= | ++   | =  | :=  | ,  | ; |
-| % | >> | %=  | >>= | --   | !  | ... | .  | : |
-|   | &^ | &^= |     |      |    |     |    |   |
 
+|  |  |  |  |  |  |  |  |  |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| + | & | += | &= | && | == | != | \( | \) |
+| - | \| | -= | \|= | \|\| | &lt; | &lt;= | \[ | \] |
+| \* | ^ | \*= | ^= | &lt;- | &gt; | &gt;= | { | } |
+| / | &lt;&lt; | /= | &lt;&lt;= | ++ | = | := | , | ; |
+| % | &gt;&gt; | %= | &gt;&gt;= | -- | ! | ... | . | : |
+|  | &^ | &^= |  |  |  |  |  |  |
 
+## References {.cols-1}
 
-References {.cols-1}
---------
-- [Devhints](https://devhints.io/go) _(devhints.io)_
-- [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_
-- [Golang wiki](https://github.com/golang/go/wiki/) _(github.com)_
-- [Effective Go](https://golang.org/doc/effective_go.html) _(golang.org)_
-- [Go by Example](https://gobyexample.com/) _(gobyexample.com)_
-- [Awesome Go](https://awesome-go.com/) _(awesome-go.com)_
-- [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _(youtube.com)_
-- [Style Guide](https://github.com/golang/go/wiki/CodeReviewComments) _(github.com)_
-
-
-
+* [Devhints](https://devhints.io/go) _\(devhints.io\)_
+* [A tour of Go](https://tour.golang.org/welcome/1) _\(tour.golang.org\)_
+* [Golang wiki](https://github.com/golang/go/wiki/) _\(github.com\)_
+* [Effective Go](https://golang.org/doc/effective_go.html) _\(golang.org\)_
+* [Go by Example](https://gobyexample.com/) _\(gobyexample.com\)_
+* [Awesome Go](https://awesome-go.com/) _\(awesome-go.com\)_
+* [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _\(youtube.com\)_
+* [Style Guide](https://github.com/golang/go/wiki/CodeReviewComments) _\(github.com\)_
 

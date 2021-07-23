@@ -1,29 +1,28 @@
 ---
 title: Emacs
-date: 2020-12-17 16:21:49
+date: '2020-12-17T16:21:49.000Z'
 icon: icon-emacs
 background: bg-purple-500
 tags:
-    - editor
-    - text
-    - shortcut
+  - editor
+  - text
+  - shortcut
 categories:
-    - Toolkit
-intro: |
-    [Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable, self-documenting real time display text editor.
-    This reference was made for Emacs 27.
+  - Toolkit
+intro: >
+  [Emacs](https://www.gnu.org/software/emacs) is the extensible, customizable,
+  self-documenting real time display text editor.
+
+  This reference was made for Emacs 27.
 ---
 
+# emacs
 
-## Getting started {.cols-3}
+## Starting Emacs
 
+To enter Emacs, just type its name: \`\`\`shell script $ emacs
 
-### Starting Emacs
-To enter Emacs, just type its name: 
-```shell script
-$ emacs
-```
-
+```text
 ------
 
 | -           | -                                        |
@@ -529,48 +528,43 @@ Making global key bindings in Emacs Lisp:
 (global-set-key (kbd "M-#") ’query-replace-regexp)
 ```
 
-
-
-
-### Abbrevs
+## Abbrevs
 
 | - | - |
-|-------------|------------------------------------------|
-| `C-x` `a` `g`   | Add global abbrev                        |
-| `C-x` `a` `l`   | Add mode-local abbrev                    |
-| `C-x` `a` `i` `g` | Add global expansion for this abbrev     |
+| :--- | :--- |
+| `C-x` `a` `g` | Add global abbrev |
+| `C-x` `a` `l` | Add mode-local abbrev |
+| `C-x` `a` `i` `g` | Add global expansion for this abbrev |
 | `C-x` `a` `i` `l` | Add mode-local expansion for this abbrev |
-| `C-x` `a` `e`   | Explicitly expand abbrev                 |
-| `M-/`       | Expand previous word dynamically         |
+| `C-x` `a` `e` | Explicitly expand abbrev |
+| `M-/` | Expand previous word dynamically |
+
 {.shortcuts}
 
-
-
-
-### Spelling Check
+## Spelling Check
 
 | - | - |
-|---------------------|---------------------------------------|
-| `M-$`               | Check spelling of current word        |
+| :--- | :--- |
+| `M-$` | Check spelling of current word |
 | `M-x` ispell-region | Check spelling of all words in region |
-| `M-x` ispell-buffer | Check spelling of entire buffer       |
-| `M-x` flyspell-mode | Toggle on-the-fly spell checking      |
+| `M-x` ispell-buffer | Check spelling of entire buffer |
+| `M-x` flyspell-mode | Toggle on-the-fly spell checking |
+
 {.shortcuts}
 
+## Writing Commands {.col-span-2}
 
+### Syntax
 
-
-### Writing Commands {.col-span-2}
-
-#### Syntax
-```
+```text
 (defun command-name (args)
 "documentation" (interactive "template")
 body)
 ```
 
-#### Example
-```
+### Example
+
+```text
 (defun this-line-to-top-of-window (line)
     "Reposition current line to top of window.
 With prefix argument LINE, put point on LINE."
@@ -580,11 +574,5 @@ With prefix argument LINE, put point on LINE."
               (prefix-numeric-value line))))
 ```
 
-
-
-
-
 The interactive spec says how to read arguments interactively. Type `C-h` `f` interactive `RET` for more details.
-
-
 

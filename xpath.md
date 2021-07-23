@@ -1,147 +1,146 @@
 ---
 title: XPath
-date: 2020-12-19 22:15:43
+date: '2020-12-19T22:15:43.000Z'
 icon: icon-xpath
 background: bg-blue-600
 tags:
-    - document
-    - expression
-    - select
+  - document
+  - expression
+  - select
 categories:
-    - Toolkit
-intro: |
-    This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet, which lists commonly used XPath positioning methods and CSS selectors
+  - Toolkit
+intro: >
+  This is an [XPath](https://en.wikipedia.org/wiki/XPath) selectors cheat sheet,
+  which lists commonly used XPath positioning methods and CSS selectors
 ---
 
-Selectors {.cols-6}
---------
+# xpath
+
+## Selectors {.cols-6}
 
 ### Getting started {.col-span-2}
 
-- [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_
+* [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _\(whitebeam.org\)_
 
 Test in Firefox or Chrome console:
-```console
+
+```text
 $x('/html/body')
 $x('//h1')
 $x('//h1')[0].innerText
 $x('//a[text()="XPath"]')[0].click()
 ```
 
-
-
 ### Descendant selectors  {.col-span-2}
 
-| Xpath                     | CSS                                      |
-| ----                      | ----                                     |
-| `//h1`                    | h1                                       |
-| `//div//p`                | div p                                    |
-| `//ul/li`                 | ul > li                                  |
-| `//ul/li/a`               | ul > li > a                              |
-| `//div/*`                 | div > *                                  |
-| `/`                       | :root                                    |
-| `/html/body`                   | :root > body                             |
-{.show-header}
+| Xpath | CSS |
+| :--- | :--- |
+| `//h1` | h1 |
+| `//div//p` | div p |
+| `//ul/li` | ul &gt; li |
+| `//ul/li/a` | ul &gt; li &gt; a |
+| `//div/*` | div &gt; \* |
+| `/` | :root |
+| `/html/body` | :root &gt; body |
 
+{.show-header}
 
 ### Order selectors  {.col-span-2}
 
-| Xpath             |  CSS                   |
-|-------------------|------------------------|
-| `//ul/li[1]`        | ul > li:first-child  |
-| `//ul/li[2]`        | ul > li:nth-child(2) |
-| `//ul/li[last()]`   | ul > li:last-child   |
-| `//li[@id="id"][1]` | li#id:first-child    |
-| `//a[1]`            | a:first-child        |
-| `//a[last()]`       | a:last-child         |
-{.show-header}
+| Xpath | CSS |
+| :--- | :--- |
+| `//ul/li[1]` | ul &gt; li:first-child |
+| `//ul/li[2]` | ul &gt; li:nth-child\(2\) |
+| `//ul/li[last()]` | ul &gt; li:last-child |
+| `//li[@id="id"][1]` | li\#id:first-child |
+| `//a[1]` | a:first-child |
+| `//a[last()]` | a:last-child |
 
+{.show-header}
 
 ### Attribute selectors {.col-span-3 .row-span-2}
 
-| Xpath                           | CSS                    |
-|---------------------------------|------------------------|
-| `//*[@id="id"]`                 | #id                    |
-| `//*[@class="class"]`           | .class                 |
-| `//input[@type="submit"]`       | input[type="submit"]   |
-| `//a[@id="abc"][@for="xyz"]`    | a#abc[for="xyz"]       |
-| `//a[@rel]`                     | a[rel]                 |
-| `//a[starts-with(@href, '/')]`  | a[href^='/']           |
-| `//a[ends-with(@href, '.pdf')]` | a[href$='pdf']         |
-| `//a[contains(@href, '://')]`   | a[href*='`:`//']         |
-| `//a[contains(@rel, 'help')]`   | a[rel~='help']         |
-{.show-header}
+| Xpath | CSS |
+| :--- | :--- |
+| `//*[@id="id"]` | \#id |
+| `//*[@class="class"]` | .class |
+| `//input[@type="submit"]` | input\[type="submit"\] |
+| `//a[@id="abc"][@for="xyz"]` | a\#abc\[for="xyz"\] |
+| `//a[@rel]` | a\[rel\] |
+| `//a[starts-with(@href, '/')]` | a\[href^='/'\] |
+| `//a[ends-with(@href, '.pdf')]` | a\[href$='pdf'\] |
+| `//a[contains(@href, '://')]` | a\[href\*='`:`//'\] |
+| `//a[contains(@rel, 'help')]` | a\[rel~='help'\] |
 
+{.show-header}
 
 ### Siblings  {.col-span-3}
-|  Xpath                               | CSS      |
-|--------------------------------------|----------|
-| `//h1/following-sibling::ul`         | h1 ~ ul  |
-| `//h1/following-sibling::ul[1]`      | h1 + ul  |
-| `//h1/following-sibling::[@id="id"]` | h1 ~ #id |
-{.show-header}
 
+| Xpath | CSS |
+| :--- | :--- |
+| `//h1/following-sibling::ul` | h1 ~ ul |
+| `//h1/following-sibling::ul[1]` | h1 + ul |
+| `//h1/following-sibling::[@id="id"]` | h1 ~ \#id |
+
+{.show-header}
 
 ### jQuery {.col-span-3}
-|  Xpath                           | CSS                        |
-|----------------------------------|----------------------------|
-| `//ul/li/..`                     | $('ul > li').parent()      |
-| `//li/ancestor-or-self::section` | $('li').closest('section') |
-| `//a/@href`                      | $('a').attr('href')        |
-| `//span/text()`                  | $('span').text()           |
+
+| Xpath | CSS |
+| :--- | :--- |
+| `//ul/li/..` | $\('ul &gt; li'\).parent\(\) |
+| `//li/ancestor-or-self::section` | $\('li'\).closest\('section'\) |
+| `//a/@href` | $\('a'\).attr\('href'\) |
+| `//span/text()` | $\('span'\).text\(\) |
+
 {.show-header}
 
+### Misc selectors {.col-span-3}
 
-### Misc selectors {.col-span-3} 
-|  Xpath                            | CSS                     |
-|-----------------------------------|-------------------------|
-| `//h1[not(@id)]`                  | h1:not([id])            |
-| `//button[text()="Submit"]`       | Text match              |
-| `//button[contains(text(),"Go")]` | Text contains (substring)  |
-| `//product[@price > 2.50]`        | Arithmetic              |
-| `//ul[*]`                         | Has children            |
-| `//ul[li]`                        | Has children (specific) |
-| `//a[@name or @href]`             | Or logic                |
-| `//a | //div`                     | Union (joins results)   |
+| Xpath | CSS |  |
+| :--- | :--- | :--- |
+| `//h1[not(@id)]` | h1:not\(\[id\]\) |  |
+| `//button[text()="Submit"]` | Text match |  |
+| `//button[contains(text(),"Go")]` | Text contains \(substring\) |  |
+| `//product[@price > 2.50]` | Arithmetic |  |
+| `//ul[*]` | Has children |  |
+| `//ul[li]` | Has children \(specific\) |  |
+| `//a[@name or @href]` | Or logic |  |
+| \`//a | //div\` | Union \(joins results\) |
+
 {.show-header}
 
-
-
-Expressions {.cols-3}
------------
+## Expressions {.cols-3}
 
 ### Steps and axes {.secondary}
-<br/>
 
-| -    | -    | -    | -               |
-|------|------|------|-----------------|
-| `//` | `ul` | `/`  | `a[@id='link']` |
-| Axis | Step | Axis | Step            |
+| - | - | - | - |
+| :--- | :--- | :--- | :--- |
+| `//` | `ul` | `/` | `a[@id='link']` |
+| Axis | Step | Axis | Step |
+
 {.left-text}
-
 
 ### Prefixes
 
-| Prefix | Example               | Means    |
-|--------|-----------------------|----------|
-| `//`   | `//hr[@class='edge']` | Anywhere |
-| `/`    | `/html/body/div`      | Root     |
-| `./`   | `./div/p`             | Relative |
-{.show-header}
+| Prefix | Example | Means |
+| :--- | :--- | :--- |
+| `//` | `//hr[@class='edge']` | Anywhere |
+| `/` | `/html/body/div` | Root |
+| `./` | `./div/p` | Relative |
 
+{.show-header}
 
 ### Axes
 
-| Axis | Example             | Means      |
-|------|---------------------|------------|
-| `/`  | `//ul/li/a`         | Child      |
+| Axis | Example | Means |
+| :--- | :--- | :--- |
+| `/` | `//ul/li/a` | Child |
 | `//` | `//[@id="list"]//a` | Descendant |
+
 {.show-header}
 
-
-
-Predicates {.cols-3}
-----------
+## Predicates {.cols-3}
 
 ### Predicates
 
@@ -167,7 +166,6 @@ Restricts a nodeset only if some condition is true. They can be chained.
 //div[@id="head" and position()=2]
 //div[(x and y) or not(z)]
 ```
-
 
 ### Using nodes
 
@@ -207,14 +205,13 @@ Order is significant, these two are different.
 
 ### Nesting predicates
 
-```
+```text
 //section[.//h1[@id='hi']]
 ```
 
 This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.
 
-Functions {.cols-2}
----------
+## Functions {.cols-2}
 
 ### Node functions
 
@@ -230,7 +227,6 @@ namespace-uri()
 count()           # //table[count(tr)=1]
 position()        # //ol/li[position()=2]
 ```
-
 
 ### String functions
 
@@ -250,7 +246,6 @@ normalize-space()
 string-length()
 ```
 
-
 ### Boolean functions
 
 ```bash
@@ -265,8 +260,7 @@ number()
 boolean()
 ```
 
-Axes {.cols-2}
-----
+## Axes {.cols-2}
 
 ### Using axes
 
@@ -277,11 +271,12 @@ Axes {.cols-2}
 //ul/descendant-or-self::li   # ul li
 //ul/ancestor-or-self::li     # $('ul').closest('li')
 ```
-----
-|      |      |            |      |
-|------|------|------------|------|
+
+|  |  |  |  |
+| :--- | :--- | :--- | :--- |
 | `//` | `ul` | `/child::` | `li` |
-| Axis | Step | Axis       | Step |
+| Axis | Step | Axis | Step |
+
 {.left-text}
 
 Steps of an expression are separated by `/`, usually used to pick child nodes. That's not always true: you can specify a different "axis" with `::`.
@@ -327,25 +322,16 @@ Steps of an expression are separated by `/`, usually used to pick child nodes. T
 
 ### Other axes {.row-span-2}
 
-| Axis                 | Abbrev | Notes                                            |
-| ---                  | ---    | ---                                              |
-| `ancestor`           |        |                                                  |
-| `ancestor-or-self`   |        |                                                  |
+| Axis | Abbrev | Notes |
+| :--- | :--- | :--- |
+| `ancestor` |  |  |
+| `ancestor-or-self` |  |  |
 
-| `attribute`          | `@`    | `@href` is short for `attribute::href`           |
-| `child`              |        | `div` is short for `child::div`                  |
-| `descendant`         |        |                                                  |
-| `descendant-or-self` | `//`   | `//` is short for `/descendant-or-self::node()/` |
-| `namespace`          |        |                                                  |
+\| `attribute` \| `@` \| `@href` is short for `attribute::href` \| \| `child` \| \| `div` is short for `child::div` \| \| `descendant` \| \| \| \| `descendant-or-self` \| `//` \| `//` is short for `/descendant-or-self::node()/` \| \| `namespace` \| \| \|
 
-| `self`               | `.`    | `.` is short for `self::node()`                  |
-| `parent`             | `..`   | `..` is short for `parent::node()`               |
+\| `self` \| `.` \| `.` is short for `self::node()` \| \| `parent` \| `..` \| `..` is short for `parent::node()` \|
 
-| `following`          |        |                                                  |
-| `following-sibling`  |        |                                                  |
-| `preceding`          |        |                                                  |
-| `preceding-sibling`  |        |                                                  |
-{.headers}
+\| `following` \| \| \| \| `following-sibling` \| \| \| \| `preceding` \| \| \| \| `preceding-sibling` \| \| \| {.headers}
 
 There are other axes you can use.
 
@@ -357,8 +343,7 @@ There are other axes you can use.
 
 Use `|` to join two expressions.
 
-More examples {.cols-2}
--------------
+## More examples {.cols-2}
 
 ### Examples
 
@@ -376,14 +361,14 @@ count(//*)          # count all elements
 ```bash
 //section[h1[@id='section-name']]
 ```
+
 Finds a `<section>` that directly contains `h1#section-name`
 
 ```bash
 //section[//h1[@id='section-name']]
 ```
 
-Finds a `<section>` that contains `h1#section-name`.
-(Same as above, but uses descendant-or-self instead of child)
+Finds a `<section>` that contains `h1#section-name`. \(Same as above, but uses descendant-or-self instead of child\)
 
 ### Closest
 
@@ -401,11 +386,8 @@ Works like jQuery's `$().closest('.box')`.
 
 Finds `<item>` and check its attributes
 
-See also
---------
-* [Devhints](https://devhints.io/xpath) _(devhints.io)_
-* [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _(whitebeam.org)_
+## See also
 
-
-
+* [Devhints](https://devhints.io/xpath) _\(devhints.io\)_
+* [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _\(whitebeam.org\)_
 

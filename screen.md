@@ -1,26 +1,24 @@
 ---
 title: Screen
-date: 2021-01-02 20:03:55
+date: '2021-01-02T20:03:55.000Z'
 background: bg-green-500
 tags:
-    - terminal
-    - session
-    - utility
+  - terminal
+  - session
+  - utility
 categories:
-    - Linux Command
+  - Linux Command
 intro: |
-    This is a quick reference guide cheat sheet for the screen command.
+  This is a quick reference guide cheat sheet for the screen command.
 ---
 
+# screen
 
-Getting started {.cols-3}
----------------
+## Getting started
 
-### Getting started
+\`\`\`shell script $ screen
 
-```shell script
-$ screen 
-```
+```text
 1\. Press <kbd>Ctrl-A</kbd> <kbd>D</kbd> to detach session
 
 ---
@@ -29,12 +27,10 @@ $ screen
 ```shell script
 $ screen -ls
 ```
-3\. Re-attach a screen Session
-```shell script
-$ screen -r <name/pid>
-```
 
+3. Re-attach a screen Session \`\`\`shell script $ screen -r &lt;name/pid&gt;
 
+```text
 ### Options {.col-span-2}
 | Options | Example                                 | Description                           |
 |---------|-----------------------------------------|---------------------------------------|
@@ -126,3 +122,4 @@ SSH and attach in one line
 ```shell script
 $ ssh -t user@host screen -x <name/pid>
 ```
+

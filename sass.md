@@ -1,28 +1,29 @@
 ---
 title: Sass
-date: 2020-12-20 22:15:43
+date: '2020-12-20T22:15:43.000Z'
 icon: icon-sass
 background: bg-pink-500
 tags:
-    - css
+  - css
 categories:
-    - Programming
-intro: |
-      This is a quick reference cheat sheet that lists the most useful features of [SASS](https://sass-lang.com).
+  - Programming
+intro: >
+  This is a quick reference cheat sheet that lists the most useful features of
+  [SASS](https://sass-lang.com).
 ---
 
-Basics {.cols-3}
---------
+# sass
+
+## Basics {.cols-3}
 
 ### Introduction
 
-- [Documentation](https://sass-lang.com/documentation) _(sass-lang.com)_
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _(learnxinyminutes.com)_
-
+* [Documentation](https://sass-lang.com/documentation) _\(sass-lang.com\)_
+* [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _\(learnxinyminutes.com\)_
 
 ### Variables
 
-```scss
+```css
 $defaultLinkColor: #46EAC2;
 
 a {
@@ -32,7 +33,7 @@ a {
 
 ### String interpolation
 
-```scss
+```css
 $wk: -webkit-;
 
 .rounded-box {
@@ -40,11 +41,9 @@ $wk: -webkit-;
 }
 ```
 
-
-
 ### Comments
 
-```scss
+```css
 /*
  Block comments
  Block comments
@@ -54,12 +53,9 @@ $wk: -webkit-;
 // Line comments
 ```
 
-
-
-
 ### Mixins
 
-```scss
+```css
 @mixin heading-font {
     font-family: sans-serif;
     font-weight: bold;
@@ -68,13 +64,12 @@ h1 {
     @include heading-font;
 }
 ```
-See: [Mixins](#mixins-2)
 
-
+See: [Mixins](sass.md#mixins-2)
 
 ### Nesting {.row-span-2}
 
-```scss
+```css
 .markdown-body {
     a {
       color: blue;
@@ -86,7 +81,8 @@ See: [Mixins](#mixins-2)
 ```
 
 #### to properties
-```scss
+
+```css
 text: {
     // like text-align: center
     align: center;          
@@ -95,16 +91,15 @@ text: {
 }
 ```
 
-
 ### Extend
 
-```scss
+```css
 .button {
     ···
 }
 ```
 
-```scss
+```css
 .push-button {
     @extend .button;
 }
@@ -112,7 +107,7 @@ text: {
 
 ### @import
 
-```scss
+```css
 @import './other_sass_file';
 @import '/code', 'lists';
 
@@ -123,20 +118,17 @@ text: {
 
 The `.sass` or `.sass` extension is optional.
 
-
-Mixins {.cols-3}
-------
-
+## Mixins {.cols-3}
 
 ### Parameters
 
-```scss
+```css
 @mixin font-size($n) {
     font-size: $n * 1.2em;
 }
 ```
 
-```scss
+```css
 body {
     @include font-size(2);
 }
@@ -144,13 +136,13 @@ body {
 
 ### Default values
 
-```scss
+```css
 @mixin pad($n: 10px) {
     padding: $n;
 }
 ```
 
-```scss
+```css
 body {
     @include pad(15px);
 }
@@ -158,7 +150,7 @@ body {
 
 ### Default variable
 
-```scss
+```css
 $default-padding: 10px;
 
 @mixin pad($n: $default-padding) {
@@ -170,13 +162,11 @@ body {
 }
 ```
 
-
-Color functions {.cols-2}
---------
+## Color functions {.cols-2}
 
 ### rgba
 
-```scss
+```css
 rgb(100, 120, 140)
 rgba(100, 120, 140, .5)
 rgba($color, .5)
@@ -184,30 +174,30 @@ rgba($color, .5)
 
 ### Mixing
 
-```scss
+```css
 mix($a, $b, 10%)   // 10% a, 90% b
 ```
 
 ### Modifying HSLA
 
-```scss
+```css
 darken($color, 5%)
 lighten($color, 5%)
 ```
 
-```scss
+```css
 saturate($color, 5%)
 desaturate($color, 5%)
 grayscale($color)
 ```
 
-```scss
+```css
 adjust-hue($color, 15deg)
 complement($color)    // like adjust-hue(_, 180deg)
 invert($color)
 ```
 
-```scss
+```css
 fade-in($color, .5)   // aka opacify()
 fade-out($color, .5)  // aka transparentize()
 rgba($color, .5)      // sets alpha to .5
@@ -217,7 +207,7 @@ rgba($color, .5)      // sets alpha to .5
 
 #### HSLA
 
-```scss
+```css
 hue($color)         // 0deg..360deg
 saturation($color)  // 0%..100%
 lightness($color)   // 0%..100%
@@ -226,17 +216,17 @@ alpha($color)       // 0..1 (aka opacity())
 
 #### RGB
 
-```scss
+```css
 red($color)         // 0..255
 green($color)
 blue($color)
 ```
 
-See: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method), [red()](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance_method)
+See: [hue\(\)](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method), [red\(\)](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance_method)
 
 ### Adjustments
 
-```scss
+```css
 // Changes by fixed amounts
 adjust-color($color, $blue: 5)
 adjust-color($color, $lightness: -30%) // darken(_, 30%)
@@ -244,12 +234,12 @@ adjust-color($color, $alpha: -0.4)     // fade-out(_, .4)
 adjust-color($color, $hue: 30deg)      // adjust-hue(_, 15deg)
 ```
 
-```scss
+```css
 // Changes via percentage
 scale-color($color, $lightness: 50%)
 ```
 
-```scss
+```css
 // Changes one property completely
 change-color($color, $hue: 180deg)
 change-color($color, $blue: 250)
@@ -257,22 +247,21 @@ change-color($color, $blue: 250)
 
 Supported: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`
 
-Other functions {.cols-2}
---------
+## Other functions {.cols-2}
 
 ### Strings
 
-```scss
+```css
 unquote('hello')
 quote(hello)
 ```
 
-```scss
+```css
 to-upper-case(hello)
 to-lower-case(hello)
 ```
 
-```scss
+```css
 str-length(hello world)
 str-slice(hello, 2, 5)     // "ello" - it's 1-based, not 0-based
 str-insert("abcd", "X", 1) // "Xabcd"
@@ -280,43 +269,43 @@ str-insert("abcd", "X", 1) // "Xabcd"
 
 ### Units
 
-```scss
+```css
 unit(3em)        // 'em'
 unitless(100px)  // false
 ```
 
 ### Numbers
 
-```scss
+```css
 floor(3.5)
 ceil(3.5)
 round(3.5)
 abs(3.5)
 ```
 
-```scss
+```css
 min(1, 2, 3)
 max(1, 2, 3)
 ```
 
-```scss
+```css
 percentage(.5)   // 50%
 random(3)        // 0..3
 ```
 
 ### Misc
 
-```scss
+```css
 variable-exists(red)    // checks for $red
 mixin-exists(red-text)  // checks for @mixin red-text
 function-exists(redify)
 ```
 
-```scss
+```css
 global-variable-exists(red)
 ```
 
-```scss
+```css
 selector-append('.menu', 'li', 'a')   // .menu li a
 selector-nest('.menu', '&:hover li')  // .menu:hover li
 selector-extend(...)
@@ -325,12 +314,11 @@ selector-replace(...)
 selector-unify(...)
 ```
 
-Feature checks {.cols-2}
---------
+## Feature checks {.cols-2}
 
 ### Feature check
 
-```scss
+```css
 feature-exists(global-variable-shadowing)
 ```
 
@@ -341,20 +329,19 @@ feature-exists(global-variable-shadowing)
 * units-level-3
 * at-error
 
-Loops {.cols-3}
---------
+## Loops {.cols-3}
 
 ### For loops
 
-```scss
+```css
 @for $i from 1 through 4 {
     .item-#{$i} { left: 20px * $i; }
 }
 ```
 
-### Each loops (simple)
+### Each loops \(simple\)
 
-```scss
+```css
 $menu-items: home about contact;
 
 @each $item in $menu-items {
@@ -364,8 +351,9 @@ $menu-items: home about contact;
 }
 ```
 
-### Each loops (nested)
-```scss
+### Each loops \(nested\)
+
+```css
 $backgrounds: (home, 'home.jpg'),
               (about, 'about.jpg');
 
@@ -378,7 +366,7 @@ $backgrounds: (home, 'home.jpg'),
 
 ### While loops
 
-```scss
+```css
 $i: 6;
 @while $i > 0 {
     .item-#{$i} { width: 2em * $i; }
@@ -386,12 +374,11 @@ $i: 6;
 }
 ```
 
-Other features {.cols-3}
---------
+## Other features {.cols-3}
 
 ### Conditionals {.row-span-2}
 
-```scss
+```css
 @if $position == 'left' {
      position: absolute;
      left: 0;
@@ -407,7 +394,7 @@ Other features {.cols-3}
 
 ### Interpolation
 
-```scss
+```css
 .#{$klass} { ... }      // Class
 call($function-name)    // Functions
 
@@ -418,7 +405,7 @@ url("#{$background}.jpg")
 
 ### Lists
 
-```scss
+```css
 $list: (a b c);
 
 nth($list, 1)  // starts with 1
@@ -429,10 +416,9 @@ length($list)
 
 ### Maps {.col-span-2}
 
-```scss
+```css
 $map: (key1: value1, key2: value2, key3: value3);
 
 map-get($map, key1)
 ```
-
 

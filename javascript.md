@@ -1,31 +1,30 @@
 ---
 title: JavaScript
-date: 2020-12-24 17:12:25
+date: '2020-12-24T17:12:25.000Z'
 icon: icon-javascript
 background: bg-yellow-500
 tags:
-    - js
-    - web
+  - js
+  - web
 categories:
   - Programming
-intro: |
-    A JavaScript cheat sheet with the most important concepts, functions, methods, and more. A complete quick reference for beginners.
+intro: >
+  A JavaScript cheat sheet with the most important concepts, functions, methods,
+  and more. A complete quick reference for beginners.
 ---
 
+# javascript
 
-
-
-Getting started {.cols-3}
-------------
+## Getting started {.cols-3}
 
 ### Introduction
+
 JavaScript is a lightweight, interpreted programming language.
 
-- [Learn X in Y minutes](https://learnxinyminutes.com/docs/javascript/) _(learnxinyminutes.com)_
-- [Regex in JavaScript](/regex#regex-in-javascript) _(quickref.me)_
+* [Learn X in Y minutes](https://learnxinyminutes.com/docs/javascript/) _\(learnxinyminutes.com\)_
+* [Regex in JavaScript](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md#regex-in-javascript) _\(quickref.me\)_
 
-
-### console.log()
+### console.log\(\)
 
 ```javascript
 alert('Hello world!');
@@ -33,15 +32,12 @@ console.log('Hello world!');
 // => Hello world!
 ```
 
-
 ### Numbers
 
 ```javascript
 let amount = 6;
 let price = 4.99;
 ```
-
-
 
 ### Variables
 
@@ -57,7 +53,6 @@ var a;
 console.log(a); // => undefined
 ```
 
-
 ### Strings
 
 ```javascript
@@ -66,10 +61,7 @@ let double = "Wheres my bandit hat?";
 
 // => 21
 console.log(single.length);
-
 ```
-
-
 
 ### Arithmetic Operators
 
@@ -81,7 +73,6 @@ console.log(single.length);
 10 % 5 = 0     // Modulo
 ```
 
-
 ### Comments
 
 ```javascript
@@ -91,9 +82,7 @@ console.log(single.length);
 The below configuration must be 
 changed before deployment. 
 */
-
 ```
-
 
 ### Assignment Operators
 
@@ -108,7 +97,6 @@ console.log(number);
 // => 120
 ```
 
-
 ### String Interpolation
 
 ```javascript
@@ -121,9 +109,6 @@ let age = 7;
 `Tommy is ${age} years old.`;
 ```
 
-
-
-
 ### let Keyword
 
 ```javascript
@@ -132,7 +117,6 @@ console.log(count); // => undefined
 count = 10;
 console.log(count); // => 10
 ```
-
 
 ### const Keyword
 
@@ -143,11 +127,7 @@ const numberOfColumns = 4;
 numberOfColumns = 8;
 ```
 
-
-
-Conditionals {.cols-3}
-------------
-
+## Conditionals {.cols-3}
 
 ### if Statement
 
@@ -159,8 +139,6 @@ if (isMailSent) {
 }
 ```
 
-
-
 ### Ternary Operator
 
 ```javascript
@@ -170,7 +148,6 @@ var x=1;
 result = (x == 1) ? true : false;
 ```
 
-
 ### Operators {.row-span-2}
 
 ```javascript
@@ -179,14 +156,18 @@ true || false;       // true
 false || false;      // false
 10 > 100 || 10 > 20; // false
 ```
+
 #### Logical Operator &&
+
 ```javascript
 true && true;        // true
 1 > 2 && 2 > 1;      // false
 true && false;       // false
 4 === 4 && 3 > 1;    // true
 ```
+
 #### Comparison Operators
+
 ```javascript
 1 > 3                // false
 3 > 1                // true
@@ -195,16 +176,16 @@ true && false;       // false
 1 === 2              // false
 1 === '1'            // false
 ```
+
 #### Logical Operator !
+
 ```javascript
 let lateToWork = true;
 let oppositeValue = !lateToWork;
 
 // => false
-console.log(oppositeValue); 
+console.log(oppositeValue);
 ```
-
-
 
 ### else if
 
@@ -223,9 +204,6 @@ if (size > 100) {
 // Print: Small
 ```
 
-
-
-
 ### switch Statement
 
 ```javascript
@@ -243,11 +221,7 @@ switch (food) {
 }
 ```
 
-
-
-Functions {.cols-3}
-------------
-
+## Functions {.cols-3}
 
 ### Functions
 
@@ -260,7 +234,6 @@ function sum(num1, num2) {
 // Calling the function:
 sum(3, 6); // 9
 ```
-
 
 ### Anonymous Functions
 
@@ -276,38 +249,42 @@ const rocketToMars = function() {
 }
 ```
 
+### Arrow Functions \(ES6\) {.row-span-2}
 
+#### With two arguments
 
-### Arrow Functions (ES6) {.row-span-2}
-#### With two arguments 
 ```javascript
 const sum = (param1, param2) => { 
   return param1 + param2; 
 }; 
-console.log(sum(2,5)); // => 7 
+console.log(sum(2,5)); // => 7
 ```
-#### With no arguments 
+
+#### With no arguments
+
 ```javascript
 const printHello = () => { 
   console.log('hello'); 
 }; 
 printHello(); // => hello
 ```
-#### With a single argument 
+
+#### With a single argument
+
 ```javascript
 const checkWeight = weight => { 
   console.log(`Weight : ${weight}`); 
 }; 
-checkWeight(25); // => Weight : 25 
+checkWeight(25); // => Weight : 25
 ```
+
 #### Concise arrow functions
+
 ```javascript
 const multiply = (a, b) => a * b; 
 // => 60 
-console.log(multiply(2, 30)); 
+console.log(multiply(2, 30));
 ```
-
-
 
 ### return Keyword
 
@@ -323,7 +300,6 @@ function sum(num1, num2) {
 }
 ```
 
-
 ### Calling Functions
 
 ```javascript
@@ -336,8 +312,6 @@ function sum(num1, num2) {
 sum(2, 4); // 6
 ```
 
-
-
 ### Function Expressions
 
 ```javascript
@@ -345,7 +319,6 @@ const dog = function() {
   return 'Woof!';
 }
 ```
-
 
 ### Function Parameters
 
@@ -356,7 +329,6 @@ function sayHello(name) {
 }
 ```
 
-
 ### Function Declaration
 
 ```javascript
@@ -365,26 +337,20 @@ function add(num1, num2) {
 }
 ```
 
-
-
-
-Scope  {.cols-3}
-------------
-
+## Scope  {.cols-3}
 
 ### Scope
 
 ```javascript
 function myFunction() {
-  
+
   var pizzaName = "Volvo";
   // Code here can use pizzaName
-  
+
 }
 
 // Code here can't use pizzaName
 ```
-
 
 ### Block Scoped Variables
 
@@ -397,9 +363,7 @@ if (isLoggedIn == true) {
 
 // Uncaught ReferenceError...
 console.log(statusMessage);
-
 ```
-
 
 ### Global Variables
 
@@ -414,11 +378,7 @@ function printColor() {
 printColor(); // => blue
 ```
 
-
-
-Arrays  {.cols-3}
-------------
-
+## Arrays  {.cols-3}
 
 ### Arrays
 
@@ -437,7 +397,6 @@ const numbers = [1, 2, 3, 4];
 numbers.length // 4
 ```
 
-
 ### Index
 
 ```javascript
@@ -448,8 +407,7 @@ console.log(myArray[0]); // 100
 console.log(myArray[1]); // 200
 ```
 
-
-### Method .push()
+### Method .push\(\)
 
 ```javascript
 // Adding a single element:
@@ -461,8 +419,7 @@ const numbers = [1, 2];
 numbers.push(3, 4, 5);
 ```
 
-
-### Method .pop()
+### Method .pop\(\)
 
 ```javascript
 const a= ['eggs', 'flour', 'chocolate'];
@@ -470,7 +427,6 @@ const a= ['eggs', 'flour', 'chocolate'];
 const p = a.pop(); // 'chocolate'
 console.log(a); // ['eggs', 'flour']
 ```
-
 
 ### Mutable
 
@@ -481,11 +437,7 @@ names.push('Carl');
 // ['Alice', 'Bob', 'Carl']
 ```
 
-
-
-Loops  {.cols-3}
-------------
-
+## Loops  {.cols-3}
 
 ### While Loop
 
@@ -501,7 +453,6 @@ while (i < 5) {
 }
 ```
 
-
 ### Reverse Loop
 
 ```javascript
@@ -514,7 +465,6 @@ for (let i = a.length - 1; i >= 0; i--){
 // => 2. cherry
 // => 1. banana
 ```
-
 
 ### Do…While Statement
 
@@ -530,7 +480,6 @@ do {
 // => 0 1 3 6 10
 ```
 
-
 ### For Loop
 
 ```javascript
@@ -541,7 +490,6 @@ for (let i = 0; i < 4; i += 1) {
 // => 0, 1, 2, 3
 ```
 
-
 ### Looping Through Arrays
 
 ```javascript
@@ -551,7 +499,6 @@ for (let i = 0; i < array.length; i++){
 
 // => Every item in the array
 ```
-
 
 ### Break
 
@@ -566,13 +513,13 @@ for (let i = 0; i < 99; i += 1) {
 ```
 
 ### Continue
+
 ```javascript
 for (i = 0; i < 10; i++) {
   if (i === 3) { continue; }
   text += "The number is " + i + "<br>";
 }
 ```
-
 
 ### Nested
 
@@ -584,8 +531,6 @@ for (let i = 0; i < 2; i += 1) {
 }
 ```
 
-
-
 ### for...in loop
 
 ```javascript
@@ -596,11 +541,7 @@ for (let key in mobile) {
 }
 ```
 
-
-
-Iterators {.cols-2}
-------------
-
+## Iterators {.cols-2}
 
 ### Functions Assigned to Variables
 
@@ -614,9 +555,7 @@ let f = plusFive;
 plusFive(3); // 8
 // Since f has a function value, it can be invoked. 
 f(9); // 14
-
 ```
-
 
 ### Callback Functions
 
@@ -635,7 +574,7 @@ printMsg(isEven, 4);
 // => The number 4 is an even number: True.
 ```
 
-### Array Method .reduce()
+### Array Method .reduce\(\)
 
 ```javascript
 const arrayOfNumbers = [1, 2, 3, 4];
@@ -647,8 +586,7 @@ const sum = arrayOfNumbers.reduce((accumulator, curVal) => {
 console.log(sum); // 10
 ```
 
-
-### Array Method .map()
+### Array Method .map\(\)
 
 ```javascript
 const a = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];
@@ -660,19 +598,17 @@ const announcements = a.map(member => {
 console.log(announcements);
 ```
 
-
-### Array Method .forEach()
+### Array Method .forEach\(\)
 
 ```javascript
 const numbers = [28, 77, 45, 99, 27];
 
 numbers.forEach(number => {  
   console.log(number);
-}); 
+});
 ```
 
-
-### Array Method .filter()
+### Array Method .filter\(\)
 
 ```javascript
 const randomNumbers = [4, 11, 42, 14, 39];
@@ -681,11 +617,7 @@ const filteredArray = randomNumbers.filter(n => {
 });
 ```
 
-
-
-Objects {.cols-2}
-------------
-
+## Objects {.cols-2}
 
 ### Accessing Properties
 
@@ -697,7 +629,6 @@ const apple = {
 console.log(apple.color); // => Green
 console.log(apple.price.bulk); // => $3/kg
 ```
-
 
 ### Naming Properties
 
@@ -713,8 +644,6 @@ const trainSchedule = {
 }
 ```
 
-
-
 ### Non-existent properties
 
 ```javascript
@@ -724,7 +653,6 @@ const classElection = {
 
 console.log(classElection.place); // undefined
 ```
-
 
 ### Mutable {.row-span-2}
 
@@ -747,8 +675,6 @@ student = {}
 // TypeError: Assignment to constant variable.
 ```
 
-
-
 ### Assignment shorthand syntax
 
 ```javascript
@@ -760,9 +686,6 @@ const {name, age} = person;
 console.log(name); // 'Tom'
 console.log(age);  // '22'
 ```
-
-
-
 
 ### Delete operator
 
@@ -784,9 +707,7 @@ console.log(person);
   goal: "learning JavaScript"
 }
 */
-	
 ```
-
 
 ### Objects as arguments
 
@@ -809,7 +730,6 @@ console.log(origNum);
 console.log(origObj.color);
 ```
 
-
 ### Shorthand object creation
 
 ```javascript
@@ -817,7 +737,6 @@ const activity = 'Surfing';
 const beach = { activity };
 console.log(beach); // { activity: 'Surfing' }
 ```
-
 
 ### this Keyword
 
@@ -831,8 +750,6 @@ const cat = {
 };
 console.log(cat.whatName()); // => Pipey
 ```
-
-
 
 ### Factory functions
 
@@ -850,9 +767,7 @@ const dogFactory = (name, age, breed) => {
     }
   };
 };
-
 ```
-
 
 ### Methods
 
@@ -871,7 +786,6 @@ const engine = {
 engine.start('noisily');
 engine.sputter();
 ```
-
 
 ### Getters and setters
 
@@ -893,11 +807,7 @@ console.log(myCat.name);
 myCat.name = 'Yankee';
 ```
 
-
-
-Classes {.cols-3}
-------------
-
+## Classes {.cols-3}
 
 ### Static Methods
 
@@ -906,11 +816,11 @@ class Dog {
   constructor(name) {
     this._name = name;  
   }
-  
+
   introduce() { 
     console.log('This is ' + this._name + ' !');  
   }
-  
+
   // A static method
   static bark() {
     console.log('Woof!');  
@@ -924,7 +834,6 @@ myDog.introduce();
 Dog.bark();
 ```
 
-
 ### Class
 
 ```javascript
@@ -933,7 +842,7 @@ class Song {
     this.title;
     this.author;
   }
-  
+
   play() {
     console.log('Song playing!');
   }
@@ -942,7 +851,6 @@ class Song {
 const mySong = new Song();
 mySong.play();
 ```
-
 
 ### Class Constructor
 
@@ -958,7 +866,6 @@ const mySong = new Song('Bohemian Rhapsody', 'Queen');
 console.log(mySong.title);
 ```
 
-
 ### Class Methods
 
 ```javascript
@@ -966,13 +873,12 @@ class Song {
   play() {
     console.log('Playing!');
   }
-  
+
   stop() {
     console.log('Stopping!');
   }
 }
 ```
-
 
 ### extends
 
@@ -1000,12 +906,7 @@ const mySong = new Song({
 });
 ```
 
-
-
-
-Modules {.cols-2}
-------------
-
+## Modules {.cols-2}
 
 ### Require
 
@@ -1020,8 +921,7 @@ var moduleA = require( "./module-a" );
 console.log(moduleA.someFunctionality)
 ```
 
-
-### Export 
+### Export
 
 ```javascript
 // module "moduleA.js"
@@ -1035,7 +935,6 @@ import cube from './moduleA.js';
 console.log(cube(3)); // 27
 ```
 
-
 ### Export Module
 
 ```javascript
@@ -1044,8 +943,7 @@ Course.name = "Javascript Node.js"
 module.exports = Course;
 ```
 
-
-### Import keyword 
+### Import keyword
 
 ```javascript
 // add.js
@@ -1059,11 +957,7 @@ import { add } from './add';
 console.log(add(2, 3)); // 5
 ```
 
-
-
-Promises {.cols-2}
-------------
-
+## Promises {.cols-2}
 
 ### Promise states  {.row-span-2}
 
@@ -1082,7 +976,6 @@ const promise = new Promise((resolve, reject) => {
 promise.then((res) => console.log(res), (err) => alert(err));
 ```
 
-
 ### Executor function
 
 ```javascript
@@ -1093,8 +986,7 @@ const executorFn = (resolve, reject) => {
 const promise = new Promise(executorFn);
 ```
 
-
-### setTimeout()
+### setTimeout\(\)
 
 ```javascript
 const loginAlert = () =>{
@@ -1104,9 +996,7 @@ const loginAlert = () =>{
 setTimeout(loginAlert, 6000);
 ```
 
-
-
-### .then() method
+### .then\(\) method
 
 ```javascript
 const promise = new Promise((resolve, reject) => {    
@@ -1122,8 +1012,7 @@ promise.then((res) => {
 });
 ```
 
-
-### .catch() method
+### .catch\(\) method
 
 ```javascript
 const promise = new Promise((resolve, reject) => {  
@@ -1141,8 +1030,7 @@ promise.catch((err) => {
 });
 ```
 
-
-### Promise.all()
+### Promise.all\(\)
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {
@@ -1162,8 +1050,7 @@ Promise.all([promise1, promise2]).then((res) => {
 });
 ```
 
-
-### Avoiding nested Promise and .then()
+### Avoiding nested Promise and .then\(\)
 
 ```javascript
 const promise = new Promise((resolve, reject) => {  
@@ -1188,8 +1075,6 @@ const print = (val) => {
 promise.then(twoStars).then(oneDot).then(print);
 ```
 
-
-
 ### Creating
 
 ```javascript
@@ -1200,7 +1085,7 @@ const executorFn = (resolve, reject) => {
 const promise = new Promise(executorFn);
 ```
 
-### Chaining multiple .then()
+### Chaining multiple .then\(\)
 
 ```javascript
 const promise = new Promise(resolve => setTimeout(() => resolve('dAlan'), 100));
@@ -1214,11 +1099,7 @@ promise.then(res => {
 });
 ```
 
-
-
-Async-Await {.cols-2}
-------------
-
+## Async-Await {.cols-2}
 
 ### Asynchronous
 
@@ -1245,7 +1126,6 @@ msg(); // Message: Hello World! <-- after 2 seconds
 msg1(); // Message: Hello World! <-- after 2 seconds
 ```
 
-
 ### Resolving Promises
 
 ```javascript
@@ -1260,7 +1140,6 @@ Promise.all([pro1, pro2, pro3]).then(function(values) {
 });
 // expected => Array [5, 44, "foo"]
 ```
-
 
 ### Async Await Promises
 
@@ -1281,7 +1160,6 @@ async function msg() {
 msg(); // Message: Hello World! <-- after 2 seconds
 ```
 
-
 ### Error Handling
 
 ```javascript
@@ -1294,7 +1172,6 @@ try {
   alert( "Invalid JSON data!" );
 }
 ```
-
 
 ### Aysnc await operator
 
@@ -1315,14 +1192,11 @@ async function msg() {
 msg(); // Message: Hello World! <-- after 2 seconds
 ```
 
+## Requests {.cols-3}
 
+### JSON
 
-Requests {.cols-3}
-------------
-
-### JSON 
-
-```json
+```javascript
 const jsonObj = {
   "name": "Rick",
   "id": "11A",
@@ -1330,16 +1204,12 @@ const jsonObj = {
 };
 ```
 
-
-
 ### XMLHttpRequest
 
 ```javascript
 const xhr = new XMLHttpRequest();
 xhr.open('GET', 'mysite.com/getjson');
 ```
-
-
 
 ### GET
 
@@ -1353,7 +1223,6 @@ req.onload = () => {
 
 req.send();
 ```
-
 
 ### POST {.row-span-2}
 
@@ -1372,7 +1241,6 @@ xhr.onload = () => {
   console.log(xhr.response);
 };
 ```
-
 
 ### fetch api {.row-span-2}
 
@@ -1395,7 +1263,6 @@ fetch(url, {
 }
 ```
 
-
 ### JSON Formatted
 
 ```javascript
@@ -1405,7 +1272,6 @@ fetch('url-that-returns-JSON')
   console.log(jsonResponse);
 });
 ```
-
 
 ### promise url parameter fetch api
 
@@ -1420,7 +1286,6 @@ fetch('url')
 );
 ```
 
-
 ### Fetch API Function
 
 ```javascript
@@ -1429,16 +1294,15 @@ fetch('https://api-xxx.com/endpoint', {
  body: JSON.stringify({id: "200"})
 }).then(response => {
   if(response.ok){
-	  return response.json();  
+      return response.json();  
   }
-	throw new Error('Request failed!');
+    throw new Error('Request failed!');
 }, networkError => {
   console.log(networkError.message);
 }).then(jsonResponse => {
   console.log(jsonResponse);
 })
 ```
-
 
 ### async await syntax {.col-span-2}
 
@@ -1457,3 +1321,4 @@ const response = await fetch(endpoint, {cache: 'no-cache'});
   }
 }
 ```
+

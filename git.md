@@ -1,92 +1,78 @@
 ---
 title: Git
-date: 2020-11-25 18:28:43
+date: '2020-11-25T18:28:43.000Z'
 icon: icon-git
 background: bg-gray-400
 tags:
-    - github
-    - gitlab
-    - version
-    - VCS
+  - github
+  - gitlab
+  - version
+  - VCS
 categories:
-    - Linux Command
-intro: This cheat sheet summarizes commonly used Git command line instructions for quick reference.
+  - Linux Command
+intro: >-
+  This cheat sheet summarizes commonly used Git command line instructions for
+  quick reference.
 ---
 
-Getting Started {.cols-3}
----------------
+# git
+
+## Getting Started {.cols-3}
 
 ### Create a Repository
-Create a new local repository
-``` shell script
-$ git init [project name]
-```
 
+Create a new local repository \`\`\` shell script $ git init \[project name\]
+
+```text
 Clone a repository 
 ``` shell script
 $ git clone git_url
 ```
 
-Clone a repository into a specified directory
-``` shell script
-$ git clone git_url my_directory
-```
+Clone a repository into a specified directory \`\`\` shell script $ git clone git\_url my\_directory
 
-
-
-
+```text
 ### Make a change {.row-span-2}
 Show modified files in working directory, staged for your next commit
 ``` shell script
 $ git status
 ```
 
-Stages the file, ready for commit
-``` shell script
-$ git add [file]
-```
+Stages the file, ready for commit \`\`\` shell script $ git add \[file\]
 
+```text
 Stage all changed files, ready for commit
 ``` shell script
 $ git add .
 ```
 
-Commit all staged files to versioned history
-``` shell script
-$ git commit -m "commit message"
-```
+Commit all staged files to versioned history \`\`\` shell script $ git commit -m "commit message"
 
+```text
 Commit all your tracked files to versioned history
 ``` shell script
 $ git commit -am "commit message"
 ```
 
-Unstages file, keeping the file changes
-``` shell script
-$ git reset [file]
-```
+Unstages file, keeping the file changes \`\`\` shell script $ git reset \[file\]
 
+```text
 Revert everything to the last commit
 ``` shell script
 $ git reset --hard
 ```
 
-Diff of what is changed but not staged
-``` shell script
-$ git diff
-```
+Diff of what is changed but not staged \`\`\` shell script $ git diff
 
+```text
 Diff of what is staged but not yet commited
 ``` shell script
 $ git diff --staged
 ```
 
-Apply any commits of current branch ahead of specified one
-``` shell script
-$ git rebase [branch]
-```
+Apply any commits of current branch ahead of specified one \`\`\` shell script $ git rebase \[branch\]
 
-
+```text
 ### Configuration
 
 Set the name that will be attached to your commits and tags
@@ -94,23 +80,17 @@ Set the name that will be attached to your commits and tags
 $ git config --global user.name "name"
 ```
 
-Set an email address that will be attached to your commits and tags
-``` shell script
-$ git config --global user.email "email"
-```
+Set an email address that will be attached to your commits and tags \`\`\` shell script $ git config --global user.email "email"
 
+```text
 Enable some colorization of Git output
 ``` shell script
 $ git config --global color.ui auto
 ```
 
-Edit the global configuration file in a text editor
-``` shell script
-$ git config --global --edit
-```
+Edit the global configuration file in a text editor \`\`\` shell script $ git config --global --edit
 
-
-
+```text
 ### Working with Branches
 
 List all local branches
@@ -118,62 +98,51 @@ List all local branches
 $ git branch
 ```
 
-List all branches, local and remote
-``` shell script
-$ git branch -av
-```
+List all branches, local and remote \`\`\` shell script $ git branch -av
 
+```text
 Switch to a branch, my_branch, and update working directory
 ``` shell script
 $ git checkout my_branch
 ```
 
-Create a new branch called new_branch
-``` shell script
-$ git branch new_branch
-```
+Create a new branch called new\_branch \`\`\` shell script $ git branch new\_branch
 
+```text
 Delete the branch called my_branch
 ``` shell script
 $ git branch -d my_branch
 ```
 
-Merge branchA into branchB
-``` shell script
-$ git checkout branchB
-$ git merge branchA
-```
+Merge branchA into branchB \`\`\` shell script $ git checkout branchB $ git merge branchA
 
+```text
 Tag the current commit
 ``` shell script
 $ git tag my_tag
 ```
 
-
 ### Observe your Repository
-Show the commit history for the currently active branch
-``` shell script
-$ git log
-```
+
+Show the commit history for the currently active branch \`\`\` shell script $ git log
+
+```text
 Show the commits on branchA that are not on branchB
 ``` shell script
 $ git log branchB..branchA
 ```
-Show the commits that changed file, even across renames
-``` shell script
-$ git log --follow [file]
-```
+
+Show the commits that changed file, even across renames \`\`\` shell script $ git log --follow \[file\]
+
+```text
 Show the diff of what is in branchA that is not in branchB
 ``` shell script
 $ git diff branchB...branchA
 ```
-Show any object in Git in human-readable format
-``` shell script
-$ git show [SHA]
-```
 
+Show any object in Git in human-readable format \`\`\` shell script $ git show \[SHA\]
 
-
+```text
 ### Synchronize
 
 Fetch down all the branches from that Git remote
@@ -181,60 +150,43 @@ Fetch down all the branches from that Git remote
 $ git fetch [alias]
 ```
 
-Merge a remote branch into your current branch to bring it up to date
-``` shell script
-$ git merge [alias]/[branch]
-```
+Merge a remote branch into your current branch to bring it up to date \`\`\` shell script $ git merge \[alias\]/\[branch\]
 
+```text
 Transmit local branch commits to the remote repository branch
 ``` shell script
 $ git push [alias] [branch]
 ```
 
-Fetch and merge any commits from the tracking remote branch
-``` shell script
-$ git pull
-```
+Fetch and merge any commits from the tracking remote branch \`\`\` shell script $ git pull
 
+```text
 Merge just one specific commit from another branch to your current branch
 ``` shell script
 $ git cherry-pick [commit_id]
 ```
 
-
-
-
 ### Remote
-Add a git URL as an alias
-``` shell script
-$ git remote add [alias] [url]
-```
 
+Add a git URL as an alias \`\`\` shell script $ git remote add \[alias\] \[url\]
+
+```text
 Show the names of the remote repositories you've set up
 ``` shell script
 $ git remote
 ```
 
-Show the names and URLs of the remote repositories
-``` shell script
-$ git remote -v
-```
+Show the names and URLs of the remote repositories \`\`\` shell script $ git remote -v
 
+```text
 Remove a remote repository
 ``` shell script
 $ git remote rm [remote repo name]
 ```
 
-Change the URL of the git repo
-``` shell script
-$ git remote set-url origin [git_url]
-```
+Change the URL of the git repo \`\`\` shell script $ git remote set-url origin \[git\_url\]
 
-
-
-
-
-
+```text
 ### Temporary Commits
 
 Save modified and staged changes
@@ -242,44 +194,34 @@ Save modified and staged changes
 $ git stash
 ```
 
-List stack-order of stashed file changes
-``` shell script
-$ git stash list
-```
+List stack-order of stashed file changes \`\`\` shell script $ git stash list
 
+```text
 Write working from top of stash stack
 ``` shell script
 $ git stash pop
 ```
 
-Discard the changes from top of stash stack
-``` shell script
-$ git stash drop
-```
+Discard the changes from top of stash stack \`\`\` shell script $ git stash drop
 
-
-
-
+```text
 ### Tracking path Changes
 Delete the file from project and stage the removal for commit
 ``` shell script
 $ git rm [file]
 ```
 
-Change an existing file path and stage the move
-``` shell script
-$ git mv [existing-path] [new-path]
-```
+Change an existing file path and stage the move \`\`\` shell script $ git mv \[existing-path\] \[new-path\]
 
+```text
 Show all commit logs with indication of any paths that moved
 ``` shell script
 $ git log --stat -M
 ```
 
-
 ### Ignoring Files
 
-```
+```text
 /logs/*
 
 !logs/.gitkeep
@@ -293,75 +235,83 @@ node_modules
 # Ignore SASS config files
 .sass-cache
 ```
+
 A `.gitignore` file specifies intentionally untracked files that Git should ignore
 
+## Tricks {.cols-3}
 
+### Rename branch
 
-Tricks {.cols-3}
-------
+* **Renamed to `new_name`**
 
-### Rename branch 
-- #### **Renamed** to `new_name`
-    ```shell script
-    $ git branch -m <new_name>
-    ```
-- #### **Push** and reset
-    ```shell script
-    $ git push origin -u <new_name>
-    ```
-- #### **Delete** remote branch
-    ```shell script
-    $ git push origin --delete <old>
-    ```
-{.style-timeline}
+    \`\`\`shell script
 
+    $ git branch -m 
+
+    \`\`\`
+
+* **Push and reset**
+
+    \`\`\`shell script
+
+    $ git push origin -u 
+
+    \`\`\`
+
+* **Delete remote branch**
+
+    \`\`\`shell script
+
+    $ git push origin --delete 
+
+    \`\`\`
+
+  {.style-timeline}
 
 ### Log
-Search change by content
-```shell script
-$ git log -S'<a term in the source>'
-```
+
+Search change by content \`\`\`shell script $ git log -S''
+
+```text
 Show changes over time for specific file
 ```shell script
 $ git log -p <file_name>
 ```
-Print out a cool visualization of your log
-```shell script {.wrap}
-$ git log --pretty=oneline --graph --decorate --all
-```
 
+Print out a cool visualization of your log \`\`\`shell script {.wrap} $ git log --pretty=oneline --graph --decorate --all
+
+```text
 ### Branch {.row-span-2}
 List all branches and their upstreams 
 ```shell script
-$ git branch -vv 
+$ git branch -vv
 ```
-Quickly switch to the previous branch
-```shell script
-$ git checkout -
-```
+
+Quickly switch to the previous branch \`\`\`shell script $ git checkout -
+
+```text
 Get only remote branches
 ```shell script
 $ git branch -r
 ```
-Checkout a single file from another branch
-```shell script
-$ git checkout <branch> -- <file>
-```
 
+Checkout a single file from another branch \`\`\`shell script $ git checkout  -- 
 
-
+```text
 ### Commit
 Rewrite last commit message
 ```shell script
 $ git commit -v --amend
 ```
 
-
 ### Git Aliases
-```cmd
+
+```text
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 ```
+
 See also: [More Aliases](https://gist.github.com/johnpolacek/69604a1f6861129ef088)
+

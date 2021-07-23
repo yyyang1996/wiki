@@ -1,24 +1,26 @@
 ---
-title: Java
-date: 2021-03-10 19:50:01
-icon: icon-java
-background: bg-red-700
-tags:
-    - object-oriented
-    - class
-categories:
-    - Programming
-intro: |
-    This cheat sheet is a crash course for Java beginners and help review the basic syntax of the Java language.
 plugins:
-    - tooltip
+  - tooltip
+intro: >
+  This cheat sheet is a crash course for Java beginners and help review the
+  basic syntax of the Java language.
+background: bg-red-700
+date: '2021-03-10T19:50:01.000Z'
+title: Java
+tags:
+  - object-oriented
+  - class
+icon: icon-java
+categories:
+  - Programming
 ---
 
+# java
 
-Getting started {.cols-3}
---------
+## Getting started {.cols-3}
 
 ### Hello.java {.row-span-2}
+
 ```java
 public class Hello {
   // main methord
@@ -29,15 +31,10 @@ public class Hello {
   }
 }
 ```
-Compiling and running
-```shell script
-$ javac Hello.java
-$ java Hello
-Hello, world!
-```
 
+Compiling and running \`\`\`shell script $ javac Hello.java $ java Hello Hello, world!
 
-
+```text
 ### Variables
 ```java
 int num = 5;
@@ -48,34 +45,33 @@ String site = "quickref.me";
 ```
 
 ### Primitive Data Types {.row-span-2}
-| Data Type | Size   | Default | Range               |
-|-----------|--------|---------|---------------------|
-| `byte`    | 1 byte | 0       | -128 ^to^ 127       |
-| `short`   | 2 byte | 0       | -2^15^ ^to^ 2^15^-1 |
-| `int`     | 4 byte | 0       | -2^31^ ^to^ 2^31^-1 |
-| `long`    | 8 byte | 0       | -2^63^ ^to^ 2^63^-1 |
-| `float`   | 4 byte | 0.0f    |_N/A_                 |
-| `double`  | 8 byte | 0.0d    |_N/A_                 |
-| `char`    | 2 byte | \\u0000 | 0 ^to^ 65535        |
-| `boolean` |_N/A_    | false   | true / false        |
+
+| Data Type | Size | Default | Range |
+| :--- | :--- | :--- | :--- |
+| `byte` | 1 byte | 0 | -128 ^to^ 127 |
+| `short` | 2 byte | 0 | -2^15^ ^to^ 2^15^-1 |
+| `int` | 4 byte | 0 | -2^31^ ^to^ 2^31^-1 |
+| `long` | 8 byte | 0 | -2^63^ ^to^ 2^63^-1 |
+| `float` | 4 byte | 0.0f | _N/A_ |
+| `double` | 8 byte | 0.0d | _N/A_ |
+| `char` | 2 byte | \u0000 | 0 ^to^ 65535 |
+| `boolean` | _N/A_ | false | true / false |
+
 {.show-header}
 
-
-
-
 ### Strings
+
 ```java
 String first = "John";
 String last = "Doe";
 String name = first + " " + last;
 System.out.println(name);
 ```
-See: [Strings](#strings-2)
 
-
-
+See: [Strings](java.md#strings-2)
 
 ### Loops
+
 ```java
 String word = "QuickRef";
 for (char c: word.toCharArray()) {
@@ -83,10 +79,11 @@ for (char c: word.toCharArray()) {
 }
 // Outputs: Q-u-i-c-k-R-e-f-
 ```
-See: [Loops](#loops-2)
 
+See: [Loops](java.md#loops-2)
 
 ### Arrays
+
 ```java
 char[] chars = new char[10];
 chars[0] = 'a'
@@ -96,10 +93,11 @@ String[] letters = {"A", "B", "C"};
 int[] mylist = {100, 200};
 boolean[] answers = {true, false};
 ```
-See: [Arrays](#arrays-2)
 
+See: [Arrays](java.md#arrays-2)
 
 ### Swap
+
 ```java
 int a = 1;
 int b = 2;
@@ -112,6 +110,7 @@ System.out.println(a + " " + b); // 2 1
 ```
 
 ### Type Casting
+
 ```java
 // Widening
 // byte<short<int<long<float<double
@@ -128,6 +127,7 @@ Double.parseDouble("10"); // 10.0
 ```
 
 ### Conditionals
+
 ```java
 int j = 10;
 
@@ -139,11 +139,11 @@ if (j == 10) {
   System.out.println("I also don't");
 }
 ```
-See: [Conditionals](#conditionals-2)
 
-
+See: [Conditionals](java.md#conditionals-2)
 
 ### User Input
+
 ```java
 Scanner in = new Scanner(System.in);
 String str = in.nextLine();
@@ -153,8 +153,7 @@ int num = in.nextInt();
 System.out.println(num);
 ```
 
-Strings {.cols-3}
--------
+## Strings {.cols-3}
 
 ### Basic
 
@@ -164,8 +163,8 @@ String str2 = new String("value");
 String str3 = String.valueOf(123);
 ```
 
-
 ### Concatenation
+
 ```java
 String s = 3 + "str" + 3;     // 3str3
 String s = 3 + 3 + "str";     // 6str
@@ -175,37 +174,46 @@ String s = "" + 3 + 3 + "23"; // 3323
 String s = 3 + 3 + 23;        // 29
 ```
 
-
 ### StringBuilder {.row-span-3}
-StringBuilder sb = new StringBuilder(10);
+
+StringBuilder sb = new StringBuilder\(10\);
+
 ```java
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
 |   |   |   |   |   |   |   |   |   |
 └───┴───┴───┴───┴───┴───┴───┴───┴───┘
 0   1   2   3   4   5   6   7   8   9
 ```
-sb.append("QuickRef");
+
+sb.append\("QuickRef"\);
+
 ```java
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
 | Q | u | i | c | k | R | e | f |   |
 └───┴───┴───┴───┴───┴───┴───┴───┴───┘
 0   1   2   3   4   5   6   7   8   9
 ```
-sb.delete(5, 9);
+
+sb.delete\(5, 9\);
+
 ```java
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
 | Q | u | i | c | k |   |   |   |   |
 └───┴───┴───┴───┴───┴───┴───┴───┴───┘
 0   1   2   3   4   5   6   7   8   9
 ```
-sb.insert(0, "My ");
+
+sb.insert\(0, "My "\);
+
 ```java
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
 | M | y |   | Q | u | i | c | k |   |
 └───┴───┴───┴───┴───┴───┴───┴───┴───┘
 0   1   2   3   4   5   6   7   8   9
 ```
-sb.append("!");
+
+sb.append\("!"\);
+
 ```java
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
 | M | y |   | Q | u | i | c | k | ! |
@@ -213,8 +221,8 @@ sb.append("!");
 0   1   2   3   4   5   6   7   8   9
 ```
 
-
 ### Comparison
+
 ```java
 String s1 = new String("QuickRef"); 
 String s2 = new String("QuickRef"); 
@@ -225,8 +233,8 @@ s1.equals(s2)     // true
 "AB".equalsIgnoreCase("ab")  // true
 ```
 
-
 ### Manipulation
+
 ```java
 String str = "Abcd";
 
@@ -239,8 +247,8 @@ str.replace("b", "-"); // A-cd
 "ab".toCharArray();    // {'a', 'b'}
 ```
 
-
 ### Information
+
 ```java
 String str = "abcd";
 
@@ -257,9 +265,8 @@ str.startsWith("a"); // true
 str.isEmpty();       // false
 ```
 
-
-
 ### Immutable
+
 ```java
 String str = "hello";
 str.concat("world");
@@ -267,8 +274,6 @@ str.concat("world");
 // Outputs: hello
 System.out.println(str);
 ```
-
----
 
 ```java
 String str = "hello";
@@ -280,14 +285,10 @@ System.out.println(concat);
 
 Once created cannot be modified, any modification creates a new String
 
-
-
-
-Arrays {.cols-3}
--------
-
+## Arrays {.cols-3}
 
 ### Declare
+
 ```java
 int[] a1;
 int[] a2 = {1, 2, 3};
@@ -299,8 +300,8 @@ a4[2] = 2;
 a4[3] = 3;
 ```
 
-
 ### Modify
+
 ```java
 int[] a = {1, 2, 3};
 System.out.println(a[0]); // 1
@@ -311,8 +312,8 @@ System.out.println(a[0]); // 9
 System.out.println(a.length); // 3
 ```
 
+### Loop \(Read & Modify\)
 
-### Loop (Read & Modify)
 ```java
 int[] arr = {1, 2, 3};
 for (int i=0; i < arr.length; i++) {
@@ -322,18 +323,18 @@ for (int i=0; i < arr.length; i++) {
 // Outputs: 2 4 6
 ```
 
+### Loop \(Read\)
 
-### Loop (Read)
 ```java
 String[] arr = {"a", "b", "c"};
 for (int a: arr) {
     System.out.print(a + " ");
 }
-// Outputs: a b c 
+// Outputs: a b c
 ```
 
-
 ### Multidimensional Arrays
+
 ```java
 int[][] matrix = { {1, 2, 3}, {4, 5} };
 
@@ -346,11 +347,11 @@ for (int i = 0; i < a.length; ++i) {
     System.out.println(a[i][j]);
   }
 }
-// Outputs: 1 2 3 4 5 6 7 
+// Outputs: 1 2 3 4 5 6 7
 ```
 
-
 ### Sort
+
 ```java
 char[] chars = {'b', 'a', 'c'};
 Arrays.sort(chars);
@@ -359,60 +360,53 @@ Arrays.sort(chars);
 Arrays.toString(chars);
 ```
 
-
-
-
-Conditionals {.cols-3}
------------
-
+## Conditionals {.cols-3}
 
 ### Operators {.row-span-2}
-- <a href="javascript:void(0);" data-tooltip="Additive operator (also used for String concatenation)">+</a>
-- <a href="javascript:void(0);" data-tooltip="Subtraction operator">-</a>
-- <a href="javascript:void(0);" data-tooltip="Multiplication operator">*</a>
-- <a href="javascript:void(0);" data-tooltip="Division operator">/</a>
-- <a href="javascript:void(0);" data-tooltip="Remainder operator">%</a>
-- <a href="javascript:void(0);" data-tooltip="Simple assignment operator">=</a>
-- <a href="javascript:void(0);" data-tooltip="Increment operator; increments a value by 1">++</a>
-- <a href="javascript:void(0);" data-tooltip="Decrement operator; decrements a value by 1">--</a>
-- <a href="javascript:void(0);" data-tooltip="Logical complement operator; inverts the value of a boolean">!</a>
-{.style-none .cols-4}
 
-----
+* [+](javascript:void%280%29;)
+* [-](javascript:void%280%29;)
+* [\*](javascript:void%280%29;)
+* [/](javascript:void%280%29;)
+* [%](javascript:void%280%29;)
+* [=](javascript:void%280%29;)
+* [++](javascript:void%280%29;)
+* [--](javascript:void%280%29;)
+* [!](javascript:void%280%29;)
 
-- <a href="javascript:void(0);" data-tooltip="Equal to">==</a>
-- <a href="javascript:void(0);" data-tooltip="Not equal to">!=</a>
-- <a href="javascript:void(0);" data-tooltip="Greater than">></a>
-- <a href="javascript:void(0);" data-tooltip="Greater than or equal to">>=</a>
-- <a href="javascript:void(0);" data-tooltip="Less than"><</a>
-- <a href="javascript:void(0);" data-tooltip="Less than or equal to"><=</a>
-{.style-none .cols-4}
+  {.style-none .cols-4}
 
-----
+* [==](javascript:void%280%29;)
+* [!=](javascript:void%280%29;)
+* [&gt;](javascript:void%280%29;)
+* [&gt;=](javascript:void%280%29;)
+* [&lt;](javascript:void%280%29;)
+* [&lt;=](javascript:void%280%29;)
 
-- <a href="javascript:void(0);" data-tooltip="Conditional-AND">&&</a>
-- <a href="javascript:void(0);" data-tooltip="Conditional-OR">||</a>
-- [?:](#ternary-operator){data-tooltip="Ternary (shorthand for if-then-else statement)"}
-{.style-none .cols-4}
+  {.style-none .cols-4}
 
-----
+* [&&](javascript:void%280%29;)
+* [\|\|](javascript:void%280%29;)
+* [?:](java.md#ternary-operator){data-tooltip="Ternary \(shorthand for if-then-else statement\)"}
 
-- <a href="javascript:void(0);" data-tooltip="Compares an object to a specified type">instanceof</a>
-{.style-none}
+  {.style-none .cols-4}
 
-----
+* [instanceof](javascript:void%280%29;)
 
-- <a href="javascript:void(0);" data-tooltip="Unary bitwise complement">~</a>
-- <a href="javascript:void(0);" data-tooltip="Signed left shift"><<</a>
-- <a href="javascript:void(0);" data-tooltip="Signed right shift">>></a>
-- <a href="javascript:void(0);" data-tooltip="Unsigned right shift">>>></a>
-- <a href="javascript:void(0);" data-tooltip="Bitwise AND">&</a>
-- <a href="javascript:void(0);" data-tooltip="Bitwise exclusive OR">^</a>
-- <a href="javascript:void(0);" data-tooltip="Bitwise inclusive OR">|</a>
-{.style-none .cols-4}
+  {.style-none}
 
+* [~](javascript:void%280%29;)
+* [&lt;&lt;](javascript:void%280%29;)
+* [&gt;&gt;](javascript:void%280%29;)
+* [&gt;&gt;&gt;](javascript:void%280%29;)
+* [&](javascript:void%280%29;)
+* [^](javascript:void%280%29;)
+* [\|](javascript:void%280%29;)
+
+  {.style-none .cols-4}
 
 ### If else
+
 ```java
 int k = 15;
 if (k > 20) {
@@ -425,6 +419,7 @@ if (k > 20) {
 ```
 
 ### Switch {.row-span-2}
+
 ```java
 int month = 3;
 String str;
@@ -447,8 +442,8 @@ switch (month) {
 System.out.println("Result " + str);
 ```
 
-
 ### Ternary operator
+
 ```java
 int a = 10;
 int b = 20;
@@ -458,19 +453,16 @@ int max = (a > b) ? a : b;
 System.out.println(max);
 ```
 
-
-Loops {.cols-3}
-----
+## Loops {.cols-3}
 
 ### For Loop
+
 ```java
 for (int i = 0; i < 10; i++) {
   System.out.print(i);
 }
 // Outputs: 0123456789
 ```
-
-------
 
 ```java
 for (int i = 0,j = 0; i < 3; i++,j--) {
@@ -480,6 +472,7 @@ for (int i = 0,j = 0; i < 3; i++,j--) {
 ```
 
 ### Enhanced For Loop
+
 ```java
 int[] numbers = {1,2,3,4,5};
 
@@ -488,10 +481,11 @@ for (int number: numbers) {
 }
 // Outputs: 12345
 ```
+
 Used to loop around array's or List's
 
-
 ### While Loop
+
 ```java
 int count = 0;
 
@@ -503,6 +497,7 @@ while (count < 5) {
 ```
 
 ### Do While Loop
+
 ```java
 int count = 0;
 
@@ -514,6 +509,7 @@ do{
 ```
 
 ### Continue Statement
+
 ```java
 for (int i = 0; i < 5; i++) {
   if (i == 3) {
@@ -525,6 +521,7 @@ for (int i = 0; i < 5; i++) {
 ```
 
 ### Break Statement
+
 ```java
 for (int i = 0; i < 5; i++) {
   System.out.print(i);
@@ -535,29 +532,29 @@ for (int i = 0; i < 5; i++) {
 // Outputs: 0123
 ```
 
-Collections Framework {.cols-3}
---------------------
+## Collections Framework {.cols-3}
 
 ### Java Collections {.col-span-2}
 
-| Collection                                                                              | Interface   | Ordered | Sorted | Thread safe | Duplicate | Nullable           |
-|-----------------------------------------------------------------------------------------|-------------|---------|--------|-------------|-----------|--------------------|
-| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html)         | List        | Y       | _N_    | _N_         | Y         | Y                  |
-| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html)               | List        | Y       | _N_    | Y           | Y         | Y                  |
-| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html)       | List, Deque | Y       | _N_    | _N_         | Y         | Y                  |
-| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html)             | Set         | _N_     | _N_    | _N_         | _N_       | One `null`         |
-| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html) | Set         | Y       | _N_    | _N_         | _N_       | One `null`         |
-| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)             | Set         | Y       | Y      | _N_         | _N_       | _N_                |
-| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html)             | Map         | _N_     | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
-| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html)         | Map         | _N_     | _N_    | Y           | _N (key)_ | _N (key)_          |
-| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html) | Map         | Y       | _N_    | _N_         | _N (key)_ | One `null` _(key)_ |
-| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html)             | Map         | Y       | Y      | _N_         | _N (key)_ | _N (key)_          |
-| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html)       | Deque       | Y       | _N_    | _N_         | Y         | _N_                |
-| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html) | Queue       | Y       | _N_    | _N_         | Y         | _N_                |
+| Collection | Interface | Ordered | Sorted | Thread safe | Duplicate | Nullable |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) | List | Y | _N_ | _N_ | Y | Y |
+| [Vector](https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html) | List | Y | _N_ | Y | Y | Y |
+| [LinkedList](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) | List, Deque | Y | _N_ | _N_ | Y | Y |
+| [HashSet](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) | Set | _N_ | _N_ | _N_ | _N_ | One `null` |
+| [LinkedHashSet](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html) | Set | Y | _N_ | _N_ | _N_ | One `null` |
+| [TreeSet](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html) | Set | Y | Y | _N_ | _N_ | _N_ |
+| [HashMap](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) | Map | _N_ | _N_ | _N_ | _N \(key\)_ | One `null` _\(key\)_ |
+| [HashTable](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html) | Map | _N_ | _N_ | Y | _N \(key\)_ | _N \(key\)_ |
+| [LinkedHashMap](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html) | Map | Y | _N_ | _N_ | _N \(key\)_ | One `null` _\(key\)_ |
+| [TreeMap](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html) | Map | Y | Y | _N_ | _N \(key\)_ | _N \(key\)_ |
+| [ArrayDeque](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html) | Deque | Y | _N_ | _N_ | Y | _N_ |
+| [PriorityQueue](https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html) | Queue | Y | _N_ | _N_ | Y | _N_ |
+
 {.show-header .left-text}
 
-
 ### ArrayList
+
 ```java
 List<Integer> nums = new ArrayList<>();
 
@@ -583,6 +580,7 @@ for (Integer value : nums) {
 ```
 
 ### HashMap
+
 ```java
 Map<Integer, String> m = new HashMap<>();
 m.put(5, "Five");
@@ -602,6 +600,7 @@ m.forEach((key, value) -> {
 ```
 
 ### HashSet
+
 ```java
 Set<String> set = new HashSet<>();
 if (set.isEmpty()) {
@@ -625,6 +624,7 @@ for (String element : set) {
 ```
 
 ### ArrayDeque
+
 ```java
 Deque<String> a = new ArrayDeque<>();
 
@@ -647,21 +647,21 @@ System.out.println(a.peek());
 System.out.println(a.pop());
 ```
 
-Misc {.cols-3}
-----
-
+## Misc {.cols-3}
 
 ### Access Modifiers {.col-span-2}
-| Modifier    | Class | Package | Subclass | World |
-|-------------|-------|---------|----------|-------|
-| public      | Y     | Y       | Y        | Y     |
-| protected   | Y     | Y       | Y        | _N_   |
-| no modifier | Y     | Y       | _N_      | _N_   |
-| private     | Y     | _N_     | _N_      | _N_   |
+
+| Modifier | Class | Package | Subclass | World |
+| :--- | :--- | :--- | :--- | :--- |
+| public | Y | Y | Y | Y |
+| protected | Y | Y | Y | _N_ |
+| no modifier | Y | Y | _N_ | _N_ |
+| private | Y | _N_ | _N_ | _N_ |
+
 {.show-header .left-text}
 
-
 ### Regular expressions
+
 ```java
 String text = "I am learning Java";
 // Removing All Whitespace
@@ -671,14 +671,14 @@ text.replaceAll("\\s+", "");
 text.split("\\|");
 text.split(Pattern.quote("|"));
 ```
-See: [Regex in java](/regex#regex-in-java)
 
-
+See: [Regex in java](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md#regex-in-java)
 
 ### Comment
+
 ```java
 // I am a single line comment!
- 
+
 /*
 And I am a 
 multi-line comment!
@@ -693,77 +693,80 @@ multi-line comment!
 ```
 
 ### Keywords {.col-span-2}
-- abstract
-- continue
-- for
-- new
-- switch
-- assert
-- default
-- goto
-- package
-- synchronized
-- boolean
-- do
-- if
-- private
-- this
-- break
-- double
-- implements
-- protected
-- throw
-- byte
-- else
-- import
-- public
-- throws
-- case
-- enum
-- instanceof
-- return
-- transient
-- catch
-- extends
-- int
-- short
-- try
-- char
-- final
-- interface
-- static
-- void
-- class
-- finally
-- long
-- strictfp
-- volatile
-- const
-- float
-- native
-- super
-- while
-{.style-none .cols-7}
 
-### Math methods 
+* abstract
+* continue
+* for
+* new
+* switch
+* assert
+* default
+* goto
+* package
+* synchronized
+* boolean
+* do
+* if
+* private
+* this
+* break
+* double
+* implements
+* protected
+* throw
+* byte
+* else
+* import
+* public
+* throws
+* case
+* enum
+* instanceof
+* return
+* transient
+* catch
+* extends
+* int
+* short
+* try
+* char
+* final
+* interface
+* static
+* void
+* class
+* finally
+* long
+* strictfp
+* volatile
+* const
+* float
+* native
+* super
+* while
 
-| Method                | Description                 |
-|-----------------------|-----------------------------|
-| `Math.max(a,b)`       | Maximum of a and b          |
-| `Math.min(a,b)`       | Minimum of a and b          |
-| `Math.abs(a)`         | Absolute value a            |
-| `Math.sqrt(a)`        | Square-root of a            |
-| `Math.pow(a,b)`       | Power of b                  |
-| `Math.round(a)`       | Closest integer             |
-| `Math.sin(ang)`       | Sine of ang                 |
-| `Math.cos(ang)`       | Cosine of ang               |
-| `Math.tan(ang)`       | Tangent of ang              |
-| `Math.asin(ang)`      | Inverse sine of ang         |
-| `Math.log(a)`         | Natural logarithm of a      |
-| `Math.toDegrees(rad)` | Angle rad in degrees        |
-| `Math.toRadians(deg)` | Angle deg in radians        |
+  {.style-none .cols-7}
+
+### Math methods
+
+| Method | Description |
+| :--- | :--- |
+| `Math.max(a,b)` | Maximum of a and b |
+| `Math.min(a,b)` | Minimum of a and b |
+| `Math.abs(a)` | Absolute value a |
+| `Math.sqrt(a)` | Square-root of a |
+| `Math.pow(a,b)` | Power of b |
+| `Math.round(a)` | Closest integer |
+| `Math.sin(ang)` | Sine of ang |
+| `Math.cos(ang)` | Cosine of ang |
+| `Math.tan(ang)` | Tangent of ang |
+| `Math.asin(ang)` | Inverse sine of ang |
+| `Math.log(a)` | Natural logarithm of a |
+| `Math.toDegrees(rad)` | Angle rad in degrees |
+| `Math.toRadians(deg)` | Angle deg in radians |
 
 ### Try/Catch/Finally
+
 ```java
 try {
   // something
@@ -773,3 +776,4 @@ try {
   System.out.println("always printed");
 }
 ```
+

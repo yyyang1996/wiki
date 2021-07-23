@@ -1,22 +1,20 @@
 ---
 layout: post
-title: "Setup OpenWRT on WR720N"
-date: 2014-01-13 14:49
+title: Setup OpenWRT on WR720N
+date: '2014-01-13 14:49'
 comments: true
 categories: blog
 ---
 
+# setup-openwrt-on-wr720n
 
 ## First Install OpenWRT
 
-Download [openwrt-17.01.5-ar71xx-generic-tl-wr720n-v3-squashfs-factory.bin](http://downloads.openwrt.org/releases/17.01.5/targets/ar71xx/generic/openwrt-17.01.5-ar71xx-generic-tl-wr720n-v3-squashfs-factory.bin) 
-到 [OpenWrt][1] 下载 [适合WR720N的安装包][2]
+Download [openwrt-17.01.5-ar71xx-generic-tl-wr720n-v3-squashfs-factory.bin](http://downloads.openwrt.org/releases/17.01.5/targets/ar71xx/generic/openwrt-17.01.5-ar71xx-generic-tl-wr720n-v3-squashfs-factory.bin) 到 [OpenWrt](http://downloads.openwrt.org/snapshots/trunk/ar71xx/) 下载 [适合WR720N的安装包](http://downloads.openwrt.org/snapshots/trunk/ar71xx/openwrt-ar71xx-generic-tl-wr720n-v3-squashfs-factory.bin)
 
-and upload to admin dashboard - upgrade page. 
-打开WR720N 的系统管理界面 , 上传安装包
+and upload to admin dashboard - upgrade page. 打开WR720N 的系统管理界面 , 上传安装包
 
-That'll auto reboot when complete.
-等待上传完成 , 系统自动完成升级过程
+That'll auto reboot when complete. 等待上传完成 , 系统自动完成升级过程
 
 ## Replace Flash to 16M
 
@@ -76,9 +74,8 @@ root@openwrt:~$
 ```bash
 cd /tmp
 wget http://downloads.openwrt.org/snapshots/trunk/PLATFORM/xxx-sysupgrade.bin
-sysupgrade -v /tmp/openwrt-ar71xx-generic-wzr-hp-ag300h-squashfs-sysupgrade.bin  
+sysupgrade -v /tmp/openwrt-ar71xx-generic-wzr-hp-ag300h-squashfs-sysupgrade.bin
 ```
-
 
 ## 安装软件
 
@@ -145,9 +142,11 @@ opkg install kmod-usb-core kmod-usb-uhci kmod-usb-storage  kmod-usb2  kmod-fs-ex
 ```
 
 -
+
 ```bash
 mount /dev/sda1 /mnt
 ```
+
 -
 
 ```bash
@@ -172,11 +171,8 @@ config 'mount'
     option fstype   ext4
     option options  rw,sync
     option enabled_fsck 1
-    option is_rootfs 1  
+    option is_rootfs 1
 ```
 
 All done .
 
- [1]: http://downloads.openwrt.org/snapshots/trunk/ar71xx/
- [2]: http://downloads.openwrt.org/snapshots/trunk/ar71xx/openwrt-ar71xx-generic-tl-wr720n-v3-squashfs-factory.bin
- [3]: https://www.youtube.com/

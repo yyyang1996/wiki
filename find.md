@@ -1,27 +1,27 @@
 ---
 title: Find
 icon: icon-search
-date: 2020-12-28 16:52:20
+date: '2020-12-28T16:52:20.000Z'
 tags:
-    - search
-    - file
-    - directory
+  - search
+  - file
+  - directory
 categories:
-    - Linux Command
-intro: |
-    This is a quick reference list of cheatsheet for linux find command, contains common options and examples.
+  - Linux Command
+intro: >
+  This is a quick reference list of cheatsheet for linux find command, contains
+  common options and examples.
 ---
 
+# find
 
-Getting started {.cols-3}
----------------
+## Getting started {.cols-3}
 
 ### Usage
 
-```shell script
-$ find [path...] [options] [expression]
-```
+\`\`\`shell script $ find \[path...\] \[options\] \[expression\]
 
+```text
 Wildcard
 ```shell script
 $ find . -name "*.txt"
@@ -29,65 +29,62 @@ $ find . -name "2020*.csv"
 $ find . -name "json_*"
 ```
 
-----
-- [Regex reference](/regex) _(quickref.me)_
-- [Find cheatsheet](https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538) _(gist.github.com)_
+* [Regex reference](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) _\(quickref.me\)_
+* [Find cheatsheet](https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538) _\(gist.github.com\)_
 
 ### Option Examples {.col-span-2}
-| Option      | Example                                     | Description                                            |
-|-------------|---------------------------------------------|--------------------------------------------------------|
-| `-type`     | find . -type d                              | Find only directories              |
-| `-name`     | find . -type f -name "*.txt"                | Find file by name                |
-| `-iname`    | find . -type f -iname "hello"                | Find file by name (case-insensitive) |
-| `-size`     | find . -size +1G                            | Find files larger than 1G                              |
-| `-user`     | find . -type d -user jack                   | Find jack's file                                       |
-| `-regex`    | find /var -regex '.\*/tmp/.\*[0-9]*.file'     | Using Regex with find. See [regex](/regex)                                |
-| `-maxdepth` | find . -maxdepth 1 -name "a.txt"            | In the current directory and subdirectories |
-| `-mindepth` | find / -mindepth 3 -maxdepth 5 -name pass |  Between sub-directory level 2 and 4         |
+
+| Option | Example | Description |
+| :--- | :--- | :--- |
+| `-type` | find . -type d | Find only directories |
+| `-name` | find . -type f -name "\*.txt" | Find file by name |
+| `-iname` | find . -type f -iname "hello" | Find file by name \(case-insensitive\) |
+| `-size` | find . -size +1G | Find files larger than 1G |
+| `-user` | find . -type d -user jack | Find jack's file |
+| `-regex` | find /var -regex '.\*/tmp/.\*\[0-9\]\*.file' | Using Regex with find. See [regex](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) |
+| `-maxdepth` | find . -maxdepth 1 -name "a.txt" | In the current directory and subdirectories |
+| `-mindepth` | find / -mindepth 3 -maxdepth 5 -name pass | Between sub-directory level 2 and 4 |
+
 {.show-header}
 
-
 ### Type
-|           |                      |
-|-----------|----------------------|
-| `-type d` | Directory            |
-| `-type f` | File                 |
-| `-type l` | Symbolic link        |
-| `-type b` | Buffered block       |
+
+|  |  |
+| :--- | :--- |
+| `-type d` | Directory |
+| `-type f` | File |
+| `-type l` | Symbolic link |
+| `-type b` | Buffered block |
 | `-type c` | Unbuffered character |
-| `-type p` | Named pipe           |
-| `-type s` | Socket               |
-
-
+| `-type p` | Named pipe |
+| `-type s` | Socket |
 
 ### Size
-|           |                           |
-|-----------|---------------------------|
-| `-size b` | 512-byte blocks (default) |
-| `-size c` | Bytes                     |
-| `-size k` | Kilobytes                 |
-| `-size M` | Megabytes                 |
-| `-size G` | Gigabytes                 |
-| `-size T` | Terabytes _(only BSD)_    |
-| `-size P` | Petabytes _(only BSD)_    |
+
+|  |  |
+| :--- | :--- |
+| `-size b` | 512-byte blocks \(default\) |
+| `-size c` | Bytes |
+| `-size k` | Kilobytes |
+| `-size M` | Megabytes |
+| `-size G` | Gigabytes |
+| `-size T` | Terabytes _\(only BSD\)_ |
+| `-size P` | Petabytes _\(only BSD\)_ |
 
 ### Size +/-
 
-Find all bigger than 10MB files
-```shell script
-$ find / -size +10M
-```
+Find all bigger than 10MB files \`\`\`shell script $ find / -size +10M
 
+```text
 Find all smaller than 10MB files
 ```shell script
 $ find / -size -10M
-````
-
-Find all files that are exactly 10M
-```shell script
-$ find / -size 10M
+`
 ```
 
+Find all files that are exactly 10M \`\`\`shell script $ find / -size 10M
+
+```text
 Find Size between 100MB and 1GB
 ```shell script
 $ find / -size +100M -size -1G
@@ -95,51 +92,40 @@ $ find / -size +100M -size -1G
 
 The `+` and `-` prefixes signify greater than and less than, as usual.
 
-
-
-
 ### Names
 
-Find files using name in current directory
-```shell script
-$ find . -name tecmint.txt
-```
+Find files using name in current directory \`\`\`shell script $ find . -name tecmint.txt
 
+```text
 Find files under home directory
 
 ```shell script
 $ find /home -name tecmint.txt
 ```
 
-Find files using name and ignoring case
-```shell script
-$ find /home -iname tecmint.txt
-```
+Find files using name and ignoring case \`\`\`shell script $ find /home -iname tecmint.txt
 
+```text
 Find directories using name
 ```shell script
 $ find / -type d -name tecmint
 ```
 
-Find php files using name
-```shell script
-$ find . -type f -name tecmint.php
-```
+Find php files using name \`\`\`shell script $ find . -type f -name tecmint.php
 
+```text
 Find all php files in directory
 ```shell script
 $ find . -type f -name "*.php"
 ```
 
-
 ### Permissions
 
 Find the files whose permissions are 777.
 
-```shell script
-$ find . -type f -perm 0777 -print
-```
+\`\`\`shell script $ find . -type f -perm 0777 -print
 
+```text
 Find the files without permission 777.
 
 ```shell script
@@ -148,10 +134,9 @@ $ find / -type f ! -perm 777
 
 Find SUID set files.
 
-```shell script
-$ find / -perm /u=s
-```
+\`\`\`shell script $ find / -perm /u=s
 
+```text
 Find SGID set files.
 
 ```shell script
@@ -160,41 +145,38 @@ $ find / -perm /g=s
 
 Find Read Only files.
 
-```shell script
-$ find / -perm /u=r
-```
+\`\`\`shell script $ find / -perm /u=r
 
+```text
 Find Executable files.
 
 ```shell script
 $ find / -perm /a=x
 ```
 
-
 ### Owners and Groups
 
-Find single file based on user
-```shell script
-$ find / -user root -name tecmint.txt
-```
+Find single file based on user \`\`\`shell script $ find / -user root -name tecmint.txt
+
+```text
 Find all files based on user
 ```shell script
 $ find /home -user tecmint
 ```
-Find all files based on group
-```shell script
-$ find /home -group developer
-```
+
+Find all files based on group \`\`\`shell script $ find /home -group developer
+
+```text
 Find particular files of user
 ```shell script
 $ find /home -user tecmint -iname "*.txt"
 ```
 
-
 ### Multiple filenames
-```shell script {.wrap}
-$ find . -type f \( -name "*.sh" -o -name "*.txt" \)
-```
+
+\`\`\`shell script {.wrap} $ find . -type f \( -name "_.sh" -o -name "_.txt" \)
+
+```text
 Find files with `.sh` and `.txt` extensions
 
 
@@ -204,98 +186,90 @@ Find files with `.sh` and `.txt` extensions
 ```shell script {.wrap}
 $ find /opt /usr /var -name foo.scala -type f
 ```
+
 Find files with multiple dirs
 
-
 ### Empty
-```shell script
-$ find . -type d -empty
-```
 
+\`\`\`shell script $ find . -type d -empty
+
+```text
 Delete all empty files in a directory
 ```shell script
 $ find . -type f -empty -delete
 ```
 
-
-Date and Time {.cols-3}
--------------
-
+## Date and Time {.cols-3}
 
 ### Means {.col-span-2}
-| Option          | Description                                                |
-|-----------------|------------------------------------------------------------|
-| `atime` | access time (last time file <yel>opened</yel>)                  |
-| `mtime` | modified time (last time file <yel>contents was modified</yel>) |
-| `ctime` | changed time (last time file <yel>inode was changed</yel>)     |
+
+| Option | Description |
+| :--- | :--- |
+| `atime` | access time \(last time file opened\) |
+| `mtime` | modified time \(last time file contents was modified\) |
+| `ctime` | changed time \(last time file inode was changed\) |
+
 #### Example
-| Option          | Description                                                |
-|-----------------|------------------------------------------------------------|
-| `-mtime +0`     | Modified greater than 24 hours ago                         |
-| `-mtime 0`      | Modified between now and 1 day ago                         |
-| `-mtime -1`     | Modified less than 1 day ago (same as `-mtime 0`)          |
-| `-mtime 1`      | Modified between 24 and 48 hours ago                       |
-| `-mtime +1`     | Modified more than 48 hours ago                            |
-| `-mtime +1w`    | Last modified more than 1 week ago                         |
-| `-atime 0`      | Last accessed between now and 24 hours ago                 |
-| `-atime +0`     | Accessed more than 24 hours ago                            |
-| `-atime 1`      | Accessed between 24 and 48 hours ago                       |
-| `-atime +1`     | Accessed more than 48 hours ago                            |
-| `-atime -1`     | Accessed less than 24 hours ago (same as `-atime 0`)       |
+
+| Option | Description |
+| :--- | :--- |
+| `-mtime +0` | Modified greater than 24 hours ago |
+| `-mtime 0` | Modified between now and 1 day ago |
+| `-mtime -1` | Modified less than 1 day ago \(same as `-mtime 0`\) |
+| `-mtime 1` | Modified between 24 and 48 hours ago |
+| `-mtime +1` | Modified more than 48 hours ago |
+| `-mtime +1w` | Last modified more than 1 week ago |
+| `-atime 0` | Last accessed between now and 24 hours ago |
+| `-atime +0` | Accessed more than 24 hours ago |
+| `-atime 1` | Accessed between 24 and 48 hours ago |
+| `-atime +1` | Accessed more than 48 hours ago |
+| `-atime -1` | Accessed less than 24 hours ago \(same as `-atime 0`\) |
 | `-ctime -6h30m` | File status changed within the last 6 hours and 30 minutes |
 
-
 ### Examples
- Find last 50 days modified files
-```shell script
-$ find / -mtime 50
-```
+
+Find last 50 days modified files \`\`\`shell script $ find / -mtime 50
+
+```text
  find last 50 days accessed files
 ```shell script
 $ find / -atime 50
 ```
- find last 50-100 days modified files
-```shell script
-$ find / -mtime +50 –mtime -100
-```
+
+find last 50-100 days modified files \`\`\`shell script $ find / -mtime +50 –mtime -100
+
+```text
  find changed files in last 1 hour
 ```shell script
 $ find / -cmin -60
 ```
- find modified files in last 1 hour
-```shell script
-$ find / -mmin -60
-```
+
+find modified files in last 1 hour \`\`\`shell script $ find / -mmin -60
+
+```text
  find accessed files in last 1 hour
 ```shell script
 $ find / -amin -60
 ```
 
-
-Find and {.cols-2}
---------
-
+## Find and {.cols-2}
 
 ### Find and delete {.row-span-3}
 
 Find and remove multiple files
 
-```shell script
-$ find . -type f -name "*.mp3" -exec rm -f {} \;
-```
+\`\`\`shell script $ find . -type f -name "\*.mp3" -exec rm -f {} \;
 
+```text
 Find and remove single file
 
 ```shell script
 $ find . -type f -name "tecmint.txt" -exec rm -f {} \;
 ```
 
+Find and delete 100mb files \`\`\`shell script $ find / -type f -size +100m -exec rm -f {} \;
 
-Find and delete 100mb files
-```shell script
-$ find / -type f -size +100m -exec rm -f {} \;
-```
-
+```text
 Find specific files and delete
 ```shell script
 $ find / -type f -name *.mp3 -size +10m -exec rm {} \;
@@ -303,10 +277,9 @@ $ find / -type f -name *.mp3 -size +10m -exec rm {} \;
 
 ### Find and replace
 
-```shell script {.wrap}
-$ find ./ -type f -exec sed -i 's/find/replace/g' {} \;
-$ find ./ -type f -readable -writable -exec sed -i "s/old/new/g" {} \;
-```
+\`\`\`shell script {.wrap} $ find ./ -type f -exec sed -i 's/find/replace/g' {} \; $ find ./ -type f -readable -writable -exec sed -i "s/old/new/g" {} \;
+
+```text
 See also: [sed](/sed) command
 
 
@@ -317,27 +290,24 @@ $ find . -type f -name 'file*' -exec sh -c 'x="{}"; mv "$x" "${x}.bak"' \;
 ```
 
 ### Find and move
-```shell script
-$ find . -name '*.mp3' -exec mv {} /tmp/music \;
-```
+
+\`\`\`shell script $ find . -name '\*.mp3' -exec mv {} /tmp/music \;
+
+```text
 Find and move it to a specific directory
 
 ### Find and copy
 ```shell script
 $ find . -name '*2020*.xml' -exec cp -r "{}" /tmp/backup \;
 ```
+
 Find and copy it to a specific directory
 
+### Find and concatenate
 
-### Find and concatenate 
+\`\`\`shell script $ find download -type f -iname '_.csv' \| xargs cat &gt; merged.csv $ find download -type f -name '_.gz' -exec cat {} \; &gt; output
 
-```shell script
-$ find download -type f -iname '*.csv' | xargs cat > merged.csv
-$ find download -type f -name '*.gz' -exec cat {} \; > output
-```
-
-
-
+```text
 ### Find and sort
 
 ```shell script
@@ -345,26 +315,22 @@ $ find . -printf "%T+\t%p\n" | sort
 $ find . -printf "%T+\t%p\n" | sort -r
 ```
 
-
 ### Find and chmod  {.row-span-2}
 
 Find files and set permissions to 644.
 
-```shell script
-$ find / -type f -perm 0777 -print -exec chmod 644 {} \;
-```
+\`\`\`shell script $ find / -type f -perm 0777 -print -exec chmod 644 {} \;
 
+```text
 Find directories and set permissions to 755.
 
 ```shell script
 $ find / -type d -perm 777 -print -exec chmod 755 {} \;
 ```
 
-
 ### Find and tar
-```shell script
-$ find . -type f -name "*.java" | xargs tar cvf myfile.tar
-$ find . -type f -name "*.java" | xargs tar rvf myfile.tar
-```
 
+\`\`\`shell script $ find . -type f -name "_.java" \| xargs tar cvf myfile.tar $ find . -type f -name "_.java" \| xargs tar rvf myfile.tar
+
+\`\`\`
 

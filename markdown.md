@@ -1,24 +1,23 @@
 ---
 title: Markdown
-date: 2020-12-14 18:28:43
+date: '2020-12-14T18:28:43.000Z'
 icon: icon-markdown
 background: bg-purple-500
 tags:
-    - md
-    - Markup
-    - text
-    - format
+  - md
+  - Markup
+  - text
+  - format
 categories:
-    - Programming
+  - Programming
 intro: This is a quick reference cheat sheet to the Markdown syntax.
 ---
 
-Quick Reference {.cols-3}
----------------
+# markdown
 
-### Headers (atx style)
+## Headers \(atx style\)
 
-```markdown
+```text
 # h1
 ## h2
 ### h3
@@ -27,22 +26,21 @@ Quick Reference {.cols-3}
 ###### h6
 ```
 
-### Headers (setext style)
+## Headers \(setext style\)
 
-```markdown
+```text
 Header 1
 ========
 ```
 
-```markdown
+```text
 Header 2
 --------
 ```
 
+## Blockquotes
 
-### Blockquotes
-
-```markdown
+```text
 > This is
 > a blockquote
 >
@@ -50,10 +48,9 @@ Header 2
 > > Blockquote
 ```
 
+## Unordered List {.row-span-2}
 
-### Unordered List {.row-span-2}
-
-```markdown
+```text
 * Item 1
 * Item 2
     * item 3a
@@ -61,125 +58,113 @@ Header 2
 ```
 
 or
-```markdown
+
+```text
 - Item 1
 - Item 2
 ```
 
 or
 
-```markdown
+```text
 + Item 1
 + Item 2
 ```
+
 or
 
-```markdown
+```text
 - [ ] Checkbox off
 - [x] Checkbox on
 ```
 
-### Ordered List
+## Ordered List
 
-```markdown
+```text
 1. Item 1
 2. Item 2
     a. item 3a
     b. item 3b
 ```
 
+## Links
 
-
-### Links
-
-```markdown
+```text
 [link](http://google.com)
 ```
 
-```markdown
+```text
 [link][google]
-[google]: http://google.com
 ```
 
-```markdown
+```text
 <http://google.com>
 ```
 
+## Emphasis
 
-
-
-
-
-### Emphasis
-
-```markdown
+```text
 *italic*
 _italic_
 ```
 
-```markdown
+```text
 **bold**
 __bold__
 ```
 
-```markdown
+```text
 `inline code`
 ~~struck out~~
 ```
 
-
-
-
-### Horizontal line
+## Horizontal line
 
 Hyphens
-```markdown
+
+```text
 ---
 ```
 
 Asterisks
-```markdown
+
+```text
 ***
 ```
 
 Underscores
-```markdown
+
+```text
 ___
 ```
 
+## Code
 
-
-
-
-### Code
-~~~markdown
+```text
 ```javascript
 console.log("This is a block code")
 ```
-~~~
+```
 
-```markdown
+```text
 ~~~css
 .button { border: none; }
 ~~~
 ```
 
-
-```markdown
+```text
     4 space indent makes a code block
 ```
 
+### inline code
 
-#### inline code
-```markdown
+```text
 `Inline code` has back-ticks around it
 ```
 
+## Tables {.col-span-2}
 
-
-### Tables {.col-span-2}
-
-```markdown
+```text
 | Left column | Center column | Right column |
 |:------------|:-------------:|-------------:|
 | Cell 1      | Centered      | $1600        |
@@ -187,53 +172,54 @@ console.log("This is a block code")
 ```
 
 Simple style
-```markdown
+
+```text
 Left column | Center column | Right column 
 :---:|:---:|:---:
 Cell 1 | Centered | $1600 
-Cell 2 | Cell 3 | $12 
+Cell 2 | Cell 3 | $12
 ```
+
 A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 
+## Images {.col-span-2}
 
-
-### Images {.col-span-2}
-
-```markdown
+```text
 ![GitHub Logo](/images/logo.png)
 
 ![Alt Text](url)
 ```
 
-#### Image with link
-```markdown
+### Image with link
+
+```text
 [![GitHub Logo](/images/logo.png)](https://github.com/)
 
 [![Alt Text](image_url)](link_url)
 ```
 
-#### Reference style
-```markdown
-![alt text][/images/logo.png]
+### Reference style
 
-[logo]: /images/logo.png "Logo Title"
+```text
+![alt text][/images/logo.png]
 ```
 
+## Backslash escapes
 
-### Backslash escapes
+| Characters | Escape | Description |
+| :--- | :--- | :--- |
+| \ | \\ | backslash |
+| \` | \\` | backtick |
+| \* | \\* | asterisk |
+| \_ | \\_ | underscore |
+| {} | \{} | curly braces |
+| \[\] | \\[\] | square brackets |
+| \(\) | \\(\) | parentheses |
+| \# | \\# | hash mark |
+| + | \+ | plus sign |
+| - | \- | minus sign \(hyphen\) |
+| . | \. | dot |
+| ! | \! | exclamation mark |
 
-| Characters | Escape | Description           |
-|------------|--------|-----------------------|
-| \\         | \\\\   | backslash             |
-| \`         | \\\`   | backtick              |
-| \*         | \\\*   | asterisk              |
-| \_         | \\\_   | underscore            |
-| \{\}       | \\\{\} | curly braces          |
-| \[\]       | \\\[\] | square brackets       |
-| \(\)       | \\\(\) | parentheses           |
-| \#         | \\\#   | hash mark             |
-| \+         | \\\+   | plus sign             |
-| \-         | \\\-   | minus sign \(hyphen\) |
-| \.         | \\\.   | dot                   |
-| \!         | \\\!   | exclamation mark      |
 {.show-header}
+
