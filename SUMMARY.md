@@ -47,7 +47,7 @@
 * [regex](regex.md)
 * [lubuntu-on-cubietruck](lubuntu-on-cubietruck.md)
 * [yaml](yaml.md)
-* [Resolutions](resolutions.md)
+* [Mobile Device Resolutions](resolutions.md)
 * [emoji](emoji.md)
 * [how-to-set-up-your-own-git-server-on-linux](how-to-set-up-your-own-git-server-on-linux.md)
 

@@ -12,7 +12,7 @@ intro: >
   popular Phones, Tablets, Laptops and Watches
 ---
 
-# Resolutions
+# Mobile Device Resolutions
 
 ## Mobile Phones
 
