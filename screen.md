@@ -28,7 +28,7 @@ intro: |
 $ screen -ls
 ```
 
-3. Re-attach a screen Session \`\`\`shell script $ screen -r &lt;name/pid&gt;
+1. Re-attach a screen Session \`\`\`shell script $ screen -r &lt;name/pid&gt;
 
 ```text
 ### Options {.col-span-2}

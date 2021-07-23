@@ -62,7 +62,7 @@ Min  Hour Day  Mon  Weekday
 
 \| `15 2 * * 1L` \| At 2:15am on the last monday of every month \| \| `15 0 * * 4#2` \| At 00:15am on the second thursday of every month \| \| `0 0 0 1 * *` \| Every 1st of month \(monthly\) \| \| `0 0 0 1 1 *` \| Every 1st of january \(yearly\) \|
 
-\| `@reboot` \| Every reboot   
+\| `@reboot` \| Every reboot  
 _\(non-standard\)_ \|
 
 ### Special strings
@@ -72,11 +72,11 @@ _\(non-standard\)_ \|
 | @reboot | Run once, at system startup _\(non-standard\)_ |
 | @yearly | Run once every year, "0 0 1 1 \*" _\(non-standard\)_ |
 | @annually | \(same as @yearly\) _\(non-standard\)_ |
-| @monthly | Run once every month, "0 0 1  __" _\(non-standard\)_ |
-| @weekly | Run once every week, "0 0  __ 0" _\(non-standard\)_ |
-| @daily | Run once each day, "0 0  __ \*" _\(non-standard\)_ |
+| @monthly | Run once every month, "0 0 1  _\_"_ \(non-standard\)\_ |
+| @weekly | Run once every week, "0 0  _\_ 0"_ \(non-standard\)\_ |
+| @daily | Run once each day, "0 0  _\_ \*"_ \(non-standard\)\_ |
 | @midnight | \(same as @daily\) _\(non-standard\)_ |
-| @hourly | Run once an hour, "0  __  __" _\(non-standard\)_ |
+| @hourly | Run once an hour, "0    ****" _\(non-standard\)_ |
 
 ### Crontab command
 

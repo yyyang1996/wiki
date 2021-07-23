@@ -244,27 +244,27 @@ A `.gitignore` file specifies intentionally untracked files that Git should igno
 
 * **Renamed to `new_name`**
 
-    \`\`\`shell script
+  \`\`\`shell script
 
-    $ git branch -m 
+  $ git branch -m
 
-    \`\`\`
+  \`\`\`
 
 * **Push and reset**
 
-    \`\`\`shell script
+  \`\`\`shell script
 
-    $ git push origin -u 
+  $ git push origin -u
 
-    \`\`\`
+  \`\`\`
 
 * **Delete remote branch**
 
-    \`\`\`shell script
+  \`\`\`shell script
 
-    $ git push origin --delete 
+  $ git push origin --delete
 
-    \`\`\`
+  \`\`\`
 
   {.style-timeline}
 
@@ -295,7 +295,7 @@ Get only remote branches
 $ git branch -r
 ```
 
-Checkout a single file from another branch \`\`\`shell script $ git checkout  -- 
+Checkout a single file from another branch \`\`\`shell script $ git checkout --
 
 ```text
 ### Commit

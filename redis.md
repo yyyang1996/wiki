@@ -2199,7 +2199,7 @@ XADD key [MAXLEN [=|~] length] [NOMKSTREAM] *|ID field value [field value ...]
 
 **Example**
 
-\`\`\`shell script redis&gt; XADD mystream  _name Sara surname OConnor "1609040574632-0" redis&gt; XADD mystream_  field1 value1 field2 value2 field3 value3 "1609040574632-1" redis&gt; XLEN mystream \(integer\) 2 redis&gt; XRANGE mystream - + 1\) 1\) "1609040574632-0" 2\) 1\) "name" 2\) "Sara" 3\) "surname" 4\) "OConnor" 2\) 1\) "1609040574632-1" 2\) 1\) "field1" 2\) "value1" 3\) "field2" 4\) "value2" 5\) "field3" 6\) "value3"
+\`\`\`shell script redis&gt; XADD mystream _name Sara surname OConnor "1609040574632-0" redis&gt; XADD mystream_ field1 value1 field2 value2 field3 value3 "1609040574632-1" redis&gt; XLEN mystream \(integer\) 2 redis&gt; XRANGE mystream - + 1\) 1\) "1609040574632-0" 2\) 1\) "name" 2\) "Sara" 3\) "surname" 4\) "OConnor" 2\) 1\) "1609040574632-1" 2\) 1\) "field1" 2\) "value1" 3\) "field2" 4\) "value2" 5\) "field3" 6\) "value3"
 
 ```text
 Appends a new entry to a stream
@@ -2228,7 +2228,7 @@ XRANGE key start end [COUNT count]
 
 **Example**
 
-\`\`\`shell script redis&gt; XADD writers  _name Virginia surname Woolf "1609040578002-0" redis&gt; XADD writers_  name Jane surname Austen "1609040578002-1" redis&gt; XADD writers  _name Toni surname Morrison "1609040578003-0" redis&gt; XADD writers_  name Agatha surname Christie "1609040578003-1" redis&gt; XADD writers \* name Ngozi surname Adichie "1609040578003-2" redis&gt; XLEN writers \(integer\) 5 redis&gt; XRANGE writers - + COUNT 2 1\) 1\) "1609040578002-0" 2\) 1\) "name" 2\) "Virginia" 3\) "surname" 4\) "Woolf" 2\) 1\) "1609040578002-1" 2\) 1\) "name" 2\) "Jane" 3\) "surname" 4\) "Austen"
+\`\`\`shell script redis&gt; XADD writers _name Virginia surname Woolf "1609040578002-0" redis&gt; XADD writers_ name Jane surname Austen "1609040578002-1" redis&gt; XADD writers _name Toni surname Morrison "1609040578003-0" redis&gt; XADD writers_ name Agatha surname Christie "1609040578003-1" redis&gt; XADD writers \* name Ngozi surname Adichie "1609040578003-2" redis&gt; XLEN writers \(integer\) 5 redis&gt; XRANGE writers - + COUNT 2 1\) 1\) "1609040578002-0" 2\) 1\) "name" 2\) "Virginia" 3\) "surname" 4\) "Woolf" 2\) 1\) "1609040578002-1" 2\) 1\) "name" 2\) "Jane" 3\) "surname" 4\) "Austen"
 
 ```text
 Return a range of elements in a stream, with IDs matching the specified IDs interval
@@ -2242,7 +2242,7 @@ XREVRANGE key end start [COUNT count]
 
 **Example**
 
-\`\`\`shell script redis&gt; XADD writers  _name Virginia surname Woolf "1609040579130-0" redis&gt; XADD writers_  name Jane surname Austen "1609040579130-1" redis&gt; XADD writers  _name Toni surname Morrison "1609040579130-2" redis&gt; XADD writers_  name Agatha surname Christie "1609040579131-0" redis&gt; XADD writers \* name Ngozi surname Adichie "1609040579131-1" redis&gt; XLEN writers \(integer\) 5 redis&gt; XREVRANGE writers + - COUNT 1 1\) 1\) "1609040579131-1" 2\) 1\) "name" 2\) "Ngozi" 3\) "surname" 4\) "Adichie"
+\`\`\`shell script redis&gt; XADD writers _name Virginia surname Woolf "1609040579130-0" redis&gt; XADD writers_ name Jane surname Austen "1609040579130-1" redis&gt; XADD writers _name Toni surname Morrison "1609040579130-2" redis&gt; XADD writers_ name Agatha surname Christie "1609040579131-0" redis&gt; XADD writers \* name Ngozi surname Adichie "1609040579131-1" redis&gt; XLEN writers \(integer\) 5 redis&gt; XREVRANGE writers + - COUNT 1 1\) 1\) "1609040579131-1" 2\) 1\) "name" 2\) "Ngozi" 3\) "surname" 4\) "Adichie"
 
 ```text
 Return a range of elements in a stream, with IDs matching the specified IDs interval, in reverse order (from greater to smaller IDs) compared to XRANGE
@@ -2256,7 +2256,7 @@ XLEN key
 
 **Example**
 
-\`\`\`shell script redis&gt; XADD mystream  _item 1 "1609040580250-0" redis&gt; XADD mystream_  item 2 "1609040580250-1" redis&gt; XADD mystream \* item 3 "1609040580251-0" redis&gt; XLEN mystream \(integer\) 3
+\`\`\`shell script redis&gt; XADD mystream _item 1 "1609040580250-0" redis&gt; XADD mystream_ item 2 "1609040580250-1" redis&gt; XADD mystream \* item 3 "1609040580251-0" redis&gt; XLEN mystream \(integer\) 3
 
 ```text
 Return the number of entries in a stream

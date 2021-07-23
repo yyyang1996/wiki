@@ -337,12 +337,12 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 
 | Property | Description |
 | :--- | :--- |
-| `font-family:` | \  |
+| `font-family:` | \ |
 | `font-size:` | \ |
 | `letter-spacing:` | \ |
 | `line-height:` | \ |
 
-\| `font-weight:` \| \ / bold / normal \| \| `font-style:` \| italic / normal \| \| `text-decoration:` \| underline / none \|
+\| `font-weight:` \|  / bold / normal \| \| `font-style:` \| italic / normal \| \| `text-decoration:` \| underline / none \|
 
 \| `text-align:` \| left / right  
 center / justify \| \| `text-transform:` \| capitalize / uppercase / lowercase \| {.left-text}

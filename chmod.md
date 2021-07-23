@@ -18,7 +18,7 @@ intro: >
 
 ### Syntax
 
-\`\`\`shell script $ chmod \[options\]  
+\`\`\`shell script $ chmod \[options\]
 
 ```text
 #### Example

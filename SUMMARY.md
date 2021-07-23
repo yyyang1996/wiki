@@ -40,7 +40,6 @@
 * [sass](sass.md)
 * [javascript](javascript.md)
 * [screen](screen.md)
-* [Contributing](contributing.md)
 * [graphql](graphql.md)
 * [emacs](emacs.md)
 * [ssh](ssh.md)

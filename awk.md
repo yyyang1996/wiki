@@ -40,7 +40,7 @@ intro: >
 ### Awk program
 ```
 
-BEGIN {}  {}  {} ... END {&lt; final actions &gt;}
+BEGIN {} {} {} ... END {&lt; final actions &gt;}
 
 ```text
 #### Example
@@ -292,17 +292,17 @@ awk -v varName="$PWD" '
 * `/`  
 * `%`  
 * `++` 
-* `--` 
+* `--`
 
   {.cols-3 .style-none}
 
   **Shorthand assignments**
 
-* `+=` 
+* `+=`
 * `-=` 
 * `*=` 
 * `/=` 
-* `%=` 
+* `%=`
 
   {.cols-3 .style-none}
 

@@ -88,7 +88,7 @@ Escape these special characters with `\`
 | `\s` | Any whitespace character |
 | `\S` | Any non-whitespace character |
 | `\d` | Any digit, Same as \[0-9\] |
-| `\D` | Any non-digit, Same as  |
+| `\D` | Any non-digit, Same as |
 | `\w` | Any word character |
 | `\W` | Any non-word character |
 | `\X` | Any Unicode sequences, linebreaks included |
@@ -284,8 +284,8 @@ Lookaround lets you match a group before \(lookbehind\) or after \(lookahead\) y
 | `\(quiet\)` | Match \(quiet\) |
 | `c:\\windows` | Match c:\windows |
 
-Use `\` to search for these special characters:   
- `[ \ ^ $ . | ? * + ( ) { }`
+Use `\` to search for these special characters:  
+`[ \ ^ $ . | ? * + ( ) { }`
 
 ### Alternatives
 
@@ -373,15 +373,15 @@ In `[ ]` always escape `. \ ]` and sometimes `^ - .`
 | `(in\|out)put` | Match input or output |
 | `\d{5}(-\d{4})?` | US zip code _\("+ 4" optional\)_ |
 
-Parser tries EACH alternative if match fails after group.   
- Can lead to catastrophic backtracking.
+Parser tries EACH alternative if match fails after group.  
+Can lead to catastrophic backtracking.
 
 ### Back references
 
 | Pattern | Matches |
 | :--- | :--- |
 | `(to) (be) or not \1 \2` | Match to be or not to be |
-| `([^\s])\1{2}` | Match non-space, then same twice more   aaa, ... |
+| `([^\s])\1{2}` | Match non-space, then same twice more   aaa, ... |
 | `\b(\w+)\s+\1\b` | Match doubled words |
 
 ### Non-capturing group
@@ -399,9 +399,9 @@ Use non-capturing or atomic groups when possible
 | `(?>red\|green\|blue)` | Faster than non-capturing |
 | `(?>id\|identity)\b` | Match id, but not identity |
 
-"id" matches, but `\b` fails after atomic group, parser doesn't backtrack into group to retry 'identity'   
-   
- If alternatives overlap, order longer to shorter.
+"id" matches, but `\b` fails after atomic group, parser doesn't backtrack into group to retry 'identity'
+
+If alternatives overlap, order longer to shorter.
 
 ### Lookaround {.row-span-2 .col-span-2}
 

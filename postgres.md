@@ -103,7 +103,7 @@ Show all tables in database
 \dt
 ```
 
-List functions \`\`\`sql {.wrap} \df 
+List functions \`\`\`sql {.wrap} \df
 
 ```text
 ### Databases
@@ -113,7 +113,7 @@ List databases
 \l
 ```
 
-Connect to database \`\`\`sql {.wrap} \c 
+Connect to database \`\`\`sql {.wrap} \c
 
 ```text
 Show current database
@@ -121,7 +121,7 @@ Show current database
 SELECT current_database();
 ```
 
-[Create database](http://www.postgresql.org/docs/current/static/sql-createdatabase.html) \`\`\`sql {.wrap} CREATE DATABASE  WITH OWNER ;
+[Create database](http://www.postgresql.org/docs/current/static/sql-createdatabase.html) \`\`\`sql {.wrap} CREATE DATABASE WITH OWNER ;
 
 ```text
 [Drop database](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)
@@ -129,7 +129,7 @@ SELECT current_database();
 DROP DATABASE IF EXISTS <database_name>;
 ```
 
-[Rename database](http://www.postgresql.org/docs/current/static/sql-alterdatabase.html) \`\`\`sql {.wrap} ALTER DATABASE  RENAME TO ;
+[Rename database](http://www.postgresql.org/docs/current/static/sql-alterdatabase.html) \`\`\`sql {.wrap} ALTER DATABASE RENAME TO ;
 
 ```text
 ### Tables
@@ -156,7 +156,7 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE table_name = '<table_name>';
 ```
 
-[Create table](http://www.postgresql.org/docs/current/static/sql-createtable.html) \`\`\`sql {.wrap} CREATE TABLE \(  ,   \);
+[Create table](http://www.postgresql.org/docs/current/static/sql-createtable.html) \`\`\`sql {.wrap} CREATE TABLE \( , \);
 
 ```text
 Create table, with an auto-incrementing primary key
@@ -166,7 +166,7 @@ CREATE TABLE <table_name> (
 );
 ```
 
-[Delete table](http://www.postgresql.org/docs/current/static/sql-droptable.html) \`\`\`sql {.wrap} DROP TABLE IF EXISTS  CASCADE;
+[Delete table](http://www.postgresql.org/docs/current/static/sql-droptable.html) \`\`\`sql {.wrap} DROP TABLE IF EXISTS CASCADE;
 
 ```text
 ### Permissions
@@ -176,7 +176,7 @@ sudo su - postgres
 psql
 ```
 
-[Grant](http://www.postgresql.org/docs/current/static/sql-grant.html) all permissions on database \`\`\`sql {.wrap} GRANT ALL PRIVILEGES ON DATABASE  TO ;
+[Grant](http://www.postgresql.org/docs/current/static/sql-grant.html) all permissions on database \`\`\`sql {.wrap} GRANT ALL PRIVILEGES ON DATABASE TO ;
 
 ```text
 Grant connection permissions on database
@@ -211,7 +211,7 @@ ALTER TABLE <table_name> IF EXISTS
 ADD <column_name> <data_type> [<constraints>];
 ```
 
-Update column \`\`\`sql {.wrap} ALTER TABLE  IF EXISTS ALTER  TYPE  \[\];
+Update column \`\`\`sql {.wrap} ALTER TABLE IF EXISTS ALTER TYPE \[\];
 
 ```text
 Delete column
@@ -220,7 +220,7 @@ ALTER TABLE <table_name> IF EXISTS
 DROP <column_name>;
 ```
 
-Update column to be an auto-incrementing primary key \`\`\`sql {.wrap} ALTER TABLE  ADD COLUMN  SERIAL PRIMARY KEY;
+Update column to be an auto-incrementing primary key \`\`\`sql {.wrap} ALTER TABLE ADD COLUMN SERIAL PRIMARY KEY;
 
 ```text
 Insert into a table, with an auto-incrementing primary key
@@ -243,7 +243,7 @@ Read one row of data
 SELECT * FROM <table_name> LIMIT 1;
 ```
 
-Search for data \`\`\`sql {.wrap} SELECT \* FROM  WHERE  = ;
+Search for data \`\`\`sql {.wrap} SELECT \* FROM WHERE = ;
 
 ```text
 [Insert](http://www.postgresql.org/docs/current/static/sql-insert.html) data
@@ -251,7 +251,7 @@ Search for data \`\`\`sql {.wrap} SELECT \* FROM  WHERE  = ;
 INSERT INTO <table_name> VALUES( <value_1>, <value_2> );
 ```
 
-[Update](http://www.postgresql.org/docs/current/static/sql-update.html) data \`\`\`sql {.wrap} UPDATE  SET  = ,  =  WHERE  = ;
+[Update](http://www.postgresql.org/docs/current/static/sql-update.html) data \`\`\`sql {.wrap} UPDATE SET = , = WHERE = ;
 
 ```text
 [Delete](http://www.postgresql.org/docs/current/static/sql-delete.html) all data
@@ -259,7 +259,7 @@ INSERT INTO <table_name> VALUES( <value_1>, <value_2> );
 DELETE FROM <table_name>;
 ```
 
-Delete specific data \`\`\`sql {.wrap} DELETE FROM  WHERE  = ;
+Delete specific data \`\`\`sql {.wrap} DELETE FROM WHERE = ;
 
 ```text
 ### Users
@@ -269,7 +269,7 @@ List roles
 SELECT rolname FROM pg_roles;
 ```
 
-[Create user](http://www.postgresql.org/docs/current/static/sql-createuser.html) \`\`\`sql {.wrap} CREATE USER  WITH PASSWORD '';
+[Create user](http://www.postgresql.org/docs/current/static/sql-createuser.html) \`\`\`sql {.wrap} CREATE USER WITH PASSWORD '';
 
 ```text
 [Drop user](http://www.postgresql.org/docs/current/static/sql-dropuser.html)
@@ -277,7 +277,7 @@ SELECT rolname FROM pg_roles;
 DROP USER IF EXISTS <user_name>;
 ```
 
-[Alter](http://www.postgresql.org/docs/current/static/sql-alterrole.html) user password \`\`\`sql {.wrap} ALTER ROLE  WITH PASSWORD '';
+[Alter](http://www.postgresql.org/docs/current/static/sql-alterrole.html) user password \`\`\`sql {.wrap} ALTER ROLE WITH PASSWORD '';
 
 ```text
 ### Schema
@@ -376,7 +376,7 @@ DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 | `\f [STRING]` | Show or set field separator for unaligned |  |
 | `\H` | Toggle HTML output mode |  |
 | \`\t \[on | off\]\` | Show only rows |
-| `\T [STRING]` | Set or unset HTML \ tag attributes |  |
+| `\T [STRING]` | Set or unset HTML  tag attributes |  |
 | \`\x \[on | off\]\` | Toggle expanded output |
 
 ### Input/Output
@@ -425,12 +425,12 @@ Use pg_dump to backup a database
 $ pg_dump -d mydb -f mydb_backup.sql
 ```
 
-*   `-a`   Dump only the data, not the schema
-*   `-s`   Dump only the schema, no data
-*   `-c`   Drop database before recreating
-*   `-C`   Create database before restoring
-*   `-t`   Dump the named table\(s\) only
-*   `-F`   Format \(`c`: custom, `d`: directory, `t`: tar\)
+* `-a`   Dump only the data, not the schema
+* `-s`   Dump only the schema, no data
+* `-c`   Drop database before recreating
+* `-C`   Create database before restoring
+* `-t`   Dump the named table\(s\) only
+* `-F` Format \(`c`: custom, `d`: directory, `t`: tar\)
 
   {.style-none}
 
@@ -446,11 +446,11 @@ Restore a database with pg_restore
 $ pg_restore -d mydb mydb_backup.sql -c
 ```
 
-*   `-U`   Specify a database user
-*   `-c`   Drop database before recreating
-*   `-C`   Create database before restoring
-*   `-e`   Exit if an error has encountered
-*   `-F`   Format \(`c`: custom, `d`: directory, `t`: tar, `p`: plain text sql\(default\)\)
+* `-U`   Specify a database user
+* `-c`   Drop database before recreating
+* `-C`   Create database before restoring
+* `-e`   Exit if an error has encountered
+* `-F` Format \(`c`: custom, `d`: directory, `t`: tar, `p`: plain text sql\(default\)\)
 
   {.style-none}
 

@@ -144,8 +144,8 @@ ___
 ```javascript
 console.log("This is a block code")
 ```
-```
 
+```text
 ```text
 ~~~css
 .button { border: none; }
@@ -208,18 +208,18 @@ A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 
 | Characters | Escape | Description |
 | :--- | :--- | :--- |
-| \ | \\ | backslash |
+| \ | \ | backslash |
 | \` | \\` | backtick |
 | \* | \\* | asterisk |
 | \_ | \\_ | underscore |
-| {} | \{} | curly braces |
+| {} | {} | curly braces |
 | \[\] | \\[\] | square brackets |
 | \(\) | \\(\) | parentheses |
 | \# | \\# | hash mark |
-| + | \+ | plus sign |
-| - | \- | minus sign \(hyphen\) |
-| . | \. | dot |
-| ! | \! | exclamation mark |
+| + | + | plus sign |
+| - | - | minus sign \(hyphen\) |
+| . | . | dot |
+| ! | ! | exclamation mark |
 
 {.show-header}
 

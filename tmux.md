@@ -110,8 +110,8 @@ $ tmux info
 | `Ctrl+b` `"` _/_ `%` | Split Horiz/Vert |
 | `Ctrl+b` `!` | Pane -&gt; Window |
 | `Ctrl+b` `x` | Kill pane |
-| `Ctrl+b`  | Navigate panes |
-| `Ctrl+b`  | Toggle layouts |
+| `Ctrl+b` | Navigate panes |
+| `Ctrl+b` | Toggle layouts |
 | `Ctrl+b` `{` _/_ `}` | Move to Left/Right |
 | `Ctrl+b` `o` | Goto next panes |
 | `Ctrl+b` `z` | toggle full-screen |

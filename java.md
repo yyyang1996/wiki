@@ -400,7 +400,7 @@ Arrays.toString(chars);
 * [&gt;&gt;](javascript:void%280%29;)
 * [&gt;&gt;&gt;](javascript:void%280%29;)
 * [&](javascript:void%280%29;)
-* [^](javascript:void%280%29;)
+* \(javascript:void%280%29;\)
 * [\|](javascript:void%280%29;)
 
   {.style-none .cols-4}

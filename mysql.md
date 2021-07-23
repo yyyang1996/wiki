@@ -871,7 +871,7 @@ DROP INDEX idx_name;
 * [&](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-and){data-tooltip="Bitwise AND"}
 * [&gt;&gt;](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_right-shift){data-tooltip="Right shift"}
 * [&lt;&lt;](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_left-shift){data-tooltip="Left shift"}
-* \([https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html\#operator\_bitwise-xor\){data-tooltip="Bitwise](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-xor%29{data-tooltip="Bitwise) XOR"}
+* \(\[[https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html\#operator\_bitwise-xor\){data-tooltip="Bitwise\]\(https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html\#operator\_bitwise-xor%29{data-tooltip="Bitwise](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-xor%29{data-tooltip="Bitwise]%28https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-xor%29{data-tooltip="Bitwise)\) XOR"}
 * [BIT\_COUNT\(\)](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#function_bit-count){data-tooltip="Return the number of bits that are set"}
 * [\|](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-or){data-tooltip="Bitwise OR"}
 * [~](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-invert){data-tooltip="Bitwise inversion"}

@@ -292,7 +292,7 @@ Combine [operators](vim.md#available-operators) with [motions](vim.md#motions) t
 
 | Shortcut | Description | - |
 | :--- | :--- | :--- |
-| `v` |         i _/_ a | p |
+| `v` | i _/_ a | p |
 | Operator | inner _/_ around | Text object |
 
 Operate with an [operator](vim.md#available-operators) inner or around text blocks
@@ -520,7 +520,7 @@ See `:help text-objects`
 
 ### Examples {.col-span-2}
 
-\`\`\`c {.wrap} :s/a\|b/xxx\0xxx/g \# Modifies "a b" to "xxxaxxx xxxbxxx" :s/test/\U& file/ \# Modifies "test" to "TEST FILE" :s/\(test\)/\U\1\e file/ \# Modifies "test" to "TEST file" :s/\v\(\[abc\]\)\(\[efg\]\)/\2\1/g \# Modifies "af fa bg" to "fa fa gb" :s/\v\w+/\u\0/g \# Modifies "bla bla" to "Bla Bla" :s/\v\(\[ab\]\)\|\(\[cd\]\)/\1x/g \# Modifies "a b c d" to "ax bx x x" :%s/._/\L&/ \# Modifies "HTML" to "html" :s/\v&lt;\(.\)\(\w_\)/\u\1\L\2/g \# Make every first letter of a word uppercase :%s/^\(._\)\n\1/\1/ \# Remove duplicate lines :%s/&lt;\/\=\(\w+\)&gt;/\U&/g \# Convert HTML-Tags to uppercase :g/^pattern/s/$/mytext \# Find and append text to the end :g/pattern/norm! @i \# Run a macro on matching lines /^\(._\)\(\r\?\n\1\)+$ \# View the duplicates lines :v/./,/./-j \# Compress blank lines into a blank line :g//,//d \# Delete inclusively from  to 
+\`\`\`c {.wrap} :s/a\|b/xxx\0xxx/g \# Modifies "a b" to "xxxaxxx xxxbxxx" :s/test/\U& file/ \# Modifies "test" to "TEST FILE" :s/\(test\)/\U\1\e file/ \# Modifies "test" to "TEST file" :s/\v\(\[abc\]\)\(\[efg\]\)/\2\1/g \# Modifies "af fa bg" to "fa fa gb" :s/\v\w+/\u\0/g \# Modifies "bla bla" to "Bla Bla" :s/\v\(\[ab\]\)\|\(\[cd\]\)/\1x/g \# Modifies "a b c d" to "ax bx x x" :%s/._/\L&/ \# Modifies "HTML" to "html" :s/\v&lt;\(.\)\(\w_\)/\u\1\L\2/g \# Make every first letter of a word uppercase :%s/^\(._\)\n\1/\1/ \# Remove duplicate lines :%s/&lt;\/\=\(\w+\)&gt;/\U&/g \# Convert HTML-Tags to uppercase :g/^pattern/s/$/mytext \# Find and append text to the end :g/pattern/norm! @i \# Run a macro on matching lines /^\(._\)\(\r\?\n\1\)+$ \# View the duplicates lines :v/./,/./-j \# Compress blank lines into a blank line :g//,//d \# Delete inclusively from to
 
 ```text
 Vimdiff {.cols-3}
@@ -680,7 +680,7 @@ See `:help formatting`
 | ```"`` | Last exited current buffer |
 | ```0`` | In last file edited |
 | `''` | Back to line in current buffer where jumped from |
-| ```````` | Back to position in current buffer where jumped from |
+| \`\`\`\`\`\`\`\` | Back to position in current buffer where jumped from |
 | ```[`` | To beginning of previously changed or yanked text |
 | ```]`` | To end of previously changed or yanked text |
 | ```<`` | To beginning of last visual selection |
