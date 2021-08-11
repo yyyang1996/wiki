@@ -15,7 +15,7 @@ intro: >
 
 # php
 
-## Getting started {.cols-3}
+## Getting started
 
 ### hello.php
 
@@ -86,7 +86,7 @@ echo $sum;   # => 3
 
 See: [Operators](php.md#operators-2)
 
-### Include {.row-span-3}
+### Include
 
 #### vars.php
 
@@ -169,9 +169,9 @@ $alex = new Student("Alex");
 
 See: [Classes](php.md#classes-2)
 
-## Types {.cols-3}
+## Types
 
-### Boolean {.row-span-2}
+### Boolean
 
 ```php
 $boolean1 = true;
@@ -185,7 +185,7 @@ $boolean6 = (boolean) 0;   # => false
 
 Boolean are case-insensitive
 
-### Integer {.row-span-2}
+### Integer
 
 ```php
 $int1 = 28;    # => 28
@@ -260,7 +260,7 @@ foreach (bar() as $value) {
 }
 ```
 
-## Strings {.cols-3}
+## Strings
 
 ### String
 
@@ -315,9 +315,9 @@ var_dump(strpos($s, "L")); # => false
 
 See: [String Functions](https://www.php.net/manual/en/ref.strings.php)
 
-## Arrays {.cols-3}
+## Arrays
 
-### Defining {.row-span-2}
+### Defining
 
 ```php
 $a1 = ["hello", "world", "!"]
@@ -360,7 +360,7 @@ print_r($multiArray[0][1]) # => 2
 print_r($multiArray[0][2]) # => 3
 ```
 
-### Multi type {.row-span-2}
+### Multi type
 
 ```php
 $array = array(
@@ -464,7 +464,7 @@ foo('a', 'b', 'c' /*, ...*/ );
 function foo($first, string ...$other){}
 ```
 
-## Operators {.cols-4}
+## Operators
 
 ### Arithmetic
 
@@ -487,7 +487,7 @@ function foo($first, string ...$other){}
 | `a /= b` | Same as `a = a / b` |
 | `a %= b` | Same as `a = a % b` |
 
-### Comparison {.row-span-2}
+### Comparison
 
 | - | - |
 | :--- | :--- |
@@ -513,7 +513,7 @@ function foo($first, string ...$other){}
 | `&&` | And |  |  |
 | \` |  | \` | Or |
 
-### Arithmetic {.col-span-2}
+### Arithmetic
 
 ```php
 // Arithmetic
@@ -541,7 +541,7 @@ $num /= $float;  // Divide and assign the quotient to $num
 | `<<` | Shift left |  |
 | `>>` | Shift right |  |
 
-## Conditionals {.cols-3}
+## Conditionals
 
 ### If elseif else
 
@@ -623,7 +623,7 @@ $result = match (true) {
 echo $result; # => young adult
 ```
 
-## Loops {.cols-3}
+## Loops
 
 ### while
 
@@ -690,7 +690,7 @@ foreach ($a as $k) {
 
 See: [Array iteration](php.md#value-iteration)
 
-## Functions {.cols-3}
+## Functions
 
 ### Returning values
 
@@ -843,7 +843,7 @@ $extended = new ExtendClass();
 $extended->displayVar();
 ```
 
-### Classes variables {.row-span-2}
+### Classes variables
 
 ```php
 class MyClass
@@ -911,7 +911,7 @@ class Cls implements Foo, Bar
 }
 ```
 
-## Miscellaneous {.cols-3}
+## Miscellaneous
 
 ### Basic error handling
 
@@ -925,7 +925,7 @@ try {
 }
 ```
 
-### Exception in PHP 8.0 {.col-span-2}
+### Exception in PHP 8.0
 
 \`\`\`php {.wrap} $nullableValue = null;
 
@@ -952,7 +952,7 @@ try {
 }
 ```
 
-### Nullsafe Operator {.row-span-2}
+### Nullsafe Operator
 
 ```php
 // As of PHP 8.0.0, this line:

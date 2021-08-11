@@ -16,7 +16,7 @@ intro: >
 
 # xpath
 
-## Selectors {.cols-6}
+## Selectors
 
 ### Getting started {.col-span-2}
 

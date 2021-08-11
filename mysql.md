@@ -17,7 +17,7 @@ categories:
 
 # mysql
 
-## Getting started {.cols-2}
+## Getting started
 
 ### Connect MySQL
 

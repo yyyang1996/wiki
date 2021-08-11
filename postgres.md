@@ -15,7 +15,7 @@ intro: >
 
 # postgres
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Getting started
 
@@ -36,7 +36,7 @@ postgres=# \q
 postgres=# \!
 ```
 
-### psql commands {.col-span-2}
+### psql commands
 
 | Option | Example | Description |
 | :--- | :--- | :--- |
@@ -63,7 +63,7 @@ postgres=# \!
 
 Run in PostgreSQL console
 
-## Working {.cols-3}
+## Working
 
 ### Recon
 
@@ -298,7 +298,7 @@ SELECT nspname FROM pg_catalog.pg_namespace;
 DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 ```
 
-## Commands {.cols-3}
+## Commands
 
 ### Tables
 
@@ -323,7 +323,7 @@ DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 | `\s [FILE]` | Display history or save it to file |
 | `\w FILE` | Write query buffer to file |
 
-### Informational {.row-span-4}
+### Informational
 
 | - | - |
 | :--- | :--- |
@@ -413,7 +413,7 @@ DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 * `\lo_list`
 * `\lo_unlink LOBOID`
 
-## Miscellaneous {.cols-3}
+## Miscellaneous
 
 ### Backup
 

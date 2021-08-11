@@ -18,9 +18,9 @@ intro: >
 
 # vim
 
-## Getting started {.cols-3}
+## Getting started
 
-### Motion Diagrams {.row-span-2}
+### Motion Diagrams
 
 ```bash
 ▼/▶ Cursor   ▽/▷ Target

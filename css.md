@@ -15,15 +15,15 @@ intro: >
 
 # css
 
-## Getting started {.cols-3}
+## Getting started
 
-### Introduction {.row-span-3}
+### Introduction
 
 CSS is rich in capabilities and is more than simply laying out pages.
 
 #### External CSS
 
-\`\`\`html {.wrap}
+\`\`\`html
 
 ```text
 #### Inline CSS

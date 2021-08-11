@@ -14,7 +14,7 @@ intro: >
 
 # chmod
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Syntax
 

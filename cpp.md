@@ -12,7 +12,7 @@ intro: |
 
 # cpp
 
-## Getting started {.cols-3}
+## Getting started
 
 ### hello.cpp
 

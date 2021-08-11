@@ -16,9 +16,9 @@ intro: >
 
 # tmux
 
-## Tmux CLI {.cols-3}
+## Tmux CLI
 
-### New session  {.row-span-2}
+### New session
 
 Start a new session \`\`\`shell script $ tmux
 

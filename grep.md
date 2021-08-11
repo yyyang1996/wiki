@@ -18,9 +18,9 @@ intro: >-
 
 # grep
 
-## Getting started {.cols-5}
+## Getting started
 
-### Usage {.col-span-2}
+### Usage
 
 Search standard output \(i.e. a stream of text\) \`\`\`shell script $ grep \[options\] search\_string
 
@@ -36,7 +36,7 @@ Print lines in myfile.txt containing the string "mellon" \`\`\`shell script $ gr
 
 Wildcards are accepted in filename.
 
-### Option examples {.col-span-3}
+### Option examples
 
 | Option | Example | Operation |
 | :--- | :--- | :--- |
@@ -54,7 +54,7 @@ Wildcards are accepted in filename.
 | `-o` | grep -o search\_string filename | Only show the matching part of the string |
 | `-n` | grep -n "go" demo.txt | Show the line numbers of the matches |
 
-## Basic regular expressions {.cols-3}
+## Basic regular expressions
 
 ### Refer
 

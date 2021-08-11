@@ -15,7 +15,7 @@ intro: >
 
 # find
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Usage
 
@@ -32,7 +32,7 @@ $ find . -name "json_*"
 * [Regex reference](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) _\(quickref.me\)_
 * [Find cheatsheet](https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538) _\(gist.github.com\)_
 
-### Option Examples {.col-span-2}
+### Option Examples
 
 | Option | Example | Description |
 | :--- | :--- | :--- |
@@ -199,9 +199,9 @@ Delete all empty files in a directory
 $ find . -type f -empty -delete
 ```
 
-## Date and Time {.cols-3}
+## Date and Time
 
-### Means {.col-span-2}
+### Means
 
 | Option | Description |
 | :--- | :--- |
@@ -252,9 +252,9 @@ find modified files in last 1 hour \`\`\`shell script $ find / -mmin -60
 $ find / -amin -60
 ```
 
-## Find and {.cols-2}
+## Find and
 
-### Find and delete {.row-span-3}
+### Find and delete
 
 Find and remove multiple files
 
@@ -315,7 +315,7 @@ $ find . -printf "%T+\t%p\n" | sort
 $ find . -printf "%T+\t%p\n" | sort -r
 ```
 
-### Find and chmod  {.row-span-2}
+### Find and chmod
 
 Find files and set permissions to 644.
 

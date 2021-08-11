@@ -34,7 +34,7 @@ intro: >
 
 `Alt` `F7` _/_ `Ctrl` `F7`\| Find usages/Find usages in file `Ctrl` `Shift` `F7`\| Highlight usages in file `Ctrl` `Alt` `F7`\| Show usages {.shortcuts}
 
-## Navigation {.row-span-4}
+## Navigation
 
 | shortcut | description |
 | :--- | :--- |

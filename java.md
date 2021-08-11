@@ -17,9 +17,9 @@ categories:
 
 # java
 
-## Getting started {.cols-3}
+## Getting started
 
-### Hello.java {.row-span-2}
+### Hello.java
 
 ```java
 public class Hello {

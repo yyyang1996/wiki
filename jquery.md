@@ -18,7 +18,7 @@ categories:
 
 # jquery
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Including jQuery
 

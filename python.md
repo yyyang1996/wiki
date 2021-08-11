@@ -15,7 +15,7 @@ intro: >
 
 # python
 
-## Getting Started {.cols-3}
+## Getting Started
 
 ### Introduction
 

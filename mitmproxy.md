@@ -17,9 +17,9 @@ intro: >
 
 # mitmproxy
 
-## Getting stared {.cols-3}
+## Getting stared
 
-### Usage {.col-span-2}
+### Usage
 
 | Option | Example | Description |
 | :--- | :--- | :--- |

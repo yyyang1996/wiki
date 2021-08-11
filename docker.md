@@ -16,7 +16,7 @@ intro: >
 
 # docker
 
-## Getting started {.cols-2}
+## Getting started
 
 ### Getting started
 
