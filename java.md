@@ -34,8 +34,9 @@ public class Hello {
 
 Compiling and running \`\`\`shell script $ javac Hello.java $ java Hello Hello, world!
 
-```text
+
 ### Variables
+
 ```java
 int num = 5;
 float floatNum = 5.99f;
