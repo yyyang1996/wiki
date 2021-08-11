@@ -32,8 +32,13 @@ public class Hello {
 }
 ```
 
-Compiling and running \`\`\`shell script $ javac Hello.java $ java Hello Hello, world!
+Compiling and running shell script:
 
+```shell
+$ javac Hello.java 
+$ java Hello 
+Hello, world!
+```
 
 ### Variables
 
@@ -45,7 +50,7 @@ boolean bool = true;
 String site = "quickref.me";
 ```
 
-### Primitive Data Types {.row-span-2}
+### Primitive Data Types
 
 | Data Type | Size | Default | Range |
 | :--- | :--- | :--- | :--- |
@@ -57,8 +62,6 @@ String site = "quickref.me";
 | `double` | 8 byte | 0.0d | _N/A_ |
 | `char` | 2 byte | \u0000 | 0 ^to^ 65535 |
 | `boolean` | _N/A_ | false | true / false |
-
-{.show-header}
 
 ### Strings
 
