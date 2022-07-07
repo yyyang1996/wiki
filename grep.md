@@ -22,7 +22,11 @@ intro: >-
 
 ### Usage
 
-Search standard output \(i.e. a stream of text\) \`\`\`shell script $ grep \[options\] search\_string
+Search standard output \(i.e. a stream of text\) 
+
+```bash
+$ grep \[options\] search\_string
+```
 
 ```text
 Search for an exact string in file:
@@ -30,9 +34,11 @@ Search for an exact string in file:
 $ grep [options] search_string path/to/file
 ```
 
-Print lines in myfile.txt containing the string "mellon" \`\`\`shell script $ grep 'mellon' myfile.txt
+Print lines in myfile.txt containing the string "mellon" 
 
-\`\`\`
+```bash
+$ grep 'mellon' myfile.txt
+```
 
 Wildcards are accepted in filename.
 

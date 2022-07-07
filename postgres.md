@@ -19,19 +19,25 @@ intro: >
 
 ### Getting started
 
-Switch and connect \`\`\`shell script $ sudo -u postgres psql
+Switch and connect 
 
-```text
+```bash
+$ sudo -u postgres psql
+```
+
 List all databases
-```shell script
+```shell
 postgres=# \l
 ```
 
-Connect to the database named postgres \`\`\`shell script postgres=\# \c postgres
+Connect to the database named postgres 
 
-```text
+```bash
+postgres=\# \c postgres
+```
+
 Disconnect
-```shell script
+```shell
 postgres=# \q
 postgres=# \!
 ```
@@ -51,8 +57,6 @@ postgres=# \!
 | `-f` | psql mydb -f file.sql | Execute commands from a file |
 | `-V` | psql -V | Print the psql version |
 
-{.show-header}
-
 ### Getting help
 
 | - | - |
@@ -69,85 +73,109 @@ Run in PostgreSQL console
 
 Show version
 
-```text
+```sql
 SHOW SERVER_VERSION;
 ```
 
-Show system status \`\`\`sql {.wrap} \conninfo
+Show system status 
 
-```text
+```sql
+\conninfo
+```
+
 Show environmental variables
-```sql  {.wrap}
+```sql
 SHOW ALL;
 ```
 
-List users \`\`\`sql {.wrap} SELECT rolname FROM pg\_roles;
+List users 
 
-```text
+```sql
+SELECT rolname FROM pg\_roles;
+```
+
 Show current user
-```sql  {.wrap}
+```sql
 SELECT current_user;
 ```
 
 Show current user's permissions
 
-```text
+```
 \du
 ```
 
-Show current database \`\`\`sql {.wrap} SELECT current\_database\(\);
+Show current database 
 
-```text
+```sql
+SELECT current\_database\(\);
+```
+
 Show all tables in database
-```sql  {.wrap}
+```sql
 \dt
 ```
 
-List functions \`\`\`sql {.wrap} \df
+List functions 
 
-```text
+```sql
+\df
+```
+
 ### Databases
 
 List databases
-```sql  {.wrap}
+```sql
 \l
 ```
 
-Connect to database \`\`\`sql {.wrap} \c
+Connect to database 
 
-```text
+```sql
+\c
+```
+
 Show current database
-```sql  {.wrap}
+```sql
 SELECT current_database();
 ```
 
-[Create database](http://www.postgresql.org/docs/current/static/sql-createdatabase.html) \`\`\`sql {.wrap} CREATE DATABASE WITH OWNER ;
+[Create database](http://www.postgresql.org/docs/current/static/sql-createdatabase.html) 
 
-```text
+```sql
+CREATE DATABASE WITH OWNER ;
+```
+
 [Drop database](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)
-```sql {.wrap}
+```sql
 DROP DATABASE IF EXISTS <database_name>;
 ```
 
-[Rename database](http://www.postgresql.org/docs/current/static/sql-alterdatabase.html) \`\`\`sql {.wrap} ALTER DATABASE RENAME TO ;
+[Rename database](http://www.postgresql.org/docs/current/static/sql-alterdatabase.html) 
 
-```text
+```sql
+ALTER DATABASE RENAME TO ;
+```
+
 ### Tables
 
 List tables, in current db
-```sql  {.wrap}
+```sql
 \dt
 
 SELECT table_schema,table_name FROM information_schema.tables ORDER BY table_schema,table_name;
 ```
 
-List tables, globally \`\`\`sql {.wrap} \dt _._.
+List tables, globally 
+
+```sql
+\dt _._.
+```
 
 SELECT \* FROM pg\_catalog.pg\_tables
 
-```text
 List table schema
-```sql  {.wrap}
+```sql
 \d <table_name>
 \d+ <table_name>
 
@@ -156,19 +184,25 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE table_name = '<table_name>';
 ```
 
-[Create table](http://www.postgresql.org/docs/current/static/sql-createtable.html) \`\`\`sql {.wrap} CREATE TABLE \( , \);
+[Create table](http://www.postgresql.org/docs/current/static/sql-createtable.html) 
 
-```text
+```sql
+CREATE TABLE \( , \);
+```
+
 Create table, with an auto-incrementing primary key
-```sql  {.wrap}
+```sql
 CREATE TABLE <table_name> (
   <column_name> SERIAL PRIMARY KEY
 );
 ```
 
-[Delete table](http://www.postgresql.org/docs/current/static/sql-droptable.html) \`\`\`sql {.wrap} DROP TABLE IF EXISTS CASCADE;
+[Delete table](http://www.postgresql.org/docs/current/static/sql-droptable.html) 
 
-```text
+```sql
+DROP TABLE IF EXISTS CASCADE;
+```
+
 ### Permissions
 Become the postgres user, if you have permission errors
 ```shell
@@ -176,55 +210,73 @@ sudo su - postgres
 psql
 ```
 
-[Grant](http://www.postgresql.org/docs/current/static/sql-grant.html) all permissions on database \`\`\`sql {.wrap} GRANT ALL PRIVILEGES ON DATABASE TO ;
+[Grant](http://www.postgresql.org/docs/current/static/sql-grant.html) all permissions on database 
 
-```text
+```sql
+GRANT ALL PRIVILEGES ON DATABASE TO ;
+```
+
 Grant connection permissions on database
-```sql  {.wrap}
+```sql
 GRANT CONNECT ON DATABASE <db_name> TO <user_name>;
 ```
 
-Grant permissions on schema \`\`\`sql {.wrap} GRANT USAGE ON SCHEMA public TO ;
+Grant permissions on schema 
 
-```text
+```sql
+GRANT USAGE ON SCHEMA public TO ;
+```
+
 Grant permissions to functions
-```sql  {.wrap}
+```sql
 GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO <user_name>;
 ```
 
-Grant permissions to select, update, insert, delete, on a all tables \`\`\`sql {.wrap} GRANT SELECT, UPDATE, INSERT ON ALL TABLES IN SCHEMA public TO ;
+Grant permissions to select, update, insert, delete, on a all tables 
 
-```text
+```sql
+GRANT SELECT, UPDATE, INSERT ON ALL TABLES IN SCHEMA public TO ;
+```
+
 Grant permissions, on a table
-```sql  {.wrap}
+```sql
 GRANT SELECT, UPDATE, INSERT ON <table_name> TO <user_name>;
 ```
 
-Grant permissions, to select, on a table \`\`\`sql {.wrap} GRANT SELECT ON ALL TABLES IN SCHEMA public TO ;
+Grant permissions, to select, on a table 
 
-```text
+```sql
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO ;
+```
+
 ### Columns
 
 [Add column](http://www.postgresql.org/docs/current/static/sql-altertable.html)
-```sql  {.wrap}
+```sql
 ALTER TABLE <table_name> IF EXISTS
 ADD <column_name> <data_type> [<constraints>];
 ```
 
-Update column \`\`\`sql {.wrap} ALTER TABLE IF EXISTS ALTER TYPE \[\];
+Update column 
 
-```text
+```sql
+ALTER TABLE IF EXISTS ALTER TYPE \[\];
+```
+
 Delete column
-```sql  {.wrap}
+```sql
 ALTER TABLE <table_name> IF EXISTS
 DROP <column_name>;
 ```
 
-Update column to be an auto-incrementing primary key \`\`\`sql {.wrap} ALTER TABLE ADD COLUMN SERIAL PRIMARY KEY;
+Update column to be an auto-incrementing primary key 
 
-```text
+```sql
+ALTER TABLE ADD COLUMN SERIAL PRIMARY KEY;
+```
+
 Insert into a table, with an auto-incrementing primary key
-```sql  {.wrap}
+```sql
 INSERT INTO <table_name>
 VALUES (DEFAULT, <value1>);
 
@@ -235,54 +287,72 @@ VALUES ( <value1>,<value2> );
 
 ### Data
 
-\[Select\]\([http://www.postgresql.org/docs/current/static/sql-select.html](http://www.postgresql.org/docs/current/static/sql-select.html)\] all data \`\`\`sql {.wrap} SELECT \* FROM ;
+\[Select\]\([http://www.postgresql.org/docs/current/static/sql-select.html](http://www.postgresql.org/docs/current/static/sql-select.html)\] all data 
 
-```text
+```sql
+SELECT \* FROM ;
+```
+
 Read one row of data
-```sql  {.wrap}
+```sql
 SELECT * FROM <table_name> LIMIT 1;
 ```
 
-Search for data \`\`\`sql {.wrap} SELECT \* FROM WHERE = ;
+Search for data 
 
-```text
+```sql
+SELECT \* FROM WHERE = ;
+```
+
 [Insert](http://www.postgresql.org/docs/current/static/sql-insert.html) data
-```sql  {.wrap}
+```sql
 INSERT INTO <table_name> VALUES( <value_1>, <value_2> );
 ```
 
-[Update](http://www.postgresql.org/docs/current/static/sql-update.html) data \`\`\`sql {.wrap} UPDATE SET = , = WHERE = ;
+[Update](http://www.postgresql.org/docs/current/static/sql-update.html) data 
 
-```text
+```sql
+UPDATE SET = , = WHERE = ;
+```
+
 [Delete](http://www.postgresql.org/docs/current/static/sql-delete.html) all data
-```sql  {.wrap}
+```sql
 DELETE FROM <table_name>;
 ```
 
-Delete specific data \`\`\`sql {.wrap} DELETE FROM WHERE = ;
+Delete specific data 
 
-```text
+```sql
+DELETE FROM WHERE = ;
+```
+
 ### Users
 
 List roles
-```sql  {.wrap}
+```sql
 SELECT rolname FROM pg_roles;
 ```
 
-[Create user](http://www.postgresql.org/docs/current/static/sql-createuser.html) \`\`\`sql {.wrap} CREATE USER WITH PASSWORD '';
+[Create user](http://www.postgresql.org/docs/current/static/sql-createuser.html) 
 
-```text
+```sql
+CREATE USER WITH PASSWORD '';
+```
+
 [Drop user](http://www.postgresql.org/docs/current/static/sql-dropuser.html)
-```sql  {.wrap}
+```sql
 DROP USER IF EXISTS <user_name>;
 ```
 
-[Alter](http://www.postgresql.org/docs/current/static/sql-alterrole.html) user password \`\`\`sql {.wrap} ALTER ROLE WITH PASSWORD '';
+[Alter](http://www.postgresql.org/docs/current/static/sql-alterrole.html) user password 
 
-```text
+```sql
+ALTER ROLE WITH PASSWORD '';
+```
+
 ### Schema
 List schemas
-```sql  {.wrap}
+```sql
 \dn
 
 SELECT schema_name FROM information_schema.schemata;
@@ -290,11 +360,14 @@ SELECT schema_name FROM information_schema.schemata;
 SELECT nspname FROM pg_catalog.pg_namespace;
 ```
 
-[Create schema](http://www.postgresql.org/docs/current/static/sql-createschema.html) \`\`\`sql {.wrap} CREATE SCHEMA IF NOT EXISTS ;
+[Create schema](http://www.postgresql.org/docs/current/static/sql-createschema.html) 
 
-```text
+```sql
+CREATE SCHEMA IF NOT EXISTS ;
+```
+
 [Drop schema](http://www.postgresql.org/docs/current/static/sql-dropschema.html)
-```sql  {.wrap}
+```sql
 DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 ```
 
@@ -417,11 +490,14 @@ DROP SCHEMA IF EXISTS <schema_name> CASCADE;
 
 ### Backup
 
-Use pg\_dumpall to backup all databases \`\`\`shell script $ pg\_dumpall -U postgres &gt; all.sql
+Use pg\_dumpall to backup all databases 
 
-```text
+```bash
+$ pg\_dumpall -U postgres &gt; all.sql
+```
+
 Use pg_dump to backup a database
-```shell script
+```shell
 $ pg_dump -d mydb -f mydb_backup.sql
 ```
 
@@ -438,11 +514,14 @@ Use `pg_dump -?` to get the full list of options
 
 ### Restore
 
-Restore a database with psql \`\`\`shell script $ psql -U user mydb &lt; mydb\_backup.sql
+Restore a database with psql 
 
-```text
+```bash
+$ psql -U user mydb &lt; mydb\_backup.sql
+```
+
 Restore a database with pg_restore
-```shell script
+```shell
 $ pg_restore -d mydb mydb_backup.sql -c
 ```
 
@@ -458,29 +537,38 @@ Use `pg_restore -?` to get the full list of options
 
 ### Remote access
 
-Get location of postgresql.conf \`\`\`shell script $ psql -U postgres -c 'SHOW config\_file'
+Get location of postgresql.conf 
 
-```text
+```bash
+$ psql -U postgres -c 'SHOW config\_file'
+```
+
 Append to postgresql.conf
-```shell script
+```shell
 listen_addresses = '*'
 ```
 
-Append to pg\_hba.conf \(Same location as postgresql.conf\) \`\`\`shell script host all all 0.0.0.0/0 md5 host all all ::/0 md5
+Append to pg\_hba.conf \(Same location as postgresql.conf\) 
 
-```text
+```bash
+host all all 0.0.0.0/0 md5 host all all ::/0 md5
+```
+
 Restart PostgreSQL server
-```shell script
+```shell
 $ sudo systemctl resatart postgresql
 ```
 
 ### Import/Export CSV
 
-Export table into CSV file \`\`\`shell script \copy table TO '' CSV \copy table\(col1,col1\) TO '' CSV \copy \(SELECT...\) TO '' CSV
+Export table into CSV file 
 
-```text
+```bash
+\copy table TO '' CSV \copy table\(col1,col1\) TO '' CSV \copy \(SELECT...\) TO '' CSV
+```
+
 Import CSV file into table
-```shell script
+```shell
 \copy table FROM '<path>' CSV
 \copy table(col1,col1) FROM '<path>' CSV
 ```
