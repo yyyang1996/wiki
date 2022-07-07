@@ -23,11 +23,8 @@ CSS is rich in capabilities and is more than simply laying out pages.
 
 #### External CSS
 
-\`\`\`html
-
-```text
 #### Inline CSS
-```html {.wrap}
+```html
 <h2 style="text-align: center;">Centered text</h2>
 
 <p style="color: blue; font-size: 18px;">Blue, 18-point text</p>
@@ -35,7 +32,7 @@ CSS is rich in capabilities and is more than simply laying out pages.
 
 #### Internal CSS
 
-```markup
+```html
 <style>
 body {
     background-color: linen;
@@ -45,7 +42,7 @@ body {
 
 ### Add class
 
-```markup
+```html
 <div class="classname"></div>
 <div class="class1 ... classn"></div>
 ```

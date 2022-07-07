@@ -26,18 +26,17 @@ $ screen
 
 2\. List all screen sessions
 
-```shell script
+```shell
 $ screen -ls
 ```
 
 1. Re-attach a screen Session 
 
-```shell script 
-$ screen -r &lt;name/pid&gt;
+```shell 
+$ screen -r <name/pid>
 ```
 
-```text
-### Options {.col-span-2}
+### Options
 | Options | Example                                 | Description                           |
 |---------|-----------------------------------------|---------------------------------------|
 | `-S`    | screen -S debug                        | Start a new session with session name |
@@ -56,11 +55,10 @@ $ screen -r &lt;name/pid&gt;
 | Command      | Description                     |
 |--------------|---------------------------------|
 | `Ctrl-A` `?` | See help _(Lists keybindings)_  |
-{.shortcuts}
 
 
 
-### Window Management {.col-span-2 .row-span-2}
+### Window Management
 | Command                              | Description                                   |
 |--------------------------------------|-----------------------------------------------|
 | `Ctrl-A` `C`                         | Create new window                             |
@@ -74,7 +72,6 @@ $ screen -r &lt;name/pid&gt;
 | `Ctrl-A` `K`                         | Kill current window _(not recommended)_       |
 | `Ctrl-A` `\`                         | Kill all windows _(not recommended)_          |
 | `Ctrl-A` `A`                         | Rename current window                         |
-{.shortcuts}
 
 
 
@@ -86,7 +83,6 @@ $ screen -r &lt;name/pid&gt;
 | `Ctrl-A` `D` `D` | Detach and logout <br>_(quick exit)_        |
 | `Ctrl-A` `:`   | Exit all session                      |
 | `Ctrl-A` `C-\` | Force-exit screen <br>_(not recommended)_ |
-{.shortcuts}
 
 
 
@@ -100,12 +96,11 @@ $ screen -r &lt;name/pid&gt;
 | `Ctrl-A` `TAB` | Jump to next display region            |
 | `Ctrl-A` `X`   | Remove current region                  |
 | `Ctrl-A` `Q`   | Remove all regions but the current one |
-{.shortcuts}
 
 
 
 
-### Misc {.col-span-2 .row-span-2}
+### Misc
 
 | Command           | Description                          |
 |-------------------|--------------------------------------|
@@ -119,13 +114,12 @@ $ screen -r &lt;name/pid&gt;
 | `Ctrl-A` `X`      | Lock (password protect) display      |
 | `Ctrl-A` `:`      | Enter screen command                 |
 | `Ctrl-A` `H`      | Enable logging in the screen session |
-{.shortcuts}
 
 
 ### Screen tricks
 SSH and attach in one line
 
-```shell script
+```shell
 $ ssh -t user@host screen -x <name/pid>
 ```
 

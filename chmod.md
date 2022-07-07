@@ -18,9 +18,9 @@ intro: >
 
 ### Syntax
 
-\`\`\`shell script $ chmod \[options\]
-
-```text
+```bash
+$ chmod [options]
+```
 #### Example
 ```shell
 $ chmod 755 foo.txt
@@ -31,7 +31,7 @@ $ chmod u=rwx,g=rx,o= quickref.sh
 
 #### Change files and directories recursively
 
-```text
+```bash
 $ chmod -R 755 my_directory
 ```
 
@@ -57,7 +57,7 @@ Chmod Generator allows you to quickly and visually generate permissions in numer
 
 ### Explains
 
-```text
+```bash
 $ ls -l
 -rw-r--r--  1 root root 3 Jun 29 15:35 a.log
 drwxr-xr-x  2 root root 2 Jun 30 18:06 dir
@@ -65,7 +65,7 @@ drwxr-xr-x  2 root root 2 Jun 30 18:06 dir
 
 #### Permission analysis of "dir"
 
-```text
+```bash
 d  rwx  r-x  r-x
 ┬  ─┬─  ─┬─  ─┬─  
 │   │    │    │  
@@ -134,7 +134,7 @@ d  rwx  r-x  r-x
 
 ### chmod 600
 
-```text
+```bash
 $ chmod 600 example.txt
 $ chmod u=rw,g=,o= example.txt
 $ chmod a+rwx,u-x,g-rwx,o-rwx example.txt
@@ -142,7 +142,7 @@ $ chmod a+rwx,u-x,g-rwx,o-rwx example.txt
 
 ### chmod 664
 
-```text
+```bash
 $ chmod 664 example.txt
 $ chmod u=rw,g=rw,o=r example.txt
 $ chmod a+rwx,u-x,g-x,o-wx example.txt
@@ -150,7 +150,7 @@ $ chmod a+rwx,u-x,g-x,o-wx example.txt
 
 ### chmod 777
 
-```text
+```bash
 $ chmod 777 example.txt
 $ chmod u=rwx,g=rwx,o=rwx example.txt
 $ chmod a=rwx example.txt
@@ -160,31 +160,31 @@ $ chmod a=rwx example.txt
 
 Deny execute permission to everyone.
 
-```text
+```bash
 $ chmod a-x chmodExampleFile.txt
 ```
 
 Allow read permission to everyone.
 
-```text
+```bash
 $ chmod a+r chmodExampleFile.txt
 ```
 
 Make a file readable and writable by the group and others.
 
-```text
+```bash
 $ chmod go+rw chmodExampleFile.txt
 ```
 
 Make a shell script executable by the user/owner.
 
-```text
+```bash
 $ chmod u+x chmodExampleScript.sh
 ```
 
 Allow everyone to read, write, and execute the file and turn on the set group-ID.
 
-```text
+```bash
 $ chmod =rwx,g+s chmodExampleScript.sh
 ```
 
@@ -192,31 +192,31 @@ $ chmod =rwx,g+s chmodExampleScript.sh
 
 In order to remove read write permissions given to a file, use the following syntax:
 
-```text
+```bash
 $ chmod o-rw example.txt
 ```
 
 For our file example.txt, we can remove read write permissions using chmod for group by running the following command:
 
-```text
+```bash
 $ chmod  g-rx example.txt
 ```
 
 To remove chmod read write permissions from the group while adding read write permission to public/others, we can use the following command:
 
-```text
+```bash
 $ chmod g-rx, o+rx example.txt
 ```
 
 But, if you wish to remove all permissions for group and others, you can do so using the go= instead:
 
-```text
+```bash
 $ chmod go= example.txt
 ```
 
 ### Executable
 
-```text
+```bash
 $ chmod +x ~/example.py
 $ chmod u+x ~/example.py
 $ chmod a+x ~/example.py
@@ -224,7 +224,7 @@ $ chmod a+x ~/example.py
 
 ### chmod 754
 
-```text
+```bash
 $ chmod 754 foo.sh
 $ chmod u=rwx,g=rx,o=r foo.sh
 ```
@@ -233,11 +233,12 @@ $ chmod u=rwx,g=rx,o=r foo.sh
 
 ### SSH Permissions
 
-\`\`\`shell script $ chmod 700 ~/.ssh $ chmod 600 ~/.ssh/authorized\_keys $ chmod 600 ~/.ssh/id\_rsa $ chmod 600 ~/.ssh/id\_rsa.pub $ chmod 400 /path/to/access\_key.pem
+```bash
+$ chmod 700 ~/.ssh $ chmod 600 ~/.ssh/authorized\_keys $ chmod 600 ~/.ssh/id\_rsa $ chmod 600 ~/.ssh/id\_rsa.pub $ chmod 400 /path/to/access\_key.pem
 
-```text
+```
 ### Web Permissions
-```shell script
+```shell
 $ chmod -R 644 /var/www/html/
 $ chmod 644 .htaccess
 $ chmod 644 robots.txt
@@ -247,9 +248,15 @@ $ chmod 755 `find /var/www/html -type d`
 
 ### Batch Change
 
-`````shell script $ chmod -R 644 /your_path $ find /path -type d -exec chmod 755 {} \; $ find /path -type f -exec chmod 644 {} \; $ chmod 644```find /your\_path -type f\`
 
-\`\`\` See: [Command Substitution](https://tldp.org/LDP/abs/html/commandsub.html)
+```bash
+$ chmod -R 644 /your_path 
+$ find /path -type d -exec chmod 755 {} \; 
+$ find /path -type f -exec chmod 644 {} \; 
+$ chmod 644```find /your_path -type f
+```
+
+See: [Command Substitution](https://tldp.org/LDP/abs/html/commandsub.html)
 
 ## Also see
 

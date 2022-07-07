@@ -22,10 +22,10 @@ intro: This cheat sheet provides various for using Netcat on both Linux and Unix
 
 Connect to a host located anywhere
 
-`$ nc \[options\] \[host\] \[port\]`
+`$ nc [options] [host] [port]`
 
 Listen for incoming connections
-```shelll
+```shell
 $ nc -lp port [host] [port]
 ```
 
@@ -54,7 +54,7 @@ Client
 $ nc 192.168.1.9 8000
 ```
 
-## Examples {.cols-3}
+## Examples
 
 ### Banner grabbing
 

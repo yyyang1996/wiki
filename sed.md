@@ -24,7 +24,7 @@ intro: >
 Syntax 
 
 ```shell 
-$ sed \[options\] command \[input-file\]
+$ sed [options] command [input-file]
 ```
 
 With pipeline
@@ -46,11 +46,10 @@ $ echo '123abc' \| sed 's/\[0-9\]+//g'
 | `-n`   | sed -n '3 p' config.conf                   | Suppress default pattern space printing |
 | `-f`   | sed -f script.sed config.conf              | Execute sed script file                 |
 | `-e`   | sed -e 'command1' -e 'command2' input-file | Execute multiple sed commands           |
-{.show-header}
 
 
 ### Multiple commands
-```shell {.wrap}
+```shell
 $ echo "hello world" | sed -e 's/h/H/g' -e 's/w/W/g'
 Hello World
 ```
@@ -94,7 +93,6 @@ See: [Sed examples](sed.md#sed-examples)
 | `a` | sed '2 a new-line' input.txt | Append line after |
 | `i` | sed '2 i new-line' input.txt | Insert line before |
 
-{.show-header}
 
 ### Space commands
 

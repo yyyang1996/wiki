@@ -25,9 +25,12 @@ int main() {
 }
 ```
 
-Compiling and running \`\`\`shell script $ g++ hello.cpp -o hello $ ./hello Hello QuickRef
+Compiling and running
 
-```text
+```bash
+$ g++ hello.cpp -o hello $ ./hello Hello QuickRef
+```
+
 ### Variables
 ```cpp
 int number = 5;       // Integer

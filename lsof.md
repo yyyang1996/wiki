@@ -20,7 +20,8 @@ intro: |
 **lsof** meaning `L`i`S`t `O`pen `F`iles is used to find out which files are open by which process
 
 ```bash
-$ lsof $ sudo lsof -u root
+$ lsof 
+$ sudo lsof -u root
 ```
 ### Port-specific
 
@@ -36,7 +37,9 @@ $ lsof -i @192.168.1.5
 ## Process-specific
 
 ```bash
-$ lsof -c mysql $ lsof -c java $ lsof -c ssh $ lsof -c nginx $ lsof -c ssh -c httpd
+$ lsof -c mysql $ lsof -c java 
+$ lsof -c ssh $ lsof -c nginx 
+$ lsof -c ssh -c httpd
 ```
 ### User-specific
 
@@ -49,7 +52,8 @@ $ lsof -i -u ^root # Except certain user
 ## Network-specific
 
 ```bash
-$ lsof -i 4 \# IPv4 only $ lsof -i 6 \# IPv6 only
+$ lsof -i 4 \# IPv4 only 
+$ lsof -i 6 \# IPv6 only
 ```
 ### PID-specific
 ```shell
@@ -60,7 +64,8 @@ $ lsof -p ^3  # Except certain pids
 ## Filename-specific
 
 ```bash
-$ lsof /var/log/messages $ lsof /etc/passwd
+$ lsof /var/log/messages 
+$ lsof /etc/passwd
 ```
 ### Directory-specific
 ```shell

@@ -538,7 +538,7 @@ for (int i = 0; i < 5; i++) {
 
 ## Collections Framework
 
-### Java Collections {.col-span-2}
+### Java Collections
 
 | Collection | Interface | Ordered | Sorted | Thread safe | Duplicate | Nullable |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -653,7 +653,7 @@ System.out.println(a.pop());
 
 ## Misc
 
-### Access Modifiers {.col-span-2}
+### Access Modifiers
 
 | Modifier | Class | Package | Subclass | World |
 | :--- | :--- | :--- | :--- | :--- |
@@ -696,7 +696,7 @@ multi-line comment!
  */
 ```
 
-### Keywords {.col-span-2}
+### Keywords
 
 * abstract
 * continue
