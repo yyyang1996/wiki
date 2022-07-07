@@ -21,9 +21,10 @@ intro: >
 
 ### Have a try
 
-\`\`\`shell script {.wrap} $ awk -F: '{print $1, $NF}' /etc/passwd
+```bash
+$ awk -F: '{print $1, $NF}' /etc/passwd
 
-```text
+```
 ----
 |-  | -             | -                         |
 |---|---------------|---------------------------|
@@ -33,22 +34,19 @@ intro: >
 |   | `$1`          | First field               |
 |   | `$NF`         | Last field                |
 |   | `/etc/passwd` | Input data file           |
-{.left-text}
-
-
 
 ### Awk program
 ```
 
 BEGIN {} {} {} ... END {&lt; final actions &gt;}
 
-```text
-#### Example
 ```
+#### Example
+```bash
 
 awk ' BEGIN { print "\n&gt;&gt;&gt;Start" } !/\(login\|shutdown\)/ { print NR, $0 } END { print "&lt;&lt;&lt;END\n" } ' /etc/passwd
 
-```text
+```
 ### Variables {.row-span-2}
 ```bash
           $1      $2/$(NF-1)    $3/$NF
@@ -62,7 +60,7 @@ $0/NR ▶ │  2   │  google.com  │  25   │
         └──────┴──────────────┴───────┘
 ```
 
-```text
+```
 # First and last field
 awk -F: '{print $1,$NF}' /etc/passwd
 
@@ -80,7 +78,7 @@ See: [Variables](awk.md#variables-2)
 
 ### Awk program examples {.col-span-2 .row-span-2}
 
-```text
+```bash
 awk 'BEGIN {print "hello world"}'        # Prints "hello world"
 awk -F: '{print $1}' /etc/passwd         # -F: Specify field separator
 
@@ -96,7 +94,7 @@ awk -F: '{print $1} END { print "-done-"}' /etc/passwd
 
 ### Conditions
 
-```text
+```bash
 awk '{if ($3>30) print $1}' /etc/passwd
 ```
 
@@ -104,7 +102,7 @@ See: [Conditions](awk.md#conditions-2)
 
 ### Generate 1000 spaces
 
-```text
+```bash
 awk 'BEGIN{
     while (a++ < 1000)
         s=s " ";
@@ -116,7 +114,7 @@ See: [Loops](awk.md#loops)
 
 ### Arrays
 
-```text
+```bash
 awk 'BEGIN {
    fruits["mango"] = "yellow";
    fruits["orange"] = "orange"
@@ -129,7 +127,7 @@ See: [Arrays](awk.md#arrays-2)
 
 ### Functions
 
-```text
+```bash
 # => 5
 awk 'BEGIN{print length("hello")}'
 # => HELLO
@@ -180,7 +178,7 @@ See: [Functions](awk.md#functions-2)
 
 Print sum and average
 
-```text
+```bash
 awk -F: '{sum += $3}
      END { print sum, sum/NR }
 ' /etc/passwd
@@ -188,7 +186,7 @@ awk -F: '{sum += $3}
 
 Printing parameters
 
-```text
+```bash
 awk 'BEGIN {
     for (i = 1; i < ARGC; i++)
         print ARGV[i] }' a b c
@@ -196,14 +194,14 @@ awk 'BEGIN {
 
 Output field separator as a comma
 
-```text
+```bash
 awk 'BEGIN { FS=":";OFS=","}
     {print $1,$2,$3,$4}' /etc/passwd
 ```
 
 Position of match
 
-```text
+```bash
 awk 'BEGIN {
     if (match("One Two Three", "Tw"))
         print RSTART }'
@@ -211,7 +209,7 @@ awk 'BEGIN {
 
 Length of match
 
-```text
+```bash
 awk 'BEGIN {
     if (match("One Two Three", "re"))
         print RLENGTH }'
@@ -242,7 +240,7 @@ awk 'BEGIN {
 
 ### Defining variable
 
-```text
+```bash
 awk -v var1="Hello" -v var2="Wold" '
     END {print var1, var2}
 ' </dev/null
@@ -250,7 +248,7 @@ awk -v var1="Hello" -v var2="Wold" '
 
 #### Use shell variables
 
-```text
+```bash
 awk -v varName="$PWD" '
     END {print varName}' </dev/null
 ```
@@ -319,7 +317,7 @@ awk -v varName="$PWD" '
 
 ### Examples
 
-```text
+```bash
 awk 'BEGIN {
     if ("foo" ~ "^fo+$")
         print "Fooey!";
@@ -328,7 +326,7 @@ awk 'BEGIN {
 
 #### Not match
 
-```text
+```bash
 awk 'BEGIN {
     if ("boo" !~ "^fo+$")
         print "Boo!";
@@ -337,7 +335,7 @@ awk 'BEGIN {
 
 #### if in array
 
-```text
+```bash
 awk 'BEGIN {
     assoc["foo"] = "bar";
     assoc["bar"] = "baz";
@@ -369,7 +367,7 @@ awk 'BEGIN {
 
 ### User defined function
 
-```text
+```bash
 awk '
     # Returns minimum number
     function find_min(num1, num2){
@@ -402,7 +400,7 @@ awk '
 
 ### Array with index
 
-```text
+```bash
 awk 'BEGIN {
     arr[0] = "foo";
     arr[1] = "bar";
@@ -414,7 +412,7 @@ awk 'BEGIN {
 
 ### Array with key
 
-```text
+```bash
 awk 'BEGIN {
     assoc["foo"] = "bar";
     assoc["bar"] = "baz";
@@ -425,7 +423,7 @@ awk 'BEGIN {
 
 ### Array with split
 
-```text
+```bash
 awk 'BEGIN {
     split("foo:bar:baz", arr, ":");
     for (key in arr)
@@ -435,7 +433,7 @@ awk 'BEGIN {
 
 ### Array with asort
 
-```text
+```bash
 awk 'BEGIN {
     arr[0] = 3
     arr[1] = 2
@@ -448,7 +446,7 @@ awk 'BEGIN {
 
 ### Multi-dimensional
 
-```text
+```bash
 awk 'BEGIN {
     multidim[0,0] = "foo";
     multidim[0,1] = "bar";
@@ -459,7 +457,7 @@ awk 'BEGIN {
 
 ### Multi-dimensional iteration
 
-```text
+```bash
 awk 'BEGIN {
     array[1,2]=3;
     array[2,3]=5;
@@ -475,7 +473,7 @@ awk 'BEGIN {
 
 ### if-else statement
 
-```text
+```bash
 awk -v count=2 'BEGIN {
     if (count == 1)
         print "Yes";
@@ -486,7 +484,7 @@ awk -v count=2 'BEGIN {
 
 #### Ternary operator
 
-```text
+```bash
 awk -v count=2 'BEGIN {
     print (count==1) ? "Yes" : "Huh?";
 }'
@@ -494,7 +492,7 @@ awk -v count=2 'BEGIN {
 
 ### Exists
 
-```text
+```bash
 awk 'BEGIN {
     assoc["foo"] = "bar";
     assoc["bar"] = "baz";
@@ -505,7 +503,7 @@ awk 'BEGIN {
 
 #### Not exists
 
-```text
+```bash
 awk 'BEGIN {
     assoc["foo"] = "bar";
     assoc["bar"] = "baz";
@@ -516,7 +514,7 @@ awk 'BEGIN {
 
 ### switch
 
-```text
+```bash
 awk -F: '{
     switch (NR * 2 + 1) {
         case 3:
@@ -540,7 +538,7 @@ awk -F: '{
 
 ### for...i
 
-```text
+```bash
 awk 'BEGIN {
     for (i = 0; i < 10; i++)
         print "i=" i;
@@ -549,7 +547,7 @@ awk 'BEGIN {
 
 #### Powers of two between 1 and 100
 
-```text
+```bash
 awk 'BEGIN {
     for (i = 1; i <= 100; i *= 2)
         print i
@@ -558,7 +556,7 @@ awk 'BEGIN {
 
 ### for...in
 
-```text
+```bash
 awk 'BEGIN {
     assoc["key1"] = "val1"
     assoc["key2"] = "val2"
@@ -569,7 +567,7 @@ awk 'BEGIN {
 
 #### Arguments
 
-```text
+```bash
 awk 'BEGIN {
     for (argnum in ARGV)
         print ARGV[argnum];
@@ -580,7 +578,7 @@ awk 'BEGIN {
 
 #### Reverse records
 
-```text
+```bash
 awk -F: '{ x[NR] = $0 }
     END {
         for (i = NR; i > 0; i--)
@@ -591,7 +589,7 @@ awk -F: '{ x[NR] = $0 }
 
 #### Reverse fields
 
-```text
+```bash
 awk -F: '{
     for (i = NF; i > 0; i--)
         printf("%s ",$i);
@@ -601,7 +599,7 @@ awk -F: '{
 
 #### Sum by record
 
-```text
+```bash
 awk -F: '{
     s=0;
     for (i = 1; i <= NF; i++)
@@ -612,7 +610,7 @@ awk -F: '{
 
 #### Sum whole file
 
-```text
+```bash
 awk -F: '
     {for (i = 1; i <= NF; i++)
         s += $i;
@@ -623,7 +621,7 @@ awk -F: '
 
 ### while {.row-span-2}
 
-```text
+```bash
 awk 'BEGIN {
     while (a < 10) {
         print "- " " concatenation: " a
@@ -634,7 +632,7 @@ awk 'BEGIN {
 
 #### do...while
 
-```text
+```bash
 awk '{
     i = 1
     do {
@@ -646,7 +644,7 @@ awk '{
 
 ### Break
 
-```text
+```bash
 awk 'BEGIN {
     break_num = 5
     for (i = 0; i < 10; i++) {
@@ -659,7 +657,7 @@ awk 'BEGIN {
 
 ### Continue
 
-```text
+```bash
 awk 'BEGIN {
     for (x = 0; x <= 10; x++) {
         if (x == 5 || x == 6)
@@ -676,7 +674,7 @@ awk 'BEGIN {
 
 #### Right align
 
-```text
+```bash
 awk 'BEGIN{printf "|%10s|\n", "hello"}'
 
 |     hello|
@@ -684,7 +682,7 @@ awk 'BEGIN{printf "|%10s|\n", "hello"}'
 
 #### Left align
 
-```text
+```bash
 awk 'BEGIN{printf "|%-10s|\n", "hello"}'
 
 |hello     |
@@ -703,21 +701,22 @@ awk 'BEGIN{printf "|%-10s|\n", "hello"}'
 
 ### Space
 
-```text
+```bash
 awk -F: '{
     printf "%-10s %s\n", $1, $(NF-1)
 }' /etc/passwd | head -n 3
 ```
 
-Outputs \`\`\`shell script root /root bin /bin daemon /sbin
+```bashOutputs 
+ root /root bin /bin daemon /sbin
 
-```text
+```
 ### Header
 ```
 
 awk -F: 'BEGIN { printf "%-10s %s\n", "User", "Home" printf "%-10s %s\n", "----","----"} { printf "%-10s %s\n", $1, $\(NF-1\) } ' /etc/passwd \| head -n 5
 
-```text
+```
 Outputs
 ```
 
@@ -725,7 +724,7 @@ User Home
 
 root /root bin /bin daemon /sbin
 
-```text
+```
 Miscellaneous
 -------------
 

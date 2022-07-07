@@ -28,9 +28,12 @@ print("Hello quickref.me");
 ?>
 ```
 
-PHP run command \`\`\`shell script $ php hello.php
+PHP run command 
 
-```text
+```bash
+$ php hello.php
+
+```
 ### Variables
 ```php
 $boolean1 = true;
@@ -931,7 +934,7 @@ try {
 
 try { $value = $nullableValue ?? throw new InvalidArgumentException\(\); } catch \(InvalidArgumentException\) { // Variable is optional // Handle my exception echo "print me!"; }
 
-```text
+```
 ### Custom exception {.row-span-2}
 ```php
 class MyException extends Exception {

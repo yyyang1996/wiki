@@ -20,7 +20,7 @@ intro: |
 All connections on port 80 
 
 ```bash
-$ netstat -anp \| grep :80
+$ netstat -anp | grep :80
 ```
 
 Netstat Help

@@ -25,7 +25,7 @@ intro: >-
 Search standard output \(i.e. a stream of text\) 
 
 ```bash
-$ grep \[options\] search\_string
+$ grep [options] search_string
 ```
 
 ```text

@@ -46,7 +46,7 @@ Attach to named
 $ tmux a -t myname
 ```
 
-### Kill session  {.row-span-2}
+### Kill session
 Kill a session by name
 ```shell
 $ tmux kill-ses -t myname
@@ -88,7 +88,7 @@ $ tmux show-options -g
 | `Enter`         | Copy selection                          |
 | `q`                 | Quit copy mode               |
 | `Ctrl+b` `]`        | Paste contents of buffer_0 |
-{.shortcuts}
+
 
 
 Mainly works like selecting text in [Vim](/vim#motions)
@@ -97,14 +97,14 @@ Mainly works like selecting text in [Vim](/vim#motions)
 
 
 
-Tmux shortcuts {.cols-3}
+Tmux shortcuts 
 --------------
 
-### Getting started {.secondary}
+### Getting started 
 | Shortcuts           | Description                  |
 |---------------------|------------------------------|
 | `Ctrl+b` `?`        | List all shortcuts           |
-{.shortcuts .show-header}
+
 
 <br/>
 
@@ -115,7 +115,7 @@ Show every session, window, pane, etc.
 $ tmux info
 ```
 
-### Panes \(Splits\) {.row-span-2}
+### Panes \(Splits\) 
 
 | Shortcuts | Description |
 | :--- | :--- |
@@ -131,9 +131,9 @@ $ tmux info
 | `Ctrl+b` `q` | Show numbers |
 | `Ctrl+b` `q` `0`...`9` | Goto \# pane |
 
-{.shortcuts}
 
-### Window \(Tabs\) {.row-span-2}
+
+### Window \(Tabs\) 
 
 | - | - |
 | :--- | :--- |
@@ -148,7 +148,7 @@ $ tmux info
 | `Ctrl+b` `&` | Close window |
 | `Ctrl+b` `0`...`9` | Goto \# window |
 
-{.shortcuts}
+
 
 ### Session \(Set of Windows\)
 
@@ -159,17 +159,17 @@ $ tmux info
 | `Ctrl+b` `$` | Rename session |
 | `Ctrl+b` `(` _/_ `)` | Previous/Next session |
 
-{.shortcuts}
 
-## Command Mode {.cols-3}
 
-### Usage {.secondary}
+## Command Mode 
+
+### Usage 
 
 | Command | Description |
 | :--- | :--- |
 | `Ctrl+b` `:` | Enter command mode |
 
-{.shortcuts}
+
 
 ### Resizing
 

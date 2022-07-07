@@ -22,11 +22,9 @@ categories:
 
 ### Including jQuery
 
-\`\`\`javascript {.wrap}
-
-```text
 #### Official CDN
-```javascript {.wrap}
+
+```javascript
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 ```
 

@@ -623,22 +623,29 @@ See `:help formatting`
 
 ### Marks
 
-| Shortcut         | Description                                          |
-| ---------------- | ---------------------------------------------------- |
-| \`\`\`^\`\`      | Last position of cursor in insert mode               |
-| \`\`\`.\`\`      | Last change in current buffer                        |
-| \`\`\`"\`\`      | Last exited current buffer                           |
-| \`\`\`0\`\`      | In last file edited                                  |
-| `''`             | Back to line in current buffer where jumped from     |
-| \`\`\`\`\`\`\`\` | Back to position in current buffer where jumped from |
-| \`\`\`\[\`\`     | To beginning of previously changed or yanked text    |
-| \`\`\`]\`\`      | To end of previously changed or yanked text          |
-| \`\`\`<\`\`      | To beginning of last visual selection                |
-| \`\`\`>\`\`      | To end of last visual selection                      |
-
-\| `ma` | Mark this cursor position as `a` | | \`\`\`a``\| Jump to the cursor position `a` \| \| `'a` \| Jump to the beginning of the line with position `a` \| \| `d'a` \| Delete from current line to line of mark `a` \| \|``d`a`` \| Delete from current position to position of mark` a`\| \|`c'a`\| Change text from current line to line of`a `\| \| ``y`a\`\` | Yank text from current position to position of `a` |
-
-\| `:marks` | List all current marks | | `:delm a` | Delete mark `a` | | `:delm a-d` | Delete marks `a`, `b`, `c`, `d` | | `:delm abc` | Delete marks `a`, `b`, `c` \\
+| Shortcut    | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| `^`         | Last position of cursor in insert mode               |
+| `.`         | Last change in current buffer                        |
+| `"`         | Last exited current buffer                           |
+| `0`         | In last file edited                                  |
+| `''`        | Back to line in current buffer where jumped from     |
+| `\``        | Back to position in current buffer where jumped from |
+| `[`         | To beginning of previously changed or yanked text    |
+| `]`         | To end of previously changed or yanked text          |
+| `<`         | To beginning of last visual selection                |
+| `>`         | To end of last visual selection                      |
+| `ma`        | Mark this cursor position as `a`                     |
+| `a`         | Jump to the cursor position `a`                      |
+| `^a`        | Jump to the beginning of the line with position `a`  |
+| `da`        | Delete from current line to line of mark `a`         |
+| `da`        | Delete from current position to position of mark` a` | 
+| `ca`        | Change text from current line to line of`a `         |
+| `ya`        | Yank text from current position to position of `a`   |
+| `:marks`    | List all current marks                               | 
+| `:delm a`   | Delete mark `a`                                      | 
+| `:delm a-d` | Delete marks `a`, `b`, `c`, `d`                      | 
+| `:delm abc` | Delete marks `a`, `b`, `c`                           |
 
 ### Calculator
 
@@ -670,11 +677,11 @@ Do this in INSERT mode
 
 Remove duplicate lines `:sort \| %!uniq -u`
 
-````
 To number the lines in the file
-```shell script
+
+```shell
 :%!cat -n
-````
+```
 
 Copy whole doc to clipboard `:%w !pbcopy \# Mac OS X :%w !xclip -i -sel c \# GNU/Linux :%w !xsel -i -b \# GNU/Linux`
 

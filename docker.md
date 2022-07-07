@@ -22,19 +22,19 @@ intro: >
 
 Create and run a container in background
 
-\`\`\`shell script $ docker run -d -p 80:80 docker/getting-started
+```bash
+$ docker run -d -p 80:80 docker/getting-started
 
-```text
+```
 ----
 
 - `-d` - Run the container in detached mode
 - `-p 80:80` -  Map port 80 to port 80 in the container
 - `docker/getting-started` - The image to use
-{.style-none}
 
 
 Create and run a container in foreground
-```shell script
+```shell
 $ docker run -it -p 8001:8080 --name my-nginx nginx
 ```
 
@@ -43,7 +43,7 @@ $ docker run -it -p 8001:8080 --name my-nginx nginx
 * `--name my-nginx` - Specify a name
 * `nginx` - The image to use
 
-  {.style-none}
+
 
 ### General commands
 
@@ -111,20 +111,22 @@ docker create [options] IMAGE
 
 #### Example
 
-\`\`\`shell script $ docker create --name my\_redis --expose 6379 redis:3.0.2
+```bash
+$ docker create --name my\_redis --expose 6379 redis:3.0.2
 
-```text
+```
 ### Manipulating
 Renaming a Container
-```shell script
+```shell
 docker rename my-nginx nginx-server
 ```
 
-Removing a Container \`\`\`shell script docker rm nginx-server
+```bashRemoving a Container 
+docker rm nginx-server
 
-```text
+```
 Updating a Container
-```shell script
+```shell
 docker update --cpu-shares 512 -m 300M nginx-server
 ```
 
@@ -146,9 +148,10 @@ docker update --cpu-shares 512 -m 300M nginx-server
 
 ### Building Images
 
-\`\`\`shell script $ docker build . $ docker build github.com/creack/docker-firefox $ docker build - &lt; Dockerfile $ docker build - &lt; context.tar.gz $ docker build -t eon/nginx-server . $ docker build -f myOtherDockerfile . $ curl example.com/remote/Dockerfile \| docker build -f - .
+```bash
+$ docker build . $ docker build github.com/creack/docker-firefox $ docker build - &lt; Dockerfile $ docker build - &lt; context.tar.gz $ docker build -t eon/nginx-server . $ docker build -f myOtherDockerfile . $ curl example.com/remote/Dockerfile \| docker build -f - .
 
-```text
+```
 Networking
 ----------
 
@@ -158,31 +161,34 @@ Networking
 ### Manipulating
 
 Removing a network
-```shell script
+```shell
 docker network rm MyOverlayNetwork
 ```
 
-Listing networks \`\`\`shell script docker network ls
+```bashListing networks 
+docker network ls
 
-```text
+```
 Getting information about a network
-```shell script
+```shell
 docker network inspect MyOverlayNetwork
 ```
 
-Connecting a running container to a network \`\`\`shell script docker network connect MyOverlayNetwork nginx
+```bashConnecting a running container to a network 
+docker network connect MyOverlayNetwork nginx
 
-```text
+```
 Connecting a container to a network when it starts
-```shell script
+```shell
 docker run -it -d --network=MyOverlayNetwork nginx
 ```
 
-Disconnecting a container from a network \`\`\`shell script docker network disconnect MyOverlayNetwork nginx
+```bashDisconnecting a container from a network 
+docker network disconnect MyOverlayNetwork nginx
 
-```text
+```
 ### Creating Networks
-```shell script
+```shell
 docker network create -d overlay MyOverlayNetwork
 
 docker network create -d bridge MyBridgeNetwork
@@ -215,33 +221,36 @@ docker network create -d overlay \
 
 Login to a Registry
 
-\`\`\`shell script $ docker login $ docker login localhost:8080
+```bash
+$ docker login $ docker login localhost:8080
 
-```text
+```
 Logout from a Registry
 
-```shell script
+```shell
 $ docker logout
 $ docker logout localhost:8080
 ```
 
 Searching an Image
 
-\`\`\`shell script $ docker search nginx $ docker search nginx --stars=3 --no-trunc busybox
+```bash
+$ docker search nginx $ docker search nginx --stars=3 --no-trunc busybox
 
-```text
+```
 Pulling an Image
 
-```shell script
+```shell
 $ docker pull nginx
 $ docker pull eon01/nginx localhost:5000/myadmin/nginx
 ```
 
 Pushing an Image
 
-\`\`\`shell script $ docker push eon01/nginx $ docker push eon01/nginx localhost:5000/myadmin/nginx
+```bash
+$ docker push eon01/nginx $ docker push eon01/nginx localhost:5000/myadmin/nginx
 
-```text
+```
 ### Batch clean
 |  Example                                     | Description                                            |
 |-------------|---------------------------------------------|
@@ -256,11 +265,14 @@ Pushing an Image
 ### Volumes
 
 Check volumes
-```shell script
+
+```shell
 $ docker volume ls
 ```
 
-Cleanup unused volumes \`\`\`shell script $ docker volume prune
+Cleanup unused volumes 
 
-\`\`\`
+```bash
+$ docker volume prune
+```
 

@@ -75,7 +75,7 @@ d  rwx  r-x  r-x
 └─────────────── 1. File Type | directory
 ```
 
-### Permission Modes {.col-span-2}
+### Permission Modes
 
 | Permission | Description | Octal | Decimal |
 | :--- | :--- | :--- | :--- |
@@ -88,7 +88,6 @@ d  rwx  r-x  r-x
 | `rw-` | Read and Write | 110 | 6 \(4+2+0\) |
 | `rwx` | Read, Write and Execute | 111 | 7 \(4+2+1\) |
 
-{.show-header}
 
 ### Objects
 
@@ -99,7 +98,6 @@ d  rwx  r-x  r-x
 | `o` | `O`thers |
 | `a` | `A`ll, same as ugo |
 
-{.show-header}
 
 ### Permissions
 
@@ -110,7 +108,6 @@ d  rwx  r-x  r-x
 | `x` | E`x`ecute | 1 |
 | `-` | No permission | 0 |
 
-{.show-header}
 
 ### File Types
 
@@ -120,7 +117,6 @@ d  rwx  r-x  r-x
 | `-` | Regular file |
 | `l` | Symbolic `L`ink |
 
-{.show-header}
 
 ## Examples
 
@@ -156,7 +152,7 @@ $ chmod u=rwx,g=rwx,o=rwx example.txt
 $ chmod a=rwx example.txt
 ```
 
-### Symbolic mode {.row-span-3}
+### Symbolic mode 
 
 Deny execute permission to everyone.
 
@@ -188,7 +184,7 @@ Allow everyone to read, write, and execute the file and turn on the set group-ID
 $ chmod =rwx,g+s chmodExampleScript.sh
 ```
 
-### Removing Permissions  {.row-span-3}
+### Removing Permissions  
 
 In order to remove read write permissions given to a file, use the following syntax:
 

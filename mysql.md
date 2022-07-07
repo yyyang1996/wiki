@@ -86,7 +86,7 @@ Restore a backup
 mysql -u user -p db_name < db.sql
 ```
 
-## Examples {.cols-3}
+## Examples
 
 ### Managing tables
 
@@ -520,7 +520,7 @@ Drop an index
 DROP INDEX idx_name;
 ```
 
-## Data Types {.cols-3}
+## Data Types
 
 ### Strings
 
@@ -561,7 +561,7 @@ DROP INDEX idx_name;
 | `DOUBLE` | Decimal \(24 to 53 digits\) |
 | `DECIMAL` | "­DOU­BLE­" stored as string |
 
-## Functions & Operators {.cols-3}
+## Functions & Operators
 
 ### Strings
 

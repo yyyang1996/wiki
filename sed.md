@@ -61,7 +61,9 @@ Use `-e` to execute multiple sed commands
 
  
  ```bash
- $ echo 's/h/H/g' &gt;&gt; hello.sed $ echo 's/w/W/g' &gt;&gt; hello.sed $ echo "hello world" \| sed -f hello.sed Hello World
+$ echo 's/h/H/g' >> hello.sed
+$ echo 's/w/W/g' >> hello.sed 
+$ echo "hello world" | sed -f hello.sed Hello World
  ```
 
 Use `-f` to execute sed script file
