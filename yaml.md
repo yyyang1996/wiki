@@ -40,9 +40,10 @@ d: 2015-04-05    # date type
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "n1": 1, "n2": 1.234, "s1": "abc", "s2": "abc", "s3": "abc", "b": false, "d": "2015-04-05" }
+```json
+{ "n1": 1, "n2": 1.234, "s1": "abc", "s2": "abc", "s3": "abc", "b": false, "d": "2015-04-05" }
 
-```text
+```
 Use spaces to indent. There must be space between the element parts.
 
 
@@ -57,9 +58,10 @@ other_thing: *VAR_NAME
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "some\_thing": "foobar", "other\_thing": "foobar" }
+```json
+{ "some\_thing": "foobar", "other\_thing": "foobar" }
 
-```text
+```
 ### Sequence
 ```yaml
 object:
@@ -72,9 +74,10 @@ object:
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "object": { "attributes": \["a1", "a2", "a3"\], "methods": \["getter", "setter"\] } }
+```json
+{ "object": { "attributes": \["a1", "a2", "a3"\], "methods": \["getter", "setter"\] } }
 
-```text
+```
 ### Sequence of sequences
 ```yaml
 my_sequences:
@@ -84,9 +87,10 @@ my_sequences:
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "my\_sequences": \[ \[1, 2, 3\], \[4, 5, 6\] \] }
+```json
+{ "my\_sequences": \[ \[1, 2, 3\], \[4, 5, 6\] \] }
 
-```text
+```
 ### Comments
 ```yaml
 # A single line comment example
@@ -107,9 +111,10 @@ description: |
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} {"description": "hello\nworld\n"}
+```json
+{"description": "hello\nworld\n"}
 
-```text
+```
 ### Folded text
 ```yaml
 description: >
@@ -119,9 +124,10 @@ description: >
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} {"description": "hello world\n"}
+```json
+{"description": "hello world\n"}
 
-```text
+```
 ### Hashes
 ```yaml
 jack:
@@ -136,9 +142,10 @@ jack:
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "jack": { "id": 1, "name": "Franc", "salary": 5000, "hobby": \["a", "b"\], "loc": { "country": "A", "city": "A-A" } } }
+```json
+{ "jack": { "id": 1, "name": "Franc", "salary": 5000, "hobby": \["a", "b"\], "loc": { "country": "A", "city": "A-A" } } }
 
-```text
+```
 ### Nested dictionaries
 ```yaml
 Employee:
@@ -151,9 +158,10 @@ Employee:
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "Employee": { "id": 1, "name": "Franc", "department": { "name": "Sales", "depid": "11" } } }
+```json
+{ "Employee": { "id": 1, "name": "Franc", "department": { "name": "Sales", "depid": "11" } } }
 
-```text
+```
 ### Sequence of dictionaries
 ```yaml
 children:
@@ -165,9 +173,10 @@ children:
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "children": \[ {"name": "Jimmy Smith", "age": 15}, {"name": "Jenny Smith", "age": 12} \] }
+```json
+{ "children": \[ {"name": "Jimmy Smith", "age": 15}, {"name": "Jenny Smith", "age": 12} \] }
 
-```text
+```
 ### Set
 ```yaml
 set1: !!set
@@ -178,9 +187,10 @@ set2: !!set {'one', "two"}
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "set1": {"one": null, "two": null}, "set2": {"one": null, "two": null} }
+```json
+{ "set1": {"one": null, "two": null}, "set2": {"one": null, "two": null} }
 
-```text
+```
 ### Inheritance
 ```yaml
 parent: &defaults
@@ -194,9 +204,10 @@ child:
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "parent": {"a": 2, "b": 3}, "child": {"a": 2, "b": 4} }
+```json
+{ "parent": {"a": 2, "b": 3}, "child": {"a": 2, "b": 4} }
 
-```text
+```
 ### Reference
 ```yaml
 values: &ref
@@ -209,9 +220,10 @@ other_values:
 
 ### Equavalent JSON
 
-\`\`\`json {.wrap} { "values": \[ "These values", "will be reused below" \], "other\_values": { "i\_am\_ref": \[ "These values", "will be reused below" \] } }
+```json
+{ "values": \[ "These values", "will be reused below" \], "other\_values": { "i\_am\_ref": \[ "These values", "will be reused below" \] } }
 
-```text
+```
 ### Documents
 ```yaml
 ---
