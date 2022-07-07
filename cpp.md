@@ -296,7 +296,7 @@ else
     std::cout << "What?";
 ```
 
-### Operators {.row-span-2}
+### Operators
 
 #### Relational Operators
 
@@ -576,7 +576,7 @@ int main() {
 
 ## Preprocessor
 
-### Preprocessor {.row-span-3}
+### Preprocessor
 
 * [if](https://en.cppreference.com/w/cpp/preprocessor/conditional)
 * [elif](https://en.cppreference.com/w/cpp/preprocessor/conditional)
@@ -597,7 +597,6 @@ int main() {
 * [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
 * [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
 
-  {.style-none .cols-2}
 
 ### Includes
 
@@ -615,7 +614,7 @@ int main() {
 #undef FOO
 ```
 
-### If {.row-span-2}
+### If
 
 ```cpp
 #ifdef DEBUG
@@ -808,7 +807,6 @@ char * a = STR(object);   #=> char * a = "object";
 * [import](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/import&amp;action=edit&amp;redlink=1)
 * [module](https://en.cppreference.com/mwiki/index.php?title=cpp/keyword/module&amp;action=edit&amp;redlink=1)
 
-  {.style-none .cols-2}
 
 ## Also see
 

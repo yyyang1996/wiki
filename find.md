@@ -19,11 +19,12 @@ intro: >
 
 ### Usage
 
-\`\`\`shell script $ find \[path...\] \[options\] \[expression\]
+```bash
+$ find \[path...\] \[options\] \[expression\]
+```
 
-```text
 Wildcard
-```shell script
+```shell
 $ find . -name "*.txt"
 $ find . -name "2020*.csv"
 $ find . -name "json_*"
@@ -73,20 +74,24 @@ $ find . -name "json_*"
 
 ### Size +/-
 
-Find all bigger than 10MB files \`\`\`shell script $ find / -size +10M
+Finbashd all bigger than 10MB files
+```bash
+$ find / -size +10M
+```
 
-```text
 Find all smaller than 10MB files
-```shell script
+```shell
 $ find / -size -10M
 `
 ```
 
-Find all files that are exactly 10M \`\`\`shell script $ find / -size 10M
+Finbashd all files that are exactly 10M
+```bash
+$ find / -size 10M
+```
 
-```text
 Find Size between 100MB and 1GB
-```shell script
+```shell
 $ find / -size +100M -size -1G
 ```
 
@@ -94,28 +99,34 @@ The `+` and `-` prefixes signify greater than and less than, as usual.
 
 ### Names
 
-Find files using name in current directory \`\`\`shell script $ find . -name tecmint.txt
+Finbashd files using name in current directory
+```bash
+$ find . -name tecmint.txt
+```
 
-```text
 Find files under home directory
 
-```shell script
+```shell
 $ find /home -name tecmint.txt
 ```
 
-Find files using name and ignoring case \`\`\`shell script $ find /home -iname tecmint.txt
+Finbashd files using name and ignoring case
+```bash
+$ find /home -iname tecmint.txt
+```
 
-```text
 Find directories using name
-```shell script
+```shell
 $ find / -type d -name tecmint
 ```
 
-Find php files using name \`\`\`shell script $ find . -type f -name tecmint.php
+Finbashd php files using name
+```bash
+$ find . -type f -name tecmint.php
+```
 
-```text
 Find all php files in directory
-```shell script
+```shell
 $ find . -type f -name "*.php"
 ```
 
@@ -123,67 +134,75 @@ $ find . -type f -name "*.php"
 
 Find the files whose permissions are 777.
 
-\`\`\`shell script $ find . -type f -perm 0777 -print
+```bash
+$ find . -type f -perm 0777 -print
+```
 
-```text
 Find the files without permission 777.
 
-```shell script
+```shell
 $ find / -type f ! -perm 777
 ```
 
 Find SUID set files.
 
-\`\`\`shell script $ find / -perm /u=s
+```bash
+$ find / -perm /u=s
+```
 
-```text
 Find SGID set files.
 
-```shell script
+```shell
 $ find / -perm /g=s
 ```
 
 Find Read Only files.
 
-\`\`\`shell script $ find / -perm /u=r
+```bash
+$ find / -perm /u=r
+```
 
-```text
 Find Executable files.
 
-```shell script
+```shell
 $ find / -perm /a=x
 ```
 
 ### Owners and Groups
 
-Find single file based on user \`\`\`shell script $ find / -user root -name tecmint.txt
+Finbashd single file based on user
+```bash
+$ find / -user root -name tecmint.txt
+```
 
-```text
 Find all files based on user
-```shell script
+```shell
 $ find /home -user tecmint
 ```
 
-Find all files based on group \`\`\`shell script $ find /home -group developer
+Finbashd all files based on group
+```bash
+$ find /home -group developer
+```
 
-```text
 Find particular files of user
-```shell script
+```shell
 $ find /home -user tecmint -iname "*.txt"
 ```
 
 ### Multiple filenames
 
-\`\`\`shell script {.wrap} $ find . -type f \( -name "_.sh" -o -name "_.txt" \)
+```bash
+{.wrap} $ find . -type f \( -name "_.sh" -o -name "_.txt" \)
+```
 
-```text
 Find files with `.sh` and `.txt` extensions
 
 
 ### Multiple dirs
 
 
-```shell script {.wrap}
+```shell {.wrap}
 $ find /opt /usr /var -name foo.scala -type f
 ```
 
@@ -191,11 +210,12 @@ Find files with multiple dirs
 
 ### Empty
 
-\`\`\`shell script $ find . -type d -empty
+```bash
+$ find . -type d -empty
+```
 
-```text
 Delete all empty files in a directory
-```shell script
+```shell
 $ find . -type f -empty -delete
 ```
 
@@ -228,27 +248,33 @@ $ find . -type f -empty -delete
 
 ### Examples
 
-Find last 50 days modified files \`\`\`shell script $ find / -mtime 50
+Finbashd last 50 days modified files
+```bash
+$ find / -mtime 50
+```
 
-```text
  find last 50 days accessed files
-```shell script
+```shell
 $ find / -atime 50
 ```
 
-find last 50-100 days modified files \`\`\`shell script $ find / -mtime +50 –mtime -100
+finbashd last 50-100 days modified files
+```bash
+$ find / -mtime +50 –mtime -100
+```
 
-```text
  find changed files in last 1 hour
-```shell script
+```shell
 $ find / -cmin -60
 ```
 
-find modified files in last 1 hour \`\`\`shell script $ find / -mmin -60
+finbashd modified files in last 1 hour
+```bash
+$ find / -mmin -60
+```
 
-```text
  find accessed files in last 1 hour
-```shell script
+```shell
 $ find / -amin -60
 ```
 
@@ -258,46 +284,51 @@ $ find / -amin -60
 
 Find and remove multiple files
 
-\`\`\`shell script $ find . -type f -name "\*.mp3" -exec rm -f {} \;
+```bash
+$ find . -type f -name "\*.mp3" -exec rm -f {} \;
+```
 
-```text
 Find and remove single file
 
-```shell script
+```shell
 $ find . -type f -name "tecmint.txt" -exec rm -f {} \;
 ```
 
-Find and delete 100mb files \`\`\`shell script $ find / -type f -size +100m -exec rm -f {} \;
+Finbashd and delete 100mb files
+```bash
+$ find / -type f -size +100m -exec rm -f {} \;
+```
 
-```text
 Find specific files and delete
-```shell script
+```shell
 $ find / -type f -name *.mp3 -size +10m -exec rm {} \;
 ```
 
 ### Find and replace
 
-\`\`\`shell script {.wrap} $ find ./ -type f -exec sed -i 's/find/replace/g' {} \; $ find ./ -type f -readable -writable -exec sed -i "s/old/new/g" {} \;
+```bash
+{.wrap} $ find ./ -type f -exec sed -i 's/find/replace/g' {} \; $ find ./ -type f -readable -writable -exec sed -i "s/old/new/g" {} \;
+```
 
-```text
 See also: [sed](/sed) command
 
 
 ### Find and rename
-```shell script {.wrap}
+```shell {.wrap}
 $ find . -type f -name 'file*' -exec mv {} {}_renamed \;
 $ find . -type f -name 'file*' -exec sh -c 'x="{}"; mv "$x" "${x}.bak"' \;
 ```
 
 ### Find and move
 
-\`\`\`shell script $ find . -name '\*.mp3' -exec mv {} /tmp/music \;
+```bash
+$ find . -name '\*.mp3' -exec mv {} /tmp/music \;
+```
 
-```text
 Find and move it to a specific directory
 
 ### Find and copy
-```shell script
+```shell
 $ find . -name '*2020*.xml' -exec cp -r "{}" /tmp/backup \;
 ```
 
@@ -305,12 +336,13 @@ Find and copy it to a specific directory
 
 ### Find and concatenate
 
-\`\`\`shell script $ find download -type f -iname '_.csv' \| xargs cat &gt; merged.csv $ find download -type f -name '_.gz' -exec cat {} \; &gt; output
+```bash
+$ find download -type f -iname '_.csv' \| xargs cat &gt; merged.csv $ find download -type f -name '_.gz' -exec cat {} \; &gt; output
+```
 
-```text
 ### Find and sort
 
-```shell script
+```shell
 $ find . -printf "%T+\t%p\n" | sort
 $ find . -printf "%T+\t%p\n" | sort -r
 ```
@@ -319,18 +351,19 @@ $ find . -printf "%T+\t%p\n" | sort -r
 
 Find files and set permissions to 644.
 
-\`\`\`shell script $ find / -type f -perm 0777 -print -exec chmod 644 {} \;
+```bash
+$ find / -type f -perm 0777 -print -exec chmod 644 {} \;
+```
 
-```text
 Find directories and set permissions to 755.
 
-```shell script
+```shell
 $ find / -type d -perm 777 -print -exec chmod 755 {} \;
 ```
 
 ### Find and tar
 
-\`\`\`shell script $ find . -type f -name "_.java" \| xargs tar cvf myfile.tar $ find . -type f -name "_.java" \| xargs tar rvf myfile.tar
-
-\`\`\`
+```bash
+$ find . -type f -name "_.java" \| xargs tar cvf myfile.tar $ find . -type f -name "_.java" \| xargs tar rvf myfile.tar
+```
 
