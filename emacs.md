@@ -22,7 +22,7 @@ intro: >
 
 To enter Emacs, just type its name: \`\`\`shell script $ emacs
 
-```text
+````
 ------
 
 | -           | -                                        |
@@ -526,37 +526,37 @@ Making global key bindings in Emacs Lisp:
 ``` {.wrap}
 (global-set-key (kbd "C-c g") ’search-forward)
 (global-set-key (kbd "M-#") ’query-replace-regexp)
-```
+````
 
 ## Abbrevs
 
-| - | - |
-| :--- | :--- |
-| `C-x` `a` `g` | Add global abbrev |
-| `C-x` `a` `l` | Add mode-local abbrev |
-| `C-x` `a` `i` `g` | Add global expansion for this abbrev |
+| -                 | -                                        |
+| ----------------- | ---------------------------------------- |
+| `C-x` `a` `g`     | Add global abbrev                        |
+| `C-x` `a` `l`     | Add mode-local abbrev                    |
+| `C-x` `a` `i` `g` | Add global expansion for this abbrev     |
 | `C-x` `a` `i` `l` | Add mode-local expansion for this abbrev |
-| `C-x` `a` `e` | Explicitly expand abbrev |
-| `M-/` | Expand previous word dynamically |
+| `C-x` `a` `e`     | Explicitly expand abbrev                 |
+| `M-/`             | Expand previous word dynamically         |
 
 {.shortcuts}
 
 ## Spelling Check
 
-| - | - |
-| :--- | :--- |
-| `M-$` | Check spelling of current word |
+| -                   | -                                     |
+| ------------------- | ------------------------------------- |
+| `M-$`               | Check spelling of current word        |
 | `M-x` ispell-region | Check spelling of all words in region |
-| `M-x` ispell-buffer | Check spelling of entire buffer |
-| `M-x` flyspell-mode | Toggle on-the-fly spell checking |
+| `M-x` ispell-buffer | Check spelling of entire buffer       |
+| `M-x` flyspell-mode | Toggle on-the-fly spell checking      |
 
 {.shortcuts}
 
-## Writing Commands {.col-span-2}
+## Writing Commands
 
 ### Syntax
 
-```text
+```
 (defun command-name (args)
 "documentation" (interactive "template")
 body)
@@ -564,7 +564,7 @@ body)
 
 ### Example
 
-```text
+```
 (defun this-line-to-top-of-window (line)
     "Reposition current line to top of window.
 With prefix argument LINE, put point on LINE."
@@ -575,4 +575,3 @@ With prefix argument LINE, put point on LINE."
 ```
 
 The interactive spec says how to read arguments interactively. Type `C-h` `f` interactive `RET` for more details.
-

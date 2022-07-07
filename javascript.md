@@ -15,16 +15,16 @@ intro: >
 
 # javascript
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Introduction
 
 JavaScript is a lightweight, interpreted programming language.
 
-* [Learn X in Y minutes](https://learnxinyminutes.com/docs/javascript/) _\(learnxinyminutes.com\)_
-* [Regex in JavaScript](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md#regex-in-javascript) _\(quickref.me\)_
+* [Learn X in Y minutes](https://learnxinyminutes.com/docs/javascript/) _(learnxinyminutes.com)_
+* [Regex in JavaScript](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md#regex-in-javascript) _(quickref.me)_
 
-### console.log\(\)
+### console.log()
 
 ```javascript
 alert('Hello world!');
@@ -127,7 +127,7 @@ const numberOfColumns = 4;
 numberOfColumns = 8;
 ```
 
-## Conditionals {.cols-3}
+## Conditionals
 
 ### if Statement
 
@@ -148,7 +148,7 @@ var x=1;
 result = (x == 1) ? true : false;
 ```
 
-### Operators {.row-span-2}
+### Operators
 
 ```javascript
 true || false;       // true
@@ -221,7 +221,7 @@ switch (food) {
 }
 ```
 
-## Functions {.cols-3}
+## Functions
 
 ### Functions
 
@@ -249,7 +249,7 @@ const rocketToMars = function() {
 }
 ```
 
-### Arrow Functions \(ES6\) {.row-span-2}
+### Arrow Functions (ES6)
 
 #### With two arguments
 
@@ -337,7 +337,7 @@ function add(num1, num2) {
 }
 ```
 
-## Scope  {.cols-3}
+## Scope
 
 ### Scope
 
@@ -378,7 +378,7 @@ function printColor() {
 printColor(); // => blue
 ```
 
-## Arrays  {.cols-3}
+## Arrays
 
 ### Arrays
 
@@ -407,7 +407,7 @@ console.log(myArray[0]); // 100
 console.log(myArray[1]); // 200
 ```
 
-### Method .push\(\)
+### Method .push()
 
 ```javascript
 // Adding a single element:
@@ -419,7 +419,7 @@ const numbers = [1, 2];
 numbers.push(3, 4, 5);
 ```
 
-### Method .pop\(\)
+### Method .pop()
 
 ```javascript
 const a= ['eggs', 'flour', 'chocolate'];
@@ -437,7 +437,7 @@ names.push('Carl');
 // ['Alice', 'Bob', 'Carl']
 ```
 
-## Loops  {.cols-3}
+## Loops
 
 ### While Loop
 
@@ -541,7 +541,7 @@ for (let key in mobile) {
 }
 ```
 
-## Iterators {.cols-2}
+## Iterators
 
 ### Functions Assigned to Variables
 
@@ -574,7 +574,7 @@ printMsg(isEven, 4);
 // => The number 4 is an even number: True.
 ```
 
-### Array Method .reduce\(\)
+### Array Method .reduce()
 
 ```javascript
 const arrayOfNumbers = [1, 2, 3, 4];
@@ -586,7 +586,7 @@ const sum = arrayOfNumbers.reduce((accumulator, curVal) => {
 console.log(sum); // 10
 ```
 
-### Array Method .map\(\)
+### Array Method .map()
 
 ```javascript
 const a = ['Taylor', 'Donald', 'Don', 'Natasha', 'Bobby'];
@@ -598,7 +598,7 @@ const announcements = a.map(member => {
 console.log(announcements);
 ```
 
-### Array Method .forEach\(\)
+### Array Method .forEach()
 
 ```javascript
 const numbers = [28, 77, 45, 99, 27];
@@ -608,7 +608,7 @@ numbers.forEach(number => {
 });
 ```
 
-### Array Method .filter\(\)
+### Array Method .filter()
 
 ```javascript
 const randomNumbers = [4, 11, 42, 14, 39];
@@ -617,7 +617,7 @@ const filteredArray = randomNumbers.filter(n => {
 });
 ```
 
-## Objects {.cols-2}
+## Objects
 
 ### Accessing Properties
 
@@ -654,7 +654,7 @@ const classElection = {
 console.log(classElection.place); // undefined
 ```
 
-### Mutable {.row-span-2}
+### Mutable
 
 ```javascript
 const student = {
@@ -807,7 +807,7 @@ console.log(myCat.name);
 myCat.name = 'Yankee';
 ```
 
-## Classes {.cols-3}
+## Classes
 
 ### Static Methods
 
@@ -906,7 +906,7 @@ const mySong = new Song({
 });
 ```
 
-## Modules {.cols-2}
+## Modules
 
 ### Require
 
@@ -957,9 +957,9 @@ import { add } from './add';
 console.log(add(2, 3)); // 5
 ```
 
-## Promises {.cols-2}
+## Promises
 
-### Promise states  {.row-span-2}
+### Promise states
 
 ```javascript
 const promise = new Promise((resolve, reject) => {
@@ -986,7 +986,7 @@ const executorFn = (resolve, reject) => {
 const promise = new Promise(executorFn);
 ```
 
-### setTimeout\(\)
+### setTimeout()
 
 ```javascript
 const loginAlert = () =>{
@@ -996,7 +996,7 @@ const loginAlert = () =>{
 setTimeout(loginAlert, 6000);
 ```
 
-### .then\(\) method
+### .then() method
 
 ```javascript
 const promise = new Promise((resolve, reject) => {    
@@ -1012,7 +1012,7 @@ promise.then((res) => {
 });
 ```
 
-### .catch\(\) method
+### .catch() method
 
 ```javascript
 const promise = new Promise((resolve, reject) => {  
@@ -1030,7 +1030,7 @@ promise.catch((err) => {
 });
 ```
 
-### Promise.all\(\)
+### Promise.all()
 
 ```javascript
 const promise1 = new Promise((resolve, reject) => {
@@ -1050,7 +1050,7 @@ Promise.all([promise1, promise2]).then((res) => {
 });
 ```
 
-### Avoiding nested Promise and .then\(\)
+### Avoiding nested Promise and .then()
 
 ```javascript
 const promise = new Promise((resolve, reject) => {  
@@ -1085,7 +1085,7 @@ const executorFn = (resolve, reject) => {
 const promise = new Promise(executorFn);
 ```
 
-### Chaining multiple .then\(\)
+### Chaining multiple .then()
 
 ```javascript
 const promise = new Promise(resolve => setTimeout(() => resolve('dAlan'), 100));
@@ -1099,7 +1099,7 @@ promise.then(res => {
 });
 ```
 
-## Async-Await {.cols-2}
+## Async-Await
 
 ### Asynchronous
 
@@ -1192,7 +1192,7 @@ async function msg() {
 msg(); // Message: Hello World! <-- after 2 seconds
 ```
 
-## Requests {.cols-3}
+## Requests
 
 ### JSON
 
@@ -1224,7 +1224,7 @@ req.onload = () => {
 req.send();
 ```
 
-### POST {.row-span-2}
+### POST
 
 ```javascript
 const data = {
@@ -1242,7 +1242,7 @@ xhr.onload = () => {
 };
 ```
 
-### fetch api {.row-span-2}
+### Fetch API
 
 ```javascript
 fetch(url, {
@@ -1304,7 +1304,7 @@ fetch('https://api-xxx.com/endpoint', {
 })
 ```
 
-### async await syntax {.col-span-2}
+### async await syntax
 
 ```javascript
 const getSuggestions = async () => {
@@ -1321,4 +1321,3 @@ const response = await fetch(endpoint, {cache: 'no-cache'});
   }
 }
 ```
-

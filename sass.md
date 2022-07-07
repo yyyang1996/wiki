@@ -14,12 +14,12 @@ intro: >
 
 # sass
 
-## Basics {.cols-3}
+## Basics
 
 ### Introduction
 
-* [Documentation](https://sass-lang.com/documentation) _\(sass-lang.com\)_
-* [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _\(learnxinyminutes.com\)_
+* [Documentation](https://sass-lang.com/documentation) _(sass-lang.com)_
+* [Learn X in Y minutes](https://learnxinyminutes.com/docs/sass/) _(learnxinyminutes.com)_
 
 ### Variables
 
@@ -67,7 +67,7 @@ h1 {
 
 See: [Mixins](sass.md#mixins-2)
 
-### Nesting {.row-span-2}
+### Nesting
 
 ```css
 .markdown-body {
@@ -118,7 +118,7 @@ text: {
 
 The `.sass` or `.sass` extension is optional.
 
-## Mixins {.cols-3}
+## Mixins
 
 ### Parameters
 
@@ -162,7 +162,7 @@ body {
 }
 ```
 
-## Color functions {.cols-2}
+## Color functions
 
 ### rgba
 
@@ -222,7 +222,7 @@ green($color)
 blue($color)
 ```
 
-See: [hue\(\)](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance_method), [red\(\)](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance_method)
+See: [hue()](http://sass-lang.com/documentation/Sass/Script/Functions.html#hue-instance\_method), [red()](http://sass-lang.com/documentation/Sass/Script/Functions.html#red-instance\_method)
 
 ### Adjustments
 
@@ -247,7 +247,7 @@ change-color($color, $blue: 250)
 
 Supported: `$red`, `$green`, `$blue`, `$hue`, `$saturation`, `$lightness`, `$alpha`
 
-## Other functions {.cols-2}
+## Other functions
 
 ### Strings
 
@@ -314,7 +314,7 @@ selector-replace(...)
 selector-unify(...)
 ```
 
-## Feature checks {.cols-2}
+## Feature checks
 
 ### Feature check
 
@@ -329,7 +329,7 @@ feature-exists(global-variable-shadowing)
 * units-level-3
 * at-error
 
-## Loops {.cols-3}
+## Loops
 
 ### For loops
 
@@ -339,7 +339,7 @@ feature-exists(global-variable-shadowing)
 }
 ```
 
-### Each loops \(simple\)
+### Each loops (simple)
 
 ```css
 $menu-items: home about contact;
@@ -351,7 +351,7 @@ $menu-items: home about contact;
 }
 ```
 
-### Each loops \(nested\)
+### Each loops (nested)
 
 ```css
 $backgrounds: (home, 'home.jpg'),
@@ -374,9 +374,9 @@ $i: 6;
 }
 ```
 
-## Other features {.cols-3}
+## Other features
 
-### Conditionals {.row-span-2}
+### Conditionals
 
 ```css
 @if $position == 'left' {
@@ -414,11 +414,10 @@ length($list)
 @each $item in $list { ... }
 ```
 
-### Maps {.col-span-2}
+### Maps
 
 ```css
 $map: (key1: value1, key2: value2, key3: value3);
 
 map-get($map, key1)
 ```
-

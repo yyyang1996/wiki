@@ -16,418 +16,419 @@ intro: >
 
 # regex
 
-## Get Started {.cols-3}
+## Get Started
 
 ### Introduction
 
 This is a quick cheat sheet to getting started with regular expressions.
 
-* [Regex in Python](regex.md#regex-in-python) _\(quickref.me\)_
-* [Regex in JavaScript](regex.md#regex-in-javascript) _\(quickref.me\)_
-* [Regex in PHP](regex.md#regex-in-php) _\(quickref.me\)_
-* [Regex in Java](regex.md#regex-in-java) _\(quickref.me\)_
-* [Regex in MySQL](regex.md#regex-in-mysql) _\(quickref.me\)_
-* [Regex in Vim](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/vim/README.md#search-and-replace) _\(quickref.me\)_
-* [Regex in Emacs](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/emacs/README.md#search) _\(quickref.me\)_
-* [Online regex tester](https://regex101.com/) _\(regex101.com\)_
+* [Regex in Python](regex.md#regex-in-python) _(quickref.me)_
+* [Regex in JavaScript](regex.md#regex-in-javascript) _(quickref.me)_
+* [Regex in PHP](regex.md#regex-in-php) _(quickref.me)_
+* [Regex in Java](regex.md#regex-in-java) _(quickref.me)_
+* [Regex in MySQL](regex.md#regex-in-mysql) _(quickref.me)_
+* [Regex in Vim](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/vim/README.md#search-and-replace) _(quickref.me)_
+* [Regex in Emacs](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/emacs/README.md#search) _(quickref.me)_
+*   [Online regex tester](https://regex101.com/) _(regex101.com)_
 
-  {.cols-2 .style-round}
+    {.cols-2 .style-round}
 
 ### Character Classes
 
-| Pattern | Description |
-| :--- | :--- |
-| `[abc]` | A single character of: a, b or c |
-| `[^abc]` | A character except: a, b or c |
-| `[a-z]` | A character in the range: a-z |
-| `[^a-z]` | A character not in the range: a-z |
-| `[0-9]` | A digit in the range: 0-9 |
-| `[a-zA-Z]` | A character in the range: a-z or A-Z |
-| `[a-zA-Z0-9]` | A character in the range:  a-z, A-Z or 0-9 |
+| Pattern       | Description                               |
+| ------------- | ----------------------------------------- |
+| `[abc]`       | A single character of: a, b or c          |
+| `[^abc]`      | A character except: a, b or c             |
+| `[a-z]`       | A character in the range: a-z             |
+| `[^a-z]`      | A character not in the range: a-z         |
+| `[0-9]`       | A digit in the range: 0-9                 |
+| `[a-zA-Z]`    | A character in the range: a-z or A-Z      |
+| `[a-zA-Z0-9]` | A character in the range: a-z, A-Z or 0-9 |
 
 ### Quantifiers
 
-| Pattern | Description |
-| :--- | :--- |
-| `a?` | Zero or one of a |
-| `a*` | Zero or more of a |
-| `a+` | One or more of a |
+| Pattern | Description       |
+| ------- | ----------------- |
+| `a?`    | Zero or one of a  |
+| `a*`    | Zero or more of a |
+| `a+`    | One or more of a  |
 
-\|`[0-9]+` \| One or more of 0-9\|
+|`[0-9]+` | One or more of 0-9|
 
-\|`a{3}` \| Exactly 3 of a\| \|`a{3,}` \| 3 or more of a\| \|`a{3,6}` \| Between 3 and 6 of a\|
+|`a{3}` | Exactly 3 of a| |`a{3,}` | 3 or more of a| |`a{3,6}` | Between 3 and 6 of a|
 
-\|`a*` \| Greedy quantifier\| \|`a*?` \| Lazy quantifier\| \|`a*+` \| Possessive quantifier\|
+|`a*` | Greedy quantifier| |`a*?` | Lazy quantifier| |`a*+` | Possessive quantifier|
 
 ### Common Metacharacters
 
-* \^
+* ^
 * {
-* +
+*
+  *
 * \&lt;
 * \[
 * \*
-* \)
-* &gt;
+* )
+* \>
 * .
-* \(
-* \|
+* (
+* |
 * $
-* \
-* \?
+* \\
+*   ?
 
-  {.cols-3 .style-none}
+    {.cols-3 .style-none}
 
 Escape these special characters with `\`
 
-### Meta Sequences {.row-span-4}
+### Meta Sequences
 
-| Pattern | Description |
-| :--- | :--- |
-| `.` | Any single character |
-| `\s` | Any whitespace character |
-| `\S` | Any non-whitespace character |
-| `\d` | Any digit, Same as \[0-9\] |
-| `\D` | Any non-digit, Same as |
-| `\w` | Any word character |
-| `\W` | Any non-word character |
-| `\X` | Any Unicode sequences, linebreaks included |
-| `\C` | Match one data unit |
-| `\R` | Unicode newlines |
-| `\v` | Vertical whitespace character |
-| `\V` | Negation of \v - anything except newlines and vertical tabs |
-| `\h` | Horizontal whitespace character |
-| `\H` | Negation of \h |
-| `\K` | Reset match |
-| `\n` | Match nth subpattern |
-| `\pX` | Unicode property X |
-| `\p{...}` | Unicode property or script category |
-| `\PX` | Negation of \pX |
-| `\P{...}` | Negation of \p |
-| `\Q...\E` | Quote; treat as literals |
-| `\k<name>` | Match subpattern `name` |
-| `\k'name'` | Match subpattern `name` |
-| `\k{name}` | Match subpattern `name` |
-| `\gn` | Match nth subpattern |
-| `\g{n}` | Match nth subpattern |
-| `\g<n>` | Recurse nth capture group |
-| `\g'n'` | Recurses nth capture group. |
-| `\g{-n}` | Match nth relative previous subpattern |
-| `\g<+n>` | Recurse nth relative upcoming subpattern |
-| `\g'+n'` | Match nth relative upcoming subpattern |
-| `\g'letter'` | Recurse named capture group `letter` |
-| `\g{letter}` | Match previously-named capture group `letter` |
-| `\g<letter>` | Recurses named capture group `letter` |
-| `\xYY` | Hex character YY |
-| `\x{YYYY}` | Hex character YYYY |
-| `\ddd` | Octal character ddd |
-| `\cY` | Control character Y |
-| `[\b]` | Backspace character |
-| `\` | Makes any character literal |
+| Pattern      | Description                                                 |
+| ------------ | ----------------------------------------------------------- |
+| `.`          | Any single character                                        |
+| `\s`         | Any whitespace character                                    |
+| `\S`         | Any non-whitespace character                                |
+| `\d`         | Any digit, Same as \[0-9]                                   |
+| `\D`         | Any non-digit, Same as                                      |
+| `\w`         | Any word character                                          |
+| `\W`         | Any non-word character                                      |
+| `\X`         | Any Unicode sequences, linebreaks included                  |
+| `\C`         | Match one data unit                                         |
+|              | Unicode newlines                                            |
+| `\v`         | Vertical whitespace character                               |
+| `\V`         | Negation of \v - anything except newlines and vertical tabs |
+| `\h`         | Horizontal whitespace character                             |
+| `\H`         | Negation of \h                                              |
+| `\K`         | Reset match                                                 |
+|              | Match nth subpattern                                        |
+| `\pX`        | Unicode property X                                          |
+| `\p{...}`    | Unicode property or script category                         |
+| `\PX`        | Negation of \pX                                             |
+| `\P{...}`    | Negation of \p                                              |
+| `\Q...\E`    | Quote; treat as literals                                    |
+| `\k<name>`   | Match subpattern `name`                                     |
+| `\k'name'`   | Match subpattern `name`                                     |
+| `\k{name}`   | Match subpattern `name`                                     |
+| `\gn`        | Match nth subpattern                                        |
+| `\g{n}`      | Match nth subpattern                                        |
+| `\g<n>`      | Recurse nth capture group                                   |
+| `\g'n'`      | Recurses nth capture group.                                 |
+| `\g{-n}`     | Match nth relative previous subpattern                      |
+| `\g<+n>`     | Recurse nth relative upcoming subpattern                    |
+| `\g'+n'`     | Match nth relative upcoming subpattern                      |
+| `\g'letter'` | Recurse named capture group `letter`                        |
+| `\g{letter}` | Match previously-named capture group `letter`               |
+| `\g<letter>` | Recurses named capture group `letter`                       |
+| `\xYY`       | Hex character YY                                            |
+| `\x{YYYY}`   | Hex character YYYY                                          |
+| `\ddd`       | Octal character ddd                                         |
+| `\cY`        | Control character Y                                         |
+| `[\b]`       | Backspace character                                         |
+| `\`          | Makes any character literal                                 |
 
 ### Anchors
 
-| Pattern | Description |
-| :--- | :--- |
-| `\G` | Start of match |
-| `^` | Start of string |
-| `$` | End of string |
-| `\A` | Start of string |
-| `\Z` | End of string |
-| `\z` | Absolute end of string |
-| `\b` | A word boundary |
-| `\B` | Non-word boundary |
+| Pattern | Description            |
+| ------- | ---------------------- |
+| `\G`    | Start of match         |
+| `^`     | Start of string        |
+| `$`     | End of string          |
+| `\A`    | Start of string        |
+| `\Z`    | End of string          |
+| `\z`    | Absolute end of string |
+| `\b`    | A word boundary        |
+| `\B`    | Non-word boundary      |
 
 ### Substitution
 
-| Pattern | Description |
-| :--- | :--- |
-| `\0` | Complete match contents |
-| `\1` | Contents in capture group 1 |
-| `$1` | Contents in capture group 1 |
-| `${foo}` | Contents in capture group `foo` |
-| `\x20` | Hexadecimal replacement values |
-| `\x{06fa}` | Hexadecimal replacement values |
-| `\t` | Tab |
-| `\r` | Carriage return |
-| `\n` | Newline |
-| `\f` | Form-feed |
-| `\U` | Uppercase Transformation |
-| `\L` | Lowercase Transformation |
-| `\E` | Terminate any Transformation |
+| Pattern    | Description                     |
+| ---------- | ------------------------------- |
+| `\0`       | Complete match contents         |
+| `\1`       | Contents in capture group 1     |
+| `$1`       | Contents in capture group 1     |
+| `${foo}`   | Contents in capture group `foo` |
+| `\x20`     | Hexadecimal replacement values  |
+| `\x{06fa}` | Hexadecimal replacement values  |
+|            | Tab                             |
+|            | Carriage return                 |
+|            | Newline                         |
+| `\f`       | Form-feed                       |
+| `\U`       | Uppercase Transformation        |
+| `\L`       | Lowercase Transformation        |
+| `\E`       | Terminate any Transformation    |
 
 ### Group Constructs
 
-| Pattern | Description |  |
-| :--- | :--- | :--- |
-| `(...)` | Capture everything enclosed |  |
-| \`\(a | b\)\` | Match either a or b |
-| `(?:...)` | Match everything enclosed |  |
-| `(?>...)` | Atomic group \(non-capturing\) |  |
-| \`\(? | ...\)\` | Duplicate subpattern group number |
-| `(?#...)` | Comment |  |
+| Pattern   | Description                  |                                   |
+| --------- | ---------------------------- | --------------------------------- |
+| `(...)`   | Capture everything enclosed  |                                   |
+| \`(a      | b)\`                         | Match either a or b               |
+| `(?:...)` | Match everything enclosed    |                                   |
+| `(?>...)` | Atomic group (non-capturing) |                                   |
+| \`(?      | ...)\`                       | Duplicate subpattern group number |
+| `(?#...)` | Comment                      |                                   |
 
-\|`(?'name'...)` \| Named Capturing Group\| \|`(?<name>...)` \| Named Capturing Group\| \|`(?P<name>...)` \| Named Capturing Group\|
+|`(?'name'...)` | Named Capturing Group| |`(?<name>...)` | Named Capturing Group| |`(?P<name>...)` | Named Capturing Group|
 
-\|`(?imsxXU)` \| Inline modifiers\| \|`(?(DEFINE)...)` \| Pre-define patterns before using them\|
+|`(?imsxXU)` | Inline modifiers| |`(?(DEFINE)...)` | Pre-define patterns before using them|
 
 ### Assertions
 
-| - | - |  |
-| :--- | :--- | :--- |
-| \`\(?\(1\)yes | no\)\` | Conditional statement |
-| \`\(?\(R\)yes | no\)\` | Conditional statement |
-| \`\(?\(R\#\)yes | no\)\` | Recursive Conditional statement |
-| \`\(?\(R&name\)yes | no\)\` | Conditional statement |
-| \`\(?\(?=...\)yes | no\)\` | Lookahead conditional |
-| \`\(?\(?&lt;=...\)yes | no\)\` | Lookbehind conditional |
+| -                | -     |                                 |
+| ---------------- | ----- | ------------------------------- |
+| \`(?(1)yes       | no)\` | Conditional statement           |
+| \`(?(R)yes       | no)\` | Conditional statement           |
+| \`(?(R#)yes      | no)\` | Recursive Conditional statement |
+| \`(?(R\&name)yes | no)\` | Conditional statement           |
+| \`(?(?=...)yes   | no)\` | Lookahead conditional           |
+| \`(?(?<=...)yes  | no)\` | Lookbehind conditional          |
 
 ### Lookarounds
 
-| - | - |
-| :--- | :--- |
-| `(?=...)` | Positive Lookahead |
-| `(?!...)` | Negative Lookahead |
+| -          | -                   |
+| ---------- | ------------------- |
+| `(?=...)`  | Positive Lookahead  |
+| `(?!...)`  | Negative Lookahead  |
 | `(?<=...)` | Positive Lookbehind |
 | `(?<!...)` | Negative Lookbehind |
 
-Lookaround lets you match a group before \(lookbehind\) or after \(lookahead\) your main pattern without including it in the result.
+Lookaround lets you match a group before (lookbehind) or after (lookahead) your main pattern without including it in the result.
 
 ### Flags/Modifiers
 
-| Pattern | Description |
-| :--- | :--- |
-| `g` | Global |
-| `m` | Multiline |
-| `i` | Case insensitive |
-| `x` | Ignore whitespace |
-| `s` | Single line |
-| `u` | Unicode |
-| `X` | eXtended |
-| `U` | Ungreedy |
-| `A` | Anchor |
-| `J` | Duplicate group names |
+| Pattern | Description           |
+| ------- | --------------------- |
+| `g`     | Global                |
+| `m`     | Multiline             |
+| `i`     | Case insensitive      |
+| `x`     | Ignore whitespace     |
+| `s`     | Single line           |
+| `u`     | Unicode               |
+| `X`     | eXtended              |
+| `U`     | Ungreedy              |
+| `A`     | Anchor                |
+| `J`     | Duplicate group names |
 
 ### Recurse
 
-| - | - |
-| :--- | :--- |
-| `(?R)` | Recurse entire pattern |
-| `(?1)` | Recurse first subpattern |
-| `(?+1)` | Recurse first relative subpattern |
-| `(?&name)` | Recurse subpattern `name` |
-| `(?P=name)` | Match subpattern `name` |
-| `(?P>name)` | Recurse subpattern `name` |
+| -           | -                                 |
+| ----------- | --------------------------------- |
+| `(?R)`      | Recurse entire pattern            |
+| `(?1)`      | Recurse first subpattern          |
+| `(?+1)`     | Recurse first relative subpattern |
+| `(?&name)`  | Recurse subpattern `name`         |
+| `(?P=name)` | Match subpattern `name`           |
+| `(?P>name)` | Recurse subpattern `name`         |
 
 ### POSIX Character Classes {.col-span-2}
 
-| Character Class | Same as | Meaning |
-| :--- | :--- | :--- |
-| `[[:alnum:]]` | `[0-9A-Za-z]` | Letters and digits |
-| `[[:alpha:]]` | `[A-Za-z]` | Letters |
-| `[[:ascii:]]` | `[\x00-\x7F]` | ASCII codes 0-127 |
-| `[[:blank:]]` | `[\t ]` | Space or tab only |
-| `[[:cntrl:]]` | `[\x00-\x1F\x7F]` | Control characters |
-| `[[:digit:]]` | `[0-9]` | Decimal digits |
-| `[[:graph:]]` | `[[:alnum:][:punct:]]` | Visible characters \(not space\) |
-| `[[:lower:]]` | `[a-z]` | Lowercase letters |
-| `[[:print:]]` | `[ -~] == [ [:graph:]]` | Visible characters |
-| `[[:punct:]]` | &lt;code&gt;\[!"\#$%&’\(\)\*+,-./:;&lt;=&gt;?@\[\]^\_\`{\|}~\]&lt;/code&gt; | Visible punctuation characters |
-| `[[:space:]]` | `[\t\n\v\f\r ]` | Whitespace |
-| `[[:upper:]]` | `[A-Z]` | Uppercase letters |
-| `[[:word:]]` | `[0-9A-Za-z_]` | Word characters |
-| `[[:xdigit:]]` | `[0-9A-Fa-f]` | Hexadecimal digits |
-| `[[:<:]]` | `[\b(?=\w)]` | Start of word |
-| `[[:>:]]` | `[\b(?<=\w)]` | End of word |
+| Character Class | Same as                                                 | Meaning                        |
+| --------------- | ------------------------------------------------------- | ------------------------------ |
+| `[[:alnum:]]`   | `[0-9A-Za-z]`                                           | Letters and digits             |
+| `[[:alpha:]]`   | `[A-Za-z]`                                              | Letters                        |
+| `[[:ascii:]]`   | `[\x00-\x7F]`                                           | ASCII codes 0-127              |
+| `[[:blank:]]`   | `[\t ]`                                                 | Space or tab only              |
+| `[[:cntrl:]]`   | `[\x00-\x1F\x7F]`                                       | Control characters             |
+| `[[:digit:]]`   | `[0-9]`                                                 | Decimal digits                 |
+| `[[:graph:]]`   | `[[:alnum:][:punct:]]`                                  | Visible characters (not space) |
+| `[[:lower:]]`   | `[a-z]`                                                 | Lowercase letters              |
+| `[[:print:]]`   | `[ -~] == [ [:graph:]]`                                 | Visible characters             |
+| `[[:punct:]]`   | \<code>\[!"#$%&’()\*+,-./:;<=>?@\[]^\_\`{\|}\~]\</code> | Visible punctuation characters |
+| `[[:space:]]`   | `[\t\n\v\f\r ]`                                         | Whitespace                     |
+| `[[:upper:]]`   | `[A-Z]`                                                 | Uppercase letters              |
+| `[[:word:]]`    | `[0-9A-Za-z_]`                                          | Word characters                |
+| `[[:xdigit:]]`  | `[0-9A-Fa-f]`                                           | Hexadecimal digits             |
+| `[[:<:]]`       | `[\b(?=\w)]`                                            | Start of word                  |
+| `[[:>:]]`       | `[\b(?<=\w)]`                                           | End of word                    |
 
 {.show-header}
 
 ### Control verb
 
-| - | - |
-| :--- | :--- |
-| `(*ACCEPT)` | Control verb |
-| `(*FAIL)` | Control verb |
-| `(*MARK:NAME)` | Control verb |
-| `(*COMMIT)` | Control verb |
-| `(*PRUNE)` | Control verb |
-| `(*SKIP)` | Control verb |
-| `(*THEN)` | Control verb |
-| `(*UTF)` | Pattern modifier |
-| `(*UTF8)` | Pattern modifier |
-| `(*UTF16)` | Pattern modifier |
-| `(*UTF32)` | Pattern modifier |
-| `(*UCP)` | Pattern modifier |
-| `(*CR)` | Line break modifier |
-| `(*LF)` | Line break modifier |
-| `(*CRLF)` | Line break modifier |
-| `(*ANYCRLF)` | Line break modifier |
-| `(*ANY)` | Line break modifier |
-| `\R` | Line break modifier |
-| `(*BSR_ANYCRLF)` | Line break modifier |
-| `(*BSR_UNICODE)` | Line break modifier |
-| `(*LIMIT_MATCH=x)` | Regex engine modifier |
+| -                      | -                     |
+| ---------------------- | --------------------- |
+| `(*ACCEPT)`            | Control verb          |
+| `(*FAIL)`              | Control verb          |
+| `(*MARK:NAME)`         | Control verb          |
+| `(*COMMIT)`            | Control verb          |
+| `(*PRUNE)`             | Control verb          |
+| `(*SKIP)`              | Control verb          |
+| `(*THEN)`              | Control verb          |
+| `(*UTF)`               | Pattern modifier      |
+| `(*UTF8)`              | Pattern modifier      |
+| `(*UTF16)`             | Pattern modifier      |
+| `(*UTF32)`             | Pattern modifier      |
+| `(*UCP)`               | Pattern modifier      |
+| `(*CR)`                | Line break modifier   |
+| `(*LF)`                | Line break modifier   |
+| `(*CRLF)`              | Line break modifier   |
+| `(*ANYCRLF)`           | Line break modifier   |
+| `(*ANY)`               | Line break modifier   |
+|                        | Line break modifier   |
+| `(*BSR_ANYCRLF)`       | Line break modifier   |
+| `(*BSR_UNICODE)`       | Line break modifier   |
+| `(*LIMIT_MATCH=x)`     | Regex engine modifier |
 | `(*LIMIT_RECURSION=d)` | Regex engine modifier |
-| `(*NO_AUTO_POSSESS)` | Regex engine modifier |
-| `(*NO_START_OPT)` | Regex engine modifier |
+| `(*NO_AUTO_POSSESS)`   | Regex engine modifier |
+| `(*NO_START_OPT)`      | Regex engine modifier |
 
-## Regex examples{.cols-3}
+## Regex examples
 
 ### Characters
 
-| Pattern | Matches |
-| :--- | :--- |
-| `ring` | Match ring springboard etc. |
-| `.` | Match a,  9,  + etc. |
-| `h.o` | Match hoo, h2o, h/o  etc. |
-| `ring\?` | Match ring? |
-| `\(quiet\)` | Match \(quiet\) |
-| `c:\\windows` | Match c:\windows |
+| Pattern       | Matches                     |
+| ------------- | --------------------------- |
+| `ring`        | Match ring springboard etc. |
+| `.`           | Match a, 9, + etc.          |
+| `h.o`         | Match hoo, h2o, h/o etc.    |
+| `ring\?`      | Match ring?                 |
+| `\(quiet\)`   | Match (quiet)               |
+| `c:\\windows` | Match c:\windows            |
 
-Use `\` to search for these special characters:  
+Use `\` to search for these special characters:\
 `[ \ ^ $ . | ? * + ( ) { }`
 
 ### Alternatives
 
-| Pattern | Matches |  |
-| :--- | :--- | :--- |
-| \`cat | dog     \` | Match cat or dog |
-| \`id | identity \` | Match id or identity |
-| \`identity | id \` | Match id or identity |
+| Pattern    | Matches     |                      |
+| ---------- | ----------- | -------------------- |
+| \`cat      | dog \`      | Match cat or dog     |
+| \`id       | identity \` | Match id or identity |
+| \`identity | id \`       | Match id or identity |
 
 Order longer to shorter when alternatives overlap
 
 ### Character classes
 
-| Pattern | Matches |
-| :--- | :--- |
-| `[aeiou]` | Match any vowel |
-| `[^aeiou]` | Match a NON vowel |
-| `r[iau]ng` | Match ring, wrangle, sprung, etc. |
-| `gr[ae]y` | Match gray or grey |
-| `[a-zA-Z0-9]` | Match any letter or digit |
+| Pattern       | Matches                           |
+| ------------- | --------------------------------- |
+| `[aeiou]`     | Match any vowel                   |
+| `[^aeiou]`    | Match a NON vowel                 |
+| `r[iau]ng`    | Match ring, wrangle, sprung, etc. |
+| `gr[ae]y`     | Match gray or grey                |
+| `[a-zA-Z0-9]` | Match any letter or digit         |
 
 In `[ ]` always escape `. \ ]` and sometimes `^ - .`
 
 ### Shorthand classes
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `\w` | "Word" character  _\(letter, digit, or underscore\)_ |
-| `\d` | Digit |
-| `\s` | Whitespace  _\(space, tab, vtab, newline\)_ |
-| `\W, \D, or \S` | Not word, digit, or whitespace |
-| `[\D\S]` | Means not digit or whitespace, both match |
-| `[^\d\s]` | Disallow digit and whitespace |
+| Pattern         | Meaning                                           |
+| --------------- | ------------------------------------------------- |
+| `\w`            | "Word" character _(letter, digit, or underscore)_ |
+| `\d`            | Digit                                             |
+| `\s`            | Whitespace _(space, tab, vtab, newline)_          |
+| `\W, \D, or \S` | Not word, digit, or whitespace                    |
+| `[\D\S]`        | Means not digit or whitespace, both match         |
+| `[^\d\s]`       | Disallow digit and whitespace                     |
 
 ### Occurrences
 
-| Pattern | Matches |
-| :--- | :--- |
-| `colou?r` | Match color or colour |
+| Pattern             | Matches                           |
+| ------------------- | --------------------------------- |
+| `colou?r`           | Match color or colour             |
 | `[BW]ill[ieamy's]*` | Match Bill, Willy, William's etc. |
-| `[a-zA-Z]+` | Match 1 or more letters |
-| `\d{3}-\d{2}-\d{4}` | Match a SSN |
-| `[a-z]\w{1,7}` | Match a UW NetID |
+| `[a-zA-Z]+`         | Match 1 or more letters           |
+| `\d{3}-\d{2}-\d{4}` | Match a SSN                       |
+| `[a-z]\w{1,7}`      | Match a UW NetID                  |
 
 ### Greedy versus lazy
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `*  + {n,}` _greedy_ | Match as much as possible |
-| `<.+>` | Finds 1 big match in \bold\&lt;\/b&gt; |
-| `*?  +? {n,}?` _lazy_ | Match as little as possible |
-| `<.+?>` | Finds 2 matches in \&lt;b&gt;bold\&lt;\/b&gt; |
+| Pattern              | Meaning                                |
+| -------------------- | -------------------------------------- |
+| `* + {n,}` _greedy_  | Match as much as possible              |
+| `<.+>`               | Finds 1 big match in \bold\&lt;/b>     |
+| `*? +? {n,}?` _lazy_ | Match as little as possible            |
+| `<.+?>`              | Finds 2 matches in \&lt;b>bold\&lt;/b> |
 
-### Scope {.col-span-2}
+### Scope
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `\b` | "Word" edge \(next to non "word" character\) |
-| `\bring` | Word starts with "ring", ex ringtone |
-| `ring\b` | Word ends with "ring", ex spring |
-| `\b9\b` | Match single digit 9, not 19, 91, 99, etc.. |
-| `\b[a-zA-Z]{6}\b` | Match 6-letter words |
-| `\B` | Not word edge |
-| `\Bring\B` | Match springs and wringer |
-| `^\d*$` | Entire string must be digits |
-| `^[a-zA-Z]{4,20}$` | String must have 4-20 letters |
-| `^[A-Z]` | String must begin with capital letter |
-| `[\.!?"')]$` | String must end with terminal puncutation |
+| Pattern            | Meaning                                     |
+| ------------------ | ------------------------------------------- |
+| `\b`               | "Word" edge (next to non "word" character)  |
+| `\bring`           | Word starts with "ring", ex ringtone        |
+| `ring\b`           | Word ends with "ring", ex spring            |
+| `\b9\b`            | Match single digit 9, not 19, 91, 99, etc.. |
+| `\b[a-zA-Z]{6}\b`  | Match 6-letter words                        |
+| `\B`               | Not word edge                               |
+| `\Bring\B`         | Match springs and wringer                   |
+| `^\d*$`            | Entire string must be digits                |
+| `^[a-zA-Z]{4,20}$` | String must have 4-20 letters               |
+| `^[A-Z]`           | String must begin with capital letter       |
+| `[\.!?"')]$`       | String must end with terminal puncutation   |
 
 ### Modifiers
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `(?i)`\[a-z\]\*`(?-i)` | Ignore case ON / OFF |
-| `(?s)`.\*`(?-s)` | Match multiple lines \(causes . to match newline\) |
-| `(?m)`^.\*;$`(?-m)` | ^ & $ match lines not whole string |
-| `(?x)` | \#free-spacing mode, this EOL comment ignored |
-| `(?-x)` | free-spacing mode OFF |
-| /regex/`ismx` | Modify mode for entire string |
+| Pattern               | Meaning                                          |
+| --------------------- | ------------------------------------------------ |
+| `(?i)`\[a-z]\*`(?-i)` | Ignore case ON / OFF                             |
+| `(?s)`.\*`(?-s)`      | Match multiple lines (causes . to match newline) |
+| `(?m)`^.\*;$`(?-m)`   | ^ & $ match lines not whole string               |
+| `(?x)`                | #free-spacing mode, this EOL comment ignored     |
+| `(?-x)`               | free-spacing mode OFF                            |
+| /regex/`ismx`         | Modify mode for entire string                    |
 
 ### Groups
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `(in\|out)put` | Match input or output |
-| `\d{5}(-\d{4})?` | US zip code _\("+ 4" optional\)_ |
+| Pattern          | Meaning                        |
+| ---------------- | ------------------------------ |
+| `(in\|out)put`   | Match input or output          |
+| `\d{5}(-\d{4})?` | US zip code _("+ 4" optional)_ |
 
-Parser tries EACH alternative if match fails after group.  
+Parser tries EACH alternative if match fails after group.\
 Can lead to catastrophic backtracking.
 
 ### Back references
 
-| Pattern | Matches |
-| :--- | :--- |
-| `(to) (be) or not \1 \2` | Match to be or not to be |
-| `([^\s])\1{2}` | Match non-space, then same twice more   aaa, ... |
-| `\b(\w+)\s+\1\b` | Match doubled words |
+| Pattern                  | Matches                                        |
+| ------------------------ | ---------------------------------------------- |
+| `(to) (be) or not \1 \2` | Match to be or not to be                       |
+| `([^\s])\1{2}`           | Match non-space, then same twice more aaa, ... |
+| `\b(\w+)\s+\1\b`         | Match doubled words                            |
 
 ### Non-capturing group
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `on(?:click\|load)` | Faster than:  `on(click\|load)` |
+| Pattern             | Meaning                        |
+| ------------------- | ------------------------------ |
+| `on(?:click\|load)` | Faster than: `on(click\|load)` |
 
 Use non-capturing or atomic groups when possible
 
 ### Atomic groups
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `(?>red\|green\|blue)` | Faster than non-capturing |
-| `(?>id\|identity)\b` | Match id, but not identity |
+| Pattern                | Meaning                    |
+| ---------------------- | -------------------------- |
+| `(?>red\|green\|blue)` | Faster than non-capturing  |
+| `(?>id\|identity)\b`   | Match id, but not identity |
 
 "id" matches, but `\b` fails after atomic group, parser doesn't backtrack into group to retry 'identity'
 
 If alternatives overlap, order longer to shorter.
 
-### Lookaround {.row-span-2 .col-span-2}
+### Lookaround
 
-| Pattern | Meaning |
-| :--- | :--- |
-| `(?= )` | Lookahead, if you can find ahead |
-| `(?! )` | Lookahead,if you can not find ahead |
-| `(?<= )` | Lookbehind, if you can find behind |
-| `(?<! )` | Lookbehind, if you can NOT find behind |
-| `\b\w+?(?=ing\b)` | Match warbling, string, fishing, ... |
-| `\b(?!\w+ing\b)\w+\b` | Words NOT ending in "ing" |
-| `(?<=\bpre).*?\b` | Match pretend, present, prefix, ... |
-| `\b\w{3}(?<!pre)\w*?\b` | Words NOT starting with "pre" |
-| `\b\w+(?<!ing)\b` | Match words NOT ending in "ing" |
+| Pattern                 | Meaning                                |
+| ----------------------- | -------------------------------------- |
+| `(?= )`                 | Lookahead, if you can find ahead       |
+| `(?! )`                 | Lookahead,if you can not find ahead    |
+| `(?<= )`                | Lookbehind, if you can find behind     |
+| `(?<! )`                | Lookbehind, if you can NOT find behind |
+| `\b\w+?(?=ing\b)`       | Match warbling, string, fishing, ...   |
+| `\b(?!\w+ing\b)\w+\b`   | Words NOT ending in "ing"              |
+| `(?<=\bpre).*?\b`       | Match pretend, present, prefix, ...    |
+| `\b\w{3}(?<!pre)\w*?\b` | Words NOT starting with "pre"          |
+| `\b\w+(?<!ing)\b`       | Match words NOT ending in "ing"        |
 
 ### If-then-else
 
 Match "Mr." or "Ms." if word "her" is later in string
 
-```text
+```
 M(?(?=.*?\bher\b)s|r)\.
 ```
 
 requires lookaround for IF condition
 
-## RegEx in Python {.cols-3}
+## RegEx in Python
 
 ### Getting started
 
@@ -437,9 +438,9 @@ Import the regular expressions module
 import re
 ```
 
-### Examples  {.col-span-2 .row-span-3}
+### Examples
 
-#### re.search\(\)
+#### re.search()
 
 ```python
 >>> sentence = 'This is a sample string'
@@ -449,7 +450,7 @@ True
 False
 ```
 
-#### re.findall\(\)
+#### re.findall()
 
 ```python
 >>> re.findall(r'\bs?pare?\b', 'par spar apparent spare part pare')
@@ -458,7 +459,7 @@ False
 ['0501', '154', '98234']
 ```
 
-#### re.finditer\(\)
+#### re.finditer()
 
 ```python
 >>> m_iter = re.finditer(r'[0-9]+', '45 349 651 593 4 204')
@@ -466,14 +467,14 @@ False
 ['45', '349', '4', '204']
 ```
 
-#### re.split\(\)
+#### re.split()
 
 ```python
 >>> re.split(r'\d+', 'Sample123string42with777numbers')
 ['Sample', 'string', 'with', 'numbers']
 ```
 
-#### re.sub\(\)
+#### re.sub()
 
 ```python
 >>> ip_lines = "catapults\nconcatenate\ncat"
@@ -483,7 +484,7 @@ False
 * cat
 ```
 
-#### re.compile\(\)
+#### re.compile()
 
 ```python
 >>> pet = re.compile(r'dog')
@@ -497,30 +498,30 @@ False
 
 ### Functions
 
-| Function | Description |
-| :--- | :--- |
-| `re.findall` | Returns a list containing all matches |
-| `re.finditer` | Return an iterable of match objects \(one for each match\) |
-| `re.search` | Returns a Match object if there is a match anywhere in the string |
-| `re.split` | Returns a list where the string has been split at each match |
-| `re.sub` | Replaces one or many matches with a string |
-| `re.compile` | Compile a regular expression pattern for later use |
-| `re.escape` | Return string with all non-alphanumerics backslashed |
+| Function      | Description                                                       |
+| ------------- | ----------------------------------------------------------------- |
+| `re.findall`  | Returns a list containing all matches                             |
+| `re.finditer` | Return an iterable of match objects (one for each match)          |
+| `re.search`   | Returns a Match object if there is a match anywhere in the string |
+| `re.split`    | Returns a list where the string has been split at each match      |
+| `re.sub`      | Replaces one or many matches with a string                        |
+| `re.compile`  | Compile a regular expression pattern for later use                |
+| `re.escape`   | Return string with all non-alphanumerics backslashed              |
 
 ### Flags
 
-| - | - | - |
-| :--- | :--- | :--- |
-| `re.I` | `re.IGNORECASE` | Ignore case |
-| `re.M` | `re.MULTILINE` | Multiline |
-| `re.L` | `re.LOCALE` | Make `\w`,`\b`,`\s` _locale dependent_ |
-| `re.S` | `re.DOTALL` | Dot matches all _\(including newline\)_ |
-| `re.U` | `re.UNICODE` | Make `\w`,`\b`,`\d`,`\s` _unicode dependent_ |
-| `re.X` | `re.VERBOSE` | Readable style |
+| -      | -               | -                                            |
+| ------ | --------------- | -------------------------------------------- |
+| `re.I` | `re.IGNORECASE` | Ignore case                                  |
+| `re.M` | `re.MULTILINE`  | Multiline                                    |
+| `re.L` | `re.LOCALE`     | Make `\w`,`\b`,`\s` _locale dependent_       |
+| `re.S` | `re.DOTALL`     | Dot matches all _(including newline)_        |
+| `re.U` | `re.UNICODE`    | Make `\w`,`\b`,`\d`,`\s` _unicode dependent_ |
+| `re.X` | `re.VERBOSE`    | Readable style                               |
 
-## Regex in JavaScript {.cols-3}
+## Regex in JavaScript
 
-### test\(\)
+### test()
 
 ```javascript
 let textA = 'I like APPles very much';
@@ -534,7 +535,7 @@ console.log(regex.test(textA));
 console.log(regex.test(textB));
 ```
 
-### search\(\)
+### search()
 
 ```javascript
 let text = 'I like APPles very much';
@@ -548,7 +549,7 @@ console.log(text.search(regexA));
 console.log(text.search(regexB));
 ```
 
-### exec\(\)
+### exec()
 
 ```javascript
 let text = 'Do you like apples?';
@@ -561,7 +562,7 @@ console.log(regex.exec(text)[0]);
 console.log(regex.exec(text).input);
 ```
 
-### match\(\)
+### match()
 
 ```javascript
 let text = 'Here are apples and apPleS';
@@ -571,7 +572,7 @@ let regex = /apples/gi;
 console.log(text.match(regex));
 ```
 
-### split\(\)  {.col-span-2}
+### split()
 
 ```javascript
 let text = 'This 593 string will be brok294en at places where d1gits are.';
@@ -581,7 +582,7 @@ let regex = /\d+/g
 console.log(text.split(regex))
 ```
 
-### matchAll\(\)
+### matchAll()
 
 ```javascript
 let regex = /t(e)(st(\d?))/g;
@@ -595,13 +596,13 @@ console.log(array[0]);
 console.log(array[1]);
 ```
 
-### replace\(\)
+### replace()
 
 \`\`\`javascript {.wrap} let text = 'Do you like aPPles?'; let regex = /apples/i
 
-// Output: Do you like mangoes? let result = text.replace\(regex, 'mangoes'\); console.log\(result\);
+// Output: Do you like mangoes? let result = text.replace(regex, 'mangoes'); console.log(result);
 
-```text
+````
 ### replaceAll()
 
 ```javascript
@@ -611,28 +612,28 @@ let text = 'Here are apples and apPleS';
 // Output: Here are mangoes and mangoes
 let result = text.replaceAll(regex, "mangoes");
 console.log(result);
-```
+````
 
-## Regex in PHP {.cols-3}
+## Regex in PHP
 
-### Functions {.col-span-2}
+### Functions
 
-| - | - |
-| :--- | :--- |
-| `preg_match()` | Performs a regex match |
-| `preg_match_all()` | Perform a global regular expression match |
+| -                         | -                                                                |
+| ------------------------- | ---------------------------------------------------------------- |
+| `preg_match()`            | Performs a regex match                                           |
+| `preg_match_all()`        | Perform a global regular expression match                        |
 | `preg_replace_callback()` | Perform a regular expression search and replace using a callback |
-| `preg_replace()` | Perform a regular expression search and replace |
-| `preg_split()` | Splits a string by regex pattern |
-| `preg_grep()` | Returns array entries that match a pattern |
+| `preg_replace()`          | Perform a regular expression search and replace                  |
+| `preg_split()`            | Splits a string by regex pattern                                 |
+| `preg_grep()`             | Returns array entries that match a pattern                       |
 
 ### preg\_replace
 
 \`\`\`php {.wrap} $str = "Visit Microsoft!"; $regex = "/microsoft/i";
 
-// Output: Visit QuickRef! echo preg\_replace\($regex, "QuickRef", $str\);
+// Output: Visit QuickRef! echo preg\_replace($regex, "QuickRef", $str);
 
-```text
+````
 ### preg_match
 ```php 
 $str = "Visit QuickRef";
@@ -640,9 +641,9 @@ $regex = "#quickref#i";
 
 // Output: 1
 echo preg_match($regex, $str);
-```
+````
 
-### preg\_matchall {.col-span-2 .row-span-2}
+### preg\_matchall
 
 ```php
 $regex = "/[a-zA-Z]+ (\d+)/";
@@ -673,7 +674,7 @@ $regex = "/Jane/";
 echo preg_grep($regex, $arr);
 ```
 
-### preg\_split {.col-span-2}
+### preg\_split
 
 ```php
 $str = "Jane\tKate\nLucy Marion";
@@ -683,9 +684,9 @@ $regex = "@\s@";
 print_r(preg_split($regex, $str));
 ```
 
-## Regex in Java {.cols-3}
+## Regex in Java
 
-### Styles {.col-span-2}
+### Styles
 
 #### First way
 
@@ -712,42 +713,42 @@ System.out.println(s3);   // Outputs: false
 
 ### Pattern Fields
 
-| - | - |
-| :--- | :--- |
-| `CANON_EQ` | Canonical equivalence |
-| `CASE_INSENSITIVE` | Case-insensitive matching |
-| `COMMENTS` | Permits whitespace and comments |
-| `DOTALL` | Dotall mode |
-| `MULTILINE` | Multiline mode |
-| `UNICODE_CASE` | Unicode-aware case folding |
-| `UNIX_LINES` | Unix lines mode |
+| -                  | -                               |
+| ------------------ | ------------------------------- |
+| `CANON_EQ`         | Canonical equivalence           |
+| `CASE_INSENSITIVE` | Case-insensitive matching       |
+| `COMMENTS`         | Permits whitespace and comments |
+| `DOTALL`           | Dotall mode                     |
+| `MULTILINE`        | Multiline mode                  |
+| `UNICODE_CASE`     | Unicode-aware case folding      |
+| `UNIX_LINES`       | Unix lines mode                 |
 
 ### Methods
 
 #### Pattern
 
-* Pattern compile\(String regex \[, int flags\]\)
-* boolean matches\(\[String regex, \] CharSequence input\)
-* String\[\] split\(String regex \[, int limit\]\)
-* String quote\(String s\)
+* Pattern compile(String regex \[, int flags])
+* boolean matches(\[String regex, ] CharSequence input)
+* String\[] split(String regex \[, int limit])
+* String quote(String s)
 
 #### Matcher
 
-* int start\(\[int group \| String name\]\)
-* int end\(\[int group \| String name\]\)
-* boolean find\(\[int start\]\)
-* String group\(\[int group \| String name\]\)
-* Matcher reset\(\)
+* int start(\[int group | String name])
+* int end(\[int group | String name])
+* boolean find(\[int start])
+* String group(\[int group | String name])
+* Matcher reset()
 
 #### String
 
-* boolean matches\(String regex\)
-* String replaceAll\(String regex, String replacement\)
-* String\[\] split\(String regex\[, int limit\]\)
+* boolean matches(String regex)
+* String replaceAll(String regex, String replacement)
+* String\[] split(String regex\[, int limit])
 
 There are more methods ...
 
-### Examples {.col-span-2}
+### Examples
 
 Replace sentence:
 
@@ -780,23 +781,23 @@ while (m.find()) {
 System.out.println(matches);
 ```
 
-## Regex in MySQL {.cols-2}
+## Regex in MySQL
 
 ### Functions
 
-| Name | Description |
-| :--- | :--- |
-| `REGEXP` | Whether string matches regex |
-| `REGEXP_INSTR()` | Starting index of substring matching regex  _\(NOTE: Only MySQL 8.0+\)_ |
-| `REGEXP_LIKE()` | Whether string matches regex   _\(NOTE: Only MySQL 8.0+\)_ |
-| `REGEXP_REPLACE()` | Replace substrings matching regex  _\(NOTE: Only MySQL 8.0+\)_ |
-| `REGEXP_SUBSTR()` | Return substring matching regex   _\(NOTE: Only MySQL 8.0+\)_ |
+| Name               | Description                                                          |
+| ------------------ | -------------------------------------------------------------------- |
+| `REGEXP`           | Whether string matches regex                                         |
+| `REGEXP_INSTR()`   | Starting index of substring matching regex _(NOTE: Only MySQL 8.0+)_ |
+| `REGEXP_LIKE()`    | Whether string matches regex _(NOTE: Only MySQL 8.0+)_               |
+| `REGEXP_REPLACE()` | Replace substrings matching regex _(NOTE: Only MySQL 8.0+)_          |
+| `REGEXP_SUBSTR()`  | Return substring matching regex _(NOTE: Only MySQL 8.0+)_            |
 
 ### REGEXP
 
 \`\`\`sql {.wrap} expr REGEXP pat
 
-```text
+````
 #### Examples
 ```sql
 mysql> SELECT 'abc' REGEXP '^[a-d]';
@@ -806,11 +807,11 @@ mysql> SELECT name FROM cities WHERE name NOT REGEXP '^A';
 mysql> SELECT name FROM cities WHERE name REGEXP 'A|B|R';
 mysql> SELECT 'a' REGEXP 'A', 'a' REGEXP BINARY 'A';
 1   0
-```
+````
 
 ### REGEXP\_REPLACE
 
-```text
+```
 REGEXP_REPLACE(expr, pat, repl[, pos[, occurrence[, match_type]]])
 ```
 
@@ -825,7 +826,7 @@ abc X
 
 ### REGEXP\_SUBSTR
 
-```text
+```
 REGEXP_SUBSTR(expr, pat[, pos[, occurrence[, match_type]]])
 ```
 
@@ -840,7 +841,7 @@ ghi
 
 ### REGEXP\_LIKE
 
-```text
+```
 REGEXP_LIKE(expr, pat[, match_type])
 ```
 
@@ -861,7 +862,7 @@ mysql> SELECT regexp_like('a\nb\nc', '^b$', 'm');
 
 ### REGEXP\_INSTR
 
-```text
+```
 REGEXP_INSTR(expr, pat[, pos[, occurrence[, return_option[, match_type]]]])
 ```
 
@@ -877,4 +878,3 @@ mysql> SELECT regexp_instr('abbabba', 'b{2}', 1, 2);
 mysql> SELECT regexp_instr('abbabba', 'b{2}', 1, 3, 1);
 7
 ```
-

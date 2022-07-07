@@ -14,7 +14,7 @@ intro: |
 
 # graphql
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Overview
 
@@ -29,45 +29,45 @@ intro: |
 
 ### Schema
 
-|  |  |
-| :--- | :--- |
-| `schema` | GraphQL schema definition |
-| `query` | Read and traverse data |
-| `mutation` | Modify data or trigger an action |
+|                |                                  |
+| -------------- | -------------------------------- |
+| `schema`       | GraphQL schema definition        |
+| `query`        | Read and traverse data           |
+| `mutation`     | Modify data or trigger an action |
 | `subscription` | Run a query when an event occurs |
 
 ### Built-in Scalar Types
 
-|  |  |
-| :--- | :--- |
-| `Int` | Signed 32‐bit integer |
-| `Float` | Signed double-precision floating-point value |
-| `String` | UTF‐8 character sequence |
-| `Boolean` | true or false |
-| `ID` | A Unique identifier |
+|           |                                              |
+| --------- | -------------------------------------------- |
+| `Int`     | Signed 32‐bit integer                        |
+| `Float`   | Signed double-precision floating-point value |
+| `String`  | UTF‐8 character sequence                     |
+| `Boolean` | true or false                                |
+| `ID`      | A Unique identifier                          |
 
 ### Type Definitions
 
-|  |  |
-| :--- | :--- |
-| `scalar` | Scalar Type |
-| `type` | Object Type |
-| `interface` | Interface Type |
-| `union` | Union Type |
-| `enum` | Enum Type |
-| `input` | Input Object Type |
+|             |                   |
+| ----------- | ----------------- |
+| `scalar`    | Scalar Type       |
+| `type`      | Object Type       |
+| `interface` | Interface Type    |
+| `union`     | Union Type        |
+| `enum`      | Enum Type         |
+| `input`     | Input Object Type |
 
 ### Type Modifiers
 
-|  |  |
-| :--- | :--- |
-| `String` | Nullable String |
-| `String!` | Non-null String |
-| `[String]` | List of nullable Strings |
-| `[String]!` | Non-null list of nullable Strings |
+|              |                                   |
+| ------------ | --------------------------------- |
+| `String`     | Nullable String                   |
+| `String!`    | Non-null String                   |
+| `[String]`   | List of nullable Strings          |
+| `[String]!`  | Non-null list of nullable Strings |
 | `[String!]!` | Non-null list of non-null Strings |
 
-### Input Arguments {.row-span-2}
+### Input Arguments
 
 #### Basic Input
 
@@ -95,9 +95,9 @@ type Query {
 
 #### Input with multiple arguments and default values
 
-\`\`\`js {.wrap} type Query { users\(limit: Int = 10, sort: String\): \[User\] } type Query { users\(limit: Int, sort: String = "asc"\): \[User\] } type Query { users\(limit: Int = 10, sort: String = "asc"\): \[User\] }
+\`\`\`js {.wrap} type Query { users(limit: Int = 10, sort: String): \[User] } type Query { users(limit: Int, sort: String = "asc"): \[User] } type Query { users(limit: Int = 10, sort: String = "asc"): \[User] }
 
-```text
+````
 ### Input Types
 
 
@@ -106,7 +106,7 @@ input ListUsersInput {
     limit: Int
     since_id: ID
 }
-```
+````
 
 ```javascript
 type Mutation {
@@ -167,11 +167,10 @@ Union of one or more Objects
 
 ### Enums
 
-\`\`\`js {.wrap} enum USER\_STATE { NOT\_FOUND ACTIVE INACTIVE SUSPENDED } type Root { stateForUser\(userID: ID!\): USER\_STATE! users\(state: USER\_STATE, limit: Int = 10\): \[User\] }
+\`\`\`js {.wrap} enum USER\_STATE { NOT\_FOUND ACTIVE INACTIVE SUSPENDED } type Root { stateForUser(userID: ID!): USER\_STATE! users(state: USER\_STATE, limit: Int = 10): \[User] }
 
 \`\`\`
 
 ## Also see
 
-* [GraphQL Schema Language Cheat Sheet](https://github.com/sogko/graphql-schema-language-cheat-sheet) _\(github.com\)_
-
+* [GraphQL Schema Language Cheat Sheet](https://github.com/sogko/graphql-schema-language-cheat-sheet) _(github.com)_
