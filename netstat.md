@@ -17,9 +17,12 @@ intro: |
 
 ## Statistics
 
-All connections on port 80 \`\`\`shell script $ netstat -anp \| grep :80
+All connections on port 80 
 
-```text
+```bash
+$ netstat -anp \| grep :80
+```
+
 Netstat Help
 ```shell script
 $ netstat -h

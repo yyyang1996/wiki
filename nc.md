@@ -24,9 +24,8 @@ Connect to a host located anywhere
 
 `$ nc \[options\] \[host\] \[port\]`
 
-```text
 Listen for incoming connections
-```shell script 
+```shell 
 $ nc -lp port [host] [port]
 ```
 
@@ -50,9 +49,8 @@ $ nc -lp port [host] [port]
 
 Server \(192.168.1.9\) `$ nc -lv 8000`
 
-```text
 Client
-```shell script
+```shell
 $ nc 192.168.1.9 8000
 ```
 
@@ -62,9 +60,8 @@ $ nc 192.168.1.9 8000
 
 `$ nc website.com 80 GET index.html HTTP/1.1 HEAD / HTTP/1.1`
 
-```text
 or
-```shell script
+```shell
 echo "" | nc -zv -wl 192.168.1.1 801-805
 ```
 
@@ -72,9 +69,8 @@ echo "" | nc -zv -wl 192.168.1.1 801-805
 
 Scan ports between 21 to 25 `$ nc -zvn 192.168.1.1 21-25`
 
-```text
 Scan ports 22, 3306 and 8080
-```shell script
+```shell
 $ nc -zvn 192.168.1.1 22 3306 8080
 ```
 
@@ -82,9 +78,8 @@ $ nc -zvn 192.168.1.1 22 3306 8080
 
 `$ nc -lp 8001 -c "nc 127.0.0.1 8000"`
 
-```text
 or
-```shell script
+```shell
 $ nc -l 8001 | nc 127.0.0.1 8000
 ```
 
@@ -94,9 +89,8 @@ Create a tunnel from one local port to another
 
 Server \(192.168.1.9\) `$ nc -lv 8000 &lt; file.txt`
 
-```text
 Client
-```shell script
+```shell
 $ nc -nv 192.168.1.9 8000 > file.txt
 ```
 
@@ -106,9 +100,8 @@ Suppose you want to transfer a file “file.txt” from server A to client B.
 
 Server \(192.168.1.9\) `$ nc -lv 8000 &gt; file.txt`
 
-```text
 Client
-```shell script
+```shell
 $ nc 192.168.1.9 8000 < file.txt
 ```
 
@@ -118,9 +111,8 @@ Suppose you want to transfer a file “file.txt” from client B to server A:
 
 Server \(192.168.1.9\) `$ tar -cvf – dir\_name \| nc -l 8000`
 
-```text
 Client
-```shell script
+```shell
 $ nc -n 192.168.1.9 8000 | tar -xvf -
 ```
 
@@ -130,9 +122,8 @@ Suppose you want to transfer a directory over the network from A to B.
 
 Server \(192.168.1.9\) `$ nc -l 8000 \| openssl enc -d -des3 -pass pass:password &gt; file.txt`
 
-```text
 Client
-```shell script
+```shell
 $ openssl enc -des3 -pass pass:password | nc 192.168.1.9 8000
 ```
 
@@ -142,9 +133,8 @@ Encrypt data before transfering over the network
 
 Server \(192.168.1.9\) `$ dd if=/dev/sda \| nc -l 8000`
 
-```text
 Client
-```shell script
+```shell
 $ nc -n 192.168.1.9 8000 | dd of=/dev/sda
 ```
 
@@ -154,9 +144,8 @@ Cloning a linux PC is very simple. Suppose your system disk is /dev/sda
 
 Server \(192.168.1.9\) `$ cat video.avi \| nc -l 8000`
 
-```text
 Client
-```shell script {.wrap}
+```shell {.wrap}
 $ nc 192.168.1.9 8000 | mplayer -vo x11 -cache 3000 -
 ```
 
@@ -166,9 +155,8 @@ Streaming video with netcat
 
 Server \(192.168.1.9\) `$ nc -lv 8000 -e /bin/bash`
 
-```text
 Client
-```shell script
+```shell
 $ nc 192.168.1.9 8000
 ```
 
@@ -178,9 +166,8 @@ We have used remote Shell using the telnet and ssh but what if they are not inst
 
 Server \(192.168.1.9\) `$ nc -lv 8000`
 
-```text
 Client
-```shell script
+```shell
 $ nc 192.168.1.9 8000 -v -e /bin/bash
 ```
 
