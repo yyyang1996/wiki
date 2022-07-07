@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Liu Song's Wiki](README.md)
-* [how-to-build-a-quadcopter](how-to-build-a-quadcopter.md)
+* [quadcopter](how-to-build-a-quadcopter.md)
 * [css](css.md)
 * [cpp](cpp.md)
 * [http-status-code](http-status-code.md)
@@ -30,7 +30,7 @@
 * [mime](mime.md)
 * [emmet](emmet.md)
 * [bash](bash.md)
-* [setup-openwrt-on-wr720n](setup-openwrt-on-wr720n.md)
+* [wr720n](wr720n.md)
 * [sed](sed.md)
 * [git](git.md)
 * [netstat](netstat.md)
@@ -44,9 +44,8 @@
 * [emacs](emacs.md)
 * [ssh](ssh.md)
 * [regex](regex.md)
-* [lubuntu-on-cubietruck](lubuntu-on-cubietruck.md)
+* [cubietruck](cubietruck.md)
 * [yaml](yaml.md)
 * [Mobile Device Resolutions](resolutions.md)
 * [emoji](emoji.md)
-* [how-to-set-up-your-own-git-server-on-linux](how-to-set-up-your-own-git-server-on-linux.md)
-
+* [git-server](how-to-set-up-your-own-git-server-on-linux.md)
