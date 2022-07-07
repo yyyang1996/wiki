@@ -20,7 +20,7 @@ intro: |
 
 ### Connecting
 
-Connect to a server (default port 22) 
+Connect to a server (default port 22)
 
 ```bash
 $ ssh root@192.168.1.5
@@ -32,56 +32,61 @@ Connect on a specific port
 $ ssh root@192.168.1.5 -p 6222
 ```
 
-Connect via pem file (0400 permissions) 
+Connect via pem file (0400 permissions)
 
 ```bash
 $ ssh -i /path/file.pem root@192.168.1.5
 ```
 
-See: [SSH Permissions](/chmod#ssh-permissions)
+See: [SSH Permissions](chmod/#ssh-permissions)
 
 ### Executing
+
 Executes remote command
+
 ```shell
 $ ssh root@192.168.1.5 'ls -l'
 ```
 
-Invoke a local script 
+Invoke a local script
 
 ```bash
 $ ssh root@192.168.1.5 bash < script.sh
 ```
 
 Compresses and downloads from a server
+
 ```shell
 $ ssh root@192.168.1.5 "tar cvzf - ~/source" > output.tgz
 ```
 
 ### SCP
 
-Copies from remote to local 
+Copies from remote to local
 
 ```bash
 $ scp user@server:/dir/file.ext dest/
 ```
 
 Copies between two servers
+
 ```shell
 $ scp user@server:/file user@server:/dir
 ```
 
-Copies from local to remote 
+Copies from local to remote
 
 ```bash
 $ scp dest/file.ext user@server:/dir
 ```
 
 Copies a whole folder
+
 ```shell
 $ scp -r user@server:/dir dest/
 ```
 
-Copies all files from a folder 
+Copies all files from a folder
 
 ```bash
 $ scp user@server:/dir/\* dest/
@@ -125,15 +130,13 @@ Host server1
     IdentityFile ~/.ssh/server1.key
 ```
 
-Launch by alias 
+Launch by alias
 
 ```bash
 $ ssh server1
 ```
 
-See: Full [Config Options](https://linux.die.net/man/5/ssh_config)
-
-
+See: Full [Config Options](https://linux.die.net/man/5/ssh\_config)
 
 ### ProxyJump
 
@@ -141,13 +144,12 @@ See: Full [Config Options](https://linux.die.net/man/5/ssh_config)
 $ ssh -J proxy_host1 remote_host2
 ```
 
-
-
 ```bash
 $ ssh -J user@proxy\_host1 user@remote\_host2
 ```
 
 Multiple jumps
+
 ```shell
 $ ssh -J user@proxy_host1:port1,user@proxy_host2:port2 user@remote_host3
 ```
@@ -164,16 +166,15 @@ Copy to alias server
 $ ssh-copy-id server1
 ```
 
-Copy specific key 
+Copy specific key
 
 ```bash
 $ ssh-copy-id -i \~/.ssh/id\_rsa.pub user@server
 ```
 
-SSH keygen {.cols-5}
----------------
+## SSH keygen
 
-### ssh-keygen {.col-span-2}
+### ssh-keygen
 
 ```shell
 $ ssh-keygen -t rsa -b 4096 -C "your@mail.com"
@@ -189,7 +190,7 @@ Generate an RSA 4096 bit key with email as a comment
 
 ### Generate
 
-Generate a key interactively 
+Generate a key interactively
 
 ```bash
 $ ssh-keygen
@@ -201,18 +202,19 @@ Specify filename
 $ ssh-keygen -f ~/.ssh/filename
 ```
 
-Generate public key from private key 
+Generate public key from private key
 
 ```bash
 $ ssh-keygen -y -f private.key > public.pub
 ```
 
 Change comment
+
 ```shell
 $ ssh-keygen -c -f ~/.ssh/id_rsa
 ```
 
-Change private key passphrase 
+Change private key passphrase
 
 ```bash
 $ ssh-keygen -p -f \~/.ssh/id\_rsa
@@ -220,21 +222,20 @@ $ ssh-keygen -p -f \~/.ssh/id\_rsa
 
 ### Key type
 
-- rsa
-- ed25519
-- dsa
-- ecdsa
+* rsa
+* ed25519
+* dsa
+* ecdsa
 
+### known\_hosts
 
+Search from known\_hosts
 
-### known_hosts {.col-span-2}
-
-Search from known_hosts
 ```shell
 $ ssh-keygen -F <ip/hostname>
 ```
 
-Remove from known\_hosts&#x20;
+Remove from known\_hosts
 
 ```shell
 $ ssh-keygen -R <ip/hostname>

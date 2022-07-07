@@ -20,77 +20,82 @@ intro: >
 ### Usage
 
 ```bash
-$ find \[path...\] \[options\] \[expression\]
+$ find [path...] [options] [expression]
 ```
 
 Wildcard
+
 ```shell
 $ find . -name "*.txt"
 $ find . -name "2020*.csv"
 $ find . -name "json_*"
 ```
 
-* [Regex reference](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) _\(quickref.me\)_
-* [Find cheatsheet](https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538) _\(gist.github.com\)_
+* [Regex reference](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) _(quickref.me)_
+* [Find cheatsheet](https://gist.github.com/gr1ev0us/3a9b9d9dbdd38f6379288eb2686fc538) _(gist.github.com)_
 
 ### Option Examples
 
-| Option | Example | Description |
-| :--- | :--- | :--- |
-| `-type` | find . -type d | Find only directories |
-| `-name` | find . -type f -name "\*.txt" | Find file by name |
-| `-iname` | find . -type f -iname "hello" | Find file by name \(case-insensitive\) |
-| `-size` | find . -size +1G | Find files larger than 1G |
-| `-user` | find . -type d -user jack | Find jack's file |
-| `-regex` | find /var -regex '.\*/tmp/.\*\[0-9\]\*.file' | Using Regex with find. See [regex](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) |
-| `-maxdepth` | find . -maxdepth 1 -name "a.txt" | In the current directory and subdirectories |
-| `-mindepth` | find / -mindepth 3 -maxdepth 5 -name pass | Between sub-directory level 2 and 4 |
+| Option      | Example                                     | Description                                                                                                                       |
+| ----------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `-type`     | find . -type d                              | Find only directories                                                                                                             |
+| `-name`     | find . -type f -name "\*.txt"               | Find file by name                                                                                                                 |
+| `-iname`    | find . -type f -iname "hello"               | Find file by name (case-insensitive)                                                                                              |
+| `-size`     | find . -size +1G                            | Find files larger than 1G                                                                                                         |
+| `-user`     | find . -type d -user jack                   | Find jack's file                                                                                                                  |
+| `-regex`    | find /var -regex '.\*/tmp/.\*\[0-9]\*.file' | Using Regex with find. See [regex](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) |
+| `-maxdepth` | find . -maxdepth 1 -name "a.txt"            | In the current directory and subdirectories                                                                                       |
+| `-mindepth` | find / -mindepth 3 -maxdepth 5 -name pass   | Between sub-directory level 2 and 4                                                                                               |
 
 {.show-header}
 
 ### Type
 
-|  |  |
-| :--- | :--- |
-| `-type d` | Directory |
-| `-type f` | File |
-| `-type l` | Symbolic link |
-| `-type b` | Buffered block |
+|           |                      |
+| --------- | -------------------- |
+| `-type d` | Directory            |
+| `-type f` | File                 |
+| `-type l` | Symbolic link        |
+| `-type b` | Buffered block       |
 | `-type c` | Unbuffered character |
-| `-type p` | Named pipe |
-| `-type s` | Socket |
+| `-type p` | Named pipe           |
+| `-type s` | Socket               |
 
 ### Size
 
-|  |  |
-| :--- | :--- |
-| `-size b` | 512-byte blocks \(default\) |
-| `-size c` | Bytes |
-| `-size k` | Kilobytes |
-| `-size M` | Megabytes |
-| `-size G` | Gigabytes |
-| `-size T` | Terabytes _\(only BSD\)_ |
-| `-size P` | Petabytes _\(only BSD\)_ |
+|           |                           |
+| --------- | ------------------------- |
+| `-size b` | 512-byte blocks (default) |
+| `-size c` | Bytes                     |
+| `-size k` | Kilobytes                 |
+| `-size M` | Megabytes                 |
+| `-size G` | Gigabytes                 |
+| `-size T` | Terabytes _(only BSD)_    |
+| `-size P` | Petabytes _(only BSD)_    |
 
 ### Size +/-
 
 Finbashd all bigger than 10MB files
+
 ```bash
 $ find / -size +10M
 ```
 
 Find all smaller than 10MB files
+
 ```shell
 $ find / -size -10M
 `
 ```
 
 Finbashd all files that are exactly 10M
+
 ```bash
 $ find / -size 10M
 ```
 
 Find Size between 100MB and 1GB
+
 ```shell
 $ find / -size +100M -size -1G
 ```
@@ -100,6 +105,7 @@ The `+` and `-` prefixes signify greater than and less than, as usual.
 ### Names
 
 Finbashd files using name in current directory
+
 ```bash
 $ find . -name tecmint.txt
 ```
@@ -111,21 +117,25 @@ $ find /home -name tecmint.txt
 ```
 
 Finbashd files using name and ignoring case
+
 ```bash
 $ find /home -iname tecmint.txt
 ```
 
 Find directories using name
+
 ```shell
 $ find / -type d -name tecmint
 ```
 
 Finbashd php files using name
+
 ```bash
 $ find . -type f -name tecmint.php
 ```
 
 Find all php files in directory
+
 ```shell
 $ find . -type f -name "*.php"
 ```
@@ -171,21 +181,25 @@ $ find / -perm /a=x
 ### Owners and Groups
 
 Finbashd single file based on user
+
 ```bash
 $ find / -user root -name tecmint.txt
 ```
 
 Find all files based on user
+
 ```shell
 $ find /home -user tecmint
 ```
 
 Finbashd all files based on group
+
 ```bash
 $ find /home -group developer
 ```
 
 Find particular files of user
+
 ```shell
 $ find /home -user tecmint -iname "*.txt"
 ```
@@ -198,11 +212,9 @@ $ find /home -user tecmint -iname "*.txt"
 
 Find files with `.sh` and `.txt` extensions
 
-
 ### Multiple dirs
 
-
-```shell {.wrap}
+```shell
 $ find /opt /usr /var -name foo.scala -type f
 ```
 
@@ -215,6 +227,7 @@ $ find . -type d -empty
 ```
 
 Delete all empty files in a directory
+
 ```shell
 $ find . -type f -empty -delete
 ```
@@ -223,57 +236,63 @@ $ find . -type f -empty -delete
 
 ### Means
 
-| Option | Description |
-| :--- | :--- |
-| `atime` | access time \(last time file opened\) |
-| `mtime` | modified time \(last time file contents was modified\) |
-| `ctime` | changed time \(last time file inode was changed\) |
+| Option  | Description                                          |
+| ------- | ---------------------------------------------------- |
+| `atime` | access time (last time file opened)                  |
+| `mtime` | modified time (last time file contents was modified) |
+| `ctime` | changed time (last time file inode was changed)      |
 
 #### Example
 
-| Option | Description |
-| :--- | :--- |
-| `-mtime +0` | Modified greater than 24 hours ago |
-| `-mtime 0` | Modified between now and 1 day ago |
-| `-mtime -1` | Modified less than 1 day ago \(same as `-mtime 0`\) |
-| `-mtime 1` | Modified between 24 and 48 hours ago |
-| `-mtime +1` | Modified more than 48 hours ago |
-| `-mtime +1w` | Last modified more than 1 week ago |
-| `-atime 0` | Last accessed between now and 24 hours ago |
-| `-atime +0` | Accessed more than 24 hours ago |
-| `-atime 1` | Accessed between 24 and 48 hours ago |
-| `-atime +1` | Accessed more than 48 hours ago |
-| `-atime -1` | Accessed less than 24 hours ago \(same as `-atime 0`\) |
+| Option          | Description                                                |
+| --------------- | ---------------------------------------------------------- |
+| `-mtime +0`     | Modified greater than 24 hours ago                         |
+| `-mtime 0`      | Modified between now and 1 day ago                         |
+| `-mtime -1`     | Modified less than 1 day ago (same as `-mtime 0`)          |
+| `-mtime 1`      | Modified between 24 and 48 hours ago                       |
+| `-mtime +1`     | Modified more than 48 hours ago                            |
+| `-mtime +1w`    | Last modified more than 1 week ago                         |
+| `-atime 0`      | Last accessed between now and 24 hours ago                 |
+| `-atime +0`     | Accessed more than 24 hours ago                            |
+| `-atime 1`      | Accessed between 24 and 48 hours ago                       |
+| `-atime +1`     | Accessed more than 48 hours ago                            |
+| `-atime -1`     | Accessed less than 24 hours ago (same as `-atime 0`)       |
 | `-ctime -6h30m` | File status changed within the last 6 hours and 30 minutes |
 
 ### Examples
 
 Finbashd last 50 days modified files
+
 ```bash
 $ find / -mtime 50
 ```
 
- find last 50 days accessed files
+find last 50 days accessed files
+
 ```shell
 $ find / -atime 50
 ```
 
 finbashd last 50-100 days modified files
+
 ```bash
 $ find / -mtime +50 –mtime -100
 ```
 
- find changed files in last 1 hour
+find changed files in last 1 hour
+
 ```shell
 $ find / -cmin -60
 ```
 
 finbashd modified files in last 1 hour
+
 ```bash
 $ find / -mmin -60
 ```
 
- find accessed files in last 1 hour
+find accessed files in last 1 hour
+
 ```shell
 $ find / -amin -60
 ```
@@ -295,11 +314,13 @@ $ find . -type f -name "tecmint.txt" -exec rm -f {} \;
 ```
 
 Finbashd and delete 100mb files
+
 ```bash
 $ find / -type f -size +100m -exec rm -f {} \;
 ```
 
 Find specific files and delete
+
 ```shell
 $ find / -type f -name *.mp3 -size +10m -exec rm {} \;
 ```
@@ -310,11 +331,11 @@ $ find / -type f -name *.mp3 -size +10m -exec rm {} \;
 {.wrap} $ find ./ -type f -exec sed -i 's/find/replace/g' {} \; $ find ./ -type f -readable -writable -exec sed -i "s/old/new/g" {} \;
 ```
 
-See also: [sed](/sed) command
-
+See also: [sed](sed/) command
 
 ### Find and rename
-```shell {.wrap}
+
+```shell
 $ find . -type f -name 'file*' -exec mv {} {}_renamed \;
 $ find . -type f -name 'file*' -exec sh -c 'x="{}"; mv "$x" "${x}.bak"' \;
 ```
@@ -328,6 +349,7 @@ $ find . -name '\*.mp3' -exec mv {} /tmp/music \;
 Find and move it to a specific directory
 
 ### Find and copy
+
 ```shell
 $ find . -name '*2020*.xml' -exec cp -r "{}" /tmp/backup \;
 ```
@@ -366,4 +388,3 @@ $ find / -type d -perm 777 -print -exec chmod 755 {} \;
 ```bash
 $ find . -type f -name "_.java" \| xargs tar cvf myfile.tar $ find . -type f -name "_.java" \| xargs tar rvf myfile.tar
 ```
-

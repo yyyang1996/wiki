@@ -29,9 +29,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 * [Regex in MySQL](regex.md#regex-in-mysql) _(quickref.me)_
 * [Regex in Vim](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/vim/README.md#search-and-replace) _(quickref.me)_
 * [Regex in Emacs](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/emacs/README.md#search) _(quickref.me)_
-*   [Online regex tester](https://regex101.com/) _(regex101.com)_
-
-  
+* [Online regex tester](https://regex101.com/) _(regex101.com)_
 
 ### Character Classes
 
@@ -75,9 +73,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 * |
 * $
 * \\
-*   ?
-
-  
+* ?
 
 Escape these special characters with `\`
 
@@ -220,7 +216,7 @@ Lookaround lets you match a group before (lookbehind) or after (lookahead) your 
 | `(?P=name)` | Match subpattern `name`           |
 | `(?P>name)` | Recurse subpattern `name`         |
 
-### POSIX Character Classes {.col-span-2}
+### POSIX Character Classes
 
 | Character Class | Same as                                                 | Meaning                        |
 | --------------- | ------------------------------------------------------- | ------------------------------ |
