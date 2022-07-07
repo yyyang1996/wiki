@@ -17,7 +17,7 @@ intro: >-
 
 # git
 
-## Getting Started {.cols-3}
+## Getting Started
 
 ### Create a Repository
 
@@ -238,7 +238,7 @@ node_modules
 
 A `.gitignore` file specifies intentionally untracked files that Git should ignore
 
-## Tricks {.cols-3}
+## Tricks
 
 ### Rename branch
 

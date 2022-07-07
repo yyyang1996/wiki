@@ -122,7 +122,7 @@ d  rwx  r-x  r-x
 
 {.show-header}
 
-## Examples {.cols-3}
+## Examples
 
 ### Operators
 
@@ -229,7 +229,7 @@ $ chmod 754 foo.sh
 $ chmod u=rwx,g=rx,o=r foo.sh
 ```
 
-## Practices {.cols-3}
+## Practices
 
 ### SSH Permissions
 

@@ -18,7 +18,7 @@ intro: >-
 
 # bash
 
-## Getting started {.cols-3}
+## Getting started
 
 ### hello.sh
 
@@ -62,7 +62,7 @@ in bash
 
 Multi-line comments use `:'` to open and `'` to close
 
-### Arguments {.row-span-2}
+### Arguments
 
 | Expression | Description |
 | :--- | :--- |
@@ -127,9 +127,9 @@ echo "I'm in `pwd`"
 
 See: [Command substitution](http://wiki.bash-hackers.org/syntax/expansion/cmdsubst)
 
-## Parameter expansions {.cols-3}
+## Parameter expansions
 
-### Syntax {.row-span-2}
+### Syntax
 
 | Code | Description |
 | :--- | :--- |
@@ -234,7 +234,7 @@ echo "${ARR[@],}" # => hello world
 echo "${ARR[@]^}" # => Hello World
 ```
 
-## Arrays  {.cols-3}
+## Arrays 
 
 ### Defining arrays
 
@@ -284,7 +284,7 @@ for i in "${!Fruits[@]}"; do
 done
 ```
 
-### Operations {.col-span-2}
+### Operations
 
 ```bash
 Fruits=("${Fruits[@]}" "Watermelon")     # Push
@@ -309,7 +309,7 @@ Fruits=('Apple' 'Banana' 'Orange')
 extract Fruits 2     # => Orangle
 ```
 
-## Dictionaries {.cols-3}
+## Dictionaries
 
 ### Defining
 
@@ -348,7 +348,7 @@ for key in "${!sounds[@]}"; do
 done
 ```
 
-## Conditionals {.cols-3}
+## Conditionals
 
 ### Integer conditions
 
@@ -378,7 +378,7 @@ done
 | `[[ STR != STR ]]` | Not Equal |
 | `[[ STR =~ STR ]]` | Regexp |
 
-### Example {.row-span-3}
+### Example
 
 #### String
 
@@ -432,7 +432,7 @@ if [[ -e "file.txt" ]]; then
 fi
 ```
 
-### File conditions {.row-span-2}
+### File conditions
 
 | Condition | Description |
 | :--- | :--- |
@@ -469,7 +469,7 @@ if [ "$1" = 'n' -o $2 -lt 0 ]; then
 fi
 ```
 
-## Loops {.cols-3}
+## Loops
 
 ### Basic for loop
 
@@ -487,7 +487,7 @@ for ((i = 0 ; i < 100 ; i++)); do
 done
 ```
 
-### Ranges {.row-span-2}
+### Ranges
 
 ```bash
 for i in {1..5}; do
@@ -575,7 +575,7 @@ cat file.txt | while read line; do
 done
 ```
 
-## Functions {.cols-3}
+## Functions
 
 ### Defining functions
 
@@ -625,7 +625,7 @@ else
 fi
 ```
 
-## Options  {.cols-2}
+## Options 
 
 ### Options
 
@@ -667,7 +667,7 @@ shopt -s dotglob
 shopt -s globstar
 ```
 
-## History {.cols-2}
+## History
 
 ### Commands
 
@@ -710,7 +710,7 @@ shopt -s globstar
 
 `!!` can be replaced with any valid expansion i.e. `!cat`, `!-2`, `!42`, etc.
 
-## Miscellaneous  {.cols-3}
+## Miscellaneous 
 
 ### Numeric calculations
 
@@ -736,7 +736,7 @@ command -V cd
 #=> "cd is a function/alias/whatever"
 ```
 
-### Redirection {.row-span-2 .col-span-2}
+### Redirection
 
 ```bash
 python hello.py > output.txt   # stdout to (file)
@@ -777,7 +777,7 @@ case "$1" in
 esac
 ```
 
-### Trap errors {.col-span-2}
+### Trap errors
 
 ```bash
 trap 'echo Error at about $LINENO' ERR
@@ -807,7 +807,7 @@ printf "Print a float: %f" 2
 #=> "Print a float: 2.000000"
 ```
 
-### Getting options {.col-span-2}
+### Getting options
 
 ```bash
 while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do case $1 in
@@ -825,7 +825,7 @@ esac; shift; done
 if [[ "$1" == '--' ]]; then shift; fi
 ```
 
-### Check for command's result  {.col-span-2}
+### Check for command's result 
 
 ```bash
 if ping -c 1 google.com; then
@@ -833,7 +833,7 @@ if ping -c 1 google.com; then
 fi
 ```
 
-### Special variables  {.row-span-2}
+### Special variables 
 
 | Expression | Description |
 | :--- | :--- |
@@ -844,7 +844,7 @@ fi
 
 See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
-### Grep check  {.col-span-2}
+### Grep check 
 
 ```bash
 if grep -q 'foo' ~/.bash_history; then
@@ -852,7 +852,7 @@ if grep -q 'foo' ~/.bash_history; then
 fi
 ```
 
-### Backslash escapes {.row-span-2}
+### Backslash escapes
 
 * * !
 * \"
@@ -877,7 +877,7 @@ fi
 * \*
 * \?
 
-  {.cols-4 .style-none}
+
 
 Escape these special characters with `\`
 
@@ -927,7 +927,7 @@ IFS=$'\n\t'
 
 See: [Unofficial bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
 
-## Also see {.cols-1}
+## Also see
 
 * [Devhints](https://devhints.io/bash) _\(devhints.io\)_
 * [Bash-hackers wiki](http://wiki.bash-hackers.org/) _\(bash-hackers.org\)_

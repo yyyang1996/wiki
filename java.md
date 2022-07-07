@@ -157,7 +157,7 @@ int num = in.nextInt();
 System.out.println(num);
 ```
 
-## Strings {.cols-3}
+## Strings
 
 ### Basic
 
@@ -178,7 +178,7 @@ String s = "" + 3 + 3 + "23"; // 3323
 String s = 3 + 3 + 23;        // 29
 ```
 
-### StringBuilder {.row-span-3}
+### StringBuilder
 
 StringBuilder sb = new StringBuilder\(10\);
 
@@ -289,7 +289,7 @@ System.out.println(concat);
 
 Once created cannot be modified, any modification creates a new String
 
-## Arrays {.cols-3}
+## Arrays
 
 ### Declare
 
@@ -364,9 +364,9 @@ Arrays.sort(chars);
 Arrays.toString(chars);
 ```
 
-## Conditionals {.cols-3}
+## Conditionals
 
-### Operators {.row-span-2}
+### Operators
 
 * [+](javascript:void%280%29;)
 * [-](javascript:void%280%29;)
@@ -422,7 +422,7 @@ if (k > 20) {
 }
 ```
 
-### Switch {.row-span-2}
+### Switch
 
 ```java
 int month = 3;
@@ -457,7 +457,7 @@ int max = (a > b) ? a : b;
 System.out.println(max);
 ```
 
-## Loops {.cols-3}
+## Loops
 
 ### For Loop
 
@@ -536,7 +536,7 @@ for (int i = 0; i < 5; i++) {
 // Outputs: 0123
 ```
 
-## Collections Framework {.cols-3}
+## Collections Framework
 
 ### Java Collections {.col-span-2}
 
@@ -651,7 +651,7 @@ System.out.println(a.peek());
 System.out.println(a.pop());
 ```
 
-## Misc {.cols-3}
+## Misc
 
 ### Access Modifiers {.col-span-2}
 

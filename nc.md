@@ -16,9 +16,9 @@ intro: This cheat sheet provides various for using Netcat on both Linux and Unix
 
 # nc
 
-## Getting started {.cols-5}
+## Getting started
 
-### Usage {.col-span-2}
+### Usage
 
 Connect to a host located anywhere
 
@@ -30,7 +30,7 @@ Listen for incoming connections
 $ nc -lp port [host] [port]
 ```
 
-### Option examples {.col-span-3 .row-span-2}
+### Option examples
 
 | Option | Description | Example |
 | :--- | :--- | :--- |
@@ -46,7 +46,7 @@ $ nc -lp port [host] [port]
 | `-4` | nc -4 -l 8000 | IPv4 only |
 | `-6` | nc -6 -l 8000 | IPv6 only |
 
-### Chat client-server {.col-span-2}
+### Chat client-server
 
 Server \(192.168.1.9\) \`\`\`shell script $ nc -lv 8000
 
@@ -126,7 +126,7 @@ $ nc -n 192.168.1.9 8000 | tar -xvf -
 
 Suppose you want to transfer a directory over the network from A to B.
 
-### Encrypt transfer {.col-span-2}
+### Encrypt transfer
 
 Server \(192.168.1.9\) \`\`\`shell script $ nc -l 8000 \| openssl enc -d -des3 -pass pass:password &gt; file.txt
 

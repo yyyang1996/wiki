@@ -60,7 +60,7 @@ String command{.cols-3}
 
 ### APPEND 
 
-``` {.wrap}
+```
 APPEND key value
 ```
 
@@ -74,7 +74,7 @@ Append a value to a key
 
 ### BITCOUNT 
 
-``` {.wrap}
+```
 BITCOUNT key [start end]
 ```
 
@@ -90,7 +90,7 @@ Count set bits in a string
 
 ### BITFIELD 
 
-``` {.wrap}
+```
 BITFIELD key [GET type offset] [SET type offset value] [INCRBY type offset increment] [OVERFLOW WRAP|SAT|FAIL]
 ```
 
@@ -104,7 +104,7 @@ Perform arbitrary bitfield integer operations on strings
 
 ### BITOP 
 
-``` {.wrap}
+```
 BITOP operation destkey key [key ...]
 ```
 
@@ -118,7 +118,7 @@ Perform bitwise operations between strings
 
 ### BITPOS 
 
-``` {.wrap}
+```
 BITPOS key bit [start] [end]
 ```
 
@@ -132,7 +132,7 @@ Find first bit set or clear in a string
 
 ### DECR 
 
-``` {.wrap}
+```
 DECR key
 ```
 
@@ -146,7 +146,7 @@ Decrement the integer value of a key by one
 
 ### DECRBY 
 
-``` {.wrap}
+```
 DECRBY key decrement
 ```
 
@@ -160,7 +160,7 @@ Decrement the integer value of a key by the given number
 
 ### GET 
 
-``` {.wrap}
+```
 GET key
 ```
 
@@ -174,7 +174,7 @@ Get the value of a key
 
 ### GETBIT 
 
-``` {.wrap}
+```
 GETBIT key offset
 ```
 
@@ -188,7 +188,7 @@ Returns the bit value at offset in the string value stored at key
 
 ### GETRANGE 
 
-``` {.wrap}
+```
 GETRANGE key start end
 ```
 
@@ -202,7 +202,7 @@ Get a substring of the string stored at a key
 
 ### GETSET 
 
-``` {.wrap}
+```
 GETSET key value
 ```
 
@@ -216,7 +216,7 @@ Set the string value of a key and return its old value
 
 ### INCR 
 
-``` {.wrap}
+```
 INCR key
 ```
 
@@ -229,7 +229,7 @@ Increment the integer value of a key by one
 
 ### MSETNX 
 
-``` {.wrap}
+```
 MSETNX key value [key value ...]
 ```
 
@@ -245,7 +245,7 @@ Set multiple keys to multiple values, only if none of the keys exist
 
 ### INCRBYFLOAT 
 
-``` {.wrap}
+```
 INCRBYFLOAT key increment
 ```
 
@@ -259,7 +259,7 @@ Increment the float value of a key by the given amount
 
 ### MGET 
 
-``` {.wrap}
+```
 MGET key [key ...]
 ```
 
@@ -273,7 +273,7 @@ Get the values of all the given keys
 
 ### MSET 
 
-``` {.wrap}
+```
 MSET key value [key value ...]
 ```
 
@@ -288,7 +288,7 @@ Set multiple keys to multiple values
 
 ### INCRBY 
 
-``` {.wrap}
+```
 INCRBY key increment
 ```
 
@@ -303,7 +303,7 @@ Increment the integer value of a key by the given amount
 
 ### PSETEX 
 
-``` {.wrap}
+```
 PSETEX key milliseconds value
 ```
 
@@ -317,7 +317,7 @@ Set the value and expiration in milliseconds of a key
 
 ### SET 
 
-``` {.wrap}
+```
 SET key value [EX seconds|PX milliseconds|KEEPTTL] [NX|XX] [GET]
 ```
 
@@ -331,7 +331,7 @@ Set the string value of a key
 
 ### SETBIT 
 
-``` {.wrap}
+```
 SETBIT key offset value
 ```
 
@@ -345,7 +345,7 @@ Sets or clears the bit at offset in the string value stored at key
 
 ### SETEX 
 
-``` {.wrap}
+```
 SETEX key seconds value
 ```
 
@@ -359,7 +359,7 @@ Set the value and expiration of a key
 
 ### SETNX 
 
-``` {.wrap}
+```
 SETNX key value
 ```
 
@@ -373,7 +373,7 @@ Set the value of a key, only if the key does not exist
 
 ### SETRANGE 
 
-``` {.wrap}
+```
 SETRANGE key offset value
 ```
 
@@ -387,7 +387,7 @@ Overwrite part of a string at key starting at the specified offset
 
 ### STRLEN 
 
-``` {.wrap}
+```
 STRLEN key
 ```
 
@@ -402,7 +402,7 @@ Get the length of the value stored in a key
 
 ### STRALGO 
 
-``` {.wrap}
+```
 STRALGO LCS algo-specific-argument [algo-specific-argument ...]
 ```
 
@@ -422,7 +422,7 @@ Set command {.cols-3}
 
 ### SADD 
 
-``` {.wrap}
+```
 SADD key member [member ...]
 ```
 
@@ -436,7 +436,7 @@ Add one or more members to a set
 
 ### SCARD 
 
-``` {.wrap}
+```
 SCARD key
 ```
 
@@ -450,7 +450,7 @@ Get the number of members in a set
 
 ### SDIFF 
 
-``` {.wrap}
+```
 SDIFF key [key ...]
 ```
 
@@ -464,7 +464,7 @@ Subtract multiple sets
 
 ### SDIFFSTORE 
 
-``` {.wrap}
+```
 SDIFFSTORE destination key [key ...]
 ```
 
@@ -478,7 +478,7 @@ Subtract multiple sets and store the resulting set in a key
 
 ### SINTER 
 
-``` {.wrap}
+```
 SINTER key [key ...]
 ```
 
@@ -492,7 +492,7 @@ Intersect multiple sets
 
 ### SINTERSTORE 
 
-``` {.wrap}
+```
 SINTERSTORE destination key [key ...]
 ```
 
@@ -506,7 +506,7 @@ Intersect multiple sets and store the resulting set in a key
 
 ### SISMEMBER 
 
-``` {.wrap}
+```
 SISMEMBER key member
 ```
 
@@ -520,7 +520,7 @@ Determine if a given value is a member of a set
 
 ### SMISMEMBER 
 
-``` {.wrap}
+```
 SMISMEMBER key member [member ...]
 ```
 
@@ -534,7 +534,7 @@ Returns the membership associated with the given elements for a set
 
 ### SMEMBERS 
 
-``` {.wrap}
+```
 SMEMBERS key
 ```
 
@@ -548,7 +548,7 @@ Get all the members in a set
 
 ### SMOVE 
 
-``` {.wrap}
+```
 SMOVE source destination member
 ```
 
@@ -562,7 +562,7 @@ Move a member from one set to another
 
 ### SPOP 
 
-``` {.wrap}
+```
 SPOP key [count]
 ```
 
@@ -576,7 +576,7 @@ Remove and return one or multiple random members from a set
 
 ### SRANDMEMBER 
 
-``` {.wrap}
+```
 SRANDMEMBER key [count]
 ```
 
@@ -590,7 +590,7 @@ Get one or multiple random members from a set
 
 ### SREM 
 
-``` {.wrap}
+```
 SREM key member [member ...]
 ```
 
@@ -604,7 +604,7 @@ Remove one or more members from a set
 
 ### SUNION 
 
-``` {.wrap}
+```
 SUNION key [key ...]
 ```
 
@@ -618,7 +618,7 @@ Add multiple sets
 
 ### SUNIONSTORE 
 
-``` {.wrap}
+```
 SUNIONSTORE destination key [key ...]
 ```
 
@@ -644,7 +644,7 @@ List command {.cols-3}
 
 
 ### BLPOP
-``` {.wrap}
+```
 BLPOP key [key ...] timeout
 ```
 
@@ -658,7 +658,7 @@ Remove and get the first element in a list, or block until one is available |
 
 
 ### BRPOP
-``` {.wrap}
+```
 BRPOP key [key ...] timeout
 ```
 
@@ -672,7 +672,7 @@ Remove and get the last element in a list, or block until one is available |
 
 ### LINDEX 
 
-``` {.wrap}
+```
 LINDEX key index
 ```
 
@@ -686,7 +686,7 @@ Get an element from a list by its index
 
 ### LINSERT 
 
-``` {.wrap}
+```
 LINSERT key BEFORE|AFTER pivot element
 ```
 
@@ -700,7 +700,7 @@ Insert an element before or after another element in a list
 
 ### LLEN 
 
-``` {.wrap}
+```
 LLEN key
 ```
 
@@ -714,7 +714,7 @@ Get the length of a list
 
 ### LPOP 
 
-``` {.wrap}
+```
 LPOP key [count]
 ```
 
@@ -728,7 +728,7 @@ Remove and get the first elements in a list
 
 ### LPOS 
 
-``` {.wrap}
+```
 LPOS key element [RANK rank] [COUNT num-matches] [MAXLEN len]
 ```
 
@@ -742,7 +742,7 @@ Return the index of matching elements on a list
 
 ### LPUSH 
 
-``` {.wrap}
+```
 LPUSH key element [element ...]
 ```
 
@@ -756,7 +756,7 @@ Prepend one or multiple elements to a list
 
 ### LPUSHX 
 
-``` {.wrap}
+```
 LPUSHX key element [element ...]
 ```
 
@@ -770,7 +770,7 @@ Prepend an element to a list, only if the list exists
 
 ### LRANGE 
 
-``` {.wrap}
+```
 LRANGE key start stop
 ```
 
@@ -784,7 +784,7 @@ Get a range of elements from a list
 
 ### LREM 
 
-``` {.wrap}
+```
 LREM key count element
 ```
 
@@ -798,7 +798,7 @@ Remove elements from a list
 
 ### LSET 
 
-``` {.wrap}
+```
 LSET key index element
 ```
 
@@ -812,7 +812,7 @@ Set the value of an element in a list by its index
 
 ### LTRIM 
 
-``` {.wrap}
+```
 LTRIM key start stop
 ```
 
@@ -826,7 +826,7 @@ Trim a list to the specified range
 
 ### RPOP 
 
-``` {.wrap}
+```
 RPOP key [count]
 ```
 
@@ -840,7 +840,7 @@ Remove and get the last elements in a list
 
 ### RPOPLPUSH 
 
-``` {.wrap}
+```
 RPOPLPUSH source destination
 ```
 
@@ -854,7 +854,7 @@ Remove the last element in a list, prepend it to another list and return it
 
 ### LMOVE 
 
-``` {.wrap}
+```
 LMOVE source destination LEFT|RIGHT LEFT|RIGHT
 ```
 
@@ -868,7 +868,7 @@ Pop an element from a list, push it to another list and return it
 
 ### RPUSH 
 
-``` {.wrap}
+```
 RPUSH key element [element ...]
 ```
 
@@ -882,7 +882,7 @@ Append one or multiple elements to a list
 
 ### RPUSHX 
 
-``` {.wrap}
+```
 RPUSHX key element [element ...]
 ```
 
@@ -903,7 +903,7 @@ Hash command {.cols-3}
 
 ### HDEL 
 
-``` {.wrap}
+```
 HDEL key field [field ...]
 ```
 
@@ -917,7 +917,7 @@ Delete one or more hash fields
 
 ### HEXISTS 
 
-``` {.wrap}
+```
 HEXISTS key field
 ```
 
@@ -931,7 +931,7 @@ Determine if a hash field exists
 
 ### HGET 
 
-``` {.wrap}
+```
 HGET key field
 ```
 
@@ -945,7 +945,7 @@ Get the value of a hash field
 
 ### HGETALL 
 
-``` {.wrap}
+```
 HGETALL key
 ```
 
@@ -959,7 +959,7 @@ Get all the fields and values in a hash
 
 ### HINCRBY 
 
-``` {.wrap}
+```
 HINCRBY key field increment
 ```
 
@@ -973,7 +973,7 @@ Increment the integer value of a hash field by the given number
 
 ### HINCRBYFLOAT 
 
-``` {.wrap}
+```
 HINCRBYFLOAT key field increment
 ```
 
@@ -987,7 +987,7 @@ Increment the float value of a hash field by the given amount
 
 ### HKEYS 
 
-``` {.wrap}
+```
 HKEYS key
 ```
 
@@ -1001,7 +1001,7 @@ Get all the fields in a hash
 
 ### HLEN 
 
-``` {.wrap}
+```
 HLEN key
 ```
 
@@ -1015,7 +1015,7 @@ Get the number of fields in a hash
 
 ### HMGET 
 
-``` {.wrap}
+```
 HMGET key field [field ...]
 ```
 
@@ -1029,7 +1029,7 @@ Get the values of all the given hash fields
 
 ### HMSET 
 
-``` {.wrap}
+```
 HMSET key field value [field value ...]
 ```
 
@@ -1043,7 +1043,7 @@ Set multiple hash fields to multiple values
 
 ### HSET 
 
-``` {.wrap}
+```
 HSET key field value [field value ...]
 ```
 
@@ -1057,7 +1057,7 @@ Set the string value of a hash field
 
 ### HSETNX 
 
-``` {.wrap}
+```
 HSETNX key field value
 ```
 
@@ -1071,7 +1071,7 @@ Set the value of a hash field, only if the field does not exist
 
 ### HSTRLEN 
 
-``` {.wrap}
+```
 HSTRLEN key field
 ```
 
@@ -1085,7 +1085,7 @@ Get the length of the value of a hash field
 
 ### HVALS 
 
-``` {.wrap}
+```
 HVALS key
 ```
 
@@ -1105,7 +1105,7 @@ Sorted set command {.cols-3}
 
 ### BZPOPMIN
 
-``` {.wrap}
+```
 BZPOPMIN key [key ...] timeout
 ```
 
@@ -1119,7 +1119,7 @@ Remove and return the member with the lowest score from one or more sorted sets,
 
 ### BZPOPMAX
 
-``` {.wrap}
+```
 BZPOPMAX key [key ...] timeout
 ```
 
@@ -1134,7 +1134,7 @@ Remove and return the member with the highest score from one or more sorted sets
 
 ### ZADD  {.row-span-2}
 
-``` {.wrap}
+```
 ZADD key [NX|XX] [GT|LT] [CH] [INCR] score member [score member ...]
 ```
 
@@ -1148,7 +1148,7 @@ Add one or more members to a sorted set, or update its score if it already exist
 
 ### ZCARD 
 
-``` {.wrap}
+```
 ZCARD key
 ```
 
@@ -1163,7 +1163,7 @@ Get the number of members in a sorted set
 
 ### ZSCORE 
 
-``` {.wrap}
+```
 ZSCORE key member
 ```
 
@@ -1178,7 +1178,7 @@ Get the score associated with the given member in a sorted set
 
 ### ZCOUNT 
 
-``` {.wrap}
+```
 ZCOUNT key min max
 ```
 
@@ -1192,7 +1192,7 @@ Count the members in a sorted set with scores within the given values
 
 ### ZDIFF 
 
-``` {.wrap}
+```
 ZDIFF numkeys key [key ...] [WITHSCORES]
 ```
 
@@ -1206,7 +1206,7 @@ Subtract multiple sorted sets
 
 ### ZDIFFSTORE 
 
-``` {.wrap}
+```
 ZDIFFSTORE destination numkeys key [key ...]
 ```
 
@@ -1220,7 +1220,7 @@ Subtract multiple sorted sets and store the resulting sorted set in a new key
 
 ### ZINCRBY 
 
-``` {.wrap}
+```
 ZINCRBY key increment member
 ```
 
@@ -1234,7 +1234,7 @@ Increment the score of a member in a sorted set
 
 ### ZINTER 
 
-``` {.wrap}
+```
 ZINTER numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]
 ```
 
@@ -1248,7 +1248,7 @@ Intersect multiple sorted sets
 
 ### ZINTERSTORE 
 
-``` {.wrap}
+```
 ZINTERSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
 ```
 
@@ -1262,7 +1262,7 @@ Intersect multiple sorted sets and store the resulting sorted set in a new key
 
 ### ZLEXCOUNT 
 
-``` {.wrap}
+```
 ZLEXCOUNT key min max
 ```
 
@@ -1276,7 +1276,7 @@ Count the number of members in a sorted set between a given lexicographical rang
 
 ### ZPOPMAX 
 
-``` {.wrap}
+```
 ZPOPMAX key [count]
 ```
 
@@ -1290,7 +1290,7 @@ Remove and return members with the highest scores in a sorted set
 
 ### ZPOPMIN 
 
-``` {.wrap}
+```
 ZPOPMIN key [count]
 ```
 
@@ -1304,7 +1304,7 @@ Remove and return members with the lowest scores in a sorted set
 
 ### ZRANGE 
 
-``` {.wrap}
+```
 ZRANGE key start stop [WITHSCORES]
 ```
 
@@ -1318,7 +1318,7 @@ Return a range of members in a sorted set, by index
 
 ### ZRANGEBYLEX 
 
-``` {.wrap}
+```
 ZRANGEBYLEX key min max [LIMIT offset count]
 ```
 
@@ -1332,7 +1332,7 @@ Return a range of members in a sorted set, by lexicographical range
 
 ### ZREVRANGEBYLEX 
 
-``` {.wrap}
+```
 ZREVRANGEBYLEX key max min [LIMIT offset count]
 ```
 
@@ -1346,7 +1346,7 @@ Return a range of members in a sorted set, by lexicographical range, ordered fro
 
 ### ZRANGEBYSCORE 
 
-``` {.wrap}
+```
 ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]
 ```
 
@@ -1360,7 +1360,7 @@ Return a range of members in a sorted set, by score
 
 ### ZRANK 
 
-``` {.wrap}
+```
 ZRANK key member
 ```
 
@@ -1374,7 +1374,7 @@ Determine the index of a member in a sorted set
 
 ### ZREM 
 
-``` {.wrap}
+```
 ZREM key member [member ...]
 ```
 
@@ -1388,7 +1388,7 @@ Remove one or more members from a sorted set
 
 ### ZREMRANGEBYLEX 
 
-``` {.wrap}
+```
 ZREMRANGEBYLEX key min max
 ```
 
@@ -1402,7 +1402,7 @@ Remove all members in a sorted set between the given lexicographical range
 
 ### ZREMRANGEBYRANK 
 
-``` {.wrap}
+```
 ZREMRANGEBYRANK key start stop
 ```
 
@@ -1416,7 +1416,7 @@ Remove all members in a sorted set within the given indexes
 
 ### ZREMRANGEBYSCORE 
 
-``` {.wrap}
+```
 ZREMRANGEBYSCORE key min max
 ```
 
@@ -1430,7 +1430,7 @@ Remove all members in a sorted set within the given scores
 
 ### ZREVRANGE 
 
-``` {.wrap}
+```
 ZREVRANGE key start stop [WITHSCORES]
 ```
 
@@ -1444,7 +1444,7 @@ Return a range of members in a sorted set, by index, with scores ordered from hi
 
 ### ZREVRANGEBYSCORE 
 
-``` {.wrap}
+```
 ZREVRANGEBYSCORE key max min [WITHSCORES] [LIMIT offset count]
 ```
 
@@ -1458,7 +1458,7 @@ Return a range of members in a sorted set, by score, with scores ordered from hi
 
 ### ZREVRANK 
 
-``` {.wrap}
+```
 ZREVRANK key member
 ```
 
@@ -1474,7 +1474,7 @@ Determine the index of a member in a sorted set, with scores ordered from high t
 
 ### ZUNION 
 
-``` {.wrap}
+```
 ZUNION numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX] [WITHSCORES]
 ```
 
@@ -1488,7 +1488,7 @@ Add multiple sorted sets
 
 ### ZMSCORE 
 
-``` {.wrap}
+```
 ZMSCORE key member [member ...]
 ```
 
@@ -1502,7 +1502,7 @@ Get the score associated with the given members in a sorted set
 
 ### ZUNIONSTORE 
 
-``` {.wrap}
+```
 ZUNIONSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
 ```
 
@@ -1524,7 +1524,7 @@ Geo command{.cols-2}
 
 ### GEOADD 
 
-``` {.wrap}
+```
 GEOADD key longitude latitude member [longitude latitude member ...]
 ```
 
@@ -1538,7 +1538,7 @@ Add one or more geospatial items in the geospatial index represented using a sor
 
 ### GEOHASH 
 
-``` {.wrap}
+```
 GEOHASH key member [member ...]
 ```
 
@@ -1552,7 +1552,7 @@ Returns members of a geospatial index as standard geohash strings
 
 ### GEOPOS 
 
-``` {.wrap}
+```
 GEOPOS key member [member ...]
 ```
 
@@ -1566,7 +1566,7 @@ Returns longitude and latitude of members of a geospatial index
 
 ### GEODIST 
 
-``` {.wrap}
+```
 GEODIST key member1 member2 [m|km|ft|mi]
 ```
 
@@ -1580,7 +1580,7 @@ Returns the distance between two members of a geospatial index
 
 ### GEORADIUS 
 
-``` {.wrap}
+```
 GEORADIUS key longitude latitude radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]
 ```
 
@@ -1594,7 +1594,7 @@ Query a sorted set representing a geospatial index to fetch members matching a g
 
 ### GEORADIUSBYMEMBER 
 
-``` {.wrap}
+```
 GEORADIUSBYMEMBER key member radius m|km|ft|mi [WITHCOORD] [WITHDIST] [WITHHASH] [COUNT count] [ASC|DESC] [STORE key] [STOREDIST key]
 ```
 
@@ -1608,7 +1608,7 @@ Query a sorted set representing a geospatial index to fetch members matching a g
 
 ### GEOSEARCH 
 
-``` {.wrap}
+```
 GEOSEARCH key [FROMMEMBER member] [FROMLONLAT longitude latitude] [BYRADIUS radius m|km|ft|mi] [BYBOX width height m|km|ft|mi] [ASC|DESC] [COUNT count] [WITHCOORD] [WITHDIST] [WITHHASH]
 ```
 
@@ -1634,7 +1634,7 @@ Hyperloglog command{.cols-3}
 
 ### PFADD 
 
-``` {.wrap}
+```
 PFADD key element [element ...]
 ```
 
@@ -1648,7 +1648,7 @@ Adds the specified elements to the specified HyperLogLog.
 
 ### PFCOUNT 
 
-``` {.wrap}
+```
 PFCOUNT key [key ...]
 ```
 
@@ -1662,7 +1662,7 @@ Return the approximated cardinality of the set(s) observed by the HyperLogLog at
 
 ### PFMERGE 
 
-``` {.wrap}
+```
 PFMERGE destkey sourcekey [sourcekey ...]
 ```
 
@@ -1680,7 +1680,7 @@ Server command{.cols-3}
 
 ### COMMAND
 
-``` {.wrap}
+```
 COMMAND
 ```
 
@@ -1751,7 +1751,7 @@ Get array of Redis command details
 
 ### COMMAND COUNT
 
-``` {.wrap}
+```
 COMMAND COUNT
 ```
 
@@ -1765,7 +1765,7 @@ Get total number of Redis commands
 
 ### COMMAND GETKEYS
 
-``` {.wrap}
+```
 COMMAND GETKEYS
 ```
 
@@ -1779,7 +1779,7 @@ Extract keys given a full Redis command
 
 ### COMMAND INFO 
 
-``` {.wrap}
+```
 COMMAND INFO command-name [command-name ...]
 ```
 
@@ -1794,7 +1794,7 @@ Get array of specific Redis command details
 
 ### INFO 
 
-``` {.wrap}
+```
 INFO [section]
 ```
 
@@ -1813,7 +1813,7 @@ Get information and statistics about the server
 
 ### ROLE
 
-``` {.wrap}
+```
 ROLE
 ```
 
@@ -1828,7 +1828,7 @@ Return the role of the instance in the context of replication
 
 ### TIME
 
-``` {.wrap}
+```
 TIME
 ```
 
@@ -1860,7 +1860,7 @@ Generic command{.cols-3}
 
 ### DEL 
 
-``` {.wrap}
+```
 DEL key [key ...]
 ```
 
@@ -1874,7 +1874,7 @@ Delete a key
 
 ### DUMP 
 
-``` {.wrap}
+```
 DUMP key
 ```
 
@@ -1888,7 +1888,7 @@ Return a serialized version of the value stored at the specified key.
 
 ### EXISTS 
 
-``` {.wrap}
+```
 EXISTS key [key ...]
 ```
 
@@ -1902,7 +1902,7 @@ Determine if a key exists
 
 ### EXPIRE 
 
-``` {.wrap}
+```
 EXPIRE key seconds
 ```
 
@@ -1916,7 +1916,7 @@ Set a key's time to live in seconds
 
 ### EXPIREAT 
 
-``` {.wrap}
+```
 EXPIREAT key timestamp
 ```
 
@@ -1930,7 +1930,7 @@ Set the expiration for a key as a UNIX timestamp
 
 ### KEYS 
 
-``` {.wrap}
+```
 KEYS pattern
 ```
 
@@ -1944,7 +1944,7 @@ Find all keys matching the given pattern
 
 ### PERSIST 
 
-``` {.wrap}
+```
 PERSIST key
 ```
 
@@ -1958,7 +1958,7 @@ Remove the expiration from a key
 
 ### PEXPIRE 
 
-``` {.wrap}
+```
 PEXPIRE key milliseconds
 ```
 
@@ -1972,7 +1972,7 @@ Set a key's time to live in milliseconds
 
 ### PEXPIREAT 
 
-``` {.wrap}
+```
 PEXPIREAT key milliseconds-timestamp
 ```
 
@@ -1986,7 +1986,7 @@ Set the expiration for a key as a UNIX timestamp specified in milliseconds
 
 ### PTTL 
 
-``` {.wrap}
+```
 PTTL key
 ```
 
@@ -2001,7 +2001,7 @@ Get the time to live for a key in milliseconds
 
 ### RENAME 
 
-``` {.wrap}
+```
 RENAME key newkey
 ```
 
@@ -2015,7 +2015,7 @@ Rename a key
 
 ### RENAMENX 
 
-``` {.wrap}
+```
 RENAMENX key newkey
 ```
 
@@ -2030,7 +2030,7 @@ Rename a key, only if the new key does not exist
 
 ### TOUCH 
 
-``` {.wrap}
+```
 TOUCH key [key ...]
 ```
 
@@ -2044,7 +2044,7 @@ Alters the last access time of a key(s). Returns the number of existing keys spe
 
 ### TTL 
 
-``` {.wrap}
+```
 TTL key
 ```
 
@@ -2058,7 +2058,7 @@ Get the time to live for a key
 
 ### TYPE 
 
-``` {.wrap}
+```
 TYPE key
 ```
 
@@ -2072,7 +2072,7 @@ Determine the type stored at key
 
 ### UNLINK 
 
-``` {.wrap}
+```
 UNLINK key [key ...]
 ```
 
@@ -2112,7 +2112,7 @@ Connection command{.cols-3}
 
 ### CLIENT ID
 
-``` {.wrap}
+```
 CLIENT ID
 ```
 
@@ -2126,7 +2126,7 @@ Returns the client ID for the current connection
 
 ### CLIENT INFO
 
-``` {.wrap}
+```
 CLIENT INFO
 ```
 
@@ -2141,7 +2141,7 @@ Returns information about the current client connection.
 
 ### ECHO 
 
-``` {.wrap}
+```
 ECHO message
 ```
 
@@ -2156,7 +2156,7 @@ Echo the given string
 
 ### PING 
 
-``` {.wrap}
+```
 PING [message]
 ```
 
@@ -2193,7 +2193,7 @@ Stream command{.cols-2}
 
 ### XADD 
 
-``` {.wrap}
+```
 XADD key [MAXLEN [=|~] length] [NOMKSTREAM] *|ID field value [field value ...]
 ```
 
@@ -2207,7 +2207,7 @@ Appends a new entry to a stream
 
 ### XTRIM 
 
-``` {.wrap}
+```
 XTRIM key MAXLEN [=|~] length
 ```
 
@@ -2222,7 +2222,7 @@ Trims the stream to (approximately if '~' is passed) a certain size
 
 ### XRANGE 
 
-``` {.wrap}
+```
 XRANGE key start end [COUNT count]
 ```
 
@@ -2236,7 +2236,7 @@ Return a range of elements in a stream, with IDs matching the specified IDs inte
 
 ### XREVRANGE 
 
-``` {.wrap}
+```
 XREVRANGE key end start [COUNT count]
 ```
 
@@ -2250,7 +2250,7 @@ Return a range of elements in a stream, with IDs matching the specified IDs inte
 
 ### XLEN 
 
-``` {.wrap}
+```
 XLEN key
 ```
 
@@ -2265,7 +2265,7 @@ Return the number of entries in a stream
 
 ### XACK 
 
-``` {.wrap}
+```
 XACK key group ID [ID ...]
 ```
 

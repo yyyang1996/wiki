@@ -23,7 +23,7 @@ intro: >
 * [Learn X in Y minutes](https://learnxinyminutes.com/docs/yaml/) _\(learnxinyminutes.com\)_
 * [YAML lint](http://www.yamllint.com/) _\(yamllint.com\)_
 
-## Scalar types {.row-span-2}
+## Scalar types
 
 ```yaml
 n1: 1            # integer          
@@ -181,7 +181,7 @@ set2: !!set {'one', "two"}
 \`\`\`json {.wrap} { "set1": {"one": null, "two": null}, "set2": {"one": null, "two": null} }
 
 ```text
-### Inheritance {.row-span-2}
+### Inheritance
 ```yaml
 parent: &defaults
   a: 2
@@ -197,7 +197,7 @@ child:
 \`\`\`json {.wrap} { "parent": {"a": 2, "b": 3}, "child": {"a": 2, "b": 4} }
 
 ```text
-### Reference {.row-span-2}
+### Reference
 ```yaml
 values: &ref
   - These values

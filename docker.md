@@ -64,7 +64,7 @@ $ docker run -it -p 8001:8080 --name my-nginx nginx
 
 Parameter `<container>` can be container id or name
 
-## Containers {.cols-2}
+## Containers
 
 ### Starting & Stopping
 
@@ -128,7 +128,7 @@ Updating a Container
 docker update --cpu-shares 512 -m 300M nginx-server
 ```
 
-## Images {.cols-2}
+## Images
 
 ### Manipulating
 
@@ -149,7 +149,7 @@ docker update --cpu-shares 512 -m 300M nginx-server
 \`\`\`shell script $ docker build . $ docker build github.com/creack/docker-firefox $ docker build - &lt; Dockerfile $ docker build - &lt; context.tar.gz $ docker build -t eon/nginx-server . $ docker build -f myOtherDockerfile . $ curl example.com/remote/Dockerfile \| docker build -f - .
 
 ```text
-Networking {.cols-2}
+Networking
 ----------
 
 
@@ -200,7 +200,7 @@ docker network create -d overlay \
   MyOverlayNetwork
 ```
 
-## Miscellaneous {.cols-2}
+## Miscellaneous
 
 ### Docker Hub
 
@@ -211,7 +211,7 @@ docker network create -d overlay \
 | `docker login` | Authenticate to docker hub |
 | `docker push user/image` | Uploads an image to docker hub. |
 
-### Registry commands {.row-span-3}
+### Registry commands
 
 Login to a Registry
 

@@ -162,7 +162,7 @@ console.log("This is a block code")
 `Inline code` has back-ticks around it
 ```
 
-## Tables {.col-span-2}
+## Tables
 
 ```text
 | Left column | Center column | Right column |
@@ -182,7 +182,7 @@ Cell 2 | Cell 3 | $12
 
 A markdown table generator: [tableconvert.com](https://tableconvert.com/)
 
-## Images {.col-span-2}
+## Images
 
 ```text
 ![GitHub Logo](/images/logo.png)

@@ -31,7 +31,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 * [Regex in Emacs](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/emacs/README.md#search) _(quickref.me)_
 *   [Online regex tester](https://regex101.com/) _(regex101.com)_
 
-    {.cols-2 .style-round}
+  
 
 ### Character Classes
 
@@ -77,7 +77,7 @@ This is a quick cheat sheet to getting started with regular expressions.
 * \\
 *   ?
 
-    {.cols-3 .style-none}
+  
 
 Escape these special characters with `\`
 

@@ -186,9 +186,9 @@ element {
 
 See: [Dynamic content](css.md#dynamic-content)
 
-## Selectors {.cols-3}
+## Selectors
 
-### Examples  {.row-span-2}
+### Examples 
 
 #### Groups Selector
 
@@ -331,9 +331,9 @@ See also: [Attribute selectors](https://developer.mozilla.org/en-US/docs/Web/CSS
 | `p:only-of-type` | Unique of its parent |
 | `p:only-child` | Only child of its parent |
 
-## Fonts {.cols-3}
+## Fonts
 
-### Properties {.row-span-3}
+### Properties
 
 | Property | Description |
 | :--- | :--- |
@@ -364,7 +364,7 @@ font-size: 12pt;
 letter-spacing: 0.02em;
 ```
 
-### Case {.row-span-2}
+### Case
 
 ```css
 /* Hello */
@@ -386,7 +386,7 @@ text-transform: lowercase;
 }
 ```
 
-## Colors {.cols-3}
+## Colors
 
 ### Named color
 
@@ -439,9 +439,9 @@ color: transparent;
 color: currentcolor; /* keyword */
 ```
 
-## Backgrounds {.cols-3}
+## Backgrounds
 
-### Properties {.row-span-2}
+### Properties
 
 | Property | Description |
 | :--- | :--- |
@@ -454,7 +454,7 @@ content-box \| \| `background-repeat:` \| no-repeat
 repeat-x  
 repeat-y \| \| `background-attachment:` \| scroll/fixed/local \| {.left-text}
 
-### Shorthand {.secondary .col-span-2}
+### Shorthand
 
 |  | color | image | positionX | positionY |  | size | repeat | attachment |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -462,7 +462,7 @@ repeat-y \| \| `background-attachment:` \| scroll/fixed/local \| {.left-text}
 | `background:` | `#abc` | `url(b.png)` | `center` | `center` | `/` | `cover` | `repeat-x` | `local;` |
 |  | color | image | posX | posY |  | size | repeat | attach.. |
 
-### Examples {.col-span-2}
+### Examples
 
 \`\`\`css {.wrap} background: url\(img\_man.jpg\) no-repeat center;
 
@@ -471,7 +471,7 @@ background: url\(img\_flwr.gif\) right bottom no-repeat, url\(paper.gif\) left t
 background: rgb\(2,0,36\); background: linear-gradient\(90deg, rgba\(2,0,36,1\) 0%, rgba\(13,232,230,1\) 35%, rgba\(0,212,255,1\) 100%\);
 
 ```text
-The Box Model {.cols-3}
+The Box Model
 ------------
 
 
@@ -537,16 +537,16 @@ See also: [Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 
 See also: [Overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 
-## Animation {.cols-5}
+## Animation
 
-### Shorthand {.col-span-5 .secondary}
+### Shorthand
 
 |  | name | duration | timing-function | delay | count | direction | fill-mode | play-state |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `animation:` | `bounce` | `300ms` | `linear` | `100ms` | `infinite` | `alternate-reverse` | `both` | `reverse` |
 |  | name | duration | timing-function | delay | count | direction | fill-mode | play-state |
 
-### Properties {.row-span-2 .col-span-2}
+### Properties
 
 | Property | Value |
 | :--- | :--- |
@@ -564,7 +564,7 @@ See also: [Overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 
 See also: [Animation](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 
-### Example {.col-span-3}
+### Example
 
 ```css
 /* @keyframes duration | timing-function | delay |
@@ -584,13 +584,13 @@ animation: bounce 300ms linear infinite alternate-reverse;
 animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 ```
 
-### Javascript Event {.col-span-3}
+### Javascript Event
 
 ```javascript
 .one('webkitAnimationEnd oanimationend msAnimationEnd animationend')
 ```
 
-## Flexbox {.cols-2}
+## Flexbox
 
 ### Simple example
 
@@ -606,7 +606,7 @@ animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 }
 ```
 
-### Container {.row-span-2}
+### Container
 
 .container {
 
@@ -670,7 +670,7 @@ animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 
 }
 
-## Flexbox Tricks {.cols-3}
+## Flexbox Tricks
 
 ### Vertical center
 
@@ -731,7 +731,7 @@ animation: bounce 300ms linear 2s infinite alternate-reverse forwards normal;
 
 A fixed-height top bar and a dynamic-height content area.
 
-### Table-like {.col-span-2}
+### Table-like
 
 ```css
 .container {
@@ -757,14 +757,14 @@ This creates columns that have different widths, but size accordingly according 
 
 Vertically-center all items.
 
-### Left and right {.col-span-2}
+### Left and right
 
 ```css
 .menu > .left  { align-self: flex-start; }
 .menu > .right { align-self: flex-end; }
 ```
 
-## Grid Layout {.cols-3}
+## Grid Layout
 
 ### Grid Template Columns
 
@@ -913,7 +913,7 @@ The grid items are positioned to the right \(end\) of the row.
 }
 ```
 
-## Dynamic Content {.cols-3}
+## Dynamic Content
 
 ### Variable
 
@@ -984,7 +984,7 @@ li::before {
 }
 ```
 
-## Css 3 tricks {.cols-3}
+## Css 3 tricks
 
 ### Scrollbar smooth
 
@@ -996,7 +996,7 @@ html {
 
 [Click me](css.md#getting-started), the page will scroll smoothly to Getting started
 
-## See also {.cols-1}
+## See also
 
 * [CSS selectors cheatsheet](https://frontend30.com/css-selectors-cheatsheet/) _\(frontend30.com\)_
 * [MDN: Using CSS flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)

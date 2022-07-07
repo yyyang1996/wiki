@@ -62,7 +62,7 @@ $(function(){
 });
 ```
 
-## Selectors {.cols-3}
+## Selectors
 
 ### Examples {.secondary}
 
@@ -95,7 +95,6 @@ $("selector1, selector2 ...selectorn")
 * [prev + next](https://api.jquery.com/next-adjacent-Selector/){data-tooltip="Selects all next elements matching next that are immediately preceded by a sibling prev."}
 * [prev ~ siblings](https://api.jquery.com/next-siblings-selector/){data-tooltip="Selects all sibling elements that follow after the prev element, have the same parent, and match the filtering siblings selector."} {.col-span-2}
 
-  {.style-none .cols-3}
 
 ### Basic Filters
 
@@ -113,7 +112,6 @@ $("selector1, selector2 ...selectorn")
 * [:root](https://api.jquery.com/root-selector/){data-tooltip="Selects the element that is the root of the document."}
 * [:target](https://api.jquery.com/target-selector/){data-tooltip="Selects the target element indicated by the fragment identifier of the document's URI."}
 
-  {.style-none .cols-3}
 
 ### Attribute
 
@@ -127,7 +125,6 @@ $("selector1, selector2 ...selectorn")
 * [\[name\]](https://api.jquery.com/has-attribute-selector/){data-tooltip="Selects elements that have the specified attribute, with any value. "}
 * [\[name="value"\]\[name2="value2"\]](https://api.jquery.com/multiple-attribute-selector/){data-tooltip="Matches elements that match all of the specified attribute filters."} {.col-span-2}
 
-  {.style-none .cols-2}
 
 ### Child Filters
 
@@ -142,7 +139,6 @@ $("selector1, selector2 ...selectorn")
 * [:only-child](https://api.jquery.com/only-child-selector/){data-tooltip="Selects all elements that are the only child of their parent."}
 * [:only-of-type\(\)](https://api.jquery.com/only-of-type-selector/){data-tooltip="Selects all elements that have no siblings with the same element name."}
 
-  {.style-none .cols-2}
 
 ### Forms
 
@@ -162,11 +158,10 @@ $("selector1, selector2 ...selectorn")
 * [:submit](https://api.jquery.com/submit-selector/){data-tooltip="Selects all elements of type submit."}
 * [:text](https://api.jquery.com/text-selector/){data-tooltip="Selects all input elements of type text."}
 
-  {.style-none .cols-3}
 
-## Attributes {.cols-3}
+## Attributes
 
-### Examples {.secondary .row-span-2}
+### Examples
 
 ```javascript
 $('h2').css({
@@ -205,7 +200,6 @@ $('.choice').toggleClass('highlighted');
 * [.removeProp\(\)](https://api.jquery.com/removeProp/){data-tooltip="Remove a property for the set of matched elements."}
 * [.val\(\)](https://api.jquery.com/val/){data-tooltip="Get the current value of the first element in the set of matched elements."}
 
-  {.style-none .cols-2}
 
 #### Data
 
@@ -215,7 +209,6 @@ $('.choice').toggleClass('highlighted');
 * [jQuery.removeData\(\)](https://api.jquery.com/jQuery.removeData/){data-tooltip="Remove a previously-stored piece of data."}
 * [.removeData\(\)](https://api.jquery.com/removeData/){data-tooltip="Remove a previously-stored piece of data."}
 
-  {.style-none .cols-2}
 
 ### CSS
 
@@ -228,7 +221,6 @@ $('.choice').toggleClass('highlighted');
 * [jQuery.cssNumber](https://api.jquery.com/jQuery.cssNumber/){data-tooltip="An object containing all CSS properties that may be used without a unit. The .css\(\) method uses this object to see if it may append px to unitless values."}
 * [jQuery.escapeSelector\(\)](https://api.jquery.com/jQuery.escapeSelector/){data-tooltip="Escapes any character that has a special meaning in a CSS selector."}
 
-  {.style-none .cols-2}
 
 ### Dimensions
 
@@ -239,7 +231,6 @@ $('.choice').toggleClass('highlighted');
 * [.outerWidth\(\)](https://api.jquery.com/outerWidth/){data-tooltip="Get the current computed outer width \(including padding, border, and optionally margin\) for the first element in the set of matched elements."}
 * [.width\(\)](https://api.jquery.com/width/){data-tooltip="Get the current computed width for the first element in the set of matched elements."}
 
-  {.style-none .cols-2}
 
 ### Offset
 
@@ -249,9 +240,8 @@ $('.choice').toggleClass('highlighted');
 * [.scrollLeft\(\)](https://api.jquery.com/scrollLeft/){data-tooltip="Get the current horizontal position of the scroll bar for the first element in the set of matched elements."}
 * [.scrollTop\(\)](https://api.jquery.com/scrollTop/){data-tooltip="Get the current vertical position of the scroll bar for the first element in the set of matched elements or set the vertical position of the scroll bar for every matched element."}
 
-  {.style-none .cols-2}
 
-## Manipulation {.cols-3}
+## Manipulation
 
 ### Examples {.secondary .row-span-3}
 
@@ -273,7 +263,6 @@ $('span').wrap('<p></p>');
 
 * [.clone\(\)](https://api.jquery.com/clone/){data-tooltip="Create a deep copy of the set of matched elements."}
 
-  {.style-none .cols-3}
 
 ### DOM Insertion, Around
 
@@ -281,7 +270,6 @@ $('span').wrap('<p></p>');
 * [.wrapAll\(\)](https://api.jquery.com/wrapAll/){data-tooltip="Wrap an HTML structure around all elements in the set of matched elements."}
 * [.wrapInner\(\)](https://api.jquery.com/wrapInner/){data-tooltip="Wrap an HTML structure around the content of each element in the set of matched elements."}
 
-  {.style-none .cols-3}
 
 ### DOM Insertion, Inside
 
@@ -292,7 +280,6 @@ $('span').wrap('<p></p>');
 * [.prependTo\(\)](https://api.jquery.com/prependTo/){data-tooltip="Insert every element in the set of matched elements to the beginning of the target."}
 * [.text\(\)](https://api.jquery.com/text/){data-tooltip="Get the combined text contents of each element in the set of matched elements, including their descendants."}
 
-  {.style-none .cols-3}
 
 ### DOM Insertion, Outside
 
@@ -301,7 +288,6 @@ $('span').wrap('<p></p>');
 * [.insertAfter\(\)](https://api.jquery.com/insertAfter/){data-tooltip="Insert every element in the set of matched elements after the target."}
 * [.insertBefore\(\)](https://api.jquery.com/insertBefore/){data-tooltip="Insert every element in the set of matched elements before the target."}
 
-  {.style-none .cols-3}
 
 ### DOM Removal
 
@@ -310,16 +296,14 @@ $('span').wrap('<p></p>');
 * [.remove\(\)](https://api.jquery.com/remove/){data-tooltip="Remove the set of matched elements from the DOM."}
 * [.unwrap\(\)](https://api.jquery.com/unwrap/){data-tooltip="Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place."}
 
-  {.style-none .cols-3}
 
 ### DOM Replacement
 
 * [.replaceAll\(\)](https://api.jquery.com/replaceAll/){data-tooltip="Replace each target element with the set of matched elements."}
 * [.replaceWith\(\)](https://api.jquery.com/replaceWith/){data-tooltip="Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed."}
 
-  {.style-none .cols-3}
 
-## Traversing {.cols-3}
+## Traversing
 
 ### Filtering
 
@@ -333,7 +317,6 @@ $('span').wrap('<p></p>');
 * [.not\(\)](https://api.jquery.com/not/){data-tooltip="Remove elements from the set of matched elements."}
 * [.slice\(\)](https://api.jquery.com/slice/){data-tooltip="Reduce the set of matched elements to a subset specified by a range of indices."}
 
-  {.style-none .cols-3}
 
 ### Miscellaneous Traversing
 
@@ -344,7 +327,6 @@ $('span').wrap('<p></p>');
 * [.each\(\)](https://api.jquery.com/each/){data-tooltip="Iterate over a jQuery object, executing a function for each matched element. "}
 * [.end\(\)](https://api.jquery.com/end/){data-tooltip="End the most recent filtering operation in the current chain and return the set of matched elements to its previous state."}
 
-  {.style-none .cols-3}
 
 ### Tree Traversal
 
@@ -362,11 +344,10 @@ $('span').wrap('<p></p>');
 * [.prevUntil\(\)](https://api.jquery.com/prevUntil/){data-tooltip="Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object."}
 * [.siblings\(\)](https://api.jquery.com/siblings/){data-tooltip="Get the siblings of each element in the set of matched elements, optionally filtered by a selector."}
 
-  {.style-none .cols-3}
 
-## Events {.cols-3}
+## Events
 
-### Examples {.secondary .row-span-6}
+### Examples
 
 ```javascript
 // A mouse event 'click'
@@ -418,9 +399,8 @@ $( "p" ).click(function( event ) {
 * [.resize\(\)](https://api.jquery.com/resize/){data-tooltip="Bind an event handler to the resize JavaScript event, or trigger that event on an element."}
 * [.scroll\(\)](https://api.jquery.com/scroll/){data-tooltip="Bind an event handler to the scroll JavaScript event, or trigger that event on an element."}
 
-  {.style-none .cols-3}
 
-### Event Object {.row-span-6}
+### Event Object
 
 * [event.currentTarget](https://api.jquery.com/event.currentTarget/){data-tooltip=" The current DOM element within the event bubbling phase.  "}
 * [event.delegateTarget](https://api.jquery.com/event.delegateTarget/){data-tooltip="The element where the currently-called jQuery event handler was attached."}
@@ -442,15 +422,12 @@ $( "p" ).click(function( event ) {
 * [event.type](https://api.jquery.com/event.type/){data-tooltip="Describes the nature of the event."}
 * [event.which](https://api.jquery.com/event.which/){data-tooltip="For key or mouse events, this property indicates the specific key or button that was pressed."}
 
-  {.style-none .cols-1}
-
 ### Document Loading
 
 * [.load\(\)](https://api.jquery.com/load-event/){data-tooltip="Bind an event handler to the load JavaScript event."}
 * [.ready\(\)](https://api.jquery.com/ready/){data-tooltip="Specify a function to execute when the DOM is fully loaded."}
 * [.unload\(\)](https://api.jquery.com/unload/){data-tooltip="Bind an event handler to the unload JavaScript event."}
 
-  {.style-none .cols-3}
 
 ### Event Handler Attachment
 
@@ -466,7 +443,6 @@ $( "p" ).click(function( event ) {
 * [.unbind\(\)](https://api.jquery.com/unbind/){data-tooltip="Remove a previously-attached event handler from the elements."}
 * [.undelegate\(\)](https://api.jquery.com/undelegate/){data-tooltip="Remove a handler from the event for all elements which match the current selector, based upon a specific set of root elements."}
 
-  {.style-none .cols-3}
 
 ### Form Events
 
@@ -478,7 +454,6 @@ $( "p" ).click(function( event ) {
 * [.select\(\)](https://api.jquery.com/select/){data-tooltip="Bind an event handler to the select JavaScript event, or trigger that event on an element."}
 * [.submit\(\)](https://api.jquery.com/submit/){data-tooltip="Bind an event handler to the submit JavaScript event, or trigger that event on an element."}
 
-  {.style-none .cols-3}
 
 ### Keyboard Events
 
@@ -486,7 +461,6 @@ $( "p" ).click(function( event ) {
 * [.keypress\(\)](https://api.jquery.com/keypress/){data-tooltip="Bind an event handler to the keypress JavaScript event, or trigger that event on an element."}
 * [.keyup\(\)](https://api.jquery.com/keyup/){data-tooltip="Bind an event handler to the keyup JavaScript event, or trigger that event on an element."}
 
-  {.style-none .cols-3}
 
 ### Mouse Events
 
@@ -503,11 +477,10 @@ $( "p" ).click(function( event ) {
 * [.mouseup\(\)](https://api.jquery.com/mouseup/){data-tooltip="Bind an event handler to the mouseup JavaScript event, or trigger that event on an element."}
 * [.toggle\(\)](https://api.jquery.com/toggle-event/){data-tooltip="Bind two or more handlers to the matched elements, to be executed on alternate clicks."}
 
-  {.style-none .cols-3}
 
-## Effects {.cols-3}
+## Effects
 
-### Examples {.secondary .row-span-2}
+### Examples
 
 ```javascript
 $('#menu-button').on('click', () => {
@@ -531,7 +504,6 @@ $('#menu-button').on('click', () => {
 * [.show\(\)](https://api.jquery.com/show/){data-tooltip="Display the matched elements."}
 * [.toggle\(\)](https://api.jquery.com/toggle/){data-tooltip="Display or hide the matched elements."}
 
-  {.style-none .cols-3}
 
 ### Sliding
 
@@ -539,7 +511,6 @@ $('#menu-button').on('click', () => {
 * [.slideToggle\(\)](https://api.jquery.com/slideToggle/){data-tooltip="Display or hide the matched elements with a sliding motion."}
 * [.slideUp\(\)](https://api.jquery.com/slideUp/){data-tooltip="Hide the matched elements with a sliding motion."}
 
-  {.style-none .cols-3}
 
 ### Custom
 
@@ -556,7 +527,6 @@ $('#menu-button').on('click', () => {
 * [jQuery.queue\(\)](https://api.jquery.com/jQuery.queue/){data-tooltip="Show the queue of functions to be executed on the matched element."}
 * [.stop\(\)](https://api.jquery.com/stop/){data-tooltip="Stop the currently-running animation on the matched elements."}
 
-  {.style-none .cols-3}
 
 ### Fading
 
@@ -565,11 +535,10 @@ $('#menu-button').on('click', () => {
 * [.fadeTo\(\)](https://api.jquery.com/fadeTo/){data-tooltip="Adjust the opacity of the matched elements."}
 * [.fadeToggle\(\)](https://api.jquery.com/fadeToggle/){data-tooltip="Display or hide the matched elements by animating their opacity."}
 
-  {.style-none .cols-3}
 
-## Ajax {.cols-3}
+## Ajax
 
-### Examples {.secondary .row-span-2}
+### Examples
 
 ```javascript
 $.ajax({
@@ -592,7 +561,6 @@ $.ajax({
 * [.ajaxStop\(\)](https://api.jquery.com/ajaxStop/){data-tooltip="Register a handler to be called when all Ajax requests have completed. This is an Ajax Event."}
 * [.ajaxSuccess\(\)](https://api.jquery.com/ajaxSuccess/){data-tooltip="Attach a function to be executed whenever an Ajax request completes successfully. This is an Ajax Event."}
 
-  {.style-none .cols-2}
 
 ### Helper Functions
 
@@ -600,7 +568,6 @@ $.ajax({
 * [.serialize\(\)](https://api.jquery.com/serialize/){data-tooltip="Encode a set of form elements as a string for submission."}
 * [.serializeArray\(\)](https://api.jquery.com/serializeArray/){data-tooltip="Encode a set of form elements as an array of names and values."}
 
-  {.style-none .cols-2}
 
 ### Low-Level Interface
 
@@ -609,7 +576,6 @@ $.ajax({
 * [jQuery.ajaxSetup\(\)](https://api.jquery.com/jQuery.ajaxSetup/){data-tooltip="Set default values for future Ajax requests. Its use is not recommended."}
 * [jQuery.ajaxTransport\(\)](https://api.jquery.com/jQuery.ajaxTransport/){data-tooltip="Creates an object that handles the actual transmission of Ajax data."}
 
-  {.style-none .cols-2}
 
 ### Shorthand Methods
 
@@ -619,9 +585,8 @@ $.ajax({
 * [jQuery.post\(\)](https://api.jquery.com/jQuery.post/){data-tooltip="Send data to the server using a HTTP POST request."}
 * [.load\(\)](https://api.jquery.com/load/){data-tooltip="Load data from the server and place the returned HTML into the matched elements."}
 
-  {.style-none .cols-2}
 
-## Miscellaneous {.cols-3}
+## Miscellaneous
 
 ### jQuery Object
 
@@ -631,9 +596,8 @@ $.ajax({
 * [jQuery.holdReady\(\)](https://api.jquery.com/jQuery.holdReady/){data-tooltip="Holds or releases the execution of jQuery's ready event."}
 * [jQuery.when\(\)](https://api.jquery.com/jQuery.when/){data-tooltip="Provides a way to execute callback functions based on zero or more Thenable objects, usually Deferred objects that represent asynchronous events."}
 
-  {.style-none .cols-2}
 
-### Deferred Object {.row-span-2}
+### Deferred Object
 
 * [jQuery.Deferred\(\)](https://api.jquery.com/jQuery.Deferred/){data-tooltip=" A factory function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function."}
 * [deferred.always\(\)](https://api.jquery.com/deferred.always/){data-tooltip=" Add handlers to be called when the Deferred object is either resolved or rejected. "}
@@ -654,9 +618,8 @@ $.ajax({
 * [deferred.then\(\)](https://api.jquery.com/deferred.then/){data-tooltip="Add handlers to be called when the Deferred object is resolved, rejected, or still in progress. "}
 * [.promise\(\)](https://api.jquery.com/promise/){data-tooltip=" Return a Promise object to observe when all actions of a certain type bound to the collection, queued or not, have finished. "}
 
-  {.style-none .cols-2}
 
-### Utilities {.row-span-3}
+### Utilities
 
 * [jQuery.boxModel](https://api.jquery.com/jQuery.boxModel/){data-tooltip="States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model."}
 * [jQuery.browser](https://api.jquery.com/jQuery.browser/){data-tooltip="Contains flags for the useragent, read from navigator.userAgent. This property was removed in jQuery 1.9 and is available only through the jQuery.migrate plugin. Please try to use feature detection instead."}
@@ -688,7 +651,6 @@ $.ajax({
 * [jQuery.unique\(\)](https://api.jquery.com/jQuery.unique/){data-tooltip="Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers."}
 * [jQuery.uniqueSort\(\)](https://api.jquery.com/jQuery.uniqueSort/){data-tooltip="Sorts an array of DOM elements, in place, with the duplicates removed. Note that this only works on arrays of DOM elements, not strings or numbers."}
 
-  {.style-none .cols-2}
 
 ### DOM Element Methods
 
@@ -697,7 +659,6 @@ $.ajax({
 * [.size\(\)](https://api.jquery.com/size/){data-tooltip="Return the number of elements in the jQuery object."}
 * [.toArray\(\)](https://api.jquery.com/toArray/){data-tooltip="Retrieve all the elements contained in the jQuery set, as an array."}
 
-  {.style-none .cols-2}
 
 ### Internals
 
@@ -708,7 +669,6 @@ $.ajax({
 * [.pushStack\(\)](https://api.jquery.com/pushStack/){data-tooltip="Add a collection of DOM elements onto the jQuery stack."}
 * [.selector](https://api.jquery.com/selector/){data-tooltip="A selector representing selector passed to jQuery\(\), if any, when creating the original set."}
 
-  {.style-none .cols-2}
 
 ### Callbacks Object
 
@@ -725,5 +685,4 @@ $.ajax({
 * [callbacks.locked\(\)](https://api.jquery.com/callbacks.locked/){data-tooltip="Determine if the callbacks list has been locked."}
 * [callbacks.remove\(\)](https://api.jquery.com/callbacks.remove/){data-tooltip="Remove a callback or a collection of callbacks from a callback list."}
 
-  {.style-none .cols-2}
 

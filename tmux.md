@@ -20,54 +20,66 @@ intro: >
 
 ### New session
 
-Start a new session \`\`\`shell script $ tmux
+Start a new session 
+```bash
+$ tmux
+```
 
-```text
 Start a new named session
-```shell script
+```shell
 $ tmux new -s myname
 ```
 
-Show all sessions \`\`\`shell script $ tmux ls
+Show all sessions 
+```bash
+$ tmux ls
+```
 
-```text
 ### Attach session
 Attach to last session
-```shell script
+```shell
 $ tmux a
 ```
 
-Attach to named \`\`\`shell script $ tmux a -t myname
+Attach to named 
+```bash
+$ tmux a -t myname
+```
 
-```text
 ### Kill session  {.row-span-2}
 Kill a session by name
-```shell script
+```shell
 $ tmux kill-ses -t myname
 ```
 
-Kill sessions but the current \`\`\`shell script $ tmux kill-ses -a
+Kill sessions but the current 
+```bash
+$ tmux kill-ses -a
+```
 
-```text
 Kill sessions but 'myname'
-```shell script
+```shell
 $ tmux kill-ses -a -t myname
 ```
 
 ### Tmux help
 
-\`\`\`shell script $ tmux info
 
-```text
+```bash
+$ tmux info
+```
+
 ### Config
 Reload config
-```shell script
+```shell
 $ tmux source-file ~/.tmu­x.conf
 ```
 
-Show config \`\`\`shell script $ tmux show-options -g
+Show config 
+```bash
+$ tmux show-options -g
+```
 
-```text
 ### Copy Mode  
 | Command             | Description                  |
 |---------------------|------------------------------|
@@ -99,7 +111,7 @@ Tmux shortcuts {.cols-3}
 ----
 
 Show every session, window, pane, etc.
-```shell script
+```shell
 $ tmux info
 ```
 

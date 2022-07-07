@@ -87,6 +87,3 @@ intro: >
 | .3g2 | 3GPP2 audio/video container | video/3gpp2 audio/3gpp2 if it doesn't contain video |
 | .7z | 7-zip archive | application/x-7z-compressed |
 | .markdown .md | Markdown File | text/markdown |
-
-{.show-header}
-

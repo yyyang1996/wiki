@@ -15,7 +15,7 @@ intro: >
 
 # toml
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Introduction
 
@@ -121,7 +121,7 @@ array3 = [
 ]
 ```
 
-## Strings {.cols-3}
+## Strings
 
 ### Multiline String
 
@@ -152,7 +152,7 @@ is preserved.
 '''
 ```
 
-## Tables {.cols-3}
+## Tables
 
 ### Basic
 

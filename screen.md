@@ -16,19 +16,25 @@ intro: |
 
 ## Getting started
 
-\`\`\`shell script $ screen
+```shell 
+$ screen
+```
 
-```text
 1\. Press <kbd>Ctrl-A</kbd> <kbd>D</kbd> to detach session
 
 ---
 
 2\. List all screen sessions
+
 ```shell script
 $ screen -ls
 ```
 
-1. Re-attach a screen Session \`\`\`shell script $ screen -r &lt;name/pid&gt;
+1. Re-attach a screen Session 
+
+```shell script 
+$ screen -r &lt;name/pid&gt;
+```
 
 ```text
 ### Options {.col-span-2}
@@ -41,7 +47,6 @@ $ screen -ls
 | `-R`    | screen -R debug                        | Attach to a session _(Will create if it doesn't exist)_           |
 | `-d`    | screen -d -m wget xxxx.com/large.file  | Start screen in detached mode         |
 | `-X`    | screen -X -S debug kill                | Kill a running session                |
-{.show-header}
 
 
 
@@ -119,6 +124,7 @@ $ screen -ls
 
 ### Screen tricks
 SSH and attach in one line
+
 ```shell script
 $ ssh -t user@host screen -x <name/pid>
 ```

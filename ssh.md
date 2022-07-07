@@ -20,58 +20,78 @@ intro: |
 
 ### Connecting
 
-Connect to a server (default port 22) \`\`\`shell script $ ssh root@192.168.1.5
+Connect to a server (default port 22) 
 
-````
+```bash
+$ ssh root@192.168.1.5
+```
+
 Connect on a specific port
-```shell script
+
+```shell
 $ ssh root@192.168.1.5 -p 6222
-````
+```
 
-Connect via pem file (0400 permissions) \`\`\`shell script $ ssh -i /path/file.pem root@192.168.1.5
+Connect via pem file (0400 permissions) 
 
-````
+```bash
+$ ssh -i /path/file.pem root@192.168.1.5
+```
+
 See: [SSH Permissions](/chmod#ssh-permissions)
 
 ### Executing
 Executes remote command
-```shell script
+```shell
 $ ssh root@192.168.1.5 'ls -l'
-````
+```
 
-Invoke a local script \`\`\`shell script $ ssh root@192.168.1.5 bash < script.sh
+Invoke a local script 
 
-````
+```bash
+$ ssh root@192.168.1.5 bash < script.sh
+```
+
 Compresses and downloads from a server
-```shell script {.wrap}
+```shell
 $ ssh root@192.168.1.5 "tar cvzf - ~/source" > output.tgz
-````
+```
 
 ### SCP
 
-Copies from remote to local \`\`\`shell script $ scp user@server:/dir/file.ext dest/
+Copies from remote to local 
 
-````
+```bash
+$ scp user@server:/dir/file.ext dest/
+```
+
 Copies between two servers
-```shell script
+```shell
 $ scp user@server:/file user@server:/dir
-````
+```
 
-Copies from local to remote \`\`\`shell script $ scp dest/file.ext user@server:/dir
+Copies from local to remote 
 
-````
+```bash
+$ scp dest/file.ext user@server:/dir
+```
+
 Copies a whole folder
-```shell script
+```shell
 $ scp -r user@server:/dir dest/
-````
+```
 
-Copies all files from a folder \`\`\`shell script $ scp user@server:/dir/\* dest/
+Copies all files from a folder 
 
-````
+```bash
+$ scp user@server:/dir/\* dest/
+```
+
 Copies from a server folder to the current folder
-```shell script
+
+```shell
 $ scp user@server:/dir/* .
-````
+```
 
 ### Config location
 
@@ -105,48 +125,59 @@ Host server1
     IdentityFile ~/.ssh/server1.key
 ```
 
-Launch by alias \`\`\`shell script $ ssh server1
+Launch by alias 
 
-````
+```bash
+$ ssh server1
+```
+
 See: Full [Config Options](https://linux.die.net/man/5/ssh_config)
 
 
 
 ### ProxyJump
 
-```shell script
+```shell
 $ ssh -J proxy_host1 remote_host2
-````
+```
 
-\`\`\`shell script {.wrap} $ ssh -J user@proxy\_host1 user@remote\_host2
 
-````
+
+```bash
+$ ssh -J user@proxy\_host1 user@remote\_host2
+```
+
 Multiple jumps
-```shell script {.wrap}
+```shell
 $ ssh -J user@proxy_host1:port1,user@proxy_host2:port2 user@remote_host3
-````
+```
 
 ### ssh-copy-id
 
-\`\`\`shell script {.wrap} $ ssh-copy-id user@server
+```bash
+$ ssh-copy-id user@server
+```
 
-````
 Copy to alias server
-```shell script {.wrap}
+
+```shell
 $ ssh-copy-id server1
-````
+```
 
-Copy specific key \`\`\`shell script {.wrap} $ ssh-copy-id -i \~/.ssh/id\_rsa.pub user@server
+Copy specific key 
 
-````
+```bash
+$ ssh-copy-id -i \~/.ssh/id\_rsa.pub user@server
+```
+
 SSH keygen {.cols-5}
 ---------------
 
 ### ssh-keygen {.col-span-2}
 
-```shell script
+```shell
 $ ssh-keygen -t rsa -b 4096 -C "your@mail.com"
-````
+```
 
 | - | -    | -                              |
 | - | ---- | ------------------------------ |
@@ -158,25 +189,35 @@ Generate an RSA 4096 bit key with email as a comment
 
 ### Generate
 
-Generate a key interactively \`\`\`shell script $ ssh-keygen
+Generate a key interactively 
 
-````
+```bash
+$ ssh-keygen
+```
+
 Specify filename
-```shell script
+
+```shell
 $ ssh-keygen -f ~/.ssh/filename
-````
+```
 
-Generate public key from private key \`\`\`shell script $ ssh-keygen -y -f private.key > public.pub
+Generate public key from private key 
 
-````
+```bash
+$ ssh-keygen -y -f private.key > public.pub
+```
+
 Change comment
-```shell script
+```shell
 $ ssh-keygen -c -f ~/.ssh/id_rsa
-````
+```
 
-Change private key passphrase \`\`\`shell script $ ssh-keygen -p -f \~/.ssh/id\_rsa
+Change private key passphrase 
 
-````
+```bash
+$ ssh-keygen -p -f \~/.ssh/id\_rsa
+```
+
 ### Key type
 
 - rsa
@@ -189,9 +230,9 @@ Change private key passphrase \`\`\`shell script $ ssh-keygen -p -f \~/.ssh/id\_
 ### known_hosts {.col-span-2}
 
 Search from known_hosts
-```shell script
+```shell
 $ ssh-keygen -F <ip/hostname>
-````
+```
 
 Remove from known\_hosts&#x20;
 

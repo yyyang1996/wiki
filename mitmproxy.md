@@ -210,7 +210,7 @@ Replace entire GET string in a request \(quotes required to make it work\):
 ":~q ~m GET:.*:/replacement.html"
 ```
 
-## Scripts  {.cols-2}
+## Scripts
 
 ### Custom response
 

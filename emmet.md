@@ -19,7 +19,7 @@ intro: >
 
 # emmet
 
-## Syntax {.cols-3}
+## Syntax
 
 ### Getting started
 
@@ -56,7 +56,7 @@ ul&gt;li\*5
 </nav>
 ```
 
-### Custom attributes {.col-span-2}
+### Custom attributes
 
 p\[title="Hello world"\]
 
@@ -91,7 +91,7 @@ p&gt;{Click }+a{here}+{ to continue}
 Click [here](emmet.md) to continue
 
 ```text
-### ID and CLASS attributes {.row-span-2}
+### ID and CLASS attributes
 
 `#header`
 
@@ -117,7 +117,7 @@ p.class1.class2.class3
 <p class="class1 class2 class3"></p>
 ```
 
-### Implicit tag names {.row-span-2}
+### Implicit tag names
 
 .class
 
@@ -219,7 +219,7 @@ div&gt;\(header&gt;ul&gt;li\*2&gt;a\)+footer&gt;p
 </footer>
 ```
 
-### $ {.row-span-2}
+### $
 
 ul&gt;li.item$\*3
 
@@ -269,7 +269,7 @@ ul&gt;li.item$@2\*3
 </ul>
 ```
 
-## Also see {.cols-1}
+## Also see
 
 * [Emmet Cheat sheet](https://docs.emmet.io/cheat-sheet/) _\(docs.emmet.io\)_
 

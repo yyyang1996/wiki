@@ -18,7 +18,7 @@ intro: >
 
 ## Selectors
 
-### Getting started {.col-span-2}
+### Getting started
 
 * [Xpath test bed](http://www.whitebeam.org/library/guide/TechNotes/xpathtestbed.rhtm) _\(whitebeam.org\)_
 
@@ -31,7 +31,7 @@ $x('//h1')[0].innerText
 $x('//a[text()="XPath"]')[0].click()
 ```
 
-### Descendant selectors  {.col-span-2}
+### Descendant selectors 
 
 | Xpath | CSS |
 | :--- | :--- |
@@ -45,7 +45,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Order selectors  {.col-span-2}
+### Order selectors 
 
 | Xpath | CSS |
 | :--- | :--- |
@@ -58,7 +58,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Attribute selectors {.col-span-3 .row-span-2}
+### Attribute selectors
 
 | Xpath | CSS |
 | :--- | :--- |
@@ -74,7 +74,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Siblings  {.col-span-3}
+### Siblings 
 
 | Xpath | CSS |
 | :--- | :--- |
@@ -84,7 +84,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### jQuery {.col-span-3}
+### jQuery
 
 | Xpath | CSS |
 | :--- | :--- |
@@ -95,7 +95,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-### Misc selectors {.col-span-3}
+### Misc selectors
 
 | Xpath | CSS |  |
 | :--- | :--- | :--- |
@@ -110,7 +110,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-## Expressions {.cols-3}
+## Expressions
 
 ### Steps and axes {.secondary}
 
@@ -140,7 +140,7 @@ $x('//a[text()="XPath"]')[0].click()
 
 {.show-header}
 
-## Predicates {.cols-3}
+## Predicates
 
 ### Predicates
 
@@ -211,7 +211,7 @@ Order is significant, these two are different.
 
 This returns `<section>` if it has an `<h1>` descendant with `id='hi'`.
 
-## Functions {.cols-2}
+## Functions
 
 ### Node functions
 
@@ -260,7 +260,7 @@ number()
 boolean()
 ```
 
-## Axes {.cols-2}
+## Axes
 
 ### Using axes
 
@@ -343,7 +343,7 @@ There are other axes you can use.
 
 Use `|` to join two expressions.
 
-## More examples {.cols-2}
+## More examples
 
 ### Examples
 

@@ -33,7 +33,7 @@ import numpy as np
 | `np.savetxt('file.txt',arr,delimiter=' ')` | Writes to a text file |
 | `np.savetxt('file.csv',arr,delimiter=',')` | Writes to a CSV file |
 
-## Creating Arrays {.row-span-2}
+## Creating Arrays
 
 | - | - |
 | :--- | :--- |

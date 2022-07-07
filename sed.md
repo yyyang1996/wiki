@@ -17,22 +17,27 @@ intro: >
 
 # sed
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Sed Usage
 
-Syntax \`\`\`shell script $ sed \[options\] command \[input-file\]
+Syntax 
 
-```text
+```shell 
+$ sed \[options\] command \[input-file\]
+```
+
 With pipeline
-```shell script
+
+```shell
 $ cat report.txt | sed 's/Nick/John/g'
 ```
 
-\`\`\`shell script $ echo '123abc' \| sed 's/\[0-9\]+//g'
+```shell 
+$ echo '123abc' \| sed 's/\[0-9\]+//g'
+```
 
-```text
-### Option Examples {.col-span-2}
+### Option Examples
 
 | Option | Example                                    | Description                             |
 | ------ | ------------------------------------------ |---------------------------------------- |
@@ -45,7 +50,7 @@ $ cat report.txt | sed 's/Nick/John/g'
 
 
 ### Multiple commands
-```shell script {.wrap}
+```shell {.wrap}
 $ echo "hello world" | sed -e 's/h/H/g' -e 's/w/W/g'
 Hello World
 ```
@@ -54,16 +59,19 @@ Use `-e` to execute multiple sed commands
 
 ### Sed script
 
-\`\`\`shell script $ echo 's/h/H/g' &gt;&gt; hello.sed $ echo 's/w/W/g' &gt;&gt; hello.sed $ echo "hello world" \| sed -f hello.sed Hello World
 
-```text
+ 
+ ```bash
+ $ echo 's/h/H/g' &gt;&gt; hello.sed $ echo 's/w/W/g' &gt;&gt; hello.sed $ echo "hello world" \| sed -f hello.sed Hello World
+ ```
+
 Use `-f` to execute sed script file
 
 
 
 ### Examples
 
-```shell script
+```shell
 $ sed 's/old/new/g' file.txt
 $ sed 's/old/new/g' file.txt > new.txt
 
@@ -73,9 +81,9 @@ $ sed 's/old/new/g' -i.backup file.txt
 
 See: [Sed examples](sed.md#sed-examples)
 
-## Sed commands {.cols-3}
+## Sed commands
 
-### Commands {.col-span-2}
+### Commands
 
 | Command | Example | Description |
 | :--- | :--- | :--- |
@@ -103,9 +111,12 @@ See also: [File spacing](sed.md#file-spacing)
 
 ### Flags
 
-\`\`\`shell script $ sed 's/old/new/\[flags\]' \[input-file\]
 
-```text
+ 
+ ```bash
+ $ sed 's/old/new/\[flags\]' \[input-file\]
+ ```
+
 ---
 
 | Flag             | Description                                 |
@@ -141,7 +152,7 @@ See also: [File spacing](sed.md#file-spacing)
 
 
 
-Sed examples {.cols-3}
+Sed examples
 ----------
 
 
@@ -149,147 +160,195 @@ Sed examples {.cols-3}
 ### Replacing text {.row-span-2}
 
 Replace all occurrences of a string
-```shell script
+```shell
 $ sed 's/old/new/g' file.txt
 ```
 
-Replace only the nth occurrence of a string \`\`\`shell script $ sed 's/old/new/2' file.txt
+Replace only the nth occurrence of a string 
+ 
+ ```bash
+ $ sed 's/old/new/2' file.txt
+ ```
 
-```text
 Replace replace a string only on the 5th line
-```shell script
+```shell
 $ sed '5 s/old/new/' file.txt
 ```
 
-Replace "world" with "universe" but only if the line begins with "hello" \`\`\`shell script $ sed '/hello/s/world/universe/' file.txt
+Replace "world" with "universe" but only if the line begins with "hello" 
+ 
+ ```bash
+ $ sed '/hello/s/world/universe/' file.txt
+ ```
 
-```text
 Remove "\" from the end of each line
-```shell script
+```shell
 $ sed 's/\\$//' file.txt
 ```
 
-Remove all whitespace from beginning of each line \`\`\`shell script $ sed 's/^\s\*//' file.txt
+Remove all whitespace from beginning of each line 
+ 
+ ```bash
+ $ sed 's/^\s\*//' file.txt
+ ```
 
-```text
 Remove comments. Even those that are at the end of a line
-```shell script
+```shell
 $ sed 's/#.*$//' file.txt
 ```
 
 ### Search for text
 
-Search for a string and only print the lines that were matched \`\`\`shell script $ sed -n '/hello/p' file.txt
+Search for a string and only print the lines that were matched 
+ 
+ ```bash
+ $ sed -n '/hello/p' file.txt
+ ```
 
-```text
 Case insensitive search
-```shell script
+```shell
 $ sed -n '/hello/Ip' file.txt
 ```
 
-Search for a string but only output lines that do not match \`\`\`shell script $ sed -n '/hello/!p' file.txt
+Search for a string but only output lines that do not match 
+ 
+ ```bash
+ $ sed -n '/hello/!p' file.txt
+ ```
 
-```text
 ### Appending lines
 
 Append line after line 2
-```shell script
+```shell
 $ sed '2a Text after line 2' file.txt
 ```
 
-Append line at the end of the file \`\`\`shell script $ sed '$a THE END!' file.txt
+Append line at the end of the file 
+ 
+ ```bash
+ $ sed '$a THE END!' file.txt
+ ```
 
-```text
 Append line after every 3rd line starting from line 3
-```shell script
+```shell
 $ sed '3~3a Some text' file.txt
 ```
 
-### Numbering {.col-span-2}
+### Numbering
 
-Number line of a file \(simple left alignment\) \`\`\`shell script $ sed = file.txt \| sed 'N;s/\n/\t/'
+Number line of a file \(simple left alignment\) 
+ 
+ ```bash
+ $ sed = file.txt \| sed 'N;s/\n/\t/'
+ ```
 
-```text
 Number line of a file (number on left, right-aligned)
-```shell script
+```shell
 $ sed = file.txt | sed 'N; s/^/   /; s/ *\(.\{6,\}\)\n/\1  /'
 ```
 
-Number line of file, but only print numbers if line is not blank \`\`\`shell script $ sed '/./=' file.txt \| sed '/./N; s/\n/ /'
+Number line of file, but only print numbers if line is not blank 
+ 
+ ```bash
+ $ sed '/./=' file.txt \| sed '/./N; s/\n/ /'
+ ```
 
-```text
 Count lines (emulates "wc -l")
-```shell script
+```shell
 $ sed -n '$='
 ```
 
 ### Prepending lines
 
-Insert text before line 5 \`\`\`shell script $ sed '5i line number five' file.txt
+Insert text before line 5 
+ 
+ ```bash
+ $ sed '5i line number five' file.txt
+ ```
 
-```text
 Insert "Example: " before each line that contains "hello"
-```shell script
+
+```shell
 $ sed '/hello/i Example: ' file.txt
 ```
 
 ### Deleting lines
 
-Delete line 5-7 in file \`\`\`shell script $ sed '5,7d' file.txt
+Delete line 5-7 in file 
+ 
+ ```bash
+ $ sed '5,7d' file.txt
+ ```
 
-```text
 Delete every 2nd line starting with line 3
-```shell script
+```shell
 $ sed '3~2d' file.txt
 ```
 
-Delete the last line in file \`\`\`shell script $ sed '$d' file.txt
+Delete the last line in file 
+ 
+ ```bash
+ $ sed '$d' file.txt
+ ```
 
-```text
 Delete lines starting with "Hello"
-```shell script
+```shell
 $ sed '/^Hello/d' file.txt
 ```
 
-Delete all empty lines \`\`\`shell script $ sed '/^$/d' file.txt
+Delete all empty lines 
+ 
+ ```bash
+ $ sed '/^$/d' file.txt
+ ```
 
-```text
 Delete lines starting with "#"
-```shell script
+```shell
 $ sed '/^#/d' file.txt
 ```
 
 ### File spacing
 
-Double space \`\`\`shell script $ sed G
+Double space 
+ 
+ ```bash
+ $ sed G
+ ```
 
-```text
 Delete all blank lines and double space
-```shell script
+```shell
 $ sed '/^$/d;G'
 ```
 
-Triple space a file \`\`\`shell script $ sed 'G;G'
+Triple space a file 
+ 
+ ```bash
+ $ sed 'G;G'
+ ```
 
-```text
 Undo double-spacing
-```shell script
+```shell
 $ sed 'n;d'
 ```
 
-Insert a blank line above line which matches "regex" \`\`\`shell script $ sed '/regex/{x;p;x;}'
+Insert a blank line above line which matches "regex" 
+ 
+ ```bash
+ $ sed '/regex/{x;p;x;}'
+ ```
 
-```text
 Insert a blank line below line which matches "regex"
-```shell script
+```shell
 $ sed '/regex/G'
 ```
 
-Insert a blank line around line which matches "regex" \`\`\`shell script $ sed '/regex/{x;p;x;G;}'
+Insert a blank line around line which matches "regex" 
+ 
+ ```bash
+ $ sed '/regex/{x;p;x;G;}'
+ ```
 
-\`\`\`
-
-## See also {.cols-1}
+## See also
 
 * [sed cheatsheet](https://gist.github.com/ssstonebraker/6140154) _\(gist.github.com\)_
 

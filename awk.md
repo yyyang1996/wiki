@@ -17,7 +17,7 @@ intro: >
 
 # awk
 
-## Getting started {.cols-3}
+## Getting started
 
 ### Have a try
 
@@ -140,7 +140,7 @@ awk 'BEGIN{print substr("hello", 1, 3)}'
 
 See: [Functions](awk.md#functions-2)
 
-## Variables {.cols-3}
+## Variables
 
 ### Build-in variables
 
@@ -255,7 +255,7 @@ awk -v varName="$PWD" '
     END {print varName}' </dev/null
 ```
 
-## Operators {.cols-3}
+## Operators
 
 ### Operators
 
@@ -294,7 +294,7 @@ awk -v varName="$PWD" '
 * `++` 
 * `--`
 
-  {.cols-3 .style-none}
+
 
   **Shorthand assignments**
 
@@ -304,7 +304,7 @@ awk -v varName="$PWD" '
 * `/=` 
 * `%=`
 
-  {.cols-3 .style-none}
+
 
   **Comparison operators**
 
@@ -315,7 +315,7 @@ awk -v varName="$PWD" '
 * `<=`
 * `>=`
 
-  {.cols-3 .style-none}
+
 
 ### Examples
 
@@ -346,7 +346,7 @@ awk 'BEGIN {
 }'
 ```
 
-## Functions {.cols-3}
+## Functions
 
 ### Common functions {.col-span-2}
 
@@ -398,7 +398,7 @@ awk '
 '
 ```
 
-## Arrays {.cols-3}
+## Arrays
 
 ### Array with index
 
@@ -471,7 +471,7 @@ awk 'BEGIN {
 }'
 ```
 
-## Conditions {.cols-3}
+## Conditions
 
 ### if-else statement
 
@@ -536,7 +536,7 @@ awk -F: '{
 }' /etc/passwd
 ```
 
-## Loops {.cols-3}
+## Loops
 
 ### for...i
 
@@ -670,7 +670,7 @@ awk 'BEGIN {
 }'
 ```
 
-## Formatted Printing {.cols-3}
+## Formatted Printing
 
 ### Usage
 
@@ -726,7 +726,7 @@ User Home
 root /root bin /bin daemon /sbin
 
 ```text
-Miscellaneous {.cols-3}
+Miscellaneous
 -------------
 
 ### Regex Metacharacters
@@ -742,7 +742,6 @@ Miscellaneous {.cols-3}
 - `*`
 - `+`
 - `?`
-{.cols-3 .style-none}
 
 ### Escape Sequences
 | -      | -                   |

@@ -18,7 +18,7 @@ intro: >
 
 # webstorm
 
-## Editing {.row-span-5}
+## Editing
 
 | shortcut | description |
 | :--- | :--- |
@@ -34,7 +34,7 @@ intro: >
 
 `Double Shift`\|Search everywhere `Ctrl` `Shift` `A`\|Find Action `Alt` `0...9`\|Open corresponding tool window `Ctrl` `Shift` `F12`\|Toggle maximizing editor `Alt` `Shift` `F`\|Add to Favorites `Alt` `Shift` `I`\|Inspect current file `Ctrl` \`\|Quick switch current scheme `Ctrl` `Alt` `S`\|Open Settings dialog `Ctrl` `Tab`\|Switch between tool and tabs {.shortcuts}
 
-## Navigation {.row-span-4}
+## Navigation
 
 | shortcut | description |
 | :--- | :--- |

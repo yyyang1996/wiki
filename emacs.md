@@ -195,7 +195,7 @@ The help system is simple. Type `C-h` (or `F1`) and follow the directions. If yo
 
 
 
-### Multiple Windows {.col-span-2}
+### Multiple Windows
 When two commands are shown, the second is a similar command for a frame instead of a window.
 | - | - | - |
 |-------------|-------------|-------------------------------------|
@@ -447,7 +447,7 @@ Use `C-s` or `C-r` again to repeat the search in either direction. If Emacs is s
 
 
 
-Misc {.cols-3}
+Misc
 ----
 
 
@@ -464,7 +464,7 @@ Misc {.cols-3}
 
 
 
-### International Character Sets {.col-span-2}
+### International Character Sets
 
 | - | - |
 |----------------------------|------------------------------------|

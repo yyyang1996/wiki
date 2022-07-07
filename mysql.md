@@ -31,7 +31,7 @@ mysql -h <host> -P <port> -u <user> -p [db_name]
 mysql -h <host> -u <user> -p [db_name]
 ```
 
-### Commons {.row-span-2}
+### Commons
 
 #### Database
 
@@ -208,7 +208,7 @@ GROUP BY c1
 HAVING condition
 ```
 
-### Querying from multiple tables {.row-span-2}
+### Querying from multiple tables
 
 Inner join t1 and t2
 
@@ -563,7 +563,7 @@ DROP INDEX idx_name;
 
 ## Functions & Operators {.cols-3}
 
-### Strings {.row-span-2}
+### Strings
 
 * [ASCII\(\)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_ascii){data-tooltip="Return numeric value of left-most character"}
 * [BIN\(\)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_bin){data-tooltip="Return a string containing binary representation of a number"}
@@ -627,9 +627,8 @@ DROP INDEX idx_name;
 * [UPPER\(\)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_upper){data-tooltip="Convert to uppercase"}
 * [WEIGHT\_STRING\(\)](https://dev.mysql.com/doc/refman/8.0/en/string-functions.html#function_weight-string){data-tooltip="Return the weight string for a string"}
 
-  {.cols-2}
 
-### Date and Time  {.row-span-2}
+### Date and Time 
 
 * [ADDDATE\(\)](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_adddate){data-tooltip="Add time values \(intervals\) to a date value"}
 * [ADDTIME\(\)](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_addtime){data-tooltip="Add time"}
@@ -693,7 +692,6 @@ DROP INDEX idx_name;
 * [YEARWEEK\(\)](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_yearweek){data-tooltip="Return the year and week"}
 * [GET\_FORMAT\(\)](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_get-format){data-tooltip="'%m.%d.%Y'"}
 
-  {.cols-2}
 
 ### Numeric
 
@@ -735,7 +733,6 @@ DROP INDEX idx_name;
 * [TAN\(\)](https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_tan){data-tooltip="Return the tangent of the argument"}
 * [TRUNCATE\(\)](https://dev.mysql.com/doc/refman/8.0/en/mathematical-functions.html#function_truncate){data-tooltip="Truncate to specified number of decimal places"}
 
-  {.cols-2}
 
 ### Aggregate
 
@@ -759,7 +756,6 @@ DROP INDEX idx_name;
 * [VAR\_SAMP\(\)](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_var-samp){data-tooltip="Return the sample variance"}
 * [VARIANCE\(\)](https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html#function_variance){data-tooltip="Return the population standard variance"}
 
-  {.cols-2}
 
 ### JSON {.row-span-4}
 
@@ -797,7 +793,7 @@ DROP INDEX idx_name;
 * [JSON\_VALUE\(\) \(introduced 8.0.21\)](https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#function_json-value){data-tooltip="Extract value from JSON document at location pointed to by path provided; return this value as VARCHAR\(512\) or specified type"}
 * [MEMBER OF\(\) \(introduced 8.0.17\)](https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_member-of){data-tooltip="Returns true \(1\) if first operand matches any element of JSON array passed as second operand, otherwise returns false \(0\)"}
 
-  {.cols-1}
+ 
 
 ### Cast
 
@@ -805,7 +801,6 @@ DROP INDEX idx_name;
 * [CAST\(\)](https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#function_cast){data-tooltip="Cast a value as a certain type"}
 * [CONVERT\(\)](https://dev.mysql.com/doc/refman/8.0/en/cast-functions.html#function_convert){data-tooltip="Cast a value as a certain type"}
 
-  {.cols-2}
 
 ### Flow Control
 
@@ -814,7 +809,6 @@ DROP INDEX idx_name;
 * [IFNULL\(\)](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_ifnull){data-tooltip="Null if/else construct"}
 * [NULLIF\(\)](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_nullif){data-tooltip="Return NULL if expr1 = expr2"}
 
-  {.cols-2}
 
 ### Information
 
@@ -837,7 +831,6 @@ DROP INDEX idx_name;
 * [USER\(\)](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_user){data-tooltip="The user name and host name provided by the client"}
 * [VERSION\(\)](https://dev.mysql.com/doc/refman/8.0/en/information-functions.html#function_version){data-tooltip="Return a string that indicates the MySQL server version"}
 
-  {.cols-2}
 
 ### Encryption and Compression
 
@@ -854,7 +847,7 @@ DROP INDEX idx_name;
 * [UNCOMPRESSED\_LENGTH\(\)](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_uncompressed-length){data-tooltip="Return the length of a string before compression"}
 * [VALIDATE\_PASSWORD\_STRENGTH\(\)](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_validate-password-strength){data-tooltip="Determine strength of password"}
 
-  {.cols-1}
+ 
 
 ### Locking
 
@@ -864,7 +857,7 @@ DROP INDEX idx_name;
 * [RELEASE\_ALL\_LOCKS\(\)](https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_release-all-locks){data-tooltip="Release all current named locks"}
 * [RELEASE\_LOCK\(\)](https://dev.mysql.com/doc/refman/8.0/en/locking-functions.html#function_release-lock){data-tooltip="Release the named lock"}
 
-  {.cols-1}
+ 
 
 ### Bit
 
@@ -876,7 +869,6 @@ DROP INDEX idx_name;
 * [\|](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-or){data-tooltip="Bitwise OR"}
 * [~](https://dev.mysql.com/doc/refman/8.0/en/bit-functions.html#operator_bitwise-invert){data-tooltip="Bitwise inversion"}
 
-  {.cols-2}
 
 ### Miscellaneous
 
@@ -901,9 +893,8 @@ DROP INDEX idx_name;
 * [UUID\_TO\_BIN\(\)](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_uuid-to-bin){data-tooltip="Convert string UUID to binary"}
 * [VALUES\(\)](https://dev.mysql.com/doc/refman/8.0/en/miscellaneous-functions.html#function_values){data-tooltip="Define the values to be used during an INSERT"}
 
-  {.cols-2}
 
-## Also see {.cols-1}
+## Also see
 
 * [Regex in MySQL](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md#regex-in-mysql) _\(quickref.me\)_
 

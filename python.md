@@ -42,7 +42,7 @@ print(x)
 
 Python has no command for declaring a variable.
 
-### Data Types {.row-span-2}
+### Data Types
 
 |  |  |
 | :--- | :--- |
@@ -114,7 +114,7 @@ Hello from a function
 
 See: [Functions](python.md#functions-2)
 
-### File Handling {.col-span-2}
+### File Handling
 
 ```python
 with open("myfile.txt", "r", encoding='utf8') as file:
@@ -148,7 +148,7 @@ message = "Part 1."
 message += "Part 2."
 ```
 
-## Data Types {.cols-3}
+## Data Types
 
 ### Strings
 
@@ -248,7 +248,7 @@ y = str(2)    # y will be '2'
 z = str(3.0)  # z will be '3.0'
 ```
 
-## Strings {.cols-3}
+## Strings
 
 ### Array-like
 
@@ -274,7 +274,7 @@ c
 
 Loop through the letters in the word "banana"
 
-### Slicing string {.row-span-4}
+### Slicing string
 
 ```java
  ┌───┬───┬───┬───┬───┬───┬───┐
@@ -368,7 +368,7 @@ True
 'spamegg'
 ```
 
-### Formatting  {.col-span-2}
+### Formatting 
 
 ```python
 name = "John"
@@ -414,7 +414,7 @@ Get input data from console
 True
 ```
 
-## Lists {.cols-3}
+## Lists
 
 ### Defining
 
@@ -433,7 +433,7 @@ True
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-### Generate {.col-span-2}
+### Generate
 
 ```python
 >>> list(filter(lambda x : x % 2 == 1, range(1, 20)))
@@ -467,7 +467,7 @@ True
 [1, 2, 4, 3]
 ```
 
-### List Slicing {.col-span-2 .row-span-3}
+### List Slicing
 
 Syntax of list slicing:
 
@@ -548,7 +548,7 @@ Traceback (most recent call last):
 IndexError: list index out of range
 ```
 
-### Concatenating  {.row-span-2}
+### Concatenating
 
 ```python
 >>> odd = [1, 3, 5]
@@ -560,7 +560,7 @@ IndexError: list index out of range
 [1, 3, 5, 9, 11, 13]
 ```
 
-### Sort & Reverse {.row-span-2}
+### Sort & Reverse
 
 ```python
 >>> li = [3, 1, 3, 2, 5]
@@ -588,7 +588,7 @@ IndexError: list index out of range
 ['re', 're', 're']
 ```
 
-## Flow control {.cols-3}
+## Flow control
 
 ### Basic
 
@@ -624,7 +624,7 @@ else:
     print("Value is True")
 ```
 
-## Loops {.cols-3}
+## Loops
 
 ### Basic
 
@@ -694,7 +694,7 @@ for n, a in zip(name, age):
     print('%s is %d years old' %(n, a))
 ```
 
-### List Comprehension {.col-span-2}
+### List Comprehension
 
 ```python
 result = [x**2 for x in range(10) if x % 2 == 0]
@@ -703,7 +703,7 @@ print(result)
 # [0, 4, 16, 36, 64]
 ```
 
-## Functions {.cols-3}
+## Functions
 
 ### Basic
 
@@ -772,7 +772,7 @@ add(5, 20)  # => 25
 (lambda x, y: x ** 2 + y ** 2)(2, 1)
 ```
 
-## Modules {.cols-3}
+## Modules
 
 ### Import modules
 
@@ -811,7 +811,7 @@ import math
 dir(math)
 ```
 
-## File Handling {.cols-3}
+## File Handling
 
 ### Read file
 
@@ -891,7 +891,7 @@ import os
 os.rmdir("myfolder")
 ```
 
-## Classes & Inheritance {.cols-3}
+## Classes & Inheritance
 
 ### Defining
 
@@ -931,7 +931,7 @@ charlie = Dog()
 charlie.bark()   # => "Ham-Ham"
 ```
 
-### Class Variables  {.row-span-2}
+### Class Variables
 
 ```python
 class my_class:
@@ -947,7 +947,7 @@ print(x.class_variable)
 print(y.class_variable)
 ```
 
-### Super\(\) Function {.row-span-2}
+### Super\(\) Function
 
 ```python
 class ParentClass:
@@ -1040,7 +1040,7 @@ print(Yoki.legs) # => 4
 Yoki.sound()     # => Woof!
 ```
 
-## Miscellaneous {.cols-3}
+## Miscellaneous
 
 ### Comments
 
@@ -1082,7 +1082,7 @@ gen_to_list = list(values)
 print(gen_to_list)
 ```
 
-### Handle exceptions {.col-span-3}
+### Handle exceptions
 
 ```python
 try:

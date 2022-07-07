@@ -61,15 +61,13 @@ G gg H M L k j ▶ print("to")
 └──────────────▷ print("SCREEN 2")
 ```
 
-### Motions {.row-span-2}
+### Motions
 
 | Shortcut | Description |
 | :--- | :--- |
 | `h` _\|_ `j` _\|_ `k` _\|_ `l` | Arrow keys |
 | `<C-u>` _/_ `<C-d>` | Half-page up/down |
 | `<C-b>` _/_ `<C-f>` | Page up/down |
-
-{.shortcuts}
 
 #### Words{.left-text}
 
@@ -78,16 +76,12 @@ G gg H M L k j ▶ print("to")
 | `b` _/_ `w` | Previous/Next word |
 | `ge` _/_ `e` | Previous/Next end of word |
 
-{.shortcuts}
-
 #### Line
 
 | Shortcut | Description |
 | :--- | :--- |
 | `0` _\(zero\)_ _/_ `$` | Start/End of line |
 | `^` | Start of line _\(non-blank\)_ |
-
-{.shortcuts}
 
 #### Character
 
@@ -97,8 +91,6 @@ G gg H M L k j ▶ print("to")
 | `To` _/_ `to` | Move before/after previous/next `o` |  |  |
 | \` | `_/_`n | \` | Go to first/`n`th column |
 
-{.shortcuts}
-
 #### Document
 
 | Shortcut | Description |
@@ -107,16 +99,12 @@ G gg H M L k j ▶ print("to")
 | `:n` _\|_ `nG` | Go to line `n` |
 | `}` _/_ `{` | Next/Previous empty line |
 
-{.shortcuts}
-
 #### Window
 
 | Shortcut | Description |
 | :--- | :--- |
 | `H` _/_ `M` _/_ `L` | Top/Middle/Bottom screen |
 | `zt` _/_ `zz` _/_  `zb` | Top/Center/Bottom this line |
-
-{.shortcuts}
 
 ### Insert Mode
 
@@ -129,8 +117,6 @@ G gg H M L k j ▶ print("to")
 | `C` | Change to end of line |
 | `gi` | Insert at last insert point |
 | `Esc` _\|_ `<C-[>` | Exit insert mode |
-
-{.shortcuts}
 
 ### Saving and Exiting
 
@@ -147,8 +133,6 @@ G gg H M L k j ▶ print("to")
 | `:sav` new.txt | Save and edit `new.txt` |
 | `:w` !sudo tee % | Write to readonly file |
 
-{.shortcuts}
-
 ### Normal Mode
 
 | Shortcut | Description |
@@ -160,9 +144,7 @@ G gg H M L k j ▶ print("to")
 | `J` | Join with next line |
 | `<C-r>` _/_ 5 `<C-r>` | Redo changes `1` / `5` times |
 
-{.shortcuts}
-
-### Cut and paste {.row-span-2}
+### Cut and paste
 
 | Shortcut | Description |
 | :--- | :--- |
@@ -177,8 +159,6 @@ G gg H M L k j ▶ print("to")
 | `"*p` _\|_ `"+p` | Paste from system clipboard |
 | `"*y` _\|_ `"+y` | Paste to system clipboard |
 
-{.shortcuts}
-
 #### In visual mode
 
 | Shortcut | Description |
@@ -186,8 +166,6 @@ G gg H M L k j ▶ print("to")
 | `d` _\|_ `x` | Delete selection  _\(Cut\)_ |
 | `s` | Replace selection |
 | `y` | Yank selection _\(Copy\)_ |
-
-{.shortcuts}
 
 ### Repeating
 
@@ -199,8 +177,6 @@ G gg H M L k j ▶ print("to")
 | `&` | Repeat last `:s` |
 | `@:` | Repeat a command-line command |
 
-{.shortcuts}
-
 ### Visual mode
 
 | Shortcut | Description |
@@ -210,8 +186,6 @@ G gg H M L k j ▶ print("to")
 | `<C-v>` | Enter visual block mode |
 | `ggVG` | Select all text |
 | `>` _/_ `<` | Shift text right/left |
-
-{.shortcuts}
 
 ### Macros
 
@@ -223,9 +197,7 @@ G gg H M L k j ▶ print("to")
 | `7@i` | Run macro `i` 7 times |
 | `@@` | Repeat last macro |
 
-{.shortcuts}
-
-## Operators {.cols-3}
+## Operators
 
 ### Usage {.secondary}
 
@@ -236,7 +208,7 @@ G gg H M L k j ▶ print("to")
 
 Combine [operators](vim.md#available-operators) with [motions](vim.md#motions) to use them
 
-### Available Operators {.row-span-2}
+### Available Operators
 
 | Shortcut | Description |
 | :--- | :--- |
@@ -252,7 +224,7 @@ Combine [operators](vim.md#available-operators) with [motions](vim.md#motions) t
 | `<` | Indent left |
 | `!` | Filter through external program |
 
-### Examples {.row-span-2}
+### Examples
 
 | Combination | Description |
 | :--- | :--- |
@@ -286,7 +258,7 @@ Combine [operators](vim.md#available-operators) with [motions](vim.md#motions) t
 | `d`5j | Delete `5` lines downwards |
 | `>`4k | Indent `4` lines upwards |
 
-## Text objects {.cols-3}
+## Text objects
 
 ### Usage {.secondary}
 
@@ -297,7 +269,7 @@ Combine [operators](vim.md#available-operators) with [motions](vim.md#motions) t
 
 Operate with an [operator](vim.md#available-operators) inner or around text blocks
 
-### Text objects {.row-span-2}
+### Text objects
 
 | Shortcut | Description |
 | :--- | :--- |
@@ -347,7 +319,7 @@ See `:help text-objects`
 | `y`ip | Yank inner paragraph |
 | `y`ap | Yank paragraph _\(including newline\)_ |
 
-## Multiple files {.cols-3}
+## Multiple files
 
 ### Buffers
 
@@ -383,8 +355,6 @@ See `:help text-objects`
 | `<C-w>` `h` _/_ `l` | Go to the left/right window |  |
 | `<C-w>` `j` _/_ `k` | Go to the up/down window |  |
 
-{.shortcuts}
-
 ### Tabs
 
 | Shortcut | Description |
@@ -408,9 +378,7 @@ See `:help text-objects`
 | `gT` | Go to previous tab |
 | `2gt` | Go to tab number `2` |
 
-{.shortcuts}
-
-## Search and Replace {.cols-3}
+## Search and Replace
 
 ### Search
 
@@ -424,8 +392,6 @@ See `:help text-objects`
 | `N` | Previous match |
 | `*` | Search for current word forward |
 | `#` | Search for current word backward |
-
-{.shortcuts}
 
 ### Replace LINE
 
@@ -456,7 +422,7 @@ See `:help text-objects`
 | `:%s/old/new/gi` | Replace all _\(ignore case\)_ |
 | `:%s/\vold/new/g` | Replace all with [regex](https://github.com/song940/wiki/tree/c9e74bdcff44d911d638a634d32d0d7a2751356e/regex/README.md) |
 
-### Ranges {.row-span-2}
+### Ranges
 
 | - | - |
 | :--- | :--- |
@@ -470,7 +436,7 @@ See `:help text-objects`
 | `,3` | Next `3` lines |
 | `-3,` | Forward `3` lines |
 
-### Global command {.row-span-2}
+### Global command
 
 ```text
 :[range]g/{pattern}/[command]
@@ -518,12 +484,12 @@ See `:help text-objects`
 | `\e` | End of `\u`, `\U`, `\l` and `\L` |
 | `\E` | End of `\u`, `\U`, `\l` and `\L` |
 
-### Examples {.col-span-2}
+### Examples
 
 \`\`\`c {.wrap} :s/a\|b/xxx\0xxx/g \# Modifies "a b" to "xxxaxxx xxxbxxx" :s/test/\U& file/ \# Modifies "test" to "TEST FILE" :s/\(test\)/\U\1\e file/ \# Modifies "test" to "TEST file" :s/\v\(\[abc\]\)\(\[efg\]\)/\2\1/g \# Modifies "af fa bg" to "fa fa gb" :s/\v\w+/\u\0/g \# Modifies "bla bla" to "Bla Bla" :s/\v\(\[ab\]\)\|\(\[cd\]\)/\1x/g \# Modifies "a b c d" to "ax bx x x" :%s/._/\L&/ \# Modifies "HTML" to "html" :s/\v&lt;\(.\)\(\w_\)/\u\1\L\2/g \# Make every first letter of a word uppercase :%s/^\(._\)\n\1/\1/ \# Remove duplicate lines :%s/&lt;\/\=\(\w+\)&gt;/\U&/g \# Convert HTML-Tags to uppercase :g/^pattern/s/$/mytext \# Find and append text to the end :g/pattern/norm! @i \# Run a macro on matching lines /^\(._\)\(\r\?\n\1\)+$ \# View the duplicates lines :v/./,/./-j \# Compress blank lines into a blank line :g//,//d \# Delete inclusively from to
 
 ```text
-Vimdiff {.cols-3}
+Vimdiff
 -------
 
 
@@ -535,7 +501,7 @@ $ vimdiff file1 file2 [file3]
 $ vim -d file1 file2 [file3]
 ```
 
-### Editing {.row-span-2}
+### Editing
 
 ```text
 :[range]diffget [bufspec]
@@ -551,11 +517,9 @@ $ vim -d file1 file2 [file3]
 | `:1,$+1diffget` | Get all differences |
 | `ZQ` | Quit without changes |
 
-{.shortcuts}
-
 See: [Ranges](vim.md#ranges)
 
-### Folds {.row-span-2}
+### Folds
 
 | Shortcut | Description |
 | :--- | :--- |
@@ -569,8 +533,6 @@ See: [Ranges](vim.md#ranges)
 | `zr` | Fold less _\(foldlevel -= 1\)_ |
 | `zx` | Update folds |
 
-{.shortcuts}
-
 ### Jumping
 
 | Shortcut | Description |
@@ -578,11 +540,9 @@ See: [Ranges](vim.md#ranges)
 | `]c` | Next difference |
 | `[c` | Previous difference |
 
-{.shortcuts}
+## Miscellaneous
 
-## Miscellaneous {.cols-3}
-
-### Case {.row-span-2}
+### Case
 
 | Shortcut | Description |
 | :--- | :--- |
@@ -599,8 +559,6 @@ See: [Ranges](vim.md#ranges)
 | `ggguG` | _Lowercase_ all text |
 | `ggg~G` | _Toggle case_  all text |
 
-{.shortcuts}
-
 ### Jumping
 
 | Shortcut | Description |
@@ -610,9 +568,7 @@ See: [Ranges](vim.md#ranges)
 | `gf` | Go to file in cursor |
 | `ga` | Display hex, ascii value |
 
-{.shortcuts}
-
-### Misc command-lines {.row-span-2}
+### Misc command-lines
 
 | - | - |
 | :--- | :--- |
@@ -636,8 +592,6 @@ See: [Ranges](vim.md#ranges)
 | `[m` | Previous method start |
 | `[M` | Previous method end |
 
-{.shortcuts}
-
 ### Counters
 
 | Shortcut | Description |
@@ -645,9 +599,7 @@ See: [Ranges](vim.md#ranges)
 | `<C-a>` | Increase number |
 | `<C-x>` | Decrease number |
 
-{.shortcuts}
-
-### Tags {.row-span-2 .col-span-2}
+### Tags
 
 | Shortcut | Description |
 | :--- | :--- |
@@ -658,8 +610,6 @@ See: [Ranges](vim.md#ranges)
 | `<C-o> <C-i>` | Back/forward |
 | `:tselect Classname` | Find definitions of Classname |
 | `:tjump Classname` | Find definitions of Classname \(auto-select 1st\) |
-
-{.shortcuts}
 
 ### Formatting
 
@@ -688,7 +638,7 @@ See `:help formatting`
 
 \| `ma` \| Mark this cursor position as `a` \| \| ```a`` \| Jump to the cursor position `a` \| \| `'a` \| Jump to the beginning of the line with position `a` \| \| `d'a` \| Delete from current line to line of mark `a` \| \| ``d`a`` \| Delete from current position to position of mark `a` \| \| `c'a` \| Change text from current line to line of `a` \| \| ``y`a`` \| Yank text from current position to position of `a` \|
 
-\| `:marks` \| List all current marks \| \| `:delm a` \| Delete mark `a` \| \| `:delm a-d` \| Delete marks `a`, `b`, `c`, `d` \| \| `:delm abc` \| Delete marks `a`, `b`, `c` \| {.shortcuts}
+\| `:marks` \| List all current marks \| \| `:delm a` \| Delete mark `a` \| \| `:delm a-d` \| Delete marks `a`, `b`, `c`, `d` \| \| `:delm abc` \| Delete marks `a`, `b`, `c` \
 
 ### Calculator
 
@@ -696,8 +646,6 @@ See `:help formatting`
 | :--- | :--- |
 | `<C-r>` `=` 7\*7 | Shows the result |
 | `<C-r>` `=` 10/2 | Shows the result |
-
-{.shortcuts}
 
 Do this in INSERT mode
 
@@ -718,11 +666,9 @@ Do this in INSERT mode
 | `<C-r>"` | Paste from " register |
 | `<C-x><C-f>` | Auto-completion of path in insert mode |
 
-{.shortcuts}
-
 ### Tricks
 
-Remove duplicate lines \`\`\`shell script :sort \| %!uniq -u
+Remove duplicate lines `:sort \| %!uniq -u`
 
 ```text
 To number the lines in the file
@@ -730,9 +676,7 @@ To number the lines in the file
 :%!cat -n
 ```
 
-Copy whole doc to clipboard \`\`\`shell script :%w !pbcopy \# Mac OS X :%w !xclip -i -sel c \# GNU/Linux :%w !xsel -i -b \# GNU/Linux
-
-\`\`\`
+Copy whole doc to clipboard `:%w !pbcopy \# Mac OS X :%w !xclip -i -sel c \# GNU/Linux :%w !xsel -i -b \# GNU/Linux`
 
 ## Also see
 

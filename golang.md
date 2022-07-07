@@ -14,7 +14,7 @@ intro: >
 
 # golang
 
-## Getting started {.cols-3}
+## Getting started
 
 ### hello.go
 
@@ -94,7 +94,7 @@ if true {
 
 See: [Flow control](golang.md#flow-control)
 
-## Basic types {.cols-3}
+## Basic types
 
 ### Strings
 
@@ -155,7 +155,7 @@ fmt.Println(!true)          // false
 
 See: [More Operators](golang.md#operators-and-punctuation)
 
-### Arrays {.row-span-2}
+### Arrays
 
 ```go
 ┌────┬────┬────┬────┬─────┬─────┐
@@ -270,7 +270,7 @@ s := strconv.Itoa(i)
 fmt.Println(s) // Outputs: 90
 ```
 
-## Strings {.cols-3}
+## Strings
 
 ### Strings function
 
@@ -296,7 +296,7 @@ func main() {
 }
 ```
 
-### fmt.Printf {.row-span-2 .col-span-2}
+### fmt.Printf
 
 ```go
 package main
@@ -360,7 +360,7 @@ See also: [fmt](https://golang.org/pkg/fmt/)
 | ToLower\("TEST"\) | test |
 | ToUpper\("test"\) | TEST |
 
-## Flow control {.cols-3}
+## Flow control
 
 ### Conditional
 
@@ -442,9 +442,9 @@ for {
 }
 ```
 
-## Structs & Maps {.cols-3}
+## Structs & Maps
 
-### Defining {.row-span-2}
+### Defining
 
 ```go
 package main
@@ -479,7 +479,7 @@ v := Vertex{X: 1}
 
 You can also put field names.
 
-### Maps {.row-span-2}
+### Maps
 
 ```go
 m := make(map[string]int)
@@ -510,7 +510,7 @@ v.X = 2
 
 Doing `v.X` is the same as doing `(*v).X`, when `v` is a pointer.
 
-## Functions {.cols-3}
+## Functions
 
 ### Multiple arguments
 
@@ -644,9 +644,9 @@ fmt.Println(inner()) // => 200
 fmt.Println(val)     // => 101
 ```
 
-## Packages {.cols-3}
+## Packages
 
-### Importing {.row-span-2}
+### Importing
 
 ```go
 import "fmt"
@@ -664,7 +664,7 @@ import (
 
 See: [Importing](https://tour.golang.org/basics/1)
 
-### Aliases {.row-span-2}
+### Aliases
 
 ```go
 import r "math/rand"
@@ -698,9 +698,9 @@ func Hello () {
 
 See: [Exported names](https://tour.golang.org/basics/3)
 
-## Concurrency {.cols-3}
+## Concurrency
 
-### Goroutines {.row-span-2}
+### Goroutines
 
 ```go
 package main
@@ -731,7 +731,7 @@ func main() {
 
 See: [Goroutines](https://tour.golang.org/concurrency/1), [Channels](https://tour.golang.org/concurrency/2)
 
-### WaitGroup  {.row-span-2}
+### WaitGroup 
 
 ```go
 package main
@@ -798,7 +798,7 @@ ch <- 3
 
 See: [Buffered channels](https://tour.golang.org/concurrency/3)
 
-## Error control {.cols-3}
+## Error control
 
 ### Deferring functions
 
@@ -837,7 +837,7 @@ func main() {
 
 See: [Defer, panic and recover](https://blog.golang.org/defer-panic-and-recover)
 
-## Methods  {.cols-2}
+## Methods 
 
 ### Receivers
 
@@ -877,7 +877,7 @@ v.Scale(0.5)
 
 See: [Pointer receivers](https://tour.golang.org/methods/4)
 
-## Interfaces {.cols-2}
+## Interfaces
 
 ### A basic interface
 
@@ -918,7 +918,7 @@ The methods defined in `Shape` are implemented in `Rectangle`.
 
 \`\`\`
 
-## Miscellaneous {.cols-3}
+## Miscellaneous
 
 ### Keywords
 
@@ -948,7 +948,7 @@ The methods defined in `Shape` are implemented in `Rectangle`.
 * return
 * var
 
-  {.cols-3 .style-none}
+ 
 
 ### Operators and punctuation
 
@@ -961,7 +961,7 @@ The methods defined in `Shape` are implemented in `Rectangle`.
 | % | &gt;&gt; | %= | &gt;&gt;= | -- | ! | ... | . | : |
 |  | &^ | &^= |  |  |  |  |  |  |
 
-## References {.cols-1}
+## References
 
 * [Devhints](https://devhints.io/go) _\(devhints.io\)_
 * [A tour of Go](https://tour.golang.org/welcome/1) _\(tour.golang.org\)_

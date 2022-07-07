@@ -17,7 +17,7 @@ intro: >
 
 # cron
 
-## Format {.cols-2}
+## Format
 
 ### Format
 
@@ -89,7 +89,7 @@ _\(non-standard\)_ \|
 
 {.shortcuts}
 
-### Special characters {.col-span-2}
+### Special characters
 
 | Special Character | Description |
 | :--- | :--- |
@@ -101,7 +101,7 @@ _\(non-standard\)_ \|
 | `Hash (#)` | It is allowed only for Day Of Week field, which must be followed within range of 1 to 5. For example, 4\#1 means "The first Thursday" of given month. |
 | `Question mark (?)` | Can be instead of '\*' and allowed for Day of Month and Day Of Week. Usage is restricted to either Day of Month or Day Of Week in a cron expression. |
 
-## Also see {.cols-1}
+## Also see
 
 * [Devhints](https://devhints.io/cron) _\(devhints.io\)_
 * [Crontab Generator](https://crontab-generator.org/) _\(crontab-generator.org\)_
