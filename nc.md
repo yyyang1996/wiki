@@ -25,7 +25,7 @@ Connect to a host located anywhere
 `$ nc \[options\] \[host\] \[port\]`
 
 Listen for incoming connections
-```shell 
+```shelll
 $ nc -lp port [host] [port]
 ```
 
@@ -145,7 +145,7 @@ Cloning a linux PC is very simple. Suppose your system disk is /dev/sda
 Server \(192.168.1.9\) `$ cat video.avi \| nc -l 8000`
 
 Client
-```shell {.wrap}
+```shelll
 $ nc 192.168.1.9 8000 | mplayer -vo x11 -cache 3000 -
 ```
 
