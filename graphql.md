@@ -167,9 +167,18 @@ Union of one or more Objects
 
 ### Enums
 
-\`\`\`js {.wrap} enum USER\_STATE { NOT\_FOUND ACTIVE INACTIVE SUSPENDED } type Root { stateForUser(userID: ID!): USER\_STATE! users(state: USER\_STATE, limit: Int = 10): \[User] }
-
-\`\`\`
+```js  
+enum USER_STATE { 
+  NOT_FOUND 
+  ACTIVE 
+  INACTIVE 
+  SUSPENDED 
+} 
+type Root { 
+  stateForUser(userID: ID!): USER_STATE! 
+  users(state: USER_STATE, limit: Int = 10): [User] 
+}
+```
 
 ## Also see
 
